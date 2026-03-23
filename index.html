@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Nobell</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body class="home-page">
+  <div class="wrapper">
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo-white.svg" alt="">
+      </a>
+
+      <button type="button" class="header__burger header__burger--fixed js-burger-toggle js-burger-open">
+        <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="15" height="1" fill="white" />
+          <rect y="6" width="23" height="1" fill="white" />
+          <rect x="8" y="13" width="15" height="1" fill="white" />
+        </svg>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="hero-section">
+        <video class="hero-video hero-video-desktop" autoplay muted loop playsinline>
+          <source src="https://dev.nobell.com/wp-content/uploads/2026/02/1080_web_audio_video_10sec.mp4"
+            type="video/mp4">
+        </video>
+
+        <video class="hero-video hero-video-mobile" autoplay muted loop playsinline>
+          <source src="https://dev.nobell.com/wp-content/uploads/2026/02/mob_1080_web_audio_video_10sec.mp4"
+            type="video/mp4">
+        </video>
+
+        <div class="hero-content">
+          <a href="#slider-section" class="hero-title js-link-to">Начните Жить Красиво</a>
+        </div>
+      </section>
+
+      <section class="slider-section" id="slider-section">
+        <div class="container">
+          <div class="section-head" data-aos="fade-up" data-aos-duration="1200">
+            <h2 class="section-head__title js-second-section">ПРЕМИАЛЬНЫЙ КОНСЬЕРЖ СЕРВИС НОВОГО УРОВНЯ</h2>
+            <div class="section-head__line"></div>
+            <p class="section-head__text">Мы объединяем под одной экосистемой услуги и товары, формирующие эксклюзивный мир привилегий и комфорта</p>
+          </div>
+
+          <div class="slider-line js-card-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#s1" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s1.png" alt="">
+                    </div>
+                    <h3 class="card__title">ЭКОСИСТЕМА КРАСИВОЙ ЖИЗНИ</h3>
+                    <p class="card__text">Для людей привыкших жить в окружении лучшего, что может предложить мир.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#s2" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s2.png" alt="">
+                    </div>
+                    <h3 class="card__title">ТРАВЕЛ МЕНЕДЖМЕНТ</h3>
+                    <p class="card__text">Создаём идеальный баланс впечатлений, особого комфорта и безупречной
+                      логистики.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#s3" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s3.png" alt="">
+                    </div>
+                    <h3 class="card__title">ТОРГОВЫЙ КОНСЬЕРЖ</h3>
+                    <p class="card__text">Не просто шопинг, это новый уровень вашего особенного стиля жизни с Нобелл.
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#s4" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s4.png" alt="">
+                    </div>
+                    <h3 class="card__title">ОРГАНИЗАЦИЯ ДОСУГА</h3>
+                    <p class="card__text">Ваш мастер-ключ к самым ярким и ожидаемым событиям светской и ночной жизни
+                      по всему миру.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#s5" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s5.png" alt="">
+                    </div>
+                    <h3 class="card__title">РЕЗИДЕНТСКИЙ СЕРВИС</h3>
+                    <p class="card__text">Когда ваша резиденция живёт как пятизвездочный отель: сервис, вкус, комфорт
+                      и тишина.
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#s6" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s6.png" alt="">
+                    </div>
+                    <h3 class="card__title">FAMILY-ОФИС</h3>
+                    <p class="card__text">Надёжный круг повседневной заботы: активы, здоровье и личная команда
+                      профессионалов.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--
+          <div class="slider-line">
+            <div class="slider-line__wrap js-slider-line">
+              <div class="slider-line__item">
+                <a href="#s1" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s1.png" alt="">
+                    </div>
+                    <h3 class="card__title">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ СЕРВИС</h3>
+                    <p class="card__text">Для людей привыкших жить в окружении лучшего, что может предложить мир.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="slider-line__item">
+                <a href="#s2" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s2.png" alt="">
+                    </div>
+                    <h3 class="card__title">ТРАВЕЛ МЕНЕДЖМЕНТ</h3>
+                    <p class="card__text">Создаём идеальный баланс впечатлений, особого комфорта и безупречной
+                      логистики.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="slider-line__item">
+                <a href="#s3" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s3.png" alt="">
+                    </div>
+                    <h3 class="card__title">ТОРГОВЫЙ КОНСЬЕРЖ</h3>
+                    <p class="card__text">Не просто шопинг, это новый уровень вашего особенного стиля жизни с Нобелл.
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="slider-line__item">
+                <a href="#s4" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s4.png" alt="">
+                    </div>
+                    <h3 class="card__title">ОРГАНИЗАЦИЯ ДОСУГА</h3>
+                    <p class="card__text">Ваш мастер-ключ к самым ярким и ожидаемым событиям светской и ночной жизни по
+                      всему миру.</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="slider-line__item">
+                <a href="#s5" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s5.png" alt="">
+                    </div>
+                    <h3 class="card__title">РЕЗИДЕНТСКИЙ СЕРВИС</h3>
+                    <p class="card__text">Не просто шопинг, это новый уровень вашего особенного стиля жизни с Нобелл.
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="slider-line__item">
+                <a href="#s6" class="card js-to-slide">
+                  <div class="card__wrap">
+                    <div class="card__img">
+                      <img src="assets/images/img/s6.png" alt="">
+                    </div>
+                    <h3 class="card__title">FAMILY-ОФИС</h3>
+                    <p class="card__text">Не просто шопинг, это новый уровень вашего особенного стиля жизни с Нобелл.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          -->
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="container">
+          <div class="section-head" data-aos="fade-up" data-aos-duration="1200">
+            <h2 class="section-head__title">ОТКРОЙТЕ ДЛЯ СЕБЯ ЧАРУЮЩУЮ СВОБОДУ МИРА НОБЕЛЛ</h2>
+            <div class="section-head__line"></div>
+            <p class="section-head__text">Продумывая каждый элемент личного комфорта,<br> мы предоставляем вам
+              возможность
+              жить, именно так, <br>как вы этого желаете и заслуживаете.</p>
+          </div>
+          <div class="info">
+            <div class="info-item" id="s1" data-aos="fade-up" data-aos-duration="1200">
+              <div class="info-item__img">
+                <img src="https://dev.nobell.com/wp-content/uploads/2026/nobell/w1.png" loading="lazy"
+                  alt="Резидентский консьерж сервис">
+              </div>
+              <div class="info-item__body">
+                <h3 class="info-item__title">ЭКОСИСТЕМА КРАСИВОЙ ЖИЗНИ</h3>
+                <span class="info-item__subtitle">Для людей привыкших жить в окружении лучшего, что может предложить мир.</span>
+                <div class="info-item__content">
+                  <p>Нобелл - консьерж сервис для тех, кто привык жить в пространстве безупречного стиля и комфорта.
+                    Большинство наших клиентов — люди, для которых лучшие отели мира не редкая привилегия, а привычный
+                    стандарт. Возвращаясь домой после путешествий, они ожидают того же уровня заботы — точности,
+                    деликатности и культуры сервиса. Нобелл становится продолжением лучшего отельного опыта, только
+                    дома. </p>
+                  <p>Наша формула красивой жизни проста: у премиальной жизни должен быть один надёжный адрес. Один контакт
+                    вместо десятков, ясная система вместо хаоса, неизменно высокая планка вместо компромиссов. Мы
+                    выстраиваем вокруг клиента мягкую, но безошибочную инфраструктуру заботы: лайфстайл-услуги,
+                    резидентский сервис и торговая платформа люксовых товаров складываются в единую экосистему, в
+                    которой премиальный уровень не обсуждается, а соблюдается.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item" id="s2" data-aos="fade-up" data-aos-duration="1200">
+              <div class="info-item__img">
+                <img src="https://dev.nobell.com/wp-content/uploads/2026/nobell/w2.png" loading="lazy"
+                  alt="ТРЕВЕЛ  МЕНЕДЖМЕНТ ">
+              </div>
+
+              <div class="info-item__body">
+                <h3 class="info-item__title">ТРЕВЕЛ МЕНЕДЖМЕНТ </h3>
+                <span class="info-item__subtitle">Создаём идеальный баланс впечатлений, особого комфорта и безупречной
+                  логистики.</span>
+                <div class="info-item__content">
+                  <p>Мы предлагаем широкий спектр персонализированных туристических услуг с полной гарантией качества.
+                    Среди прочих наши услуги включают сервис по бронированию авиабилетов и отелей без мгновенной оплаты,
+                    специальные тарифы в отелях по всему миру, срочное получение паспорта, визовое и транспортное
+                    сопровождение в поездке, доступ к расширенной базе частных самолётов и рейсов jet sharing,
+                    возможность через одно окно заказать любые сопутствующие услуги.</p>
+                  <p>Эксклюзивный отдых на Сент-Барте или рождественские каникулы в сафари-лоджи в Африке, в местах, где
+                    заканчиваются туристические тропы и начинается настоящая тишина. Мы всегда предложим наилучший
+                    сценарий путешествия, в котором будет продумано всё до мельчайших деталей, начиная от вида,
+                    открывающегося из окна вашей резиденции, и заканчивая выбором яхты, джета или спорт-кара для
+                    любителей скорости и адреналина, с учётом безопасности и интересов вашей семьи.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item" id="s3" data-aos="fade-up" data-aos-duration="1200">
+              <div class="info-item__img">
+                <img src="https://dev.nobell.com/wp-content/uploads/2026/nobell/w3.png" loading="lazy"
+                  alt="НЕ ПРОСТО шопинг, ЭТО НОВЫЙ УРОВЕНЬ ВАШЕГО СТИЛЯ ЖИЗНИ">
+              </div>
+
+              <div class="info-item__body">
+                <h3 class="info-item__title">ТОРГОВЫЙ КОНСЬЕРЖ</h3>
+                <span class="info-item__subtitle">Не просто шопинг, это новый уровень вашего особенного стиля жизни
+                  с Нобелл.</span>
+                <div class="info-item__content">
+                  <p>Нобелл создаёт формат шопинга, где каждый момент адаптирован под вас: комфорт, эксклюзивность и
+                    уверенность в подлинности каждой покупки сочетаются с доступом к лучшим ценам. Мы предлагаем
+                    резидентам широкий выбор: эксклюзивные автомобили, ювелирные украшения и часы, произведения
+                    искусства и арт-объекты, аксессуары и коллекции одежды от культовых брендов. Благодаря обширной сети
+                    партнёров и прямых контрактов мы гарантируем оптимальное соотношение цены и качества. Каждое
+                    изделие проходит строгую аутентификацию, а мы берём на себя полную финансовую ответственность за его
+                    оригинальность и сохранность.</p>
+                  <p>Всё — от эксклюзивной примерки одежды и выбора часов, до тест-драйва нового автомобиля, частного
+                    показа ювелирных украшений или арт-объектов — доступно в привычном и приватном пространстве вашего
+                    жилого комплекса.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item" id="s4" data-aos="fade-up" data-aos-duration="1200">
+              <div class="info-item__img">
+                <img src="https://dev.nobell.com/wp-content/uploads/2026/nobell/w4.png" loading="lazy"
+                  alt="ОРГАНИЗАЦИЯ ДОСУГА">
+              </div>
+
+              <div class="info-item__body">
+                <h3 class="info-item__title">ОРГАНИЗАЦИЯ ДОСУГА</h3>
+                <span class="info-item__subtitle">Ваш мастер-ключ к ярким и ожидаемым событиям светской и ночной жизни
+                  по всему миру.</span>
+                <div class="info-item__content">
+                  <p>Каким бы ни был сюжет Вашей импровизации, будь то гастрономический ужин, особенное путешествие или
+                    лучшие места в опере - лишь один звонок в нашу консьерж-службу и Ваши пожелания начнут исполняться.
+                    Для вас мы открываем двери лучших заведений мира и готовы обеспечить места в первых рядах самых
+                    именитых мероприятий, минуя любые формальности, даруя Вам изысканную легкость воплощения
+                    задуманного. </p>
+                  <p>Статус клиента Нобелл предоставляет возможность приоритетного бронирования лучших мест в самых
+                    фешенебельных ресторанов столицы и гастрономических галерей по всему миру. Вы получите
+                    релизы самых ожидаемых культурных и спортивных событий столицы и всего мира. Обладая уникальными
+                    связями, мы сможем решить вопрос вашего участия даже в тех мероприятиях светской жизни, места на
+                    которые находятся в листах ожидания или закрыты для открытых продаж.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item" id="s5" data-aos="fade-up" data-aos-duration="1200">
+              <div class="info-item__img">
+                <img src="https://dev.nobell.com/wp-content/uploads/2026/nobell/w5.png" loading="lazy"
+                  alt="Резидентский сервис">
+              </div>
+
+              <div class="info-item__body">
+                <h3 class="info-item__title">Резидентский сервис</h3>
+                <span class="info-item__subtitle">Когда ваша резиденция живёт как пятизвездочный отель: сервис, вкус,
+                  комфорт и тишина.</span>
+                <div class="info-item__content">
+                  <p>Резидентский сервис Нобелл переносит стандарты пятизвёздочного гостеприимства в пространство вашего
+                    дома, превращая повседневность в продуманный, гармоничный и безупречный
+                    опыт. Это не просто набор отдельных функций, а целостная система заботы, которая
+                    незаметно решает бытовые задачи. Нобелл создаёт ощущение,<br>
+                    что ваш дом управляется по принципам лучших отелей мира, но с учётом приватности и индивидуальных
+                    особенностей вашей семьи. </p>
+                  <p>Мы обеспечиваем организацию повседневного быта: доставка еды и продуктов, рум-сервис, химчистка,
+                    уборка и поддержание порядка интегрированы в привычный ритм. Домашние SPA-процедуры, уход за
+                    гардеробом, внимание к детям и забота о питомцах создают атмосферу, где дом становится местом
+                    полноценного отдыха и восстановления сил. Для тех, кто ценит комфорт, сервис дополняется подбором и
+                    обучением персонала для обслуживания резиденции.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item" id="s6" data-aos="fade-up" data-aos-duration="1200">
+              <div class="info-item__img">
+                <img src="https://dev.nobell.com/wp-content/uploads/2026/nobell/w6.png" loading="lazy"
+                  alt="FAMILY-ОФИС">
+              </div>
+
+              <div class="info-item__body">
+                <h3 class="info-item__title">FAMILY-ОФИС</h3>
+                <span class="info-item__subtitle">Надёжный круг повседневной заботы: активы, здоровье и личная команда
+                  профессионалов.</span>
+                <div class="info-item__content">
+                  <p>Единое окно для активов семьи, здоровья и персонала, с закрытым доступом к лучшим возможностям и
+                    строгим режимом конфиденциальности. В части активов мы работаемс закрытыми предложениями
+                    приобретения недвижимости и предметов роскоши по всему миру: организуем показы, ведём переговоры и
+                    закрываем сделки “под ключ”. Услуги включают независимую оценку, страхование, безопасные расчёты, а
+                    также логистику. После покупки обслуживание недвижимости, гараж-менеджмент, хранение и кураторство
+                    коллекций, менеджмент яхт/авиации и сопровождение перепродажи. </p>
+                  <p>Отдельный контур — организация лечения и диагностики у лучших специалистов, включая зарубежные
+                    клиники, второе мнение, сопровождение госпитализаций и реабилитации, регулярный контроль здоровья.
+                    Третья опора — подбор и замена персонала для дома и семьи (управляющий домом, няни, водители,
+                    повара, домработницы, охрана), с проверкой рекомендаций, обучением и сопровождением адаптации под
+                    стандарты Нобелл.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-swiper-section">
+          <div class="container-fluid">
+              <div class="swiper news-blocks-swiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="news-block news-block-single">
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/12.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Инвестиционный консалтинг</span>
+                                      <h4 class="news-title">Закрытый инвестиционный <br> лот в Frank Muller Tower Дубай</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="news-block news-block-grid-2">
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/13.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Тревел менеджмент</span>
+                                      <h4 class="news-title">Заплыв с пятнистыми китами<br> на Бора-Бора</h4>
+                                  </div>
+                              </div>
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/14.png"
+                                      alt="Подбор и выкуп предметов гардероба по всему миру">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Фешен консьерж</span>
+                                      <h4 class="news-title">Подбор и выкуп предметов <br>гардероба по всему миру</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="news-block news-block-grid-4">
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/1.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Резидентский сервис</span>
+                                      <h4 class="news-title">Услуги премиальной химчистки <br> и уход за гардеробом</h4>
+                                  </div>
+                              </div>
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/2.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Резидентский сервис</span>
+                                      <h4 class="news-title">Услуги Хоум-спа в кофорте<br> и уюте собственной резиденции</h4>
+                                  </div>
+                              </div>
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/3.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Резидентский сервис</span>
+                                      <h4 class="news-title">Доставка премиальных продуктов<br> с лучших фермерских
+                                          хозяйств&nbsp;</h4>
+                                  </div>
+                              </div>
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/4.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Резидентский сервис</span>
+                                      <h4 class="news-title">Услуги премиального<br> кейтринга и файн дайнинг</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="news-block news-block-single">
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/5.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Организация досуга</span>
+                                      <h4 class="news-title">Лучшие места на Щелкунчик <br>в канун Нового года</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="news-block news-block-grid-2">
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/6.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Резидентский сервис</span>
+                                      <h4 class="news-title">Сервис горничных и уход за резиденцией</h4>
+                                  </div>
+                              </div>
+
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/7.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Family office</span>
+                                      <h4 class="news-title">Wellnes программы и<br> организация лечения</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="news-block news-block-grid-4">
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/8.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Тревел менеджмент</span>
+                                      <h4 class="news-title">Эксклюзивные привилегии<br> при бронировании люксовых отелей</h4>
+                                  </div>
+                              </div>
+
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/10.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Ювелирный консьерж</span>
+                                      <h4 class="news-title">“Imperiale Four Seasons” <br>самолетом из бутика Шопард</h4>
+                                  </div>
+                              </div>
+
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/9.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Автомобильный консьерж</span>
+                                      <h4 class="news-title">Подбор и выкуп лучших предложений<br> на мировом авто-рынке</h4>
+                                  </div>
+                              </div>
+
+                              <div class="news-item">
+                                  <img loading="lazy" src="assets/images/img/11.png" alt="">
+                                  <div class="news-tile-overlay">
+                                      <span class="news-category">Организация досуга</span>
+                                      <h4 class="news-title">Вип приглашение<br> на Paris Fashion Week</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="container">
+          <div class="section-head" data-aos="fade-up" data-aos-duration="1200">
+            <h2 class="section-head__title">F.A.Q</h2>
+            <div class="section-head__line"></div>
+            <p class="section-head__text">Часто задаваемые вопросы</p>
+          </div>
+
+          <div class="faq" data-aos="fade-up" data-aos-duration="1200">
+            <div class="faq__item active">
+              <button class="faq__question">
+                <span>Q. Как стать вашим клиентом?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__content">
+                  Стать участником закрытого клуба Nobell возможно по приглашению или по рекомендации действующего
+                  участника. Для резидентов жилых комплексов, где Nobell выступает официальным провайдером
+                  консьерж-сервиса, подключение оформляется автоматически.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Q. Сколько стоят ваши услуги для клиентов?
+                </span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__content">
+                  Базовый набор консьерж-услуг для участников закрытого клуба Nobell предоставляется без абонентской
+                  платы. Дополнительно мы формируем персональные платные пакеты под образ жизни и задачи конкретной
+                  семьи, определяя и уровень вовлечённости команды, и точный состав сервисов. Расширенные форматы
+                  рассчитаны на состоятельных клиентов (U/HNWI) и их семьи; условия и стоимость обсуждаются
+                  индивидуально на этапе подключения.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Q. Любой ЖК может быть подключен к услугам Нобелл?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__content">
+                  Наш сервис не является массовым, приоритетом является предоставление сервиса ограниченному числу
+                  потребителей для сохранения качества и эксклюзивности. В приоритете — жилые комплексы со статусом
+                  коллекционной недвижимости классов премиум и элит. Подключение новых объектов возможно по результатам
+                  предварительной оценки и наличия необходимой инфраструктуры для соблюдения наших стандартов.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Q. Как происходит взаимодействие с вашим сервисом?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__content">
+                  Вы можете обращаться к нам любым удобным способом: лично на стойке консьержа (если ваш ЖК подключён к
+                  нашей системе), через специализированное приложение, по телефону или в привычных мессенджерах.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question">
+                <span>Q. Какие основные услуги вы оказываете вашим клиентам?</span>
+                <span class="faq__icon"></span>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__content">
+                  <h3>Травел менеджмент
+                  </h3>
+                  <ul>
+                    <li>выкуп авио/жд билетов/трансферов - подбор оптимальных маршрутов и тарифов, пост-оплата.</li>
+                    <li>бронирование отелей - клубные тарифы, комплиментарные апгрейды и спец-предложения, пост-оплата.
+                    </li>
+                    <li>кураторская коллекция авторских травел пакетов.</li>
+                    <li>подбор и бронирование частных перелетов.</li>
+                    <li>подбор и бронирование яхт-чартеров по всему миру.</li>
+                    <li>оформление виз/гражданства в любые страны - полное сопровождение, подача документов вне общей
+                      очереди.</li>
+                    <li>начисление торговых баллов кеш-бек для дальнейших покупок услуг и товаров.</li>
+                  </ul>
+
+                  <h3>Торговый консьерж</h3>
+                  <ul>
+                    <li>подбор и покупка автомобилей - прямые контракты с дилерами, цены ниже рыночных, гарантия
+                      доставки, эксклюзивные модели и предложения вне рынка, для моделей из стока тест-драйв и выездная
+                      презентация.</li>
+                    <li>подбор ювелирных изделий/часов - прямые контракты с производителями и поставщиками, цены ниже
+                      рыночных, гарантия оригинальности, эксклюзивные модели и предложения вне рынка, для изделий из
+                      стока примерка и показ в вашей резиденции.</li>
+                    <li>подбор и покупка предметов гардероба - прямые контракты с производителями и поставщиками, цены
+                      ниже рыночных, гарантия оригинальности, эксклюзивные модели и предложения вне рынка, для изделий
+                      из стока примерка и показ в вашей резиденции.</li>
+                    <li>подбор и покупка арт-объектов - прямые контракты с ведущими мировыми галереями, гарантия
+                      оригинальности, предложения вне рынка, для объектов из стока показ в вашей резиденции.</li>
+                    <li>подбор и покупка подарков - персональный дневник дат, персональная подборка подарков к датам,
+                      флорестический сервис.</li>
+                    <li>начисление торговых баллов кеш-бек для дальнейших покупок услуг и товаров. </li>
+                  </ul>
+
+                  <h3>Организация досуга </h3>
+                  <ul>
+                    <li>Релизы и лучшие места на самые ожидаемые светские, культурные, клубные и спортивные мероприятия.
+                    </li>
+                    <li>бронирование ресторанов - приоритетная посадка, предзаказ, именные столовые приборы и аксессуары
+                      при посещении.</li>
+                    <li>организация мероприятий под ключ - прямые контракты со звездами отечественной эстрады, залами
+                      торжеств и ресторанами, собственный штат организаторов из лучших специалистов индустрии
+                      мероприятий.</li>
+                    <li>начисление торговых баллов кеш-бек для дальнейших покупок услуг и товаров.</li>
+                  </ul>
+
+                  <h3>Резидентский сервис </h3>
+                  <ul>
+                    <li>Доставка продуктов премиального качества - кураторская коллекция фермерских продуктов из разных
+                      уголков страны и зарубежья, контроль качества и экологичности, доставка консьержем до дверей
+                      резиденции от 5 до 15 минут продуктов и товаров первой необходимости.</li>
+                    <li>доставка готовой еды - кураторская коллекция блюд домашней еды приготовленных из свежайших
+                      фермерских продуктов, ежемесячное обновление меню, персональный подход.</li>
+                    <li>уход за гардеробом - химчистка, стирка, глажка и ремонт одежды, забор консьержем от 5 до 15
+                      минут от дверей резиденции, гарантия качества и ответственность за результат.</li>
+                    <li>уход за резиденцией - составления детального мастер-плана уборки, подбор средств ухода, дневной
+                      сервис, вечерний сервис.</li>
+                    <li>home-Spa - кураторская коллекция массажных ритуалов, профессиональные азиатские мастера, все
+                      процедуры доступны в стенах вашей резиденции.</li>
+                    <li>начисление торговых баллов кеш-бек для дальнейших покупок услуг и товаров.</li>
+                  </ul>
+
+                  <h3>FAMILY-ОФИС </h3>
+                  <ul>
+                    <li>подбор и выкуп зарубежной недвижимости - кураторская коллекция, прямые контракты с девелоперами,
+                      цены ниже рыночных, финансовая логистика, юридическое сопровождение, эксклюзивные лоты и
+                      предложения вне рынка.</li>
+                    <li>управление инвестиционной недвижимостью - поиск арендаторов, стейджинг, дизайн и ремонт,
+                      техническое управление, повышение прибыльности объекта за счет персонализированных 5* услуг Нобелл
+                      для арендатора.</li>
+                    <li>подбор и выкуп яхт/самолетов/суперкаров - прямые контракты с дилерами и производителями, цены
+                      ниже рыночных, финансовая логистика, юридическое сопровождение, пост-продажное обслуживание.</li>
+                    <li>лечение и диагностика - кураторская коллекция лучших врачей и клиник, полное сопровождение за
+                      рубежом, пост-лечебное сопровождение, онлайн консультации, второе мнение, срочная медицинская
+                      авиация, специальные программы контроля здоровья.</li>
+                    <li>подбор и управление домашним персоналом - составление проф-аватара сотрудника, проведение
+                      собеседований, обучений персонала премиальным стандартам, замена сотрудников.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="services__author" data-aos="fade-up" data-aos-duration="1200">
+            <p>Эксперты Красивой Жизни</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="#" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="#" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="#" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="#" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn js-popup-open">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <img src="assets/images/f1.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+                    <img src="assets/images/f2.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <img src="assets/images/f3.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <img src="assets/images/f4.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516"
+                        stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА
+                                ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE LIVING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ
+                                МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE SHOPPING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a>
+                        </li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО
+                                ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+            </div>
+            <div class="nav__form">
+                <form action="#">
+                    <input type="text" placeholder="ПОИСК">
+                    <button type="submit">
+                        <img src="assets/images/search.svg" alt="">
+                    </button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#">
+                    <img src="assets/images/popup.svg" alt="">
+                    Подать заявку
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>

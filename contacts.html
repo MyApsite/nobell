@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Nobell</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body class="contacts-page">
+  <div class="wrapper">
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.svg" alt="">
+      </a>
+
+      <div class="breadcrumbs">
+        <a href="index.html">
+          <img src="assets/images/home.svg" alt="">
+        </a>
+        <img src="assets/images/next.svg" alt="">
+        <span>КОНТАКТЫ</span>
+      </div>
+
+      <button type="button" class="header__burger js-burger-open">
+        <div class="header__burger-mob">
+          <img src="assets/images/b-mob.svg" alt="">
+        </div>
+        <div class="header__burger-desk">
+          <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="15" height="1" fill="#000000" />
+            <rect y="6" width="23" height="1" fill="#000000" />
+            <rect x="8" y="13" width="15" height="1" fill="#000000" />
+          </svg>
+        </div>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="contacts-section">
+        <div class="container">
+          <div class="contacts-form">
+            <div class="contacts-form__head">
+              <h1 class="contacts-form__title">Контактная форма</h1>
+              <p class="contacts-form__hint">(*) поля обязательны к заполнению</p>
+            </div>
+
+            <form class="contacts-form__body" action="#" method="post" novalidate>
+              <div class="contacts-form__grid">
+                <div class="contacts-form__field">
+                  <input class="contacts-form__control" placeholder="ИМЯ *" id="contact-first-name" name="firstName"
+                    type="text" autocomplete="given-name" required>
+                </div>
+
+                <div class="contacts-form__field">
+                  <input class="contacts-form__control" placeholder="ФАМИЛИЯ *" id="contact-last-name" name="lastName"
+                    type="text" autocomplete="family-name" required>
+                </div>
+
+                <div class="contacts-form__field contacts-form__field--full">
+                  <input class="contacts-form__control" placeholder="EMAIL *" id="contact-email" name="email"
+                    type="email" autocomplete="email" required>
+                </div>
+
+                <div class="contacts-form__field contacts-form__field--full">
+                  <div class="contacts-form__phone">
+                    <button class="contacts-form__country" type="button" aria-label="Выбор страны">
+                      <img class="contacts-form__flag" src="assets/images/cont.svg" alt="">
+                    </button>
+                    <input class="contacts-form__control contacts-form__control--phone" placeholder="ТЕЛЕФОН *"
+                      id="contact-phone" name="phone" type="tel" autocomplete="tel" required>
+                  </div>
+                </div>
+
+                <div class="contacts-form__field contacts-form__field--full">
+                  <textarea class="contacts-form__control contacts-form__control--message"
+                    placeholder="ВАШЕ СООБЩЕНИЕ *" id="contact-message" name="message" rows="3" required></textarea>
+                </div>
+              </div>
+
+              <p class="contacts-form__policy">
+                Нобелл будет использовать ваши персональные данные для обработки вашего запроса. Для получения
+                дополнительной
+                информации, пожалуйста, <br> ознакомьтесь с нашей <a class="contacts-form__policy-link"
+                  href="#">политикой конфиденциальности</a>.
+              </p>
+
+              <button class="contacts-form__submit" type="submit">Отправить заявку</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <picture>
+          <source srcset="assets/images/map-desk.webp" media="(min-width: 768px)">
+          <img src="assets/images/map-mob.webp" alt="Описание">
+        </picture>
+      </section>
+
+      <section class="inform-section">
+        <div class="container">
+          <div class="inform">
+            <h3>Мы всегда к вашим услугам по любому вопросу:</h3>
+            <a href="mailto:support@nobell.com">
+              <img src="assets/images/email.svg" alt="">
+              support@nobell.com
+            </a>
+            <p>The Gate, Level 14, Dubai International Financial Centre (DIFC), P.O. Box 74777, Dubai, UAE</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="#" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="#" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="#" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="#" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn js-popup-open">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <img src="assets/images/f1.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+                    <img src="assets/images/f2.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <img src="assets/images/f3.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <img src="assets/images/f4.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516"
+                        stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА
+                                ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE LIVING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ
+                                МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE SHOPPING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a>
+                        </li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО
+                                ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+            </div>
+            <div class="nav__form">
+                <form action="#">
+                    <input type="text" placeholder="ПОИСК">
+                    <button type="submit">
+                        <img src="assets/images/search.svg" alt="">
+                    </button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#">
+                    <img src="assets/images/popup.svg" alt="">
+                    Подать заявку
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>
