@@ -1,0 +1,127 @@
+/* Safari <14.1 flex gap fallback — replaces gap with margin */
+
+/* Navigation */
+.nav__form > * + * { margin-top: 28px; }
+.nav__form form > * + * { margin-top: 16px; }
+.nav__menu-btn > * + *, .nav__submenu-link > * + * { margin-left: 14px; }
+.nav__back > * + * { margin-left: 8px; }
+
+/* Footer */
+.footer__columns > * + * { margin-top: 32px; }
+.footer__bottom > * + * { margin-left: 10px; }
+.footer__social > * + * { margin-left: 12px; }
+.footer__legal > * + * { margin-left: 12px; }
+
+/* Services */
+.services__contacts > * + * { margin-top: 12px; }
+.services__soc > * + * { margin-left: 10px; }
+.services__img-col > * + *, .services__img-row > * + * { margin-top: 10px; }
+.services__text > * + * { margin-top: 36px; }
+
+/* Info section */
+.info-section .info > * + * { margin-top: 48px; }
+.info-item > * + * { margin-top: 33px; }
+.info-item__content > * + * { margin-top: 28px; }
+.section-head > * + * { margin-top: 14px; }
+
+/* News swiper */
+.news-swiper-section .news-tile-overlay > * + * { margin-top: 12px; }
+.news-swiper-section .news-block-grid-4 > * + * { margin-top: 10px; }
+.news-swiper-section .news-block-grid-2 > * + * { margin-top: 10px; }
+
+/* Slider */
+.slider-line__wrap > * + * { margin-left: 10px; }
+
+/* Popup */
+.popup__body a > * + * { margin-left: 16px; }
+
+/* Mobile section */
+.mob-section__description > * + * { margin-top: 14px; }
+
+/* Contacts */
+.contacts-form__grid > * + * { margin-top: 10px; }
+
+/* Inform */
+.inform > * + * { margin-top: 40px; }
+.inform a > * + * { margin-left: 7px; }
+
+/* Recommendation */
+.card-section__head > * + * { margin-top: 10px; }
+.card-section__link > * + * { margin-left: 7px; }
+.rec-slider__nav > * + * { margin-left: 11px; }
+.rec-slider__pagination > * + * { margin-left: 16px; }
+
+/* Breadcrumbs */
+.breadcrumbs > * + * { margin-left: 8px; }
+
+/* Desktop overrides */
+@media (min-width: 768px) {
+  .footer__columns > * + * { margin-top: 0; margin-left: 22px; }
+  .footer__bottom > * + * { margin-left: 30px; }
+  .footer__social > * + * { margin-left: 20px; }
+
+  .info-section .info > * + * { margin-top: 80px; }
+  .info-item > * + * { margin-top: 0; margin-left: 102px; }
+  .info-item__content > * + * { margin-top: 24px; }
+
+  .section-head > * + * { margin-top: 42px; }
+  .slider-section .section-head > * + * { margin-top: 20px; }
+
+  .news-swiper-section .news-block-grid-4 > * + * { margin-top: 0; margin-left: 16px; }
+  .news-swiper-section .news-block-grid-2 > * + * { margin-top: 0; margin-left: 16px; }
+
+  .slider-line__wrap > * + * { margin-left: 42px; }
+
+  .inform > * + * { margin-top: 60px; }
+  .card-section__link > * + * { margin-left: 16px; }
+  .rec-slider__nav > * + * { margin-left: 40px; }
+  .rec-slider__pagination > * + * { margin-left: 18px; }
+
+  /* Services img row — horizontal layout */
+  .services__img-row { flex-direction: row; }
+  .services__img-row > * + * { margin-top: 0; margin-left: 10px; }
+}
+
+@media (min-width: 1200px) {
+  .info-section .info > * + * { margin-top: 160px; }
+  .slider-section .section-head > * + * { margin-top: 12px; }
+}
+
+/* Flex gap support detection — browsers WITH gap support ignore the margins */
+@supports (gap: 1px) {
+  .nav__form > * + *,
+  .nav__form form > * + *,
+  .nav__menu-btn > * + *,
+  .nav__submenu-link > * + *,
+  .nav__back > * + *,
+  .footer__columns > * + *,
+  .footer__bottom > * + *,
+  .footer__social > * + *,
+  .footer__legal > * + *,
+  .services__contacts > * + *,
+  .services__soc > * + *,
+  .services__img-col > * + *,
+  .services__img-row > * + *,
+  .services__text > * + *,
+  .info-section .info > * + *,
+  .info-item > * + *,
+  .info-item__content > * + *,
+  .section-head > * + *,
+  .news-swiper-section .news-tile-overlay > * + *,
+  .news-swiper-section .news-block-grid-4 > * + *,
+  .news-swiper-section .news-block-grid-2 > * + *,
+  .slider-line__wrap > * + *,
+  .popup__body a > * + *,
+  .mob-section__description > * + *,
+  .contacts-form__grid > * + *,
+  .inform > * + *,
+  .inform a > * + *,
+  .card-section__head > * + *,
+  .card-section__link > * + *,
+  .rec-slider__nav > * + *,
+  .rec-slider__pagination > * + *,
+  .breadcrumbs > * + *,
+  .slider-section .section-head > * + * {
+    margin: 0;
+  }
+}
