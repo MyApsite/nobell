@@ -1,3 +1,6 @@
+/* Custom spacing fixes */
+.card-section__head .card-section__text { margin-top: 28px; }
+
 /* Safari <14.1 flex gap fallback — replaces gap with margin */
 
 /* Navigation */
