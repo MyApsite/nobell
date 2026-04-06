@@ -1,9 +1,11 @@
-# fonts declaration
+# MIME types
 AddType x-font/otf .otf
 AddType x-font/ttf .ttf
 AddType x-font/eot .eot
 AddType x-font/woff .woff
 AddType image/x-icon .ico
+AddType image/webp .webp
+AddType video/mp4 .mp4
 # compress text, html, javascript, css, xml:
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
@@ -19,7 +21,7 @@ AddType image/x-icon .ico
 </IfModule>
 #Browser cache
 <IfModule mod_expires.c>
-    <FilesMatch "\.(jpe?g|png|gif|js|css|ttf|svg|woff?2)$">
+    <FilesMatch "\.(jpe?g|png|gif|webp|js|css|ttf|svg|woff?2|mp4)$">
         ExpiresActive On
         ExpiresDefault "access plus 7 days"
     </FilesMatch>
