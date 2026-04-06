@@ -428,75 +428,79 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var swiperSlider = function () {
-  var accountantInit = new Swiper('.js-card-slider', {
-    slidesPerView: 1.285,
-    spaceBetween: 10,
-    // loop: true,
-    freeMode: true,
-    // speed: 10000,
-    simulateTouch: true,
-    allowTouchMove: true,
-    // autoplay: {
-    //   delay: 0,
-    //   disableOnInteraction: false,
-    // },
+  var accountantInit, newsSwiper, recSlider;
 
-    mousewheel: {
-      forceToAxis: true,
-      sensitivity: 1
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 3
+  if (document.querySelector('.js-card-slider')) {
+    accountantInit = new Swiper('.js-card-slider', {
+      slidesPerView: 1.285,
+      spaceBetween: 10,
+      freeMode: true,
+      simulateTouch: true,
+      allowTouchMove: true,
+      mousewheel: {
+        forceToAxis: true,
+        sensitivity: 1
       },
-      1024: {
-        spaceBetween: 20
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        },
+        1024: {
+          spaceBetween: 20
+        },
+        1440: {
+          slidesPerView: 2.9,
+          spaceBetween: 40
+        }
+      }
+    });
+  }
+
+  if (document.querySelector('.news-blocks-swiper')) {
+    newsSwiper = new Swiper('.news-blocks-swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      speed: 6000,
+      freeMode: true,
+      freeModeMomentum: false,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false
       },
-      1440: {
-        slidesPerView: 2.9,
-        spaceBetween: 40
+      allowTouchMove: true,
+      grabCursor: true,
+      breakpoints: {
+        1024: {
+          spaceBetween: 16
+        }
       }
-    }
-  });
-  var newsSwiper = new Swiper('.news-blocks-swiper', {
-    loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    speed: 6000,
-    freeMode: true,
-    freeModeMomentum: false,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: false
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-    breakpoints: {
-      1024: {
-        spaceBetween: 16
+    });
+  }
+
+  if (document.querySelector('.js-rec-slider')) {
+    recSlider = new Swiper('.js-rec-slider', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      navigation: {
+        nextEl: '.js-next',
+        prevEl: '.js-prev'
+      },
+      pagination: {
+        el: '.js-pagination',
+        clickable: true
       }
-    }
-  });
-  var recSlider = new Swiper('.js-rec-slider', {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    speed: 800,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true
-    },
-    navigation: {
-      nextEl: '.js-next',
-      prevEl: '.js-prev'
-    },
-    pagination: {
-      el: '.js-pagination',
-      clickable: true
-    }
-  });
+    });
+  }
+
   var init = function init() {};
   return {
     init: init

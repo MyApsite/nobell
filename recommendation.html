@@ -44,7 +44,7 @@
       <section class="card-section card-section--slider">
         <div class="container">
           <div class="card-section__head">
-            <span class="card-section__date">Январь 28, 2026</span>
+            <span class="card-section__date" id="js-today-date">Январь 28, 2026</span>
             <h2 class="card-section__title">In the Spotlight</h2>
             <p class="card-section__text">Гид по отелям и яхтам</p>
           </div>
@@ -807,6 +807,14 @@ Rockwell Group и фирменный резидентский сервис бр�
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/vendor.min.js?v=2" defer></script>
   <script src="assets/js/app.js?v=2" defer></script>
+  <script>
+    (function(){
+      var months = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+      var d = new Date();
+      var el = document.getElementById('js-today-date');
+      if (el) el.textContent = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    })();
+  </script>
 </body>
 
 </html>

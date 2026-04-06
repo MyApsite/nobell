@@ -1,5 +1,5 @@
-/* Custom spacing fixes */
-.card-section__head .card-section__text { margin-top: 28px; }
+/* Custom spacing fixes — these are NOT reset by @supports because they use specific selectors, not > * + * */
+.card-section__head .card-section__text { margin-top: 18px; }
 
 /* Safari <14.1 flex gap fallback — replaces gap with margin */
 
