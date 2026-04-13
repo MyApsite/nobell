@@ -53,6 +53,9 @@ RewriteRule ^(.*)\.php$ / [R=301,L]
 
 RedirectMatch 404 /\.git
 
+# Block access to old-site folder
+RedirectMatch 403 ^/old-site(/.*)?$
+
 # ============================================
 # 7. Browser caching
 # ============================================
