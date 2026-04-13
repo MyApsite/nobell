@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Nobell</title>
-    <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
+  <title>Пример реализованного проекта — Nobell</title>
+  <meta name="description" content="Кейс Nobell — безупречное обслуживание, трансформированное в персонализированный стиль жизни. Реализованный проект премиального резидентского сервиса.">
+  <meta name="keywords" content="кейс, проект, резидентский сервис, Nobell, премиальный ЖК">
+  <link rel="canonical" href="https://nobell.com/example.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nobell.com/example.html">
+  <meta property="og:title" content="Пример реализованного проекта — Nobell">
+  <meta property="og:description" content="Кейс Nobell — безупречное обслуживание, трансформированное в персонализированный стиль жизни.">
+  <meta property="og:image" content="https://nobell.com/assets/images/video-poster.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Nobell">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Пример реализованного проекта — Nobell">
+  <meta name="twitter:description" content="Кейс Nobell — безупречное обслуживание, трансформированное в персонализированный стиль жизни.">
+  <meta name="twitter:image" content="https://nobell.com/assets/images/video-poster.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/images/e-mob.webp?v=2" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/e-desk.webp?v=2" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css?v=2">
-  <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=2">
-  <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=2">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css?v=13">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=13">
+  <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=13">
 </head>
 
 <body>
@@ -27,7 +45,7 @@
         <span>Услуги для УК</span>
       </div>
 
-      <button type="button" class="header__burger js-burger-open">
+      <button type="button" class="header__burger header__burger--fixed js-burger-open">
         <div class="header__burger-mob">
           <img src="assets/images/b-mob.svg?v=2" alt="Меню" title="Меню">
         </div>
@@ -78,7 +96,7 @@
                 <source srcset="assets/images/e-desk.webp?v=2" type="image/webp" media="(min-width: 768px)">
                 <source srcset="assets/images/e-mob.webp?v=2" type="image/webp">
                 <source srcset="assets/images/e-desk.jpg?v=2" media="(min-width: 768px)">
-                <img src="assets/images/e-mob.jpg?v=2" alt="Пример проекта Nobell" title="Пример проекта Nobell">
+                <img src="assets/images/e-mob.jpg?v=2" fetchpriority="high" decoding="async" alt="Пример проекта Nobell" title="Пример проекта Nobell">
               </picture>
               <p class="services__img-text">Девелопер: Капитал Групп, Заказчик: УК Имперский Дом, Название объекта:
                 Имперский Дом, Адрес Объекта: Москва, Якиманский Переулок 6, Средняя стоимость квартиры: Один миллиард
@@ -104,8 +122,8 @@
             </div>
             <div class="services__img">
               <div class="services__video">
-                <video id="video" playsinline poster="assets/images/video-poster.jpg?v=2">
-                  <source src="assets/video/Nobell_promo-opt.mp4?v=2" type="video/mp4">
+                <video id="video" playsinline poster="assets/images/video-poster.png">
+                  <source src="https://dev.nobell.com/wp-content/uploads/2026/02/Nobell_promo.mp4" type="video/mp4">
                 </video>
 
                 <button type="button" class="video-btn" aria-label="Play video">
@@ -524,8 +542,8 @@
     </div>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/vendor.min.js?v=2" defer></script>
-  <script src="assets/js/app.js?v=2" defer></script>
+  <script src="assets/js/vendor.min.js?v=13" defer></script>
+  <script src="assets/js/app.js?v=13" defer></script>
 </body>
 
 </html>

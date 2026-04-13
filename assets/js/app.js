@@ -457,26 +457,142 @@ var swiperSlider = function () {
   }
 
   if (document.querySelector('.news-blocks-swiper')) {
-    newsSwiper = new Swiper('.news-blocks-swiper', {
-      loop: true,
-      slidesPerView: 'auto',
-      spaceBetween: 10,
-      speed: 6000,
-      freeMode: true,
-      freeModeMomentum: false,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: false
-      },
-      allowTouchMove: true,
-      grabCursor: true,
-      breakpoints: {
-        1024: {
-          spaceBetween: 16
-        }
+    // CSS @keyframes marquee + drag (mouse + touch)
+    var newsWrap = document.querySelector('.news-blocks-swiper .swiper-wrapper');
+    if (newsWrap) {
+      var newsImgs = newsWrap.querySelectorAll('img[loading="lazy"]');
+      for (var ni = 0; ni < newsImgs.length; ni++) {
+        newsImgs[ni].setAttribute('loading', 'eager');
       }
-    });
+      newsWrap.innerHTML += newsWrap.innerHTML;
+      newsWrap.classList.add('news-marquee-active');
+
+      var NEWS_SPEED = 48; // px/sec
+      var newsHalf = 0;
+      var newsDur = 0;
+
+      var getCurrentX = function () {
+        var style = window.getComputedStyle(newsWrap);
+        var t = style.transform || style.webkitTransform;
+        if (!t || t === 'none') return 0;
+        var m3 = t.match(/matrix3d\(([^)]+)\)/);
+        if (m3) return parseFloat(m3[1].split(',')[12]) || 0;
+        var m2 = t.match(/matrix\(([^)]+)\)/);
+        if (m2) return parseFloat(m2[1].split(',')[4]) || 0;
+        return 0;
+      };
+
+      var setAnimationAt = function (offsetPx) {
+        // Нормализуем в диапазон [-newsHalf, 0]
+        offsetPx = offsetPx % newsHalf;
+        if (offsetPx > 0) offsetPx -= newsHalf;
+        // Прогресс в [0..1], от 0 (start) до 1 (-newsHalf)
+        var progress = -offsetPx / newsHalf;
+        var delay = -progress * newsDur;
+        // Жёсткий рестарт анимации с нужным delay
+        newsWrap.style.animation = 'none';
+        void newsWrap.offsetHeight;
+        newsWrap.style.transform = '';
+        newsWrap.style.animation = 'news-marquee ' + newsDur + 's linear infinite ' + delay + 's';
+        newsWrap.style.willChange = 'transform';
+      };
+
+      var startMarquee = function () {
+        newsHalf = newsWrap.scrollWidth / 2;
+        newsDur = newsHalf / NEWS_SPEED;
+        newsWrap.style.setProperty('--news-marquee-duration', newsDur + 's');
+        newsWrap.classList.add('news-marquee-running');
+      };
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(startMarquee);
+      });
+
+      // Пересчёт ширины при resize (без сброса позиции — просто обновляем duration)
+      var onResize = function () {
+        if (dragging) return;
+        var newHalf = newsWrap.scrollWidth / 2;
+        if (Math.abs(newHalf - newsHalf) > 1) {
+          newsHalf = newHalf;
+          newsDur = newsHalf / NEWS_SPEED;
+          newsWrap.style.setProperty('--news-marquee-duration', newsDur + 's');
+        }
+      };
+      window.addEventListener('resize', onResize);
+
+      // ===== Drag =====
+      var dragging = false;
+      var startPointerX = 0;
+      var startOffset = 0;
+      var currentOffset = 0;
+      var moved = false;
+
+      var onDown = function (e) {
+        dragging = true;
+        moved = false;
+        startPointerX = e.clientX;
+        startOffset = getCurrentX();
+        currentOffset = startOffset;
+        // Пауза анимации через inline animation:none + фиксация позиции
+        newsWrap.style.animation = 'none';
+        void newsWrap.offsetHeight;
+        newsWrap.style.transform = 'translate3d(' + startOffset + 'px, 0, 0)';
+        newsWrap.classList.add('news-marquee-dragging');
+        newsWrap.classList.remove('news-marquee-running');
+        if (e.pointerId !== undefined && newsWrap.setPointerCapture) {
+          try { newsWrap.setPointerCapture(e.pointerId); } catch (err) {}
+        }
+      };
+
+      var onMove = function (e) {
+        if (!dragging) return;
+        var delta = e.clientX - startPointerX;
+        if (Math.abs(delta) > 3) moved = true;
+        currentOffset = startOffset + delta;
+        // Бесшовный wrap
+        currentOffset = currentOffset % newsHalf;
+        if (currentOffset > 0) currentOffset -= newsHalf;
+        newsWrap.style.transform = 'translate3d(' + currentOffset + 'px, 0, 0)';
+      };
+
+      var onUp = function (e) {
+        if (!dragging) return;
+        dragging = false;
+        newsWrap.classList.remove('news-marquee-dragging');
+        setAnimationAt(currentOffset);
+        newsWrap.classList.add('news-marquee-running');
+        if (e && e.pointerId !== undefined && newsWrap.releasePointerCapture) {
+          try { newsWrap.releasePointerCapture(e.pointerId); } catch (err) {}
+        }
+      };
+
+      // Блокируем клики, если был drag (чтобы не кликалось по ссылкам при свайпе)
+      newsWrap.addEventListener('click', function (e) {
+        if (moved) {
+          e.preventDefault();
+          e.stopPropagation();
+          moved = false;
+        }
+      }, true);
+
+      if (window.PointerEvent) {
+        newsWrap.addEventListener('pointerdown', onDown);
+        newsWrap.addEventListener('pointermove', onMove);
+        newsWrap.addEventListener('pointerup', onUp);
+        newsWrap.addEventListener('pointercancel', onUp);
+      } else {
+        newsWrap.addEventListener('mousedown', onDown);
+        window.addEventListener('mousemove', onMove);
+        window.addEventListener('mouseup', onUp);
+        newsWrap.addEventListener('touchstart', function (e) {
+          if (e.touches[0]) onDown({ clientX: e.touches[0].clientX });
+        }, { passive: true });
+        newsWrap.addEventListener('touchmove', function (e) {
+          if (e.touches[0]) onMove({ clientX: e.touches[0].clientX });
+        }, { passive: true });
+        newsWrap.addEventListener('touchend', function () { onUp(); });
+      }
+    }
   }
 
   if (document.querySelector('.js-rec-slider')) {

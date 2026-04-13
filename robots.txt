@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /mobile/
+Disallow: /moscow/
+
+Sitemap: https://nobell.com/sitemap.xml

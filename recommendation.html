@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Nobell</title>
-    <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
+  <title>Витрина рекомендаций — Nobell</title>
+  <meta name="description" content="Рекомендации Nobell — курируемый гид по лучшим отелям, яхтам, автомобилям, часам и резиденциям для ценителей изысканного образа жизни.">
+  <meta name="keywords" content="рекомендации, luxury, отели, яхты, автомобили, часы, Nobell">
+  <link rel="canonical" href="https://nobell.com/recommendation.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nobell.com/recommendation.html">
+  <meta property="og:title" content="Витрина рекомендаций — Nobell">
+  <meta property="og:description" content="Курируемый гид по лучшим отелям, яхтам, автомобилям и часам для ценителей изысканного образа жизни.">
+  <meta property="og:image" content="https://nobell.com/assets/images/video-poster.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Nobell">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Витрина рекомендаций — Nobell">
+  <meta name="twitter:description" content="Курируемый гид по лучшим отелям, яхтам, автомобилям и часам.">
+  <meta name="twitter:image" content="https://nobell.com/assets/images/video-poster.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/modernlinePersonalUse.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/images/Rolls-Royce.webp?v=3" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/clock.webp?v=3" type="image/webp">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css?v=3">
-  <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=3">
-  <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=3">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css?v=13">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=13">
+  <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=13">
+  <style>.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
 </head>
 
 <body>
@@ -27,7 +50,7 @@
         <span>ВИТРИНА РЕКОМЕНДАЦИЙ</span>
       </div>
 
-      <button type="button" class="header__burger js-burger-open">
+      <button type="button" class="header__burger header__burger--fixed js-burger-open">
         <div class="header__burger-mob">
           <img src="assets/images/b-mob.svg?v=3" alt="Меню" title="Меню">
         </div>
@@ -43,6 +66,7 @@
 
 
     <main class="main">
+      <h1 class="visually-hidden">Витрина рекомендаций Nobell — эксклюзивные находки для ценителей</h1>
       <section class="card-section card-section--slider">
         <div class="container">
           <div class="card-section__head">
@@ -60,7 +84,7 @@
                       <div class="house-card__img">
                         <picture>
                           <source srcset="assets/images/Rolls-Royce.webp?v=3" type="image/webp">
-                          <img loading="lazy" src="assets/images/Rolls-Royce.jpg?v=3" alt="Rolls-Royce Spectre Semaphore" title="Rolls-Royce Spectre Semaphore">
+                          <img fetchpriority="high" decoding="async" src="assets/images/Rolls-Royce.jpg?v=3" alt="Rolls-Royce Spectre Semaphore" title="Rolls-Royce Spectre Semaphore">
                         </picture>
                       </div>
                       <div class="house-card__body">
@@ -80,7 +104,7 @@
                       <div class="house-card__img">
                         <picture>
                           <source srcset="assets/images/clock.webp?v=3" type="image/webp">
-                          <img loading="lazy" src="assets/images/clock.jpg?v=3" alt="Patek Philippe Aquanaut Luce — хронограф" title="Patek Philippe Aquanaut Luce — хронограф">
+                          <img decoding="async" src="assets/images/clock.jpg?v=3" alt="Patek Philippe Aquanaut Luce — хронограф" title="Patek Philippe Aquanaut Luce — хронограф">
                         </picture>
                       </div>
                       <div class="house-card__body">
@@ -807,8 +831,8 @@ Rockwell Group и фирменный резидентский сервис бр�
     </div>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/vendor.min.js?v=3" defer></script>
-  <script src="assets/js/app.js?v=3" defer></script>
+  <script src="assets/js/vendor.min.js?v=13" defer></script>
+  <script src="assets/js/app.js?v=13" defer></script>
   <script>
     (function(){
       var months = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
