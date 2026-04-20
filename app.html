@@ -17,18 +17,9 @@
     <meta name="description" content="Точность и надежность в выполнение любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за ваше комфортное проживание"/>
     <link rel="stylesheet" href="legacy/css/libs.min.css">
     <link rel="stylesheet" href="legacy/css/styles.css">
-    <!-- Изоляция двух jQuery: legacy (со slick) для старого слайдера и новый для бургер-меню -->
+    <!-- Legacy jQuery грузим первым, потом noConflict — чтобы window.$/jQuery освободить для нового -->
     <script src="legacy/js/lib.min.js"></script>
     <script>window.$legacy = jQuery.noConflict(true);</script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/vendor.min.js?v=13"></script>
-    <script src="assets/js/app.js?v=13"></script>
-    <script>
-        // custom.js запускаем в изолированной области, где $ и jQuery = legacy jQuery (у него есть slick)
-        fetch('legacy/js/custom.js').then(function(r){return r.text();}).then(function(code){
-            (new Function('$', 'jQuery', code))(window.$legacy, window.$legacy);
-        });
-    </script>
     <style>
         .trio_phone .tp_desc .phn.phn1 .phone {
             background-image: url(legacy/img/x100.png);
@@ -456,6 +447,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Новые скрипты — как на example.html: новый jQuery бандлится внутри vendor.min.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/vendor.min.js?v=13" defer></script>
+    <script src="assets/js/app.js?v=13" defer></script>
+    <!-- Legacy custom.js запускаем изолированно: $ и jQuery внутри = legacy jQuery со slick -->
+    <script>
+        fetch('legacy/js/custom.js').then(function(r){return r.text();}).then(function(code){
+            (new Function('$', 'jQuery', code))(window.$legacy, window.$legacy);
+        });
+    </script>
 
 </body>
 
