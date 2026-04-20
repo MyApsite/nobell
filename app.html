@@ -42,309 +42,37 @@
 <body>
     <div id="loaders"><span class="n1"></span><span class="n2"></span></div>
 
-    <!-- BEGIN login_form.php -->
-    <div id="btm_form" class="f_form">
-        <div class="mn_close"></div>
-        <div class="f_form_in">
-            <div class="ff_desc">
-                <div class="ff_desc_in">
-                    <div class="ff_logo ups">
-                        <a href="index.html">
-                            <img src="legacy/img/new_logos_menu.png" alt="">
-                        </a>
-                    </div>
-                    <div class="f_txt">
-                        <h5 id="f5" class="ups">мы будем рады предоставить Вам любую необходимую
-                        услугу, в любое удобное для Вас время. Для активации
-                        вашей сервисной программы введите логин и пароль,
-                        предоставленные в абонентском &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;договоре &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;оказания &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;услуг.
-                        </h5>
-                        <div id="tcrc"><img src="legacy/img/x.png" alt=""></div>
-                    </div>
-                    <div class="ff_form">
-                        <form action="#" method="post" class="rg_form">
-                            <div id="finp" class="ups rows">
-                                <input type="text" placeholder="Логин">
-                            </div>
-                            <div id="fpass" class="ups rows">
-                                <input type="password" placeholder="Пароль">
-                            </div>
-                            <div id="fbtn" class="ups clearfix rows rows_btn">
-                                <input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox">
-                                <label for="checkboxG1" class="css-label">Оставаться в системе</label>
-                                <a href="#" id="comein" class="comein">Войти</a>
-                            </div>
-                        </form>
-                    </div>
-                    <span class="bsck bsck_f_form"><img src="legacy/img/life.svg" alt=""></span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        $(document).ready(function () {
-            $('#comein').click(function(){
-                $('.ff_form input').addClass('notvalid');
-            });
-        });
-    </script>
-    <!-- END login_form.php -->
+    <!-- ============= НОВАЯ ШАПКА ============= -->
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <img src="assets/images/logo.svg?v=2" alt="Nobell — логотип" title="Nobell — логотип">
+        </a>
 
-    <!-- BEGIN member_form.php -->
-    <style>
-        .of_form .off_desc .off_desc_in .off_form form {
-            max-width: 536px;
-        }
-        .of_form .off_desc .off_desc_in .off_form form .rows .cols {
-            width: 250px;
-        }
-    </style>
-    <div class="nav_member nav_member01">
-        <div class="mn_close"></div>
-        <div class="of_form">
-            <div class="of_form_in">
-                <div class="off_desc">
-                    <div class="off_desc_in">
-                        <div class="off_logo">
-                            <a href="index.html">
-                                <img src="legacy/img/new_logos_menu.png" alt="">
-                            </a>
-                        </div>
-                        <div class="of_txt">
-                            <p style="width: 536px; margin-right: auto; margin-left: auto">Мы с гордостью приглашаем Вас стать участником закрытого клуба Нобелл.
-Для получения более детальной информации о процессе регистрации, а также
-списка эксклюзивных привилегий и услуг, обладателями которых Вы станете,
-получив статус клиента Нобелл, пожалуйста, заполните форму обратной связи.
-                            </p>
-                        </div>
-                        <div class="off_form">
-                            <form class="rg_form rg_form01" id="member_form">
-                                <div class="rows">
-                                    <div class="cols">
-                                        <select class="select" name="MRS">
-                                            <option>Господин</option>
-                                            <option>Госпожа</option>
-                                        </select>
-                                    </div>
-                                    <div class="cols">
-                                        <input type="text" name="NAME" class="req" placeholder="Имя">
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="cols">
-                                        <input type="text" name="LAST_NAME" class="req" placeholder="Фамилия">
-                                    </div>
-                                    <div class="cols">
-                                        <input type="text" name="PHONE" class="req" placeholder="Телефон">
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="cols">
-                                        <input type="text" name="EMAIL" class="req email" placeholder="Email">
-                                    </div>
-                                    <div class="cols">
-                                        <button class="comein">Отправить</button>
-                                    </div>
-                                </div>
-                                <p class="bsck"><img src="legacy/img/life.svg" alt=""></p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END member_form.php -->
-
-    <!-- BEGIN member_form2.php -->
-    <style>
-        .of_form .off_desc .off_desc_in .off_form form {
-            max-width: 524px;
-        }
-        .of_form .off_desc .off_desc_in .off_form form .rows .cols {
-            width: 246px;
-        }
-        .nav_new.open {
-            opacity: 1;
-            -webkit-transition: ease 0.5s;
-            -o-transition: ease 0.5s;
-            transition: ease 0.5s;
-            z-index: 999;
-        }
-        .nav_new {
-            margin: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
-            z-index: -1;
-            background: rgba(255,255,255,.94);
-            overflow-y: auto;
-            -webkit-transition: ease 0.3s;
-            -o-transition: ease 0.3s;
-            transition: ease 0.3s;
-        }
-        .nav_new .mn_close {
-            position: absolute;
-            top: 20px;
-            right: 46px;
-            width: 22px;
-            left: auto;
-            height: 22px;
-            cursor: pointer;
-            z-index: 9;
-        }
-        .mn_new {
-            position: absolute;
-            top: 20px;
-            left: 46px;
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-        }
-    </style>
-    <div class="nav_new nav_member02">
-        <div class="mn_close"></div>
-        <div class="of_form">
-            <div class="of_form_in">
-                <div class="off_desc">
-                    <div class="off_desc_in">
-                        <div class="off_logo">
-                            <a href="index.html">
-                                <img src="legacy/img/new_logos_menu.png" alt="">
-                            </a>
-                        </div>
-                        <div class="of_txt">
-                            <p style="width: 530px; margin-right: auto; margin-left: auto">Мы с гордостью предлагаем Вам стать частью семьи Нобелл. Для получения
-более детальной информации о наших возможностях, географии деятельности
-и уникальных конкурентных преимуществах партнерства с Нобелл, просьба
-заполнить данную форму регистрации участника девелоперской программы.
-                            </p>
-                        </div>
-                        <div class="off_form">
-                            <form class="rg_form rg_form02" id="member_form2">
-                                <div class="rows">
-                                    <div class="cols">
-                                        <select class="select" name="MRS">
-                                            <option>Господин</option>
-                                            <option>Госпожа</option>
-                                        </select>
-                                    </div>
-                                    <div class="cols">
-                                        <input type="text" name="NAME" class="req" placeholder="Фамилия">
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="cols">
-                                        <input type="text" name="COMPANY_NAME" class="req" placeholder="Название компании">
-                                    </div>
-                                    <div class="cols">
-                                        <input type="text" name="PHONE" class="req" placeholder="Телефон">
-                                    </div>
-                                </div>
-                                <div class="rows">
-                                    <div class="cols">
-                                        <input type="text" name="EMAIL" class="req email" placeholder="Email">
-                                    </div>
-                                    <div class="cols">
-                                        <button class="comein">Отправить</button>
-                                    </div>
-                                </div>
-                                <p class="bsck"><img src="legacy/img/life.svg" alt=""></p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END member_form2.php -->
-
-    <!-- BEGIN menu.php -->
-    <style>
-        .min li {
-            width: 30vw;
-        }
-    </style>
-    <div class="main_nav">
-        <div class="mn_close"></div>
-        <div class="mn_logo">
+        <div class="breadcrumbs">
             <a href="index.html">
-                <img src="legacy/img/new_logos_menu.png" alt="">
+                <img src="assets/images/home.svg?v=2" alt="Главная" title="Главная">
             </a>
+            <img src="assets/images/next.svg?v=2" alt="Далее" title="Далее">
+            <span>Приложение для резидентов</span>
         </div>
-        <ul class="nav_menu">
-            <li>
-                <a class="empty" href="index.html">Услуги</a>
-                <div class="cbp-hrsub cbp-hrsub_3">
-                    <div class="cbp-hrsub-inner">
-                        <ul class="min min3">
-                            <li><a href="#">Услуги для жильцов</a></li>
-                            <li><a href="#">Услуги для девелоперов</a></li>
-                            <li><a href="#">Услуги для партнеров</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a class="empty" href="#">Продукция</a>
-                <div class="cbp-hrsub cbp-hrsub_3">
-                    <div class="cbp-hrsub-inner">
-                        <ul class="min min3">
-                            <li><a href="#">Luxury home products</a></li>
-                            <li><a href="#">Exclusive bath products</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a class="empty" href="#">Нобелл</a>
-                <div class="cbp-hrsub">
-                    <div class="cbp-hrsub-inner">
-                        <ul class="min">
-                            <li><a href="index.html">Нобелл групп</a></li>
-                            <li><a href="#">Цель и миссия бренда</a></li>
-                            <li><a href="#">Нобелл групп "white paper"</a></li>
-                            <li><a href="#">Обслуживаемые резиденции</a></li>
-                            <li><a href="#" style="min-width: 314px;">Абонентский договор обслуживания</a></li>
-                            <li><a href="privacy.html">Политика конфиденциальности</a></li>
-                            <li><a href="#">Руководящий состав</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="app.html">Приложение</a>
-            </li>
-            <span class="crc"></span>
-        </ul>
-        <span class="bsck"><img src="legacy/img/life.svg" alt=""></span>
-    </div>
-    <!-- END menu.php -->
+
+        <button type="button" class="header__burger header__burger--fixed js-burger-open">
+            <div class="header__burger-mob">
+                <img src="assets/images/b-mob.svg?v=2" alt="Меню" title="Меню">
+            </div>
+            <div class="header__burger-desk">
+                <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="15" height="1" fill="#000000" />
+                    <rect y="6" width="23" height="1" fill="#000000" />
+                    <rect x="8" y="13" width="15" height="1" fill="#000000" />
+                </svg>
+            </div>
+        </button>
+    </header>
+    <!-- ============= /НОВАЯ ШАПКА ============= -->
 
     <div id="wrapper">
-        <!-- BEGIN header.php -->
-        <div id="header" class="header_main">
-            <div class="clearfix header_top">
-                <div class="ht_l">
-                    <div class="btn_nav">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="ht_r">
-                    <p class="text-center">КП для управления объектом:</p>
-                    <p class="text-center"><a href="tel:+74997044949">+7 (499) 704 49 49</a></p>
-                </div>
-                <div class="b_logo"><a href="index.html"><span class="logo"></span></a></div>
-            </div>
-        </div>
-        <!-- END header.php -->
 
         <div id="aplct" class="prl_bg2">
             <img src="legacy/img/16_1.jpg" alt="">
@@ -579,53 +307,149 @@
     </footer>
     <!-- ============= /НОВЫЙ ФУТЕР ============= -->
 
-    <div id="win_reg" class="win_popup hides">
-        <div class="win_popup_in">
-            <div class="wp_ttl">
-                <h3>Contact us</h3>
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516" stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/people.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">О НАС</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/flag.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/diamond.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/message.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/people.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">О НАС</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/flag.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">FINE LIVING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/diamond.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">FINE SHOPPING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/message.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a></li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="app.html" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
             </div>
-            <div class="clearfix wp_desc">
-                <div class="wp_dl">
-                    <h4>Portonovi kumbor 85340 herceg novi montenegro</h4>
-                    <div class="wp_phone">
-                        <p>Sales office <a href="tel:+38231355375">+382 31 355 375</a></p>
-                    </div>
-                    <div class="wp_mail">
-                        <p>For media enquiries, please email <a href="mailto:enquiries@portonovi.com">enquiries@portonovi.com</a></p>
-                    </div>
-                </div>
-                <div class="wp_dr">
-                    <h4>Enquiries</h4>
-                    <p>To request more information on Portonovi Montenegro, including Pricing, Floor Plans and Brochures, and to discover its range of attractive investment opportunities, please use the form below.</p>
-                    <form action="#" method="post" class="connect_us">
-                        <div class="clearfix rows">
-                            <span>First name *</span>
-                            <input type="text" name="firstName" required>
-                        </div>
-                        <div class="clearfix rows">
-                            <span>Last name *</span>
-                            <input type="text" name="lastName" required>
-                        </div>
-                        <div class="clearfix rows">
-                            <span>Email address *</span>
-                            <input type="text" class="email" name="email" required>
-                        </div>
-                        <div class="clearfix rows">
-                            <span>Phone number *</span>
-                            <input type="text" class="phone" name="phone" required>
-                        </div>
-                        <div class="clearfix rows">
-                            <span>Enquiry *</span>
-                            <input type="text" name="enquiry" required>
-                        </div>
-                        <div class="clearfix rows rows_btn">
-                            <button class="send">Submit</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="nav__form">
+                <form action="#">
+                    <input type="text" placeholder="ПОИСК">
+                    <button type="submit"><img src="assets/images/search.svg?v=2" alt="Поиск"></button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#">
+                    <img src="assets/images/popup.svg?v=2" alt="">
+                    Подать заявку
+                </a>
             </div>
         </div>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/vendor.min.js?v=13" defer></script>
+    <script src="assets/js/app.js?v=13" defer></script>
 </body>
 
 </html>
