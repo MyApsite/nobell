@@ -26,17 +26,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
     var video = document.getElementById('video');
     var button = document.querySelector('.video-btn');
     if (video && button) {
-      button.addEventListener('click', function () {
-        video.play().then(function () {
-          button.classList.add('hidden');
-        })["catch"](function (err) {
-          console.log('Video play error:', err);
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      var saveData = conn && conn.saveData;
+      var slowNet = conn && (conn.effectiveType === '2g' || conn.effectiveType === 'slow-2g' || conn.effectiveType === '3g');
+
+      if (prefersReducedMotion || saveData || slowNet) {
+        button.style.display = 'none';
+      } else {
+        var isDesktop = window.matchMedia('(min-width: 768px)').matches;
+        video.src = isDesktop
+          ? 'assets/video/Nobell_promo-480p.mp4'
+          : 'assets/video/Nobell_promo-360p.mp4';
+
+        button.addEventListener('click', function () {
+          video.play().then(function () {
+            button.classList.add('hidden');
+          })["catch"](function (err) {
+            console.log('Video play error:', err);
+          });
         });
-      });
-      video.addEventListener('click', function () {
-        video.pause();
-        button.classList.remove('hidden');
-      });
+        video.addEventListener('click', function () {
+          video.pause();
+          button.classList.remove('hidden');
+        });
+      }
     }
 
     //FAQ

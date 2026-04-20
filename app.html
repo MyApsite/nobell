@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="cmsmagazine" content="e9693fa3bee7e535eb6c84ab605a9292" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="legacy/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="legacy/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="legacy/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="legacy/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="legacy/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="legacy/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Приложение для резидентов — Nobell</title>
+    <meta name="description" content="Точность и надежность в выполнение любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за ваше комфортное проживание"/>
+    <link rel="stylesheet" href="legacy/css/libs.min.css">
+    <link rel="stylesheet" href="legacy/css/styles.css">
+    <script src="legacy/js/lib.min.js"></script>
+    <script src="legacy/js/custom.js"></script>
+    <style>
+        .trio_phone .tp_desc .phn.phn1 .phone {
+            background-image: url(legacy/img/x100.png);
+        }
+        .trio_phone .tp_desc .phn.phn2 .phone {
+            background-image: url(legacy/img/x200.png);
+        }
+        .trio_phone .tp_desc .phn.phn3 .phone {
+            background-image: url(legacy/img/x300.png);
+        }
+    </style>
+
+    <!-- НОВЫЙ футер: стили и шрифты -->
+    <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=13">
+    <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=13">
+</head>
+
+<body>
+    <div id="loaders"><span class="n1"></span><span class="n2"></span></div>
+
+    <!-- BEGIN login_form.php -->
+    <div id="btm_form" class="f_form">
+        <div class="mn_close"></div>
+        <div class="f_form_in">
+            <div class="ff_desc">
+                <div class="ff_desc_in">
+                    <div class="ff_logo ups">
+                        <a href="index.html">
+                            <img src="legacy/img/new_logos_menu.png" alt="">
+                        </a>
+                    </div>
+                    <div class="f_txt">
+                        <h5 id="f5" class="ups">мы будем рады предоставить Вам любую необходимую
+                        услугу, в любое удобное для Вас время. Для активации
+                        вашей сервисной программы введите логин и пароль,
+                        предоставленные в абонентском &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;договоре &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;оказания &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;услуг.
+                        </h5>
+                        <div id="tcrc"><img src="legacy/img/x.png" alt=""></div>
+                    </div>
+                    <div class="ff_form">
+                        <form action="#" method="post" class="rg_form">
+                            <div id="finp" class="ups rows">
+                                <input type="text" placeholder="Логин">
+                            </div>
+                            <div id="fpass" class="ups rows">
+                                <input type="password" placeholder="Пароль">
+                            </div>
+                            <div id="fbtn" class="ups clearfix rows rows_btn">
+                                <input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox">
+                                <label for="checkboxG1" class="css-label">Оставаться в системе</label>
+                                <a href="#" id="comein" class="comein">Войти</a>
+                            </div>
+                        </form>
+                    </div>
+                    <span class="bsck bsck_f_form"><img src="legacy/img/life.svg" alt=""></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#comein').click(function(){
+                $('.ff_form input').addClass('notvalid');
+            });
+        });
+    </script>
+    <!-- END login_form.php -->
+
+    <!-- BEGIN member_form.php -->
+    <style>
+        .of_form .off_desc .off_desc_in .off_form form {
+            max-width: 536px;
+        }
+        .of_form .off_desc .off_desc_in .off_form form .rows .cols {
+            width: 250px;
+        }
+    </style>
+    <div class="nav_member nav_member01">
+        <div class="mn_close"></div>
+        <div class="of_form">
+            <div class="of_form_in">
+                <div class="off_desc">
+                    <div class="off_desc_in">
+                        <div class="off_logo">
+                            <a href="index.html">
+                                <img src="legacy/img/new_logos_menu.png" alt="">
+                            </a>
+                        </div>
+                        <div class="of_txt">
+                            <p style="width: 536px; margin-right: auto; margin-left: auto">Мы с гордостью приглашаем Вас стать участником закрытого клуба Нобелл.
+Для получения более детальной информации о процессе регистрации, а также
+списка эксклюзивных привилегий и услуг, обладателями которых Вы станете,
+получив статус клиента Нобелл, пожалуйста, заполните форму обратной связи.
+                            </p>
+                        </div>
+                        <div class="off_form">
+                            <form class="rg_form rg_form01" id="member_form">
+                                <div class="rows">
+                                    <div class="cols">
+                                        <select class="select" name="MRS">
+                                            <option>Господин</option>
+                                            <option>Госпожа</option>
+                                        </select>
+                                    </div>
+                                    <div class="cols">
+                                        <input type="text" name="NAME" class="req" placeholder="Имя">
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <div class="cols">
+                                        <input type="text" name="LAST_NAME" class="req" placeholder="Фамилия">
+                                    </div>
+                                    <div class="cols">
+                                        <input type="text" name="PHONE" class="req" placeholder="Телефон">
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <div class="cols">
+                                        <input type="text" name="EMAIL" class="req email" placeholder="Email">
+                                    </div>
+                                    <div class="cols">
+                                        <button class="comein">Отправить</button>
+                                    </div>
+                                </div>
+                                <p class="bsck"><img src="legacy/img/life.svg" alt=""></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END member_form.php -->
+
+    <!-- BEGIN member_form2.php -->
+    <style>
+        .of_form .off_desc .off_desc_in .off_form form {
+            max-width: 524px;
+        }
+        .of_form .off_desc .off_desc_in .off_form form .rows .cols {
+            width: 246px;
+        }
+        .nav_new.open {
+            opacity: 1;
+            -webkit-transition: ease 0.5s;
+            -o-transition: ease 0.5s;
+            transition: ease 0.5s;
+            z-index: 999;
+        }
+        .nav_new {
+            margin: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+            background: rgba(255,255,255,.94);
+            overflow-y: auto;
+            -webkit-transition: ease 0.3s;
+            -o-transition: ease 0.3s;
+            transition: ease 0.3s;
+        }
+        .nav_new .mn_close {
+            position: absolute;
+            top: 20px;
+            right: 46px;
+            width: 22px;
+            left: auto;
+            height: 22px;
+            cursor: pointer;
+            z-index: 9;
+        }
+        .mn_new {
+            position: absolute;
+            top: 20px;
+            left: 46px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+        }
+    </style>
+    <div class="nav_new nav_member02">
+        <div class="mn_close"></div>
+        <div class="of_form">
+            <div class="of_form_in">
+                <div class="off_desc">
+                    <div class="off_desc_in">
+                        <div class="off_logo">
+                            <a href="index.html">
+                                <img src="legacy/img/new_logos_menu.png" alt="">
+                            </a>
+                        </div>
+                        <div class="of_txt">
+                            <p style="width: 530px; margin-right: auto; margin-left: auto">Мы с гордостью предлагаем Вам стать частью семьи Нобелл. Для получения
+более детальной информации о наших возможностях, географии деятельности
+и уникальных конкурентных преимуществах партнерства с Нобелл, просьба
+заполнить данную форму регистрации участника девелоперской программы.
+                            </p>
+                        </div>
+                        <div class="off_form">
+                            <form class="rg_form rg_form02" id="member_form2">
+                                <div class="rows">
+                                    <div class="cols">
+                                        <select class="select" name="MRS">
+                                            <option>Господин</option>
+                                            <option>Госпожа</option>
+                                        </select>
+                                    </div>
+                                    <div class="cols">
+                                        <input type="text" name="NAME" class="req" placeholder="Фамилия">
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <div class="cols">
+                                        <input type="text" name="COMPANY_NAME" class="req" placeholder="Название компании">
+                                    </div>
+                                    <div class="cols">
+                                        <input type="text" name="PHONE" class="req" placeholder="Телефон">
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <div class="cols">
+                                        <input type="text" name="EMAIL" class="req email" placeholder="Email">
+                                    </div>
+                                    <div class="cols">
+                                        <button class="comein">Отправить</button>
+                                    </div>
+                                </div>
+                                <p class="bsck"><img src="legacy/img/life.svg" alt=""></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END member_form2.php -->
+
+    <!-- BEGIN menu.php -->
+    <style>
+        .min li {
+            width: 30vw;
+        }
+    </style>
+    <div class="main_nav">
+        <div class="mn_close"></div>
+        <div class="mn_logo">
+            <a href="index.html">
+                <img src="legacy/img/new_logos_menu.png" alt="">
+            </a>
+        </div>
+        <ul class="nav_menu">
+            <li>
+                <a class="empty" href="index.html">Услуги</a>
+                <div class="cbp-hrsub cbp-hrsub_3">
+                    <div class="cbp-hrsub-inner">
+                        <ul class="min min3">
+                            <li><a href="#">Услуги для жильцов</a></li>
+                            <li><a href="#">Услуги для девелоперов</a></li>
+                            <li><a href="#">Услуги для партнеров</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="empty" href="#">Продукция</a>
+                <div class="cbp-hrsub cbp-hrsub_3">
+                    <div class="cbp-hrsub-inner">
+                        <ul class="min min3">
+                            <li><a href="#">Luxury home products</a></li>
+                            <li><a href="#">Exclusive bath products</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="empty" href="#">Нобелл</a>
+                <div class="cbp-hrsub">
+                    <div class="cbp-hrsub-inner">
+                        <ul class="min">
+                            <li><a href="index.html">Нобелл групп</a></li>
+                            <li><a href="#">Цель и миссия бренда</a></li>
+                            <li><a href="#">Нобелл групп "white paper"</a></li>
+                            <li><a href="#">Обслуживаемые резиденции</a></li>
+                            <li><a href="#" style="min-width: 314px;">Абонентский договор обслуживания</a></li>
+                            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                            <li><a href="#">Руководящий состав</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="app.html">Приложение</a>
+            </li>
+            <span class="crc"></span>
+        </ul>
+        <span class="bsck"><img src="legacy/img/life.svg" alt=""></span>
+    </div>
+    <!-- END menu.php -->
+
+    <div id="wrapper">
+        <!-- BEGIN header.php -->
+        <div id="header" class="header_main">
+            <div class="clearfix header_top">
+                <div class="ht_l">
+                    <div class="btn_nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="ht_r">
+                    <p class="text-center">КП для управления объектом:</p>
+                    <p class="text-center"><a href="tel:+74997044949">+7 (499) 704 49 49</a></p>
+                </div>
+                <div class="b_logo"><a href="index.html"><span class="logo"></span></a></div>
+            </div>
+        </div>
+        <!-- END header.php -->
+
+        <div id="aplct" class="prl_bg2">
+            <img src="legacy/img/16_1.jpg" alt="">
+        </div>
+        <div class="clearfix main_ideal main_ideal_apl" style="margin-bottom: -5px;">
+            <div class="mi_ttl mi_ttl_border" style="margin-top: 68px; border-color: #998f8a ">
+                <h1 id="sdin1_2" class="ops sdin ttl3643 color_gray">Управление жизнью в одно касание</h1>
+            </div>
+            <div id="mtdi" class="ops clearfix mi_ttl_desc" style="margin-bottom: 70px; margin-top: 20px;">
+                <p class="Gtxt1224C color_gray" style="text-align: center;">Точность и надежность, выполнение любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за Ваше комфортное<br>
+проживание – все это далеко не полный список преимуществ, которые окажутся в Ваших руках при использовании мобильного приложения «Nobell Mobile Butler».</p>
+            </div>
+            <div id="dayWithPremis" class="full-width-element premis-day">
+                <div id="dayWithPremisPhone" class="premis-day__phone">
+                    <div class="premis-day__phone-inner-wrap">
+                        <div class="premis-day__phone-inner premis-day__phone-inner--visible" style="background-image: url(legacy/img/screen_100.png);"> </div>
+                        <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_200.png);"></div>
+                        <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_300.png);"></div>
+                        <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_400.png);"></div>
+                    </div>
+                </div>
+                <div class="premis-day__block" data-phonescreen="legacy/img/43.jpg">
+                    <div class="pd1 premis-day__image premis-day__image--visible">
+                        <img alt="" src="legacy/img/43.jpg" class="premis-day__img--desktop" />
+                        <img alt="" src="legacy/img/20m.jpg" class="premis-day__img--mobile" />
+                    </div>
+                    <div class="premis-day__content premis-day__content--active">
+                        <div>
+                            <div class="premis-day__day-content">
+                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
+                                <h3>ЧИСТОТА И ПОРЯДОК<br>В ОДНО КАСАНИЕ</h3>
+                                <p style="text-align: justify; max-width: 280px">Для проведения дневной уборки резиденции отправьте
+нам запрос с указанием желаемого времени сервиса.
+Пожелания и комментарии к данному сервису вы сможете
+оставить, заполнив соответствующее текстовое поле:
+«Комментарии». Используя короткое текстовое смс, мы
+уведомим вас о завершении сервиса и готовности вашей
+резиденции. Мы искренне желаем &nbsp;вам &nbsp;прекрасного &nbsp;дня!</p>
+                                <span class="bsck"><span class="csh"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="premis-day__block" data-phonescreen="legacy/img/80.jpg">
+                    <div class="pd2 premis-day__image">
+                        <img alt="" class="premis-day__img--desktop" src="legacy/img/80.jpg" />
+                        <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
+                    </div>
+                    <div class="premis-day__content">
+                        <div>
+                            <div class="premis-day__day-content">
+                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
+                                <h3>ШЕДЕВРЫ ГАСТРОНОМИИ<br>В ОДНО КАСАНИЕ</h3>
+                                <p style="text-align: justify; max-width: 276px">Укажите желаемые блюда  и выберите время для начала трапезы. К вашим услугам предоставлено дневное  меню  (12:00-24:00) шести ресторанов,  а в позднее время (24:00-6:00) &nbsp;вы &nbsp;можете заказать блюда &nbsp;&nbsp;из &nbsp;&nbsp;ночного &nbsp;меню. «NOBELL LOUNGE» функционирует круглосуточно &nbsp;и мы будем рады предложить &nbsp;широкий &nbsp;выбор &nbsp;напитков, &nbsp;сигар и кальянов, &nbsp;а &nbsp;так &nbsp;же меню деликатесных закусок.</p>
+                                <span class="bsck"><span class="csh"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="premis-day__block" data-phonescreen="legacy/img/79.jpg">
+                    <div class="pd2 premis-day__image">
+                        <img alt="" class="premis-day__img--desktop" src="legacy/img/79.jpg" />
+                        <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
+                    </div>
+                    <div class="premis-day__content">
+                        <div>
+                            <div class="premis-day__day-content">
+                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
+                                <h3>ЛЮБОЕ ПОРУЧЕНИЕ<br>В ОДНО КАСАНИЕ</h3>
+                                <p style="text-align: justify; max-width: 242px">Служба батлеров двадцать четыре часа в сутки
+в вашем распоряжении. Укажите локацию и время
+встречи с батлером и сам тип вашего поручения.
+Опишите дополнительные пожелания и вопросы,
+касающиеся ваших поручений в текстовом поле:
+«Комментарии». Мы всегда будем рады оказать
+всестороннюю и оперативную помощь в решении
+любых &nbsp;&nbsp;поставленных &nbsp;&nbsp;вами &nbsp;задач &nbsp;и &nbsp;поручений.</p>
+                                <span class="bsck"><span class="csh"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="premis-day__block" data-phonescreen="legacy/img/42.jpg">
+                    <div class="pd2 premis-day__image">
+                        <img alt="" class="premis-day__img--desktop" src="legacy/img/42.jpg" />
+                        <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
+                    </div>
+                    <div class="premis-day__content">
+                        <div>
+                            <div class="premis-day__day-content">
+                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
+                                <h3>СВЯЗЬ С РЕСЕПШЕН<br>В ОДНО КАСАНИЕ</h3>
+                                <p style="text-align: justify; max-width: 242px">Служба ресепшн двадцать четыре часа в сутки  в вашем распоряжении. Опишите свои пожелания  и вопросы,  касающиеся  встречи  и  сопровождения ваших  гостей,  приёма  курьерской  доставки  или любые другие аспекты  в  соответствующем  поле: «Ваш   запрос».   Мы  всегда  будем   рады  оказать  всестороннюю  и  оперативную помощь в решении любых &nbsp;&nbsp;поставленых &nbsp;&nbsp;вами &nbsp;задач  &nbsp;&nbsp;и  &nbsp;&nbsp;поручений.</p>
+                                <span class="bsck"><span class="csh"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trio_phone">
+                <div class="tp_ttl">
+                    <h2 id="tpp1_2" class="ops">Максимальная свобода и непревзойденный<br>Комфорт в отправке бытовых поручений</h2>
+                </div>
+                <div class="tp_desc">
+                    <div class="phn1 phn">
+                        <div class="o_phone">
+                            <div class="phone"></div>
+                        </div>
+                        <div id="txt1" class="ops txt">Прямое общение
+                            <br>Со всеми службами
+                            <br>Посредством чата</div>
+                    </div>
+                    <div class="phn2 phn">
+                        <div class="o_phone">
+                            <div class="phone"></div>
+                        </div>
+                        <div id="txt2" class="ops txt">Передача изображений
+                            <br>И возможность
+                            <br>Двустороннего чата</div>
+                    </div>
+                    <div class="phn3 phn">
+                        <div class="o_phone">
+                            <div class="phone"></div>
+                        </div>
+                        <div id="txt3" class="ops txt">Удобный контроль
+                            <br>Над всеми режимами
+                            <br>Вашей резиденции</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container1266 clearfix main_ideal main_ideal_img" style="margin-top: 100px">
+                <div id="md10" class="mi_desc mia">
+                    <div class="mid_i">
+                        <div class="imid_bg bg_mac bg_mac_ipad">
+                            <img src="legacy/img/b200.png" alt="">
+                        </div>
+                        <div class="mid_txt">
+                            <div id="m1" class="mid_txt_in" style="margin-top: 30px;">
+                                <h3 id="ttl_txt1_1" class="ops color_gray Gttl2429" style="margin-bottom: 16px; margin-top: 90px;">УПРАВЛЯЙТЕ ВСЕМИ ДОСТУПНЫМИ СЕРВИСАМИ ПРЯМО С ЭКРАНА ДОМАШНЕГО ПЛАНШЕТА</h3>
+                                <p id="txt_txt1_1" class="ops txt_txt color_gray Gtxt1218C">Планшетное приложение «Nobell» раскрывает границы традиционного стиля жизни современных ЖК. Заказывайте Ваши любимые блюда с указанием любых гастрономических особенностей<br>
+приготовления, заказывайте уборку Вашей резиденции с указанием желаемых аспектов, бронируйте места на любые светские мероприятия, общайтесь напрямую<br>
+с операторами ресепшн, управляйте температурным режимом, освещением, шторами, телевизором и другими электроприборами.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tm1" class="trg" data-id="1"></div>
+                </div>
+                <div id="md20" class="mi_desc mia">
+                    <div class="mid_i mid_ir">
+                        <div class="imid_bg bg_mac">
+                            <img src="legacy/img/b100.png" alt="">
+                        </div>
+                        <div class="mid_txt">
+                            <div id="m2" class="mid_txt_in" style="margin-top: 0px; ">
+                                <h3 id="ttl_txt2_1" class="ops ttl_txt color_gray Gttl2429" style="margin-bottom: 16px; margin-top: 70px;">Доступ через любой браузер ко всем услугам и системам вашей резиденции  </h3>
+                                <p id="txt_txt2_1" class="ops txt_txt color_gray Gtxt1218C">Вы сможете с легкостью управлять всем спектром доступных сервисов и систем вашей резиденции из любой точки планеты.<br>
+Управляйте домашним температурным режимом, освещением, шторами, заказывайте приготовление ужина или<br>
+подготовку горячей ванны, ведь теперь для этого вам совсем нет необходимости находиться дома.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tm2" class="trg" data-id="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/wrapper-->
+
+    <!-- ============= НОВЫЙ ФУТЕР (заменяет старый footer.php) ============= -->
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="#" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="#" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="#" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="app.html" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <img src="assets/images/f1.svg?v=2" alt="WhatsApp" title="WhatsApp">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+                    <img src="assets/images/f2.svg?v=2" alt="Telegram" title="Telegram">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <img src="assets/images/f3.svg?v=2" alt="Instagram" title="Instagram">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <img src="assets/images/f4.svg?v=2" alt="Facebook" title="Facebook">
+                </a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+    <!-- ============= /НОВЫЙ ФУТЕР ============= -->
+
+    <div id="win_reg" class="win_popup hides">
+        <div class="win_popup_in">
+            <div class="wp_ttl">
+                <h3>Contact us</h3>
+            </div>
+            <div class="clearfix wp_desc">
+                <div class="wp_dl">
+                    <h4>Portonovi kumbor 85340 herceg novi montenegro</h4>
+                    <div class="wp_phone">
+                        <p>Sales office <a href="tel:+38231355375">+382 31 355 375</a></p>
+                    </div>
+                    <div class="wp_mail">
+                        <p>For media enquiries, please email <a href="mailto:enquiries@portonovi.com">enquiries@portonovi.com</a></p>
+                    </div>
+                </div>
+                <div class="wp_dr">
+                    <h4>Enquiries</h4>
+                    <p>To request more information on Portonovi Montenegro, including Pricing, Floor Plans and Brochures, and to discover its range of attractive investment opportunities, please use the form below.</p>
+                    <form action="#" method="post" class="connect_us">
+                        <div class="clearfix rows">
+                            <span>First name *</span>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="clearfix rows">
+                            <span>Last name *</span>
+                            <input type="text" name="lastName" required>
+                        </div>
+                        <div class="clearfix rows">
+                            <span>Email address *</span>
+                            <input type="text" class="email" name="email" required>
+                        </div>
+                        <div class="clearfix rows">
+                            <span>Phone number *</span>
+                            <input type="text" class="phone" name="phone" required>
+                        </div>
+                        <div class="clearfix rows">
+                            <span>Enquiry *</span>
+                            <input type="text" name="enquiry" required>
+                        </div>
+                        <div class="clearfix rows rows_btn">
+                            <button class="send">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
