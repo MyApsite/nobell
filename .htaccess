@@ -29,7 +29,9 @@ Redirect 301 /serviced-residences.php /example.html
 
 # ============================================
 # 4. Catch-all: any other .php → homepage
+#    (исключаем /old-site/ — там лежит копия старого PHP-сайта для просмотра)
 # ============================================
+RewriteCond %{REQUEST_URI} !^/old-site/
 RewriteRule ^(.*)\.php$ / [R=301,L]
 
 # ============================================
@@ -53,8 +55,7 @@ RewriteRule ^(.*)\.php$ / [R=301,L]
 
 RedirectMatch 404 /\.git
 
-# Block access to old-site folder
-RedirectMatch 403 ^/old-site(/.*)?$
+# /old-site/ — старый PHP-сайт (доступ открыт)
 
 # ============================================
 # 7. Browser caching
