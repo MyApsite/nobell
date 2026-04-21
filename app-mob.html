@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <!-- Редирект на десктопную версию для больших экранов (до загрузки CSS/JS) -->
@@ -22,16 +22,16 @@
     <meta name="theme-color" content="#ffffff">
     <title>Приложение для резидентов (моб.) — Nobell</title>
 
-    <!-- Legacy mobile CSS -->
+    <!-- Legacy mobile CSS (russian moscow variant) -->
     <link rel="stylesheet" href="legacy-mob/css/libs.min.css">
     <link rel="stylesheet" href="legacy-mob/css/animate.css">
     <link rel="stylesheet" href="legacy-mob/css/styles.css">
 
-    <!-- Legacy jQuery + noConflict, потом новый грузится без конфликта -->
+    <!-- Legacy jQuery + noConflict → window.$legacy -->
     <script src="legacy-mob/js/lib.min.js"></script>
     <script>window.$legacy = jQuery.noConflict(true);</script>
 
-    <!-- Новая CSS для новой шапки и футера -->
+    <!-- Новый сайт: CSS шапки/футера -->
     <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -80,37 +80,36 @@
                     </div>
                 </div>
                 <div class="ttl_apl bb bb_white">
-                    <h3 id="t2" class="ops Gttl1524U color_gray" style="margin-top: 0">A SYMBOL OF WHAT'S POSSIBLE WHEN CLASSIC<br>
-HOSPITALITY MEETS MODERN INNOVATION</h3>
-                    <div id="t3" class="ops brdh"></div>
-                    <div id="t4" class="ops txt Gtxt1118 color_gray">Unsurpassed comfort in managing everyday tasks, maximum<br>
-freedom of actions, accuracy and reliability in execution of any<br>
-requests or orders, time-saving and convenient in communication<br>
-with all lifestyle support services readily available. Just some of<br>
-advantages at your fingertips when using the Nobell App.</div>
+                    <h3 id="t2" class="ops Gttl1524U color_gray" style="margin-top: 0">NOBELL MOBILE BUTLER<br>
+ВАШ ПРОВОДНИК В МИР БЕЗУПРЕЧНОГО<br>
+СЕРВИСА И КОМФОРТА</h3>
+                    <div id="t3" class="ops brdh" style="margin-top: 60px;"></div>
+                    <div id="t4" class="ops txt Gtxt1118 color_gray">Комфорт в отправке поручений, точность выполнения задач,<br>
+экономия времени, простота в общении со всеми службами<br>
+обеспечения вашего комфортного проживание - это не полный<br>
+список преимуществ, которые окажутся в ваших руках при<br>
+использовании мобильного приложения «Nobell».</div>
                 </div>
             </div>
 
             <div class="b_phones">
                 <div class="slr_phones">
                     <div class="slr_phone_txt">
-                        <div class="spt active Gttl1524U color_gray" data-ip="0">DIRECT COMMUNICATION WITH ALL<br>
-DEPARTMENTS THROUGH CHAT</div>
-                        <div class="spt Gttl1524U color_gray" data-ip="1">MESSENGER STYLE CONVERSATIONS<br>
-TO ADDRESS ALL ENQUIRIES</div>
-                        <div class="spt Gttl1524U color_gray" data-ip="2">EASY ACCESS TO HEATING, COOLING AND<br>OTHER HOME MANAGEMENT FEATURES</div>
+                        <div class="spt active Gttl1524U color_gray" data-ip="0">Прямое общение Со всеми<br>службами Посредством чата</div>
+                        <div class="spt Gttl1524U color_gray" data-ip="1">Передача изображений И<br>возможность Двустороннего чата</div>
+                        <div class="spt Gttl1524U color_gray" data-ip="2">Удобный контроль Над<br>всеми режимами Вашей резиденции</div>
                     </div>
 
                     <div class="swiper-container slr_phone">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="mph"><img src="legacy-mob/img/page_20/220_2.png" alt=""></div>
+                                <div class="mph"><img src="legacy-mob/img/page_20/320_2.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="mph"><img src="legacy-mob/img/page_20/220_3.png" alt=""></div>
+                                <div class="mph"><img src="legacy-mob/img/page_20/320_3.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="mph"><img src="legacy-mob/img/page_20/220_4.png" alt=""></div>
+                                <div class="mph"><img src="legacy-mob/img/page_20/320_4.png" alt=""></div>
                             </div>
                         </div>
                         <div class="nav_slr_phone swiper-button-prev"></div>
@@ -123,29 +122,25 @@ TO ADDRESS ALL ENQUIRIES</div>
             <div class="b_phones2">
                 <div class="slr_phones2">
                     <div class="slr_phone_txt2">
-                        <div class="spt2 active Gttl1524U color_gray" data-ip2="0">HAVE YOUR RESIDENCE<br>
-CLEANED WITH ONE TOUCH</div>
-                        <div class="spt2 Gttl1524U color_gray" data-ip2="1">COMPLETE ALL ERRANDS<br>
-WITH ONE TOUCH</div>
-                        <div class="spt2 Gttl1524U color_gray" data-ip2="2">CONTACT RECEPTION<br>
-WITH ONE TOUCH</div>
-                        <div class="spt2 Gttl1524U color_gray" data-ip2="3">HAVE YOUR DINNER<br>
-SERVED WITH ONE TOUCH</div>
+                        <div class="spt2 active Gttl1524U color_gray" data-ip2="0">ЧИСТОТА И ПОРЯДОК<br>В ОДНО КАСАНИЕ</div>
+                        <div class="spt2 Gttl1524U color_gray" data-ip2="1">ЛЮБОЕ ПОРУЧЕНИЕ<br>В ОДНО КАСАНИЕ</div>
+                        <div class="spt2 Gttl1524U color_gray" data-ip2="2">СВЯЗЬ С РЕСЕПШЕН<br>В ОДНО КАСАНИЕ</div>
+                        <div class="spt2 Gttl1524U color_gray" data-ip2="3">ШЕДЕВРЫ ГАСТРОНОМИИ<br>В ОДНО КАСАНИЕ</div>
                     </div>
 
                     <div class="swiper-container slr_phone2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="mph2"><img src="legacy-mob/img/page_20/220_5.png" alt=""></div>
+                                <div class="mph2"><img src="legacy-mob/img/page_20/320_5.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="mph2"><img src="legacy-mob/img/page_20/220_6.png" alt=""></div>
+                                <div class="mph2"><img src="legacy-mob/img/page_20/320_6.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="mph2"><img src="legacy-mob/img/page_20/220_7.png" alt=""></div>
+                                <div class="mph2"><img src="legacy-mob/img/page_20/320_7.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="mph2"><img src="legacy-mob/img/page_20/220_8.png" alt=""></div>
+                                <div class="mph2"><img src="legacy-mob/img/page_20/320_8.png" alt=""></div>
                             </div>
                         </div>
                         <div class="nav_slr_phone2 swiper-button-prev2"></div>
@@ -157,32 +152,30 @@ SERVED WITH ONE TOUCH</div>
 
             <div class="b_phones_txt">
                 <div id="bb1" class="b_apl">
-                    <h3 id="t6" class="ops Gttl1524U color_gray">A TOTALY NEW AND INNOVATIVE<br>
-RESIDENTIAL EXPERIENCE</h3>
+                    <h3 id="t6" class="ops Gttl1524U color_gray">Управляйте всеми доступными<br>Сервисами с домашнего планшета</h3>
                     <div id="t7" class="ops brdh"></div>
-                    <div id="t8" class="ops txt Gtxt1118 color_gray">The tablet butler app goes beyond any traditional<br>
-residential experience. A full range of interactive services is<br>
-offered directly from your private tablet. Make concierge requests,<br>
-book and customise housekeeping service and customise your<br>
-dishes. With optional integrations, tablet butler provides<br>
-control of lights, temperature, curtains and TV.</div>
+                    <div id="t8" class="ops txt Gtxt1118 color_gray">Заказывайте любимые блюда с указанием<br>
+гастрономических особенностей приготовления,<br>
+заказывайте уборку вашей резиденции с указанием<br>
+желаемых аспектов, бронируйте билеты на светские<br>
+мероприятия, управляйте температурным режимом,<br>
+освещением и другими бытовыми элементами.</div>
                     <div id="ipad" class="mm_bg_over">
-                        <div class="mm_bg" style="background-image: url(legacy-mob/img/page_20/220_9.png)"></div>
+                        <div class="mm_bg" style="background-image: url(legacy-mob/img/page_20/320_9.png)"></div>
                         <div id="q1" class="trg" data-id="1"></div>
                     </div>
                 </div>
                 <div id="bb2" class="b_apl">
-                    <h3 id="t9" class="ops Gttl1524U color_gray">ACCESS VIA ANY BROWSER<br>
-TO ALL SERVICES AND SYSTEMS</h3>
+                    <h3 id="t9" class="ops Gttl1524U color_gray">Легкий доступ ко всем услугам<br>Через любой браузер</h3>
                     <div id="t10" class="ops brdh"></div>
-                    <div id="t11" class="ops txt Gtxt1118 color_gray">You can use multiple devices and get easy access to all<br>
-your residential services and systems via any browser, on any<br>
-device, without the need to download the APP. You can choose if<br>
-to connect from a PC, tablet or smartphone, so you can have<br>
-the access to room controls and all service requests,<br>
-even when you are away from home.</div>
+                    <div id="t11" class="ops txt Gtxt1118 color_gray">Управляйте всеми услугами и системами вашей<br>
+резиденции из любой точки планеты: настраивайте<br>
+желаемый температурный или световой режим,<br>
+заказывайте подачу ужина или подготовку горячей<br>
+ванны, ведь теперь для этого совсем нет<br>
+необходимости находиться дома.</div>
                     <div id="mac" class="mm_bg_over">
-                        <div class="mm_bg" style="background-image: url(legacy-mob/img/page_20/220_10.png)"></div>
+                        <div class="mm_bg" style="background-image: url(legacy-mob/img/page_20/320_10.png)"></div>
                         <div id="q2" class="trg" data-id="2"></div>
                     </div>
                 </div>
@@ -384,11 +377,11 @@ even when you are away from home.</div>
         </div>
     </div>
 
-    <!-- Новые скрипты (бургер/попап) -->
+    <!-- Новые скрипты — бургер и попап -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/vendor.min.js?v=13" defer></script>
     <script src="assets/js/app.js?v=13" defer></script>
-    <!-- Legacy custom.js — в изолированной области с legacy jQuery (со Swiper) -->
+    <!-- Legacy custom.js — изолированно с legacy jQuery (со swiper) -->
     <script>
         fetch('legacy-mob/js/custom.js').then(function(r){return r.text();}).then(function(code){
             (new Function('$', 'jQuery', code))(window.$legacy, window.$legacy);

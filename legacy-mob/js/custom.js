@@ -37,15 +37,15 @@ $(document).ready(function () {
 
     $('.service_l').click(function(event){
     	event.preventDefault();
-     	$('.in_home .gear').addClass('active');
-     	$('.lm_list').removeClass('active');
-     	$('#service_menu').addClass('active');
-     	$('.in_home .pt').text('Services');
-     	$('.pt').removeClass('active');
-     	$('.service_t').addClass('active');
-     	$('.in_home .gear').addClass('active');
-     	$('.in_home .closes').addClass('active');
-     }); 
+    	$('.in_home .gear').addClass('active');
+    	$('.lm_list').removeClass('active');
+    	$('#service_menu').addClass('active');
+    	$('.in_home .pt').text('Услуги');
+    	$('.pt').removeClass('active');
+    	$('.service_t').addClass('active');
+    	$('.in_home .gear').addClass('active');
+    	$('.in_home .closes').addClass('active');
+    });
 
     // $('.product_l').click(function(event){
     // 	event.preventDefault();
@@ -1092,12 +1092,9 @@ $(document).ready(function () {
 	$('#l86').waypoint(function() {
 		$('#l86').addClass('animated fadeInUp');
 	}, { offset: '100%' });
-	$('#l87').waypoint(function() {
-		$('#l87').addClass('animated fadeInUp');
-	}, { offset: '100%' });	
 	$('#lq').waypoint(function() {
 		$('#lq').addClass('animated fadeInUp');
-	}, { offset: '100%' });
+	}, { offset: '100%' }); 
 
 	function showScreen(){
 		// var spanT = $('.f_ttl_txt .t'),
@@ -1116,7 +1113,7 @@ $(document).ready(function () {
 
 		var tlT = new TimelineMax();
 		tlT
-		.to('.splash_screen', 3, {ease: Power1.easeInOut, y: -1050, delay: 2.5})
+		.to('.splash_screen', 3, {ease: Power1.easeInOut, y: -1050, delay: 3})
 		// .to(ff_logo, 1, {autoAlpha: 1, ease: Power1.easeInOut}, "-=0.8")
 		// .fromTo(spanT, 2.5, {y: -83, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease: Power1.easeInOut})
 		// .fromTo(spanB, 2.5, {y: 83, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease: Power1.easeInOut}, "-=2.5")
