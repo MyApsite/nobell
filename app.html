@@ -2,6 +2,13 @@
 <html>
 
 <head>
+    <!-- Редирект на мобильную версию для узких экранов (до загрузки CSS/JS) -->
+    <script>
+        if (window.matchMedia('(max-width: 767px)').matches) {
+            window.location.replace('app-mob.html');
+        }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="cmsmagazine" content="e9693fa3bee7e535eb6c84ab605a9292" />
     <meta name="viewport" content="width=device-width, initial-scale=1">

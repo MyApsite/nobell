@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Редирект на десктопную версию для больших экранов (до загрузки CSS/JS) -->
+    <script>
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            window.location.replace('app.html');
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="cmsmagazine" content="e9693fa3bee7e535eb6c84ab605a9292" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="legacy-mob/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="legacy-mob/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="legacy-mob/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="legacy-mob/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="legacy-mob/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="legacy-mob/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Приложение для резидентов (моб.) — Nobell</title>
+
+    <!-- Legacy mobile CSS -->
+    <link rel="stylesheet" href="legacy-mob/css/libs.min.css">
+    <link rel="stylesheet" href="legacy-mob/css/animate.css">
+    <link rel="stylesheet" href="legacy-mob/css/styles.css">
+
+    <!-- Legacy jQuery + noConflict, потом новый грузится без конфликта -->
+    <script src="legacy-mob/js/lib.min.js"></script>
+    <script>window.$legacy = jQuery.noConflict(true);</script>
+
+    <!-- Новая CSS для новой шапки и футера -->
+    <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=13">
+    <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=13">
+</head>
+
+<body>
+    <div id="loaders"><span class="n1"></span><span class="n2"></span></div>
+
+    <!-- ============= НОВАЯ ШАПКА ============= -->
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <img src="assets/images/logo.svg?v=2" alt="Nobell — логотип" title="Nobell — логотип">
+        </a>
+
+        <div class="breadcrumbs">
+            <a href="index.html">
+                <img src="assets/images/home.svg?v=2" alt="Главная" title="Главная">
+            </a>
+            <img src="assets/images/next.svg?v=2" alt="Далее" title="Далее">
+            <span>Приложение для резидентов</span>
+        </div>
+
+        <button type="button" class="header__burger header__burger--fixed js-burger-open">
+            <div class="header__burger-mob">
+                <img src="assets/images/b-mob.svg?v=2" alt="Меню" title="Меню">
+            </div>
+            <div class="header__burger-desk">
+                <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="15" height="1" fill="#000000" />
+                    <rect y="6" width="23" height="1" fill="#000000" />
+                    <rect x="8" y="13" width="15" height="1" fill="#000000" />
+                </svg>
+            </div>
+        </button>
+    </header>
+    <!-- ============= /НОВАЯ ШАПКА ============= -->
+
+    <div class="wrapper_all">
+        <div id="wrapper">
+            <div id="apl" class="mi_in_pages">
+                <div class="bb bb_top bb_white" style="padding-top: 75px">
+                    <div class="mm_bg_over_top1 mbot">
+                        <img src="legacy-mob/img/page_20/20_1.png" alt="">
+                    </div>
+                </div>
+                <div class="ttl_apl bb bb_white">
+                    <h3 id="t2" class="ops Gttl1524U color_gray" style="margin-top: 0">A SYMBOL OF WHAT'S POSSIBLE WHEN CLASSIC<br>
+HOSPITALITY MEETS MODERN INNOVATION</h3>
+                    <div id="t3" class="ops brdh"></div>
+                    <div id="t4" class="ops txt Gtxt1118 color_gray">Unsurpassed comfort in managing everyday tasks, maximum<br>
+freedom of actions, accuracy and reliability in execution of any<br>
+requests or orders, time-saving and convenient in communication<br>
+with all lifestyle support services readily available. Just some of<br>
+advantages at your fingertips when using the Nobell App.</div>
+                </div>
+            </div>
+
+            <div class="b_phones">
+                <div class="slr_phones">
+                    <div class="slr_phone_txt">
+                        <div class="spt active Gttl1524U color_gray" data-ip="0">DIRECT COMMUNICATION WITH ALL<br>
+DEPARTMENTS THROUGH CHAT</div>
+                        <div class="spt Gttl1524U color_gray" data-ip="1">MESSENGER STYLE CONVERSATIONS<br>
+TO ADDRESS ALL ENQUIRIES</div>
+                        <div class="spt Gttl1524U color_gray" data-ip="2">EASY ACCESS TO HEATING, COOLING AND<br>OTHER HOME MANAGEMENT FEATURES</div>
+                    </div>
+
+                    <div class="swiper-container slr_phone">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="mph"><img src="legacy-mob/img/page_20/220_2.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mph"><img src="legacy-mob/img/page_20/220_3.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mph"><img src="legacy-mob/img/page_20/220_4.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="nav_slr_phone swiper-button-prev"></div>
+                        <div class="nav_slr_phone swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b_phones2">
+                <div class="slr_phones2">
+                    <div class="slr_phone_txt2">
+                        <div class="spt2 active Gttl1524U color_gray" data-ip2="0">HAVE YOUR RESIDENCE<br>
+CLEANED WITH ONE TOUCH</div>
+                        <div class="spt2 Gttl1524U color_gray" data-ip2="1">COMPLETE ALL ERRANDS<br>
+WITH ONE TOUCH</div>
+                        <div class="spt2 Gttl1524U color_gray" data-ip2="2">CONTACT RECEPTION<br>
+WITH ONE TOUCH</div>
+                        <div class="spt2 Gttl1524U color_gray" data-ip2="3">HAVE YOUR DINNER<br>
+SERVED WITH ONE TOUCH</div>
+                    </div>
+
+                    <div class="swiper-container slr_phone2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="mph2"><img src="legacy-mob/img/page_20/220_5.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mph2"><img src="legacy-mob/img/page_20/220_6.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mph2"><img src="legacy-mob/img/page_20/220_7.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mph2"><img src="legacy-mob/img/page_20/220_8.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="nav_slr_phone2 swiper-button-prev2"></div>
+                        <div class="nav_slr_phone2 swiper-button-next2"></div>
+                        <div class="swiper-pagination2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b_phones_txt">
+                <div id="bb1" class="b_apl">
+                    <h3 id="t6" class="ops Gttl1524U color_gray">A TOTALY NEW AND INNOVATIVE<br>
+RESIDENTIAL EXPERIENCE</h3>
+                    <div id="t7" class="ops brdh"></div>
+                    <div id="t8" class="ops txt Gtxt1118 color_gray">The tablet butler app goes beyond any traditional<br>
+residential experience. A full range of interactive services is<br>
+offered directly from your private tablet. Make concierge requests,<br>
+book and customise housekeeping service and customise your<br>
+dishes. With optional integrations, tablet butler provides<br>
+control of lights, temperature, curtains and TV.</div>
+                    <div id="ipad" class="mm_bg_over">
+                        <div class="mm_bg" style="background-image: url(legacy-mob/img/page_20/220_9.png)"></div>
+                        <div id="q1" class="trg" data-id="1"></div>
+                    </div>
+                </div>
+                <div id="bb2" class="b_apl">
+                    <h3 id="t9" class="ops Gttl1524U color_gray">ACCESS VIA ANY BROWSER<br>
+TO ALL SERVICES AND SYSTEMS</h3>
+                    <div id="t10" class="ops brdh"></div>
+                    <div id="t11" class="ops txt Gtxt1118 color_gray">You can use multiple devices and get easy access to all<br>
+your residential services and systems via any browser, on any<br>
+device, without the need to download the APP. You can choose if<br>
+to connect from a PC, tablet or smartphone, so you can have<br>
+the access to room controls and all service requests,<br>
+even when you are away from home.</div>
+                    <div id="mac" class="mm_bg_over">
+                        <div class="mm_bg" style="background-image: url(legacy-mob/img/page_20/220_10.png)"></div>
+                        <div id="q2" class="trg" data-id="2"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!--wrapper-->
+    </div>
+
+    <!-- ============= НОВЫЙ ФУТЕР ============= -->
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="#" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="#" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="#" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="app.html" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn js-popup-open">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram"><img src="assets/images/f1.svg?v=2" alt=""></a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)"><img src="assets/images/f2.svg?v=2" alt=""></a>
+                <a href="#" class="footer__social-link" aria-label="Facebook"><img src="assets/images/f3.svg?v=2" alt=""></a>
+                <a href="#" class="footer__social-link" aria-label="YouTube"><img src="assets/images/f4.svg?v=2" alt=""></a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+    <!-- ============= /НОВЫЙ ФУТЕР ============= -->
+
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516" stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/people.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">О НАС</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/flag.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/diamond.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/message.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/people.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">О НАС</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/flag.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">FINE LIVING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/diamond.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">FINE SHOPPING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/message.svg?v=2" alt=""></span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a></li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="app.html" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+            </div>
+            <div class="nav__form">
+                <form action="#">
+                    <input type="text" placeholder="ПОИСК">
+                    <button type="submit"><img src="assets/images/search.svg?v=2" alt="Поиск"></button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#">
+                    <img src="assets/images/popup.svg?v=2" alt="">
+                    Подать заявку
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Новые скрипты (бургер/попап) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/vendor.min.js?v=13" defer></script>
+    <script src="assets/js/app.js?v=13" defer></script>
+    <!-- Legacy custom.js — в изолированной области с legacy jQuery (со Swiper) -->
+    <script>
+        fetch('legacy-mob/js/custom.js').then(function(r){return r.text();}).then(function(code){
+            (new Function('$', 'jQuery', code))(window.$legacy, window.$legacy);
+        });
+    </script>
+</body>
+
+</html>
