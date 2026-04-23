@@ -27,14 +27,8 @@
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=13">
   <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=13">
 
-  <!-- Legacy CSS — нужно для скролл-слайдера в секции 2 (.premis-day*) -->
-  <link rel="stylesheet" href="legacy/css/styles.css">
   <!-- Стили именно этой страницы -->
-  <link rel="stylesheet" href="assets/css/pages/app.css?v=1">
-
-  <!-- Legacy jQuery + slick + GSAP для скролл-слайдера; noConflict, чтобы не конфликтовать с новым jQuery из vendor.min.js -->
-  <script src="legacy/js/lib.min.js"></script>
-  <script>window.$legacy = jQuery.noConflict(true);</script>
+  <link rel="stylesheet" href="assets/css/pages/app.css?v=2">
 </head>
 
 <body class="app-page">
@@ -89,85 +83,9 @@
         <p class="app-sub-heading__text">Управляйте всеми доступными сервисами прямо с экрана вашего смартфона</p>
       </section>
 
-      <!-- ============================================
-           Section 2 — скролл-слайдер (legacy #dayWithPremis)
-           Контент меняется при скролле: ЧИСТОТА → ГАСТРОНОМИЯ → ПОРУЧЕНИЕ → РЕСЕПШЕН
-           ============================================ -->
+      <!-- Section 2 (image 119 в Figma): y=1001, 1440×820 — статичная сцена 1:1 из дизайна -->
       <section class="app-middle">
-        <div id="dayWithPremis" class="full-width-element premis-day">
-          <div id="dayWithPremisPhone" class="premis-day__phone">
-            <div class="premis-day__phone-inner-wrap">
-              <div class="premis-day__phone-inner premis-day__phone-inner--visible" style="background-image: url(legacy/img/screen_100.png);"> </div>
-              <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_200.png);"></div>
-              <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_300.png);"></div>
-              <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_400.png);"></div>
-            </div>
-          </div>
-          <div class="premis-day__block" data-phonescreen="legacy/img/43.jpg">
-            <div class="pd1 premis-day__image premis-day__image--visible">
-              <img alt="" src="legacy/img/43.jpg" class="premis-day__img--desktop" />
-              <img alt="" src="legacy/img/20m.jpg" class="premis-day__img--mobile" />
-            </div>
-            <div class="premis-day__content premis-day__content--active">
-              <div>
-                <div class="premis-day__day-content">
-                  <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                  <h3>ЧИСТОТА И ПОРЯДОК<br>В ОДНО КАСАНИЕ</h3>
-                  <p style="text-align: justify; max-width: 280px">Для проведения дневной уборки резиденции отправьте нам запрос с указанием желаемого времени сервиса. Пожелания и комментарии к данному сервису вы сможете оставить, заполнив соответствующее текстовое поле: «Комментарии». Используя короткое текстовое смс, мы уведомим вас о завершении сервиса и готовности вашей резиденции. Мы искренне желаем &nbsp;вам &nbsp;прекрасного &nbsp;дня!</p>
-                  <span class="bsck"><span class="csh"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="premis-day__block" data-phonescreen="legacy/img/80.jpg">
-            <div class="pd2 premis-day__image">
-              <img alt="" class="premis-day__img--desktop" src="legacy/img/80.jpg" />
-              <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
-            </div>
-            <div class="premis-day__content">
-              <div>
-                <div class="premis-day__day-content">
-                  <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                  <h3>ШЕДЕВРЫ ГАСТРОНОМИИ<br>В ОДНО КАСАНИЕ</h3>
-                  <p style="text-align: justify; max-width: 276px">Укажите желаемые блюда и выберите время для начала трапезы. К вашим услугам предоставлено дневное меню (12:00-24:00) шести ресторанов, а в позднее время (24:00-6:00) &nbsp;вы &nbsp;можете заказать блюда &nbsp;&nbsp;из &nbsp;&nbsp;ночного &nbsp;меню. «NOBELL LOUNGE» функционирует круглосуточно &nbsp;и мы будем рады предложить &nbsp;широкий &nbsp;выбор &nbsp;напитков, &nbsp;сигар и кальянов, &nbsp;а &nbsp;так &nbsp;же меню деликатесных закусок.</p>
-                  <span class="bsck"><span class="csh"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="premis-day__block" data-phonescreen="legacy/img/79.jpg">
-            <div class="pd2 premis-day__image">
-              <img alt="" class="premis-day__img--desktop" src="legacy/img/79.jpg" />
-              <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
-            </div>
-            <div class="premis-day__content">
-              <div>
-                <div class="premis-day__day-content">
-                  <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                  <h3>ЛЮБОЕ ПОРУЧЕНИЕ<br>В ОДНО КАСАНИЕ</h3>
-                  <p style="text-align: justify; max-width: 242px">Служба батлеров двадцать четыре часа в сутки в вашем распоряжении. Укажите локацию и время встречи с батлером и сам тип вашего поручения. Опишите дополнительные пожелания и вопросы, касающиеся ваших поручений в текстовом поле: «Комментарии». Мы всегда будем рады оказать всестороннюю и оперативную помощь в решении любых &nbsp;&nbsp;поставленных &nbsp;&nbsp;вами &nbsp;задач &nbsp;и &nbsp;поручений.</p>
-                  <span class="bsck"><span class="csh"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="premis-day__block" data-phonescreen="legacy/img/42.jpg">
-            <div class="pd2 premis-day__image">
-              <img alt="" class="premis-day__img--desktop" src="legacy/img/42.jpg" />
-              <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
-            </div>
-            <div class="premis-day__content">
-              <div>
-                <div class="premis-day__day-content">
-                  <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                  <h3>СВЯЗЬ С РЕСЕПШЕН<br>В ОДНО КАСАНИЕ</h3>
-                  <p style="text-align: justify; max-width: 242px">Служба ресепшн двадцать четыре часа в сутки в вашем распоряжении. Опишите свои пожелания и вопросы, касающиеся встречи и сопровождения ваших гостей, приёма курьерской доставки или любые другие аспекты в соответствующем поле: «Ваш запрос». Мы всегда будем рады оказать всестороннюю и оперативную помощь в решении любых &nbsp;&nbsp;поставленных &nbsp;&nbsp;вами &nbsp;задач &nbsp;и &nbsp;поручений.</p>
-                  <span class="bsck"><span class="csh"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src="assets/images/app/scene-businessman.png" alt="Связь с ресепшен в одно касание" title="Связь с ресепшен в одно касание" loading="lazy">
       </section>
 
       <!-- ============================================
@@ -392,16 +310,9 @@
     </div>
   </div>
 
-  <!-- Новые скрипты: vendor.min.js содержит свой jQuery (изолирован от legacy через noConflict выше) -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/vendor.min.js?v=13" defer></script>
   <script src="assets/js/app.js?v=13" defer></script>
-  <!-- Legacy custom.js — в изолированной области, $/jQuery = $legacy (со slick и GSAP) -->
-  <script>
-    fetch('legacy/js/custom.js').then(function(r){return r.text();}).then(function(code){
-      (new Function('$', 'jQuery', code))(window.$legacy, window.$legacy);
-    });
-  </script>
 </body>
 
 </html>
