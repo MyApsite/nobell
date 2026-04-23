@@ -1,0 +1,150 @@
+/* app-new.html — стили для страницы "Приложение для резидентов"
+   Три секции: (1) интро + 5 телефонов, (2) старый скролл-слайдер, (3) 3 телефона + подпись
+*/
+
+.app-page {
+    background: #fff;
+    color: #212121;
+}
+
+/* ============================================
+   Section 1 — интро + ряд 5 телефонов
+   ============================================ */
+.app-top {
+    padding: 0 20px 60px;
+}
+
+.app-top__intro {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-left: 216px;
+}
+
+.app-top__title {
+    font-family: 'Playfair', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #212121;
+    margin: 0 0 16px;
+    line-height: 1.1;
+}
+
+.app-top__lead {
+    font-family: 'Playfair', serif;
+    font-style: italic;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.88px;
+    color: #212121;
+    max-width: 976px;
+    margin: 0;
+}
+
+.app-top__phones {
+    display: block;
+    width: 1110px;
+    max-width: 100%;
+    margin: 32px auto 0;
+}
+
+.app-top__phones img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.app-sub-heading {
+    max-width: 702px;
+    margin: 80px auto 0;
+    text-align: center;
+}
+
+.app-sub-heading__title {
+    font-family: 'Playfair', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #212121;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    line-height: 1.3;
+}
+
+.app-sub-heading__divider {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #212121;
+    margin: 0 auto 20px;
+    border: 0;
+}
+
+.app-sub-heading__text {
+    font-family: 'Futura', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #212121;
+    margin: 0;
+}
+
+/* ============================================
+   Section 2 — старый скролл-слайдер с меняющимся экраном телефона
+   (премис-day из legacy, стили уже есть в legacy/css/styles.css)
+   Тут только небольшая корректировка врапера
+   ============================================ */
+.app-middle {
+    margin-top: 60px;
+    position: relative;
+    background: #f4f1ec;
+}
+
+/* ============================================
+   Section 3 — ряд 3 телефонов + подпись
+   ============================================ */
+.app-bottom {
+    padding: 40px 20px 0;
+}
+
+.app-bottom__phones {
+    display: block;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.app-bottom__phones img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.app-signature {
+    text-align: center;
+    padding: 40px 20px;
+    opacity: 0.8;
+}
+
+.app-signature__text {
+    font-family: 'Antarctic', serif;
+    font-size: 68px;
+    font-weight: 400;
+    color: #212121;
+    letter-spacing: -3.4px;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* ============================================
+   Адаптив — уменьшаем кегли и отступы на маленьких экранах
+   (моб-версия отдельно в app-mob.html, тут только до 768)
+   ============================================ */
+@media (max-width: 1200px) {
+    .app-top__intro { padding-left: 120px; }
+    .app-signature__text { font-size: 48px; letter-spacing: -2px; }
+}
+
+@media (max-width: 900px) {
+    .app-top__intro { padding-left: 40px; }
+    .app-signature__text { font-size: 32px; letter-spacing: -1px; white-space: normal; }
+}
