@@ -115,85 +115,12 @@
 /* ============================================
    Section 2: скролл-слайдер (legacy #dayWithPremis)
    Figma: image 119 занимает 1440×820 на y=1001
-   Переопределяем позиционирование на position:sticky,
-   чтобы не было рывков на входе/выходе (JS-controlled fixed/absolute
-   приводил к дергам на первом и последнем слайде).
+   Минимальные фиксы поверх legacy CSS — чтобы не было рывков
+   при входе/выходе секции (position:absolute→fixed→bottom).
    ============================================ */
 .app-middle {
     margin-top: 60px; /* 1001 - 941 = 60 */
     position: relative;
-    overflow: visible;
-}
-
-.app-middle #dayWithPremis {
-    overflow: visible !important;
-    position: relative !important;
-    margin: 0 !important;
-}
-
-/* Каждый блок = 100vh, для sticky нужен relative parent */
-.app-middle .premis-day__block {
-    position: relative !important;
-    height: 100vh !important;
-    min-height: 100vh !important;
-}
-
-/* Фон блока — sticky вместо absolute/fixed; всегда закреплён пока блок в зоне видимости */
-.app-middle .premis-day__image,
-.app-middle .premis-day--fixed .premis-day__image,
-.app-middle .premis-day--bottom .premis-day__image {
-    position: sticky !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: auto !important;
-    bottom: auto !important;
-    width: 50% !important;
-    height: 100vh !important;
-    clip: auto !important;
-    overflow: hidden;
-}
-
-/* Картинка всегда видна, без скейл-анимаций — так не будет появляться «пустой» момент */
-.app-middle .premis-day__image img {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100% !important;
-    object-fit: cover;
-}
-
-/* Центральный телефон — sticky относительно #dayWithPremis,
-   держится по центру viewport всё время пока секция видна */
-.app-middle .premis-day__phone,
-.app-middle .premis-day--fixed .premis-day__phone,
-.app-middle .premis-day--bottom .premis-day__phone {
-    position: sticky !important;
-    top: 0 !important;
-    bottom: auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
-    width: 303px !important;
-    margin-top: -400vh !important; /* поднимаем на 4 блока вверх = поверх всех блоков */
-    z-index: 10;
-    background-position: center center !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.app-middle .premis-day__phone-inner-wrap {
-    position: relative !important;
-    width: 303px;
-    height: 641px;
-    left: auto !important;
-    top: auto !important;
 }
 
 /* ============================================
