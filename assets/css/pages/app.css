@@ -1,5 +1,5 @@
-/* app-new.html — стили для страницы "Приложение для резидентов"
-   Три секции: (1) интро + 5 телефонов, (2) старый скролл-слайдер, (3) 3 телефона + подпись
+/* app-new.html — строго по дизайну Figma (frame 3006:12408)
+   Все токены и позиции взяты 1:1 из Figma metadata/design_context.
 */
 
 .app-page {
@@ -7,68 +7,90 @@
     color: #212121;
 }
 
-/* ============================================
-   Section 1 — интро + ряд 5 телефонов
-   ============================================ */
-.app-top {
-    padding: 0 20px 60px;
-}
-
-.app-top__intro {
-    max-width: 1110px;
+/* Базовый контейнер страницы — 1440px как в Figma */
+.app-container {
+    max-width: 1440px;
     margin: 0 auto;
+    position: relative;
+}
+
+/* ============================================
+   Section 1: хедер + интро + ряд 5 телефонов + подзаголовок
+   Figma positions (y от верха страницы):
+     Header:            0-58
+     Intro (Frame 343): 62-141   pl-216, width 1192
+     Phones 5 (Frame 33): 216-796   x=165, width 1110
+     Sub-heading (Frame 210): 856-941   x=369, width 702
+   ============================================ */
+
+/* Интро: заголовок + курсив */
+.app-intro {
     padding-left: 216px;
+    width: 1192px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px; /* 62 - 58 (высота хедера) */
 }
 
-.app-top__title {
+.app-intro__title {
     font-family: 'Playfair', serif;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
     color: #212121;
-    margin: 0 0 16px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    text-transform: uppercase; /* textCase: UPPER из Figma */
+    margin: 0;
+    width: 976px;
+    max-width: 100%;
 }
 
-.app-top__lead {
+.app-intro__italic {
     font-family: 'Playfair', serif;
     font-style: italic;
     font-size: 11px;
     line-height: 18px;
     letter-spacing: 0.88px;
     color: #212121;
-    max-width: 976px;
-    margin: 0;
+    margin: 16px 0 0; /* gap между title и italic */
+    width: 976px;
+    max-width: 100%;
 }
 
-.app-top__phones {
-    display: block;
+/* Ряд 5 телефонов: точно 1110×580, центрирован */
+.app-phones-5 {
     width: 1110px;
     max-width: 100%;
-    margin: 32px auto 0;
+    height: 580px;
+    margin: 75px auto 0; /* 216 - 141 = 75 */
 }
 
-.app-top__phones img {
+.app-phones-5 img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* Подзаголовок «Максимальная свобода»: 702×85, центрированный */
 .app-sub-heading {
-    max-width: 702px;
-    margin: 80px auto 0;
+    width: 702px;
+    max-width: 100%;
+    height: 85px;
+    margin: 60px auto 0; /* 856 - 796 = 60 */
     text-align: center;
+    position: relative;
 }
 
 .app-sub-heading__title {
     font-family: 'Playfair', serif;
     font-size: 20px;
     font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
     color: #212121;
     text-transform: uppercase;
-    margin: 0 0 20px;
-    line-height: 1.3;
+    margin: 0;
 }
 
 .app-sub-heading__divider {
@@ -76,8 +98,8 @@
     width: 40px;
     height: 1px;
     background: #212121;
-    margin: 0 auto 20px;
     border: 0;
+    margin: 20px auto 0; /* title 27h + 20 gap = 47 (где vector) */
 }
 
 .app-sub-heading__text {
@@ -85,44 +107,52 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 1.3;
+    letter-spacing: 0;
     color: #212121;
-    margin: 0;
+    margin: 20px 0 0; /* vector 0h + 20 gap = 67 (где subtext) */
 }
 
 /* ============================================
-   Section 2 — старый скролл-слайдер с меняющимся экраном телефона
-   (премис-day из legacy, стили уже есть в legacy/css/styles.css)
-   Тут только небольшая корректировка врапера
+   Section 2: скролл-слайдер (legacy #dayWithPremis)
+   Figma: image 119 занимает 1440×820 на y=1001
+   Заменяем на старый слайдер с той же высотой-ориентиром
    ============================================ */
 .app-middle {
-    margin-top: 60px;
+    margin-top: 60px; /* 1001 - 941 = 60 */
     position: relative;
-    background: #f4f1ec;
 }
 
 /* ============================================
-   Section 3 — ряд 3 телефонов + подпись
+   Section 3: ряд 3 телефонов + "Эксперты Красивой Жизни"
+   Figma positions:
+     Image 117 (3 phones): y=1921, 1440×609
+     Frame 347 (container): y=2530, 1440×575
+       Frame "эксперты" (430, 0, 580×210): text at y=71, 68px Antarctic
+     Footer: y=2740 (внутри Frame 347 на 210)
    ============================================ */
 .app-bottom {
-    padding: 40px 20px 0;
+    margin-top: 100px; /* 1921 - 1821 = 100 */
 }
 
-.app-bottom__phones {
-    display: block;
+.app-phones-3 {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    display: block;
 }
 
-.app-bottom__phones img {
+.app-phones-3 img {
     display: block;
     width: 100%;
     height: auto;
 }
 
+/* "Эксперты Красивой Жизни" */
 .app-signature {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 71px 0 71px; /* text at y=71 внутри 210px-контейнера, остаток 210-71-68 = 71 */
     text-align: center;
-    padding: 40px 20px;
     opacity: 0.8;
 }
 
@@ -130,23 +160,28 @@
     font-family: 'Antarctic', serif;
     font-size: 68px;
     font-weight: 400;
-    color: #212121;
+    line-height: normal;
     letter-spacing: -3.4px;
-    line-height: 1.2;
+    color: #212121;
     margin: 0;
     white-space: nowrap;
+    text-align: center;
 }
 
 /* ============================================
-   Адаптив — уменьшаем кегли и отступы на маленьких экранах
-   (моб-версия отдельно в app-mob.html, тут только до 768)
+   Адаптив: при ширине < 1440 ужимаемся пропорционально
+   При < 1200 — уменьшаем padding-left интро и "Эксперты"
    ============================================ */
 @media (max-width: 1200px) {
-    .app-top__intro { padding-left: 120px; }
+    .app-intro { padding-left: 120px; width: auto; }
+    .app-intro__title,
+    .app-intro__italic { width: auto; max-width: 100%; }
     .app-signature__text { font-size: 48px; letter-spacing: -2px; }
 }
 
 @media (max-width: 900px) {
-    .app-top__intro { padding-left: 40px; }
+    .app-intro { padding-left: 40px; }
+    .app-phones-5 { height: auto; }
+    .app-phones-5 img { object-fit: contain; }
     .app-signature__text { font-size: 32px; letter-spacing: -1px; white-space: normal; }
 }

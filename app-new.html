@@ -70,20 +70,23 @@
       </button>
     </header>
 
-    <main class="main">
-      <section class="app-top">
-        <div class="app-top__intro">
-          <h1 class="app-top__title">Управление жизнью в одно касание</h1>
-          <p class="app-top__lead">Точность и надежность, выполнение любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за Ваше комфортное проживание – все это далеко не полный список преимуществ, которые окажутся в Ваших руках при использовании мобильного приложения «Nobell Mobile Butler».</p>
-        </div>
-        <div class="app-top__phones">
-          <img src="assets/images/app/phones-row-5.png" alt="Экраны приложения Nobell" title="Экраны приложения Nobell" loading="lazy">
-        </div>
-        <div class="app-sub-heading">
-          <h2 class="app-sub-heading__title">Максимальная свобода и Комфорт в отправке поручений</h2>
-          <span class="app-sub-heading__divider" aria-hidden="true"></span>
-          <p class="app-sub-heading__text">Управляйте всеми доступными сервисами прямо с экрана вашего смартфона</p>
-        </div>
+    <main class="main app-container">
+      <!-- Intro (Frame 343 в Figma): y=62, pl=216, width=1192, height=79 -->
+      <section class="app-intro">
+        <h1 class="app-intro__title">Управление жизнью в одно касание</h1>
+        <p class="app-intro__italic">Точность и надежность, выполнение любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за Ваше комфортное проживание – все это далеко не полный список преимуществ, которые окажутся в Ваших руках при использовании мобильного приложения «Nobell Mobile Butler».</p>
+      </section>
+
+      <!-- Phones row 5 (Frame 33 в Figma): y=216, x=165, 1110×580 -->
+      <section class="app-phones-5">
+        <img src="assets/images/app/phones-row-5.png" alt="Экраны приложения Nobell" title="Экраны приложения Nobell" loading="lazy">
+      </section>
+
+      <!-- Sub-heading (Frame 210 в Figma): y=856, x=369, 702×85 -->
+      <section class="app-sub-heading">
+        <h2 class="app-sub-heading__title">Максимальная свобода и Комфорт в отправке поручений</h2>
+        <span class="app-sub-heading__divider" aria-hidden="true"></span>
+        <p class="app-sub-heading__text">Управляйте всеми доступными сервисами прямо с экрана вашего смартфона</p>
       </section>
 
       <!-- ============================================
@@ -170,14 +173,16 @@
       <!-- ============================================
            Section 3 — 3 телефона + подпись "Эксперты Красивой Жизни"
            ============================================ -->
-      <section class="app-bottom">
-        <div class="app-bottom__phones">
+      <div class="app-bottom">
+        <!-- Image 117 (Figma): y=1921, 1440×609 -->
+        <section class="app-phones-3">
           <img src="assets/images/app/phones-row-3.png" alt="Дополнительные экраны приложения Nobell" title="Дополнительные экраны приложения Nobell" loading="lazy">
-        </div>
-        <div class="app-signature">
+        </section>
+        <!-- "Эксперты Красивой Жизни" (Figma Frame 347→эксперты красивой жизни): контейнер 580×210, text at y=71, 68px Antarctic -->
+        <section class="app-signature">
           <p class="app-signature__text">Эксперты Красивой Жизни</p>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
