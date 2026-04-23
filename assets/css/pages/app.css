@@ -22,11 +22,13 @@
 
 .app-top__title {
     font-family: 'Playfair', serif;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 400;
     color: #212121;
     margin: 0 0 16px;
     line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .app-top__lead {
