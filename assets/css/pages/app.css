@@ -212,13 +212,29 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.app-phones-3 img {
+.app-phones-3__item {
     display: block;
-    width: 100%;
+    width: 300px;
     height: auto;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+    .app-phones-3 { gap: 20px; }
+    .app-phones-3__item { width: 26vw; }
+}
+
+@media (max-width: 700px) {
+    .app-phones-3 { flex-direction: column; gap: 30px; }
+    .app-phones-3__item { width: 220px; }
 }
 
 /* "Эксперты Красивой Жизни" */
