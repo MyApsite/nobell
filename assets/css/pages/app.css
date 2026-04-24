@@ -114,15 +114,16 @@
 
 /* ============================================
    Section 2: скролл-слайдер (legacy #dayWithPremis)
-   Секция вырывается на всю ширину viewport вне зависимости от
-   max-width: 1440px у .app-container.
+   Секция вырывается на всю ширину viewport через margin-trick.
+   ВАЖНО: без transform! transform создаёт containing block для position:fixed,
+   что ломает legacy .premis-day--fixed позиционирование.
    ============================================ */
 .app-middle {
-    margin-top: 60px; /* 1001 - 941 = 60 */
-    position: relative;
+    margin-top: 60px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
 }
 
 /* ============================================
