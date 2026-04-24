@@ -89,11 +89,9 @@
         <p class="app-sub-heading__text">Управляйте всеми доступными сервисами прямо с экрана вашего смартфона</p>
       </section>
 
-      <!-- Section 2 — скролл-слайдер.
-           Класс premis-day--fixed ставим сразу (вместо default состояния), чтобы не было рывка на входе.
-           В custom.js также поправлено: не удаляем --fixed, не переключаем на --bottom. -->
+      <!-- Section 2 — скролл-слайдер как в старой moscow/application.php, без правок -->
       <section class="app-middle">
-        <div id="dayWithPremis" class="full-width-element premis-day premis-day--fixed">
+        <div id="dayWithPremis" class="full-width-element premis-day">
           <div id="dayWithPremisPhone" class="premis-day__phone">
             <div class="premis-day__phone-inner-wrap">
               <div class="premis-day__phone-inner premis-day__phone-inner--visible" style="background-image: url(legacy/img/screen_100.png);"> </div>
@@ -394,17 +392,10 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/vendor.min.js?v=13" defer></script>
   <script src="assets/js/app.js?v=13" defer></script>
-  <!-- Legacy custom.js для слайдера: запускаем с $legacy (изолированный legacy jQuery со slick/GSAP).
-       Перед запуском патчим код: убираем removeClass('premis-day--fixed') и addClass('premis-day--bottom'),
-       чтобы класс premis-day--fixed был применён всё время пока секция в DOM — без рывков на входе/выходе. -->
+  <!-- Legacy custom.js для слайдера: запускаем с $legacy (изолированный legacy jQuery со slick/GSAP), без правок -->
   <script>
     fetch('legacy/js/custom.js').then(function(r){return r.text();}).then(function(code){
-      // Удаляем вызовы, которые снимают/добавляют --fixed/--bottom (чтобы класс оставался фиксированным)
-      var patched = code
-        .replace(/\$\(['"]#dayWithPremis['"]\)\.removeClass\(['"]premis-day--fixed['"]\);?/g, '')
-        .replace(/\$\(['"]#dayWithPremis['"]\)\.removeClass\(['"]premis-day--fixed['"]\)\.addClass\(['"]premis-day--bottom['"]\);?/g, '')
-        .replace(/\.addClass\(['"]premis-day--fixed['"]\)\.removeClass\(['"]premis-day--bottom['"]\)/g, '');
-      (new Function('$', 'jQuery', patched))(window.$legacy, window.$legacy);
+      (new Function('$', 'jQuery', code))(window.$legacy, window.$legacy);
     });
   </script>
 </body>
