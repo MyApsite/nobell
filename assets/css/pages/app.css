@@ -113,22 +113,14 @@
 }
 
 /* ============================================
-   Section 2: статичная сцена из Figma (image 119)
-   Figma: y=1001, 1440×820, 1:1 из дизайна
+   Section 2: скролл-слайдер #dayWithPremis.
+   Класс premis-day--fixed применён с самого начала (в HTML) —
+   картинка и телефон сразу position:fixed, без рывка на входе.
+   Custom.js запатчен: не удаляет --fixed, не добавляет --bottom.
    ============================================ */
 .app-middle {
     margin-top: 60px; /* 1001 - 941 = 60 */
-    width: 100%;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 0; /* убрать inline-подзазор */
-}
-
-.app-middle img {
-    display: block;
-    width: 100%;
-    height: auto;
+    position: relative;
 }
 
 /* ============================================
