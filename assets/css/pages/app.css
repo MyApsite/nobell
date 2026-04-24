@@ -114,13 +114,15 @@
 
 /* ============================================
    Section 2: скролл-слайдер (legacy #dayWithPremis)
-   Figma: image 119 занимает 1440×820 на y=1001
-   Минимальные фиксы поверх legacy CSS — чтобы не было рывков
-   при входе/выходе секции (position:absolute→fixed→bottom).
+   Секция вырывается на всю ширину viewport вне зависимости от
+   max-width: 1440px у .app-container.
    ============================================ */
 .app-middle {
     margin-top: 60px; /* 1001 - 941 = 60 */
     position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ============================================
