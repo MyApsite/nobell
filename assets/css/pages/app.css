@@ -113,14 +113,110 @@
 }
 
 /* ============================================
-   Section 2: скролл-слайдер #dayWithPremis.
-   Класс premis-day--fixed применён с самого начала (в HTML) —
-   картинка и телефон сразу position:fixed, без рывка на входе.
-   Custom.js запатчен: не удаляет --fixed, не добавляет --bottom.
+   Section 2: скролл-слайдер #dayWithPremis — через CSS position: sticky.
+   Без JS-переключения классов → нет рывка на входе/выходе.
+   Каждый блок 100vh, картинка блока прилипает к top:0 пока блок
+   в зоне видимости, затем уходит вверх.
+   Центральный телефон sticky по центру viewport на всей секции.
    ============================================ */
 .app-middle {
-    margin-top: 60px; /* 1001 - 941 = 60 */
+    margin-top: 60px;
     position: relative;
+}
+
+/* Контейнер слайдера: разрешаем sticky (overflow:visible) */
+.app-middle #dayWithPremis {
+    overflow: visible;
+    position: relative;
+    margin: 0;
+}
+
+/* Каждый блок = 100vh, relative для sticky children */
+.app-middle .premis-day__block {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    display: block;
+}
+
+/* BG картинка блока — sticky внутри своего блока; 50% ширины, 100vh */
+.app-middle .premis-day__image {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    clip: auto;
+}
+
+.app-middle .premis-day__image img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* На sticky-картинке отдельного блока JS-класс --visible всё равно применяется,
+   но мы переопределяем — видимы все, и без transform/opacity переходов */
+.app-middle .premis-day__image--visible img {
+    opacity: 1;
+    transform: none;
+}
+
+/* Контент (текст) блока — 50% справа, центр по вертикали */
+.app-middle .premis-day__block {
+    display: flex;
+    align-items: center;
+}
+
+.app-middle .premis-day__content {
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 0;
+    position: relative;
+    z-index: 5;
+}
+
+/* Центральный телефон — sticky во всём #dayWithPremis, прикреплён к верху viewport */
+.app-middle #dayWithPremisPhone.premis-day__phone {
+    position: sticky;
+    top: calc(50vh - 320px);
+    height: 641px;
+    max-height: 641px;
+    width: 303px;
+    max-width: 303px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto -641px;
+    background: transparent url('../../../legacy/img/iPhone.png') center center no-repeat;
+    background-size: cover;
+    display: block;
+    z-index: 10;
+}
+
+/* Убираем эффекты legacy --fixed/--bottom, всё контролируем через sticky */
+.app-middle .premis-day--fixed .premis-day__image,
+.app-middle .premis-day--bottom .premis-day__image {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    clip: auto;
+}
+
+.app-middle .premis-day--fixed #dayWithPremisPhone.premis-day__phone,
+.app-middle .premis-day--bottom #dayWithPremisPhone.premis-day__phone {
+    position: sticky;
+    top: calc(50vh - 320px);
+    bottom: auto;
 }
 
 /* ============================================
