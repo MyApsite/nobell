@@ -18,12 +18,20 @@
       margin: 0 12px 0 0;
       color: #212121;
     }
-    /* Картинки с Figma всё 2000×1500 (4:3), но в дизайне у каждой ячейки свои пропорции.
-       Принудительно даём контейнеру нужный aspect-ratio + object-fit:cover на img. */
+    /* Сетка фото: пропорции по Figma. Колонки одной высоты (aspect-ratio на колонке),
+       картинки внутри тянутся через object-fit:cover. */
+    .danieli-page .services__img-row .services__img-col:first-child {
+      aspect-ratio: 678 / 690;
+    }
+    .danieli-page .services__img-row .services__img-col:nth-child(2) {
+      aspect-ratio: 452 / 690;
+      gap: 6px;
+    }
     .danieli-page .services__img-row picture {
       display: block;
       width: 100%;
       overflow: hidden;
+      flex: 1 1 auto;
     }
     .danieli-page .services__img-row picture img {
       width: 100%;
@@ -31,11 +39,13 @@
       object-fit: cover;
       display: block;
     }
-    .danieli-page .services__img-row .services__img-col:first-child picture {
-      aspect-ratio: 678 / 690;
+    /* Правая колонка: верхняя 337/690, нижняя 347/690 */
+    .danieli-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(1) {
+      flex: 0 0 calc((100% - 6px) * 337 / 684);
+      height: auto;
     }
-    .danieli-page .services__img-row .services__img-col:nth-child(2) picture {
-      aspect-ratio: 452 / 337;
+    .danieli-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(2) {
+      flex: 0 0 calc((100% - 6px) * 347 / 684);
       height: auto;
     }
   </style>
