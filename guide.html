@@ -10,23 +10,11 @@
   <!-- Карточки гида: плоские (без фона/тени/радиуса), фото 291×226 (как в Figma).
        Hero-слайдер: фото 1040×584 (16:9 как в Figma), плашка с текстом 1032×247. -->
   <style>
-    /* Десктоп: плоские карточки без коробки. На моб — оставляем default (12px скругление + тень) */
-    @media (min-width: 768px) {
-      .guide__cards .product {
-        background-color: transparent;
-        border-radius: 0;
-        box-shadow: none;
-        overflow: visible;
-      }
-      .guide__cards .product:hover {
-        transform: none;
-      }
-    }
+    /* Карточки используют дефолт из styles.min.css: белый фон + 12px радиус + тень + hover-scale */
     .guide__cards .product__img {
       aspect-ratio: 291 / 226;
       overflow: hidden;
       width: 100%;
-      border-radius: 12px;
     }
     .guide__cards .product__img img {
       width: 100%;
