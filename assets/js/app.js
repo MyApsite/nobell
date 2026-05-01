@@ -573,7 +573,8 @@ var swiperSlider = function () {
     slidesPerView: 1.2,
     slidesPerGroup: 1,
     spaceBetween: 16,
-    loop: false,
+    loop: true,
+    loopAdditionalSlides: 4,
     navigation: {
       nextEl: '.js-spotlight-next',
       prevEl: '.js-spotlight-prev'
