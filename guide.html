@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Nobell</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.svg" alt="">
+      </a>
+
+      <div class="breadcrumbs">
+        <a href="index.html">
+          <img src="assets/images/home.svg" alt="">
+        </a>
+        <img src="assets/images/next.svg" alt="">
+        <span>ГИД ПО ОТЕЛЯМ И ЯХТАМ</span>
+      </div>
+
+      <button type="button" class="header__burger js-burger-open">
+        <div class="header__burger-mob">
+          <img src="assets/images/b-mob.svg" alt="">
+        </div>
+        <div class="header__burger-desk">
+          <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="15" height="1" fill="#000000" />
+            <rect y="6" width="23" height="1" fill="#000000" />
+            <rect x="8" y="13" width="15" height="1" fill="#000000" />
+          </svg>
+        </div>
+      </button>
+    </header>
+
+
+    <main class="main">
+      <section class="card-section card-section--slider">
+        <div class="container">
+          <div class="card-section__head">
+            <h2 class="card-section__title">Jetset Journal</h2>
+            <p class="card-section__text">Гид по отелям и яхтам</p>
+          </div>
+
+          <div class="card-section__slider">
+            <div class="rec-slider js-rec-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/g-1.png" alt="">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">Erebero Hills: уединённый стеклянный лодж Asilia среди крон
+                          древнего тропического леса Бвинди.
+                        </h3>
+                        <p class="house-card__text">Восемь сьютов на склоне холма создают атмосферу камерной роскоши и
+                          становятся отправной точкой для одного из самых редких природных опытов мира — встреч с
+                          горными гориллами Уганды.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/g-2.png" alt="">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">Orient Express открывают сезон 2027: элегантное парусное
+                          путешествие от Эгейского до Северного моря.
+                        </h3>
+                        <p class="house-card__text">Изысканное морское путешествие в духе
+                          гранд-тур: яхта Orient Express Corinthian и её яхта близнец Olympian представляют
+                          маршруты сезона 2027 года, проходящие через Грецию, Турцию и Северной Европе.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/g-3.png" alt="">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">The Brecon: Альпийское убежище только для взрослых с панорамным
+                          круглогодичным бассейном.
+                        </h3>
+                        <p class="house-card__text">Уединённый бутик-отель в Адельбодене, работающий по системе
+                          all-inclusive, где эстетика середины XX века, камерная атмосфера и чистый горный воздух
+                          создают тихое ощущение утончённой роскоши.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="rec-slider__nav">
+                <button type="button" class="rec-slider__btn js-prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 22L7 12L17 2" stroke="#212121" stroke-width="2" />
+                  </svg>
+                </button>
+                <div class="rec-slider__pagination js-pagination"></div>
+                <button type="button" class="rec-slider__btn js-next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 2L17 12L7 22" stroke="#212121" stroke-width="2" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-section">
+        <div class="container">
+          <div class="guide">
+            <div class="guide__head">
+              <div class="guide__nav">
+                <form action="#" class="guide-form">
+                  <div class="guide-form__wrap">
+                    <label class="guide-form__field guide-form__field--search" aria-label="Поиск">
+                      <button type="submit" class="guide-form__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M15.75 15.75L12.4928 12.4927M12.4928 12.4927C13.0499 11.9356 13.4919 11.2741 13.7935 10.5461C14.095 9.81816 14.2502 9.03792 14.2502 8.24997C14.2502 7.46202 14.095 6.68178 13.7935 5.95381C13.4919 5.22584 13.0499 4.56439 12.4928 4.00722C11.9356 3.45006 11.2742 3.00809 10.5462 2.70655C9.81822 2.40502 9.03798 2.24982 8.25003 2.24982C7.46208 2.24982 6.68184 2.40502 5.95387 2.70655C5.2259 3.00809 4.56445 3.45006 4.00728 4.00722C2.88204 5.13247 2.24988 6.65863 2.24988 8.24997C2.24988 9.84131 2.88204 11.3675 4.00728 12.4927C5.13253 13.618 6.65869 14.2501 8.25003 14.2501C9.84137 14.2501 11.3675 13.618 12.4928 12.4927Z"
+                            stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <input type="search" name="guide-search" class="guide-form__input" placeholder="ПОИСК">
+                    </label>
+
+                    <div class="guide-form__field guide-form__field--select js-select">
+                      <input type="hidden" name="guide-direction" class="js-select-input" value="">
+                      <button type="button" class="guide-form__select-btn js-select-btn" data-value="">
+                        <span class="guide-form__select-value js-select-value">ФИЛЬТР ПО НАПРАВЛЕНИЮ</span>
+                        <span class="guide-form__select-arrow" aria-hidden="true">
+                          <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L8 8L14 2" stroke="#232323" stroke-width="2" stroke-linecap="round" />
+                          </svg>
+                        </span>
+                      </button>
+
+                      <ul class="guide-form__dropdown js-select-list">
+                        <li class="guide-form__option js-select-option active" data-value="">ВСЕ НАПРАВЛЕНИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="europe">ЕВРОПА</li>
+                        <li class="guide-form__option js-select-option" data-value="france">— ФРАНЦИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="spain">— ИСПАНИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="switzerland">— ШВЕЙЦАРИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="africa">АФРИКА</li>
+                        <li class="guide-form__option js-select-option" data-value="uganda">— УГАНДА</li>
+                        <li class="guide-form__option js-select-option" data-value="zimbabwe">— ЗИМБАБВЕ</li>
+                        <li class="guide-form__option js-select-option" data-value="australasia">АВСТРАЛАЗИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="asia">АЗИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="caribbean">КАРИБСКИЕ ОСТРОВА</li>
+                        <li class="guide-form__option js-select-option" data-value="indian-ocean">ИНДИЙСКИЙ ОКЕАН</li>
+                        <li class="guide-form__option js-select-option" data-value="middle-east">БЛИЖНИЙ ВОСТОК</li>
+                        <li class="guide-form__option js-select-option" data-value="north-america">СЕВЕРНАЯ АМЕРИКА</li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="guide__filter">
+                <button type="button" class="guide-btn active" data-continent="all">ALL</button>
+                <button type="button" class="guide-btn" data-continent="africa">АФРИКА</button>
+                <button type="button" class="guide-btn" data-continent="asia">АЗИЯ</button>
+                <button type="button" class="guide-btn" data-continent="australasia">Австралазия</button>
+                <button type="button" class="guide-btn" data-continent="caribbean">Карибские острова</button>
+                <button type="button" class="guide-btn" data-continent="central-south-america">Центральная и Южная Америка
+                </button>
+                <button type="button" class="guide-btn" data-continent="europe">ЕВРОПА</button>
+                <button type="button" class="guide-btn" data-continent="indian-ocean">Индийский океан
+                </button>
+                <button type="button" class="guide-btn" data-continent="middle-east">БЛИЖНИЙ Восток
+                </button>
+                <button type="button" class="guide-btn" data-continent="north-america">Северная Америка
+                </button>
+              </div>
+            </div>
+            <div class="guide__cards">
+              <div class="card-section__row">
+                <div class="card-section__col" data-continent="europe" data-country="france">
+                  <a href="villa.html" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/v-1.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">Французская Ривьера, ФРАНЦИЯ</span>
+                        <h3 class="product__title">Zannier Bendor — новая жизнь частного острова у берегов Прованса</h3>
+                        <p class="product__text">Остров Бендор, когда-то задуманный как собственный средиземноморский ретрит, возвращается в новом качестве — как камерный курорт Zannier.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-section__col" data-continent="europe" data-country="switzerland">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="https://dev.nobell.com/wp-content/uploads/2026/nobell/p1.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">Адельбоден, Швейцария
+                        </span>
+                        <h3 class="product__title">Брекон: уединённый альпийский курорт только для взрослых с видом
+                          на бассейн круглый год</h3>
+                        <p class="product__text">Место отдыха в Адельбодене, где стиль середины прошлого века, камерная
+                          атмосфера и горный воздух создают роскошную обстановку
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-section__col" data-continent="europe" data-country="spain">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="https://dev.nobell.com/wp-content/uploads/2026/nobell/p2.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">Майорка, ИСПАНИЯ</span>
+                        <h3 class="product__title">Gran Hotel Margalida: камерный дебют Annua на западном побережье
+                          Майорки
+                        </h3>
+                        <p class="product__text">Безмятежный отель на 29 номеров, отличающийся лаконичным дизайном
+                          и первой
+                          в Аннуа полностью интегрированной концепцией спа-центра</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-section__col" data-continent="africa" data-country="uganda">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="https://dev.nobell.com/wp-content/uploads/2026/nobell/p3.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">БВИНДИ, УГАНДА</span>
+                        <h3 class="product__title">Эреберо-Хиллз: уединенное место отдыха Asilia со стеклянным фасадом
+                          над
+                          Бвинди</h3>
+                        <p class="product__text">Горный отель с 8-ю номерами-люкс сочетает в себе современные технологии
+                          и древний лесной покров Бвинди, идеальные условия для походов к гориллам</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-section__col" data-continent="africa" data-country="zimbabwe">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="https://dev.nobell.com/wp-content/uploads/2026/nobell/p4.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">Национальный парк Замбези
+                        </span>
+                        <h3 class="product__title">Частные виллы Mpala Jena: уединенное место на берегу реки над
+                          водопадом
+                          Виктория</h3>
+                        <p class="product__text">Две виллы на берегу Замбези делают этот район самым тихим и
+                          одновременно
+                          самым стильным в регионе Грейт-Плейнс, недалеко от водопада Виктория</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="guide__footer">
+                <a href="#" class="btn primary">загрузить больше</a>
+                <p class="guide__results">Показаны 12 из 947 результатов</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="#" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="#" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="#" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="#" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn js-popup-open">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <img src="assets/images/f1.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+                    <img src="assets/images/f2.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <img src="assets/images/f3.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <img src="assets/images/f4.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516"
+                        stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА
+                                ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE LIVING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ
+                                МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE SHOPPING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a>
+                        </li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО
+                                ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+            </div>
+            <div class="nav__form">
+                <form action="#">
+                    <input type="text" placeholder="ПОИСК">
+                    <button type="submit">
+                        <img src="assets/images/search.svg" alt="">
+                    </button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#">
+                    <img src="assets/images/popup.svg" alt="">
+                    Подать заявку
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <!-- Фильтрация карточек гида: по континентам (кнопки), по направлению (dropdown), по тексту (search) -->
+  <script defer>
+    (function () {
+      function init() {
+        var cards = document.querySelectorAll('.guide__cards .card-section__col');
+        var buttons = document.querySelectorAll('.guide__filter .guide-btn');
+        var selectInput = document.querySelector('.guide-form__field--select .js-select-input');
+        var searchInput = document.querySelector('input[name="guide-search"]');
+        var resultsLabel = document.querySelector('.guide__results');
+        if (!cards.length) return;
+
+        var state = { continent: 'all', direction: '', search: '' };
+
+        function getCardText(card) {
+          return (card.textContent || '').toLowerCase();
+        }
+
+        function applyFilters() {
+          var visible = 0;
+          var search = state.search.trim().toLowerCase();
+          cards.forEach(function (card) {
+            var continent = card.getAttribute('data-continent') || '';
+            var country = card.getAttribute('data-country') || '';
+            var matchContinent = state.continent === 'all' || state.continent === continent;
+            var matchDirection = !state.direction || state.direction === continent || state.direction === country;
+            var matchSearch = !search || getCardText(card).indexOf(search) !== -1;
+            var show = matchContinent && matchDirection && matchSearch;
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+          });
+          if (resultsLabel) {
+            resultsLabel.textContent = 'Показано ' + visible + ' из ' + cards.length + ' результатов';
+          }
+        }
+
+        // Кнопки континентов
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            buttons.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            state.continent = btn.getAttribute('data-continent') || 'all';
+            applyFilters();
+          });
+        });
+
+        // Dropdown — слушаем изменение скрытого input (его правит компонент select из app.js)
+        if (selectInput) {
+          var lastValue = selectInput.value;
+          // app.js не диспатчит change → проверяем вручную через MutationObserver на data-value у js-select-btn
+          var selectBtn = document.querySelector('.guide-form__field--select .js-select-btn');
+          if (selectBtn) {
+            var observer = new MutationObserver(function () {
+              var newValue = selectBtn.getAttribute('data-value') || '';
+              if (newValue !== lastValue) {
+                lastValue = newValue;
+                state.direction = newValue;
+                applyFilters();
+              }
+            });
+            observer.observe(selectBtn, { attributes: true, attributeFilter: ['data-value'] });
+          }
+          // Также вручную клики по опциям (на случай если data-value не меняется)
+          document.querySelectorAll('.guide-form__field--select .js-select-option').forEach(function (opt) {
+            opt.addEventListener('click', function () {
+              state.direction = opt.getAttribute('data-value') || '';
+              applyFilters();
+            });
+          });
+        }
+
+        // Поиск
+        if (searchInput) {
+          var debounce;
+          searchInput.addEventListener('input', function (e) {
+            clearTimeout(debounce);
+            debounce = setTimeout(function () {
+              state.search = e.target.value;
+              applyFilters();
+            }, 200);
+          });
+        }
+
+        // Не сабмитим форму — фильтр работает живьём
+        var form = document.querySelector('.guide-form');
+        if (form) form.addEventListener('submit', function (e) { e.preventDefault(); });
+
+        applyFilters();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+
+</html>
