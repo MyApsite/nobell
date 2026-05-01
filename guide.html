@@ -7,6 +7,20 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+  <!-- Карточки гида: фиксированное соотношение фото 291×226 (как в Figma), object-fit: cover -->
+  <style>
+    .guide__cards .product__img {
+      aspect-ratio: 291 / 226;
+      overflow: hidden;
+      width: 100%;
+    }
+    .guide__cards .product__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
