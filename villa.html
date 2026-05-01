@@ -7,6 +7,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+  <style>
+    /* Spotlight: на десктопе 4 карточки по 296px */
+    @media (min-width: 1280px) {
+      .spotlight__slider .swiper-slide { width: 296px !important; }
+      .spotlight__slider .product__img { aspect-ratio: 296 / 226; overflow: hidden; }
+      .spotlight__slider .product__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    }
+  </style>
 </head>
 
 <body>
@@ -318,17 +326,12 @@
                 <a href="#" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
-                      <img loading="lazy" src="assets/images/sp1.png" alt="">
+                      <img loading="lazy" src="assets/images/guide/card-1.png" alt="">
                     </div>
                     <div class="product__body">
-                      <span class="product__tag">Остров Хийумаа, Эстония
-                      </span>
-                      <h3 class="product__title">Eha: Новый эстонский ретрит, переосмысливающий северное благополучие
-                      </h3>
-                      <p class="product__text">На острове Хийумаа, входящем в биосферный резерват ЮНЕСКО, Eha откроется
-                        летом 2026 года с сезонными программами, элементальным дизайном
-                        и тихо персонализированным сервисом.
-                      </p>
+                      <span class="product__tag">ЯХТИНГ, ПУТЕШЕСТВИЯ ПО МИРУ</span>
+                      <h3 class="product__title">Four Seasons I — первая яхта культового бренда</h3>
+                      <p class="product__text">Яхта выходит в море в 2026 году, перенося фирменный жилой стиль бренда в морское путешествие — с 95 люксами, выраженной гастрономической программой и более камерным ощущением жизни на борту.</p>
                     </div>
                   </div>
                 </a>
@@ -337,14 +340,26 @@
                 <a href="#" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
-                      <img loading="lazy" src="assets/images/sp2.png" alt="">
+                      <img loading="lazy" src="assets/images/guide/card-2.png" alt="">
                     </div>
                     <div class="product__body">
-                      <span class="product__tag">ЯХТИНГ, ПУТЕШЕСТВИЯ ПО МИРУ
-                      </span>
-                      <h3 class="product__title">Luminara от Ritz-Carlton расширяет летний сезон в Азии и Аляске</h3>
-                      <p class="product__text">Сезон 2027 коллекции яхт Ritz-Carlton сочетает дни у ледников, остановки в северной Японии и встречи в Сеуле с комфортом всех люксовых кают.
-                      </p>
+                      <span class="product__tag">УГАНДА, БВИНДИ</span>
+                      <h3 class="product__title">Erebero Hills: уединённый стеклянный лодж среди крон древнего тропического леса Бвинди</h3>
+                      <p class="product__text">Восемь сьютов на склоне холма создают атмосферу камерной роскоши и становятся отправной точкой для одного из самых редких природных опытов мира — встреч с горными гориллами Уганды.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="villa.html" class="product">
+                  <div class="product__wrap">
+                    <div class="product__img">
+                      <img loading="lazy" src="assets/images/guide/card-3.png" alt="">
+                    </div>
+                    <div class="product__body">
+                      <span class="product__tag">ФРАНЦИЯ, ФРАНЦУЗСКАЯ РИВЬЕРА</span>
+                      <h3 class="product__title">Zannier Bendor — новая жизнь частного острова у берегов Прованса</h3>
+                      <p class="product__text">Остров Бендор возвращается в новом качестве — как камерный курорт Zannier, где всё построено вокруг тишины, стиля и неспешной островной жизни.</p>
                     </div>
                   </div>
                 </a>
@@ -353,14 +368,26 @@
                 <a href="#" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
-                      <img loading="lazy" src="assets/images/sp3.png" alt="">
+                      <img loading="lazy" src="assets/images/guide/card-4.png" alt="">
                     </div>
                     <div class="product__body">
-                      <span class="product__tag">Портинаткс, Испания
-                      </span>
-                      <h3 class="product__title">Nômade Temple Ibiza: Богемные ритуалы на северном побережье</h3>
-                      <p class="product__text">Новая глава в гостеприимстве Ибицы — Nômade Temple Ibiza воплощает философию бренда, сочетающую празднование и исцеление, в суровом пейзаже Портинаткса, окружённом скалами, соснами и кристально чистой водой.
-                      </p>
+                      <span class="product__tag">НАЦИОНАЛЬНЫЙ ПАРК ЗАМБЕЗИ</span>
+                      <h3 class="product__title">Mpala Jena Private Villas: уединённый ретрит на берегу реки прямо над водопадом Виктория</h3>
+                      <p class="product__text">Пара вилл, предназначенных исключительно для частного размещения, раскрывает редкий и закрытый формат отдыха у водопада Виктория, дополненный атмосферой абсолютного уединения.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="danieli.html" class="product">
+                  <div class="product__wrap">
+                    <div class="product__img">
+                      <img loading="lazy" src="assets/images/guide/card-5.png" alt="">
+                    </div>
+                    <div class="product__body">
+                      <span class="product__tag">ИТАЛИЯ, ВЕНЕЦИЯ</span>
+                      <h3 class="product__title">Four Seasons возвращает Даниэли — венецианская легенда вступает в новую эпоху</h3>
+                      <p class="product__text">Один из самых знаменитых адресов Венеции открывает новую главу под управлением Four Seasons, сохраняя историческое достоинство трёх дворцов на набережной Рива-дельи-Скьявони.</p>
                     </div>
                   </div>
                 </a>
@@ -369,13 +396,12 @@
                 <a href="#" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
-                      <img loading="lazy" src="assets/images/sp4.png" alt="">
+                      <img loading="lazy" src="assets/images/guide/card-6.png" alt="">
                     </div>
                     <div class="product__body">
-                      <span class="product__tag">Французская Ривьера, Франция
-                      </span>
-                      <h3 class="product__title">Zannier Bendor: Возрождение частного острова на легендарном острове Поль Рикар, Иль-де-Бендор</h3>
-                      <p class="product__text">Изысканное укрытие на острове возвращается на Французскую Ривьеру 1 мая 2026 года, сочетая гостеприимный гламур с чистотой дизайна и культурным замыслом.</p>
+                      <span class="product__tag">ЭСТОНИЯ, ОСТРОВ ХИЙУМАА</span>
+                      <h3 class="product__title">Eha — северный ретрит на эстонском острове Хийумаа</h3>
+                      <p class="product__text">На острове Хийумаа, входящем в сеть биосферных резерватов ЮНЕСКО, летом 2026 года открывается Eha — с сезонными программами, природной архитектурой и ненавязчивым сервисом.</p>
                     </div>
                   </div>
                 </a>
@@ -384,16 +410,12 @@
                 <a href="#" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
-                      <img loading="lazy" src="assets/images/sp2.png" alt="">
+                      <img loading="lazy" src="assets/images/guide/card-7.png" alt="">
                     </div>
                     <div class="product__body">
-                      <span class="product__tag">Адельбоден, Швейцария
-                      </span>
-                      <h3 class="product__title">Брекон: уединённый альпийский курорт только для взрослых с видом
-                        на бассейн круглый год</h3>
-                      <p class="product__text">Место отдыха в Адельбодене, где стиль середины прошлого века, камерная
-                        атмосфера и горный воздух создают роскошную обстановку
-                      </p>
+                      <span class="product__tag">ШВЕЙЦАРИЯ, АДЕЛЬБОДЕН</span>
+                      <h3 class="product__title">The Brecon — камерный альпийский отель только для взрослых</h3>
+                      <p class="product__text">Небольшой all-inclusive-отель в швейцарском Адельбодене соединяет эстетику середины века, редкую атмосферу уединения и круглогодичный подогреваемый бассейн с видом на Альпы.</p>
                     </div>
                   </div>
                 </a>
@@ -402,16 +424,12 @@
                 <a href="#" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
-                      <img loading="lazy" src="assets/images/sp2.png" alt="">
+                      <img loading="lazy" src="assets/images/guide/card-8.png" alt="">
                     </div>
                     <div class="product__body">
-                      <span class="product__tag">Адельбоден, Швейцария
-                      </span>
-                      <h3 class="product__title">Брекон: уединённый альпийский курорт только для взрослых с видом
-                        на бассейн круглый год</h3>
-                      <p class="product__text">Место отдыха в Адельбодене, где стиль середины прошлого века, камерная
-                        атмосфера и горный воздух создают роскошную обстановку
-                      </p>
+                      <span class="product__tag">ЯХТИНГ, СРЕДИЗЕМНОЕ МОРЕ</span>
+                      <h3 class="product__title">O’Madeleine — новая 60-метровая чартерная яхта верфи Golden Yacht</h3>
+                      <p class="product__text">Со стремительным силуэтом, стеклянным бассейном в носовой части и выразительным, но не сдержанным интерьером O’Madeleine предлагает более лёгкое и современное прочтение большой средиземноморской яхты.</p>
                     </div>
                   </div>
                 </a>
@@ -420,16 +438,54 @@
                 <a href="#" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
-                      <img loading="lazy" src="assets/images/sp2.png" alt="">
+                      <img loading="lazy" src="assets/images/guide/card-9.png" alt="">
                     </div>
                     <div class="product__body">
-                      <span class="product__tag">Адельбоден, Швейцария
-                      </span>
-                      <h3 class="product__title">Брекон: уединённый альпийский курорт только для взрослых с видом
-                        на бассейн круглый год</h3>
-                      <p class="product__text">Место отдыха в Адельбодене, где стиль середины прошлого века, камерная
-                        атмосфера и горный воздух создают роскошную обстановку
-                      </p>
+                      <span class="product__tag">ИТАЛИЯ, МИЛАН</span>
+                      <h3 class="product__title">Six Senses Milan откроется в районе Брера в 2026 году</h3>
+                      <p class="product__text">В 2026 году в миланском районе Брера откроется Six Senses — городской ретрит, в котором ритм мировой столицы моды соединён с атмосферой восстановления, тишины и внутреннего равновесия.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="product">
+                  <div class="product__wrap">
+                    <div class="product__img">
+                      <img loading="lazy" src="assets/images/guide/card-10.png" alt="">
+                    </div>
+                    <div class="product__body">
+                      <span class="product__tag">МАВРИКИЙ, БО-ШАН</span>
+                      <h3 class="product__title">Four Seasons Маврикий в Анахите возвращается после большого обновления</h3>
+                      <p class="product__text">Курорт на восточном побережье Маврикия с обновлёнными виллами, расширенным спа над водой, новыми гастрономическими сюжетами и ещё более тонкой связью с природой острова.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="product">
+                  <div class="product__wrap">
+                    <div class="product__img">
+                      <img loading="lazy" src="assets/images/guide/card-11.png" alt="">
+                    </div>
+                    <div class="product__body">
+                      <span class="product__tag">ИСПАНИЯ, ИБИЦА</span>
+                      <h3 class="product__title">Nômade Temple Ibiza — новый богемный адрес Ибицы</h3>
+                      <p class="product__text">Новый проект бренда Nômade соединяет праздничную энергию Ибицы с восстановлением, природной архитектурой и более тихим ритмом северного побережья.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="product">
+                  <div class="product__wrap">
+                    <div class="product__img">
+                      <img loading="lazy" src="assets/images/guide/card-12.png" alt="">
+                    </div>
+                    <div class="product__body">
+                      <span class="product__tag">ЯХТИНГ, СРЕДИЗЕМНОЕ МОРЕ</span>
+                      <h3 class="product__title">Orient Express открывают сезон 2027: элегантное парусное путешествие от Эгейского до Северного моря</h3>
+                      <p class="product__text">Изысканное морское путешествие в духе гранд-тур: яхта Orient Express Corinthian и её яхта-близнец Olympian представляют маршруты сезона 2027 года, проходящие через Грецию, Турцию и Северную Европу.</p>
                     </div>
                   </div>
                 </a>
