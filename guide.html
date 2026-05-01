@@ -7,8 +7,8 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
-  <!-- Карточки гида: убираем "коробку" вокруг карточки (фон/тень/радиус) — в Figma они плоские.
-       Фиксируем соотношение фото 291×226 как в Figma, object-fit: cover. -->
+  <!-- Карточки гида: плоские (без фона/тени/радиуса), фото 291×226 (как в Figma).
+       Hero-слайдер: фото 1040×584 (16:9 как в Figma), плашка с текстом 1032×247. -->
   <style>
     .guide__cards .product {
       background-color: transparent;
@@ -29,6 +29,23 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+    /* Hero-слайдер: фото фиксировано в пропорциях 1040/584 (как в Figma) */
+    .card-section--slider .house-card__img {
+      aspect-ratio: 1040 / 584;
+      overflow: hidden;
+      width: 100%;
+    }
+    .card-section--slider .house-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Панель с текстом: 1032 шириной, плотно по дизайну */
+    .card-section--slider .house-card__body {
+      max-width: 1032px;
+      padding: 20px 16px;
     }
   </style>
 </head>
