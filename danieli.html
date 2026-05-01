@@ -8,7 +8,7 @@
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
   <style>
-    /* Drop-cap "D" в первом параграфе после первого hero — пиксель-перфект под Figma */
+    /* Drop-cap "D" в первом параграфе — пиксель-перфект под Figma */
     .danieli-dropcap p:first-of-type::first-letter {
       font-family: 'Playfair', serif;
       font-weight: 400;
@@ -18,10 +18,30 @@
       margin: 0 12px 0 0;
       color: #212121;
     }
+    /* Картинки с Figma всё 2000×1500 (4:3), но в дизайне у каждой ячейки свои пропорции.
+       Принудительно даём контейнеру нужный aspect-ratio + object-fit:cover на img. */
+    .danieli-page .services__img-row picture {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .danieli-page .services__img-row picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .danieli-page .services__img-row .services__img-col:first-child picture {
+      aspect-ratio: 678 / 690;
+    }
+    .danieli-page .services__img-row .services__img-col:nth-child(2) picture {
+      aspect-ratio: 452 / 337;
+      height: auto;
+    }
   </style>
 </head>
 
-<body>
+<body class="danieli-page">
   <div class="wrapper">
     <header class="header">
       <a href="index.html" class="header__logo">
