@@ -154,15 +154,18 @@
                         <li class="guide-form__option js-select-option active" data-value="">ВСЕ НАПРАВЛЕНИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="europe">ЕВРОПА</li>
                         <li class="guide-form__option js-select-option" data-value="france">— ФРАНЦИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="italy">— ИТАЛИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="spain">— ИСПАНИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="switzerland">— ШВЕЙЦАРИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="africa">АФРИКА</li>
                         <li class="guide-form__option js-select-option" data-value="uganda">— УГАНДА</li>
                         <li class="guide-form__option js-select-option" data-value="zimbabwe">— ЗИМБАБВЕ</li>
+                        <li class="guide-form__option js-select-option" data-value="indian-ocean">ИНДИЙСКИЙ ОКЕАН</li>
+                        <li class="guide-form__option js-select-option" data-value="mauritius">— МАВРИКИЙ</li>
+                        <li class="guide-form__option js-select-option" data-value="mediterranean">СРЕДИЗЕМНОЕ МОРЕ (яхты)</li>
                         <li class="guide-form__option js-select-option" data-value="australasia">АВСТРАЛАЗИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="asia">АЗИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="caribbean">КАРИБСКИЕ ОСТРОВА</li>
-                        <li class="guide-form__option js-select-option" data-value="indian-ocean">ИНДИЙСКИЙ ОКЕАН</li>
                         <li class="guide-form__option js-select-option" data-value="middle-east">БЛИЖНИЙ ВОСТОК</li>
                         <li class="guide-form__option js-select-option" data-value="north-america">СЕВЕРНАЯ АМЕРИКА</li>
                       </ul>
@@ -171,25 +174,21 @@
                 </form>
               </div>
               <div class="guide__filter">
-                <button type="button" class="guide-btn active" data-continent="all">ALL</button>
-                <button type="button" class="guide-btn" data-continent="africa">АФРИКА</button>
-                <button type="button" class="guide-btn" data-continent="asia">АЗИЯ</button>
-                <button type="button" class="guide-btn" data-continent="australasia">Австралазия</button>
-                <button type="button" class="guide-btn" data-continent="caribbean">Карибские острова</button>
-                <button type="button" class="guide-btn" data-continent="central-south-america">Центральная и Южная Америка
-                </button>
-                <button type="button" class="guide-btn" data-continent="europe">ЕВРОПА</button>
-                <button type="button" class="guide-btn" data-continent="indian-ocean">Индийский океан
-                </button>
-                <button type="button" class="guide-btn" data-continent="middle-east">БЛИЖНИЙ Восток
-                </button>
-                <button type="button" class="guide-btn" data-continent="north-america">Северная Америка
-                </button>
+                <button type="button" class="guide-btn active" data-type="all">ВСЕ</button>
+                <button type="button" class="guide-btn" data-type="islands">островной отдых</button>
+                <button type="button" class="guide-btn" data-type="coastal-hotel">прибрежный отель</button>
+                <button type="button" class="guide-btn" data-type="retreat">РЕТРИТ</button>
+                <button type="button" class="guide-btn" data-type="safari-lodge">САФАРИ-ЛОДЖ</button>
+                <button type="button" class="guide-btn" data-type="wellness">wellness-отель</button>
+                <button type="button" class="guide-btn" data-type="mountain-resort">горный курорт</button>
+                <button type="button" class="guide-btn" data-type="historic-hotel">исторический отель</button>
+                <button type="button" class="guide-btn" data-type="cruises">круизы</button>
+                <button type="button" class="guide-btn" data-type="charter">чартер</button>
               </div>
             </div>
             <div class="guide__cards">
               <div class="card-section__row">
-                <div class="card-section__col" data-continent="europe" data-country="france">
+                <div class="card-section__col" data-type="islands" data-country="france">
                   <a href="villa.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img">
@@ -203,7 +202,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="card-section__col" data-continent="europe" data-country="switzerland">
+                <div class="card-section__col" data-type="mountain-resort" data-country="switzerland">
                   <a href="#" class="product">
                     <div class="product__wrap">
                       <div class="product__img">
@@ -221,7 +220,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="card-section__col" data-continent="europe" data-country="spain">
+                <div class="card-section__col" data-type="coastal-hotel" data-country="spain">
                   <a href="#" class="product">
                     <div class="product__wrap">
                       <div class="product__img">
@@ -239,7 +238,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="card-section__col" data-continent="africa" data-country="uganda">
+                <div class="card-section__col" data-type="safari-lodge" data-country="uganda">
                   <a href="#" class="product">
                     <div class="product__wrap">
                       <div class="product__img">
@@ -256,7 +255,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="card-section__col" data-continent="africa" data-country="zimbabwe">
+                <div class="card-section__col" data-type="safari-lodge" data-country="zimbabwe">
                   <a href="#" class="product">
                     <div class="product__wrap">
                       <div class="product__img">
@@ -271,6 +270,111 @@
                         <p class="product__text">Две виллы на берегу Замбези делают этот район самым тихим и
                           одновременно
                           самым стильным в регионе Грейт-Плейнс, недалеко от водопада Виктория</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 6: Венеция / Four Seasons Даниэли → historic-hotel -->
+                <div class="card-section__col" data-type="historic-hotel" data-country="italy">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/g-2.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">ИТАЛИЯ, ВЕНЕЦИЯ</span>
+                        <h3 class="product__title">Four Seasons возвращает Даниэли — венецианская легенда вступает в новую эпоху</h3>
+                        <p class="product__text">Один из самых знаменитых адресов Венеции открывает новую главу под управлением Four Seasons, сохраняя историческое достоинство трёх дворцов на набережной Рива-дельи-Скьявони.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 7: Маврикий / Four Seasons обновление → wellness -->
+                <div class="card-section__col" data-type="wellness" data-country="mauritius">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/g-3.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">МАВРИКИЙ, БО-ШАН</span>
+                        <h3 class="product__title">Four Seasons Маврикий в Анахите возвращается после большого обновления</h3>
+                        <p class="product__text">Курорт на восточном побережье Маврикия с обновлёнными виллами, расширенным спа над водой, новыми гастрономическими сюжетами и ещё более тонкой связью с природой острова.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 8: Orient Express 2027 / Яхтинг → cruises -->
+                <div class="card-section__col" data-type="cruises" data-country="mediterranean">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/g-1.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">ЯХТИНГ, СРЕДИЗЕМНОЕ МОРЕ</span>
+                        <h3 class="product__title">Orient Express открывают сезон 2027: элегантное парусное путешествие от Эгейского до Северного моря</h3>
+                        <p class="product__text">Изысканное морское путешествие в духе гранд-тур: яхта Orient Express Corinthian и её яхта-близнец Olympian представляют маршруты сезона 2027 года, проходящие через Грецию, Турцию и Северную Европу.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 9: ретрит (placeholder) -->
+                <div class="card-section__col" data-type="retreat" data-country="">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/v-3.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">НАПРАВЛЕНИЕ</span>
+                        <h3 class="product__title">Камерный ретрит — место для уединения и тишины</h3>
+                        <p class="product__text">Контент будет добавлен позже.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 10: исторический отель (placeholder) -->
+                <div class="card-section__col" data-type="historic-hotel" data-country="">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/v-5.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">НАПРАВЛЕНИЕ</span>
+                        <h3 class="product__title">Исторический отель — место с богатым наследием</h3>
+                        <p class="product__text">Контент будет добавлен позже.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 11: чартер (placeholder) -->
+                <div class="card-section__col" data-type="charter" data-country="">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/v-8.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">НАПРАВЛЕНИЕ</span>
+                        <h3 class="product__title">Частный чартер — индивидуальный маршрут</h3>
+                        <p class="product__text">Контент будет добавлен позже.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 12: островной отдых (placeholder) -->
+                <div class="card-section__col" data-type="islands" data-country="">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img">
+                        <img loading="lazy" src="assets/images/v-11.png" alt="">
+                      </div>
+                      <div class="product__body">
+                        <span class="product__tag">НАПРАВЛЕНИЕ</span>
+                        <h3 class="product__title">Островной отдых — уединение посреди океана</h3>
+                        <p class="product__text">Контент будет добавлен позже.</p>
                       </div>
                     </div>
                   </a>
@@ -544,7 +648,7 @@
         var resultsLabel = document.querySelector('.guide__results');
         if (!cards.length) return;
 
-        var state = { continent: 'all', direction: '', search: '' };
+        var state = { type: 'all', direction: '', search: '' };
 
         function getCardText(card) {
           return (card.textContent || '').toLowerCase();
@@ -554,12 +658,13 @@
           var visible = 0;
           var search = state.search.trim().toLowerCase();
           cards.forEach(function (card) {
-            var continent = card.getAttribute('data-continent') || '';
+            var type = card.getAttribute('data-type') || '';
             var country = card.getAttribute('data-country') || '';
-            var matchContinent = state.continent === 'all' || state.continent === continent;
-            var matchDirection = !state.direction || state.direction === continent || state.direction === country;
+            var matchType = state.type === 'all' || state.type === type;
+            // direction может быть страной (france/italy/...) или регионом (mediterranean/europe/...)
+            var matchDirection = !state.direction || state.direction === country;
             var matchSearch = !search || getCardText(card).indexOf(search) !== -1;
-            var show = matchContinent && matchDirection && matchSearch;
+            var show = matchType && matchDirection && matchSearch;
             card.style.display = show ? '' : 'none';
             if (show) visible++;
           });
@@ -568,12 +673,12 @@
           }
         }
 
-        // Кнопки континентов
+        // Кнопки-типы (островной отдых / ретрит / круизы и т.д.)
         buttons.forEach(function (btn) {
           btn.addEventListener('click', function () {
             buttons.forEach(function (b) { b.classList.remove('active'); });
             btn.classList.add('active');
-            state.continent = btn.getAttribute('data-continent') || 'all';
+            state.type = btn.getAttribute('data-type') || 'all';
             applyFilters();
           });
         });
