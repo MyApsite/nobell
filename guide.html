@@ -654,6 +654,15 @@
 
         var state = { type: 'all', direction: '', search: '' };
 
+        // Чтение URL-параметров: ?type=islands, ?country=france — применяется как фильтр сразу
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var pType = params.get('type');
+          var pCountry = params.get('country');
+          if (pType) state.type = pType;
+          if (pCountry) state.direction = pCountry;
+        } catch (e) {}
+
         function getCardText(card) {
           return (card.textContent || '').toLowerCase();
         }
@@ -727,6 +736,23 @@
         // Не сабмитим форму — фильтр работает живьём
         var form = document.querySelector('.guide-form');
         if (form) form.addEventListener('submit', function (e) { e.preventDefault(); });
+
+        // Если из URL пришёл type — подсветить соответствующую кнопку
+        if (state.type !== 'all') {
+          buttons.forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-type') === state.type);
+          });
+        }
+        // Если пришёл country — подставить в видимое значение dropdown
+        if (state.direction) {
+          var btn = document.querySelector('.guide-form__field--select .js-select-btn');
+          var label = document.querySelector('.guide-form__field--select .js-select-value');
+          var hidden = document.querySelector('.guide-form__field--select .js-select-input');
+          var opt = document.querySelector('.guide-form__field--select .js-select-option[data-value="' + state.direction + '"]');
+          if (btn) btn.setAttribute('data-value', state.direction);
+          if (hidden) hidden.value = state.direction;
+          if (opt && label) label.textContent = opt.textContent.trim();
+        }
 
         applyFilters();
       }
