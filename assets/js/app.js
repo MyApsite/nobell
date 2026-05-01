@@ -593,7 +593,7 @@ var swiperSlider = function () {
         spaceBetween: 20
       },
       1280: {
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         slidesPerGroup: 4,
         spaceBetween: 30
       }
