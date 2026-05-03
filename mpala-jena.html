@@ -8,6 +8,54 @@
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
   <style>
+    /* Drop-cap "M" в первом параграфе — пиксель-перфект под Figma */
+    .mpala-jena-dropcap p:first-of-type::first-letter {
+      font-family: 'Playfair', serif;
+      font-weight: 500;
+      float: left;
+      font-size: 80px;
+      line-height: 0.85;
+      margin: 0 18px 0 0;
+      color: #212121;
+    }
+    /* Full-width hero — пропорции 1110×830 из Figma */
+    .mpala-jena-page .services__img--hero picture,
+    .mpala-jena-page .services__img--hero img {
+      aspect-ratio: 1110 / 830;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Сетка фото: пропорции по Figma. Колонки одной высоты (aspect-ratio на колонке),
+       картинки внутри тянутся через object-fit:cover. */
+    .mpala-jena-page .services__img-row .services__img-col:first-child {
+      aspect-ratio: 678 / 690;
+    }
+    .mpala-jena-page .services__img-row .services__img-col:nth-child(2) {
+      aspect-ratio: 452 / 690;
+      gap: 6px;
+    }
+    .mpala-jena-page .services__img-row picture {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      flex: 1 1 auto;
+    }
+    .mpala-jena-page .services__img-row picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Правая колонка: верхняя 337/690, нижняя 347/690 */
+    .mpala-jena-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(1) {
+      flex: 0 0 calc((100% - 6px) * 337 / 684);
+      height: auto;
+    }
+    .mpala-jena-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(2) {
+      flex: 0 0 calc((100% - 6px) * 347 / 684);
+      height: auto;
+    }
     /* Spotlight: на десктопе 4 карточки по 296px */
     .spotlight__slider .product {
       background-color: #f9f9f9;
@@ -37,7 +85,7 @@
   </style>
 </head>
 
-<body>
+<body class="mpala-jena-page">
   <div class="wrapper">
     <header class="header">
       <a href="index.html" class="header__logo">
@@ -55,7 +103,7 @@
         <img src="assets/images/next.svg" alt="">
         <a href="guide.html?country=zimbabwe">Зимбабве</a>
         <img src="assets/images/next.svg" alt="">
-        <span>ВОДОПАД ВИКТОРИЯ</span>
+        <span>НАЦИОНАЛЬНЫЙ ПАРК ЗАМБЕЗИ</span>
       </div>
 
       <button type="button" class="header__burger header__burger--fixed js-burger-open">
@@ -78,7 +126,7 @@
           <div class="services">
             <div class="services__head">
               <div class="services__title">
-                <h1>Mpala Jena Private Villas — уединённый ретрит на берегу реки прямо над водопадом Виктория</h1>
+                <h1>Mpala Jena Private Villas: уединённый ретрит на берегу реки прямо над водопадом Виктория</h1>
               </div>
               <div class="services__description">
                 <p>Пара вилл, предназначенных исключительно для частного размещения, раскрывает редкий и закрытый формат отдыха у водопада Виктория, дополненный атмосферой абсолютного уединения.</p>
@@ -101,14 +149,128 @@
                 </div>
               </div>
             </div>
-            <div class="services__img">
+            <!-- Hero 1 (1110×830) — общий вид Mpala Jena Private Villas над водопадом Виктория -->
+            <div class="services__img services__img--hero">
               <picture>
-                <source srcset="assets/images/guide/card-4.png" media="(min-width: 768px)">
-                <img src="assets/images/guide/card-4.png" alt="Mpala Jena Private Villas — уединённый ретрит на берегу реки прямо над водопадом Виктория">
+                <source srcset="assets/images/mpala-jena/hero-1.png" media="(min-width: 768px)">
+                <img src="assets/images/mpala-jena/hero-1.png" alt="Mpala Jena Private Villas — национальный парк Замбези, рядом с водопадом Виктория">
               </picture>
+              <p class="services__img-text services__img-text--right">Фото: Предоставлено Mpala Jena</p>
             </div>
-            <div class="services__text services__text--first">
-              <p>Контент готовится. Здесь будет подробное описание места.</p>
+
+            <!-- Текст 1 с drop-cap "M" -->
+            <div class="services__text services__text--first mpala-jena-dropcap">
+              <p>Mpala Jena Private Villas расположены в национальном парке Замбези, примерно в пяти километрах выше по течению от основного лагеря Mpala Jena, и развивают его идею в ещё более закрытом и приватном формате. Первый дом открылся в октябре 2025 года, второй должен последовать за ним. Замысел здесь предельно ясен: не просто сафари-проживание у воды, а очень личный речной адрес у водопада Виктория, где пространство, ритм и степень уединения становятся главной роскошью.</p>
+              <p>Место для такого проекта выбрано почти безошибочно. Виллы стоят на приподнятом деревянном настиле над естественным водоёмом, куда регулярно выходят животные, а сама река здесь задаёт всему окружающему ландшафту медленный и собранный ритм. При этом близость к водопаду Виктория остаётся вполне ощутимой: дорога через парк занимает около сорока минут, и именно это сочетание — доступ к одному из самых известных природных чудес Африки и ощущение почти полной отделённости от внешнего мира — делает формат Mpala Jena Private Villas особенно убедительным.</p>
+            </div>
+
+            <!-- Grid 1: 678×690 + (452×337 / 453×347) -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g1-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g1-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g1-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g1-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g1-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g1-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 2 — архитектурный язык и авторы проекта -->
+            <div class="services__text">
+              <p>Архитектурно проект выстроен как диалог между европейской лёгкостью и африканской фактурой. Над виллами работали владельцы Кевин и Шеннон Лэнг вместе с архитектором Джулией Резерфорд и дизайнером интерьеров Трейси Келли. В результате здесь появляются средиземноморские линии, арочные окна, ставни и известковая фактура стен, но всё это уравновешено зимбабвийским ремеслом, деревянными балками, ботаническими мотивами и более тёплой, земной материальностью. Пространство не выглядит ни нарочито сафари-экзотическим, ни слишком европейским. Оно звучит мягко, цельно и очень уверенно.</p>
+            </div>
+
+            <!-- Grid 2 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g2-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g2-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g2-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g2-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g2-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g2-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 3 — планировка вилл и гастрономия -->
+            <div class="services__text">
+              <p>Каждая вилла рассчитана на шестерых взрослых либо на четверых взрослых с тремя детьми, а все ключевые помещения ориентированы на реку или её рукав. Под общей крышей из тростника расположен центральный павильон с гостиной и баром, выдержанными в палитре шалфея и камня, а спальни соединены приподнятыми переходами, которые позволяют сохранить ощущение близости к природе, но при этом делают контакт с дикой средой более безопасным и контролируемым. Внутри предусмотрены просторные веранды, отдельные гостиные, ванные комнаты формата indoor-outdoor и круглые душевые с открытым верхом, где вода и воздух становятся частью самого опыта проживания.</p>
+              <p>Жизнь на виллах строится вокруг очень естественного, почти домашнего ритма. Утро начинается с домашней гранолы, компотов и горячего завтрака, днём подают более непринуждённую еду вроде салатов, бургеров из ягнёнка и картофеля ручной нарезки, а вечером ужин переходит в полноценную многоступенчатую трапезу — например, с местным стейком и перечным соусом. Послеобеденный чай предшествует вечерним выездам, а закатные напитки могут быть поданы как на моторной лодке или доу на реке Замбези, так и в импровизированном bush bar. Гостям вилл также открыт доступ в соседний лагерь-сестру — ради коктейлей босиком у песчаного бара и бассейна с настилом.</p>
+            </div>
+
+            <!-- Grid 3 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g3-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g3-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g3-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g3-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g3-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g3-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 4 — оздоровительный формат и включённое в проживание -->
+            <div class="services__text">
+              <p>Оздоровительная составляющая здесь не отделена от самой природы места. Свет, воздух, вода и пространство уже работают как часть восстановления, а формат проживания дополняется частным гидом, отдельным автомобилем и моторной лодкой, включёнными в пребывание. Это позволяет выстраивать дни без повторов — с сафари-выездами, речными прогулками и пешими маршрутами в собственном ритме. Дополнительный штрих, который многое говорит о качестве замысла, — камеры Canon и серьёзные бинокли, предоставляемые прямо в вилле: внимание к таким деталям делает наблюдение за рекой, птицами и животными не услугой, а естественной частью жизни на месте.</p>
+            </div>
+
+            <!-- Grid 4 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g4-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g4-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g4-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g4-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/mpala-jena/g4-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/mpala-jena/g4-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Финальный текст -->
+            <div class="services__text">
+              <p>Mpala Jena Private Villas производят сильное впечатление не масштабом, а редкой точностью формата. Это не сафари-адрес для внешнего эффекта и не просто роскошное размещение рядом с известной достопримечательностью. Перед нами место, где приватность, речной ландшафт, выверенный дизайн и близость к водопаду Виктория складываются в по-настоящему собранный опыт. Для тех, кто ищет в Африке не только дикую природу, но и тишину, ритм и ощущение собственного пространства, этот проект звучит особенно убедительно.</p>
             </div>
           </div>
         </div>
@@ -127,7 +289,20 @@
                   </div>
                   <div class="tech__body">
                     <ul>
-                      <li>Контент готовится</li>
+                      <li>Проект: Mpala Jena Private Villas</li>
+                      <li>Расположение: национальный парк Замбези, Зимбабве, примерно в 5 км выше по течению от лагеря Mpala Jena, рядом с водопадом Виктория</li>
+                      <li>Формат: две виллы исключительно для частного размещения</li>
+                      <li>Открытие: первая вилла — октябрь 2025 года, вторая заявлена следом</li>
+                      <li>Вместимость каждой виллы: 6 взрослых либо 4 взрослых и 3 ребёнка</li>
+                      <li>Авторы проекта: Кевин и Шеннон Лэнг, Джулия Резерфорд, Трейси Келли</li>
+                      <li>Архитектурный язык: средиземноморские линии в сочетании с африканской фактурой</li>
+                      <li>Планировка: центральный павильон под тростниковой крышей, гостиная, бар, спальни на приподнятых переходах</li>
+                      <li>Особенности размещения: просторные веранды, отдельные гостиные, ванные indoor-outdoor, круглые душевые с открытым верхом, панорамная ориентация на реку</li>
+                      <li>Инфраструктура: инфинити-бассейн, зона у костра, бар в пляжном стиле, вид на водоём и реку</li>
+                      <li>Гастрономия: полностью индивидуальный формат питания, afternoon tea, закатные напитки на реке и в bush bar</li>
+                      <li>Включено в проживание: частный гид, отдельный автомобиль, моторная лодка, камеры Canon и бинокли в вилле</li>
+                      <li>Устойчивые решения: работа от ближайшей солнечной станции, фильтрация воды обратным осмосом, строгая система переработки</li>
+                      <li>Среда: река Замбези, естественный водоём, дикая природа национального парка, близость к водопаду Виктория</li>
                     </ul>
                   </div>
                 </div>
@@ -166,10 +341,10 @@
                     </div>
                   </div>
                   <div class="villa-descr__tags">
-                    <a href="guide.html?city=victoria-falls" class="villa-tag">водопад Виктория</a>
-                    <a href="guide.html?country=zimbabwe" class="villa-tag">зимбабве</a>
-                    <a href="guide.html?region=africa" class="villa-tag">африка</a>
+                    <a href="guide.html?region=africa" class="villa-tag">Африка</a>
+                    <a href="guide.html?country=zimbabwe" class="villa-tag">Зимбабве</a>
                     <a href="guide.html?type=safari-lodge" class="villa-tag">сафари-лодж</a>
+                    <a href="guide.html?type=retreat" class="villa-tag">ретрит</a>
                   </div>
                 </div>
               </div>
