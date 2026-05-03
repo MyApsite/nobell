@@ -39,45 +39,6 @@
       max-width: 1032px;
       padding: 20px 16px;
     }
-    /* Активные фильтры — бэджи, показывающие применённый тег / dropdown / type / city / brand */
-    .guide__active-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
-      padding: 0 20px;
-    }
-    .guide__active-filters:empty { margin-top: 0; }
-    .guide__active-filter-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 8px 6px 12px;
-      background-color: #212121;
-      color: #fff;
-      font-family: Gilroy, sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      border-radius: 999px;
-      cursor: default;
-    }
-    .guide__active-filter-badge button {
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: none;
-      background-color: rgba(255,255,255,0.18);
-      color: #fff;
-      font-size: 12px;
-      line-height: 1;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-    }
-    .guide__active-filter-badge button:hover { background-color: rgba(255,255,255,0.32); }
   </style>
 </head>
 
@@ -217,21 +178,37 @@
                         <li class="guide-form__option js-select-option active" data-value="">ВСЕ НАПРАВЛЕНИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="europe">ЕВРОПА</li>
                         <li class="guide-form__option js-select-option" data-value="france">— ФРАНЦИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="french-riviera">— — ФРАНЦУЗСКАЯ РИВЬЕРА</li>
                         <li class="guide-form__option js-select-option" data-value="italy">— ИТАЛИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="venice">— — ВЕНЕЦИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="milan">— — МИЛАН</li>
                         <li class="guide-form__option js-select-option" data-value="spain">— ИСПАНИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="ibiza">— — ИБИЦА</li>
                         <li class="guide-form__option js-select-option" data-value="switzerland">— ШВЕЙЦАРИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="adelboden">— — АДЕЛЬБОДЕН</li>
                         <li class="guide-form__option js-select-option" data-value="estonia">— ЭСТОНИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="hiiumaa">— — ОСТРОВ ХИЙУМАА</li>
                         <li class="guide-form__option js-select-option" data-value="africa">АФРИКА</li>
                         <li class="guide-form__option js-select-option" data-value="uganda">— УГАНДА</li>
+                        <li class="guide-form__option js-select-option" data-value="bwindi">— — БВИНДИ</li>
                         <li class="guide-form__option js-select-option" data-value="zimbabwe">— ЗИМБАБВЕ</li>
+                        <li class="guide-form__option js-select-option" data-value="victoria-falls">— — ВОДОПАД ВИКТОРИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="indian-ocean">ИНДИЙСКИЙ ОКЕАН</li>
                         <li class="guide-form__option js-select-option" data-value="mauritius">— МАВРИКИЙ</li>
+                        <li class="guide-form__option js-select-option" data-value="beau-champ">— — БО-ШАН</li>
                         <li class="guide-form__option js-select-option" data-value="mediterranean">СРЕДИЗЕМНОЕ МОРЕ (яхты)</li>
+                        <li class="guide-form__option js-select-option" data-value="worldwide">ПО ВСЕМУ МИРУ (яхты)</li>
                         <li class="guide-form__option js-select-option" data-value="australasia">АВСТРАЛАЗИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="asia">АЗИЯ</li>
                         <li class="guide-form__option js-select-option" data-value="caribbean">КАРИБСКИЕ ОСТРОВА</li>
                         <li class="guide-form__option js-select-option" data-value="middle-east">БЛИЖНИЙ ВОСТОК</li>
                         <li class="guide-form__option js-select-option" data-value="north-america">СЕВЕРНАЯ АМЕРИКА</li>
+                        <li class="guide-form__option js-select-option" data-value="four-seasons">FOUR SEASONS</li>
+                        <li class="guide-form__option js-select-option" data-value="zannier">ZANNIER HOTELS</li>
+                        <li class="guide-form__option js-select-option" data-value="golden-yachts">GOLDEN YACHTS</li>
+                        <li class="guide-form__option js-select-option" data-value="six-senses">SIX SENSES</li>
+                        <li class="guide-form__option js-select-option" data-value="nomade">NÔMADE</li>
+                        <li class="guide-form__option js-select-option" data-value="orient-express">ORIENT EXPRESS</li>
                       </ul>
                     </div>
                   </div>
@@ -249,7 +226,6 @@
                 <button type="button" class="guide-btn" data-type="cruises">круизы</button>
                 <button type="button" class="guide-btn" data-type="charter">чартер</button>
               </div>
-              <div class="guide__active-filters js-active-filters" aria-live="polite"></div>
             </div>
             <div class="guide__cards">
               <div class="card-section__row">
@@ -682,86 +658,18 @@
         var resultsLabel = document.querySelector('.guide__results');
         if (!cards.length) return;
 
-        var state = { type: 'all', direction: '', region: '', brand: '', city: '', search: '' };
+        var state = { type: 'all', direction: '', search: '' };
 
-        // Чтение URL-параметров: ?type=, ?country=, ?region=, ?brand=, ?city=
+        // Чтение URL-параметров: ?type=, ?country=, ?region=, ?brand=, ?city= — все
+        // location-фильтры объединяем в одно поле direction (соответствует выбору в dropdown).
         try {
           var params = new URLSearchParams(window.location.search);
           if (params.get('type')) state.type = params.get('type');
-          if (params.get('country')) state.direction = params.get('country');
-          if (params.get('region')) state.region = params.get('region');
-          if (params.get('brand')) state.brand = params.get('brand');
-          if (params.get('city')) state.city = params.get('city');
+          state.direction = params.get('country') || params.get('region') || params.get('city') || params.get('brand') || '';
         } catch (e) {}
 
         function getCardText(card) {
           return (card.textContent || '').toLowerCase();
-        }
-
-        // Контейнер для бэджей активных фильтров
-        var activeFiltersBox = document.querySelector('.js-active-filters');
-
-        function getTypeLabel(value) {
-          var btn = document.querySelector('.guide-btn[data-type="' + value + '"]');
-          return btn ? btn.textContent.trim() : value;
-        }
-        function getDirectionLabel(value) {
-          var opt = document.querySelector('.js-select-option[data-value="' + value + '"]');
-          if (opt) return opt.textContent.replace(/^—\s*/, '').trim();
-          return value;
-        }
-
-        function clearFilter(field) {
-          if (field === 'type') {
-            state.type = 'all';
-            buttons.forEach(function (b) {
-              b.classList.toggle('active', b.getAttribute('data-type') === 'all');
-            });
-          } else if (field === 'direction') {
-            state.direction = '';
-            var btn = document.querySelector('.guide-form__field--select .js-select-btn');
-            var label = document.querySelector('.guide-form__field--select .js-select-value');
-            var hidden = document.querySelector('.guide-form__field--select .js-select-input');
-            var resetOpt = document.querySelector('.guide-form__field--select .js-select-option[data-value=""]');
-            document.querySelectorAll('.guide-form__field--select .js-select-option').forEach(function (o) { o.classList.remove('active'); });
-            if (resetOpt) resetOpt.classList.add('active');
-            if (btn) btn.setAttribute('data-value', '');
-            if (hidden) hidden.value = '';
-            if (label) label.textContent = 'ВСЕ НАПРАВЛЕНИЯ';
-          } else {
-            state[field] = '';
-          }
-          // Обновим URL без перезагрузки
-          try {
-            var url = new URL(window.location.href);
-            var paramKey = field === 'direction' ? 'country' : field;
-            url.searchParams.delete(paramKey);
-            window.history.replaceState({}, '', url);
-          } catch (e) {}
-          applyFilters();
-        }
-
-        function renderActiveFilters() {
-          if (!activeFiltersBox) return;
-          activeFiltersBox.innerHTML = '';
-          var entries = [];
-          if (state.type && state.type !== 'all') entries.push(['type', getTypeLabel(state.type)]);
-          if (state.direction) entries.push(['direction', getDirectionLabel(state.direction)]);
-          if (state.region) entries.push(['region', getDirectionLabel(state.region)]);
-          if (state.city) entries.push(['city', state.city]);
-          if (state.brand) entries.push(['brand', state.brand]);
-          entries.forEach(function (e) {
-            var span = document.createElement('span');
-            span.className = 'guide__active-filter-badge';
-            span.textContent = e[1];
-            var btn = document.createElement('button');
-            btn.type = 'button';
-            btn.setAttribute('aria-label', 'Убрать фильтр ' + e[1]);
-            btn.textContent = '×';
-            btn.addEventListener('click', function () { clearFilter(e[0]); });
-            span.appendChild(btn);
-            activeFiltersBox.appendChild(span);
-          });
         }
 
         function applyFilters() {
@@ -774,23 +682,20 @@
             var brand = card.getAttribute('data-brand') || '';
             var city = card.getAttribute('data-city') || '';
             var matchType = state.type === 'all' || type.split(/\s+/).indexOf(state.type) !== -1;
-            // direction (из dropdown) может совпадать с country, region или city
+            // direction совпадает с country, region, city или brand карточки
             var matchDirection = !state.direction
               || state.direction === country
               || state.direction === region
-              || state.direction === city;
-            var matchRegion = !state.region || state.region === region;
-            var matchBrand = !state.brand || state.brand === brand;
-            var matchCity = !state.city || state.city === city;
+              || state.direction === city
+              || state.direction === brand;
             var matchSearch = !search || getCardText(card).indexOf(search) !== -1;
-            var show = matchType && matchDirection && matchRegion && matchBrand && matchCity && matchSearch;
+            var show = matchType && matchDirection && matchSearch;
             card.style.display = show ? '' : 'none';
             if (show) visible++;
           });
           if (resultsLabel) {
             resultsLabel.textContent = 'Показано ' + visible + ' из ' + cards.length + ' результатов';
           }
-          renderActiveFilters();
         }
 
         // Кнопки-типы (островной отдых / ретрит / круизы и т.д.)
