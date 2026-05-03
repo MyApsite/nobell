@@ -219,7 +219,7 @@
             <div class="guide__cards">
               <div class="card-section__row">
                 <!-- 1: ЯХТИНГ, ПУТЕШЕСТВИЯ ПО МИРУ -->
-                <div class="card-section__col" data-type="cruises" data-country="" data-region="worldwide" data-brand="four-seasons" data-city="">
+                <div class="card-section__col" data-type="cruises" data-country="" data-region="worldwide mediterranean" data-brand="four-seasons" data-city="">
                   <a href="four-seasons-i.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><img loading="lazy" src="assets/images/guide/card-1.png" alt=""></div>
@@ -671,12 +671,14 @@
             var brand = card.getAttribute('data-brand') || '';
             var city = card.getAttribute('data-city') || '';
             var matchType = state.type === 'all' || type.split(/\s+/).indexOf(state.type) !== -1;
-            // direction совпадает с country, region, city или brand карточки
+            // direction совпадает с country, region, city или brand карточки.
+            // Все эти поля поддерживают мульти-значения через пробел (как и data-type),
+            // чтобы карточка могла одновременно относиться к нескольким регионам/брендам и т.д.
             var matchDirection = !state.direction
-              || state.direction === country
-              || state.direction === region
-              || state.direction === city
-              || state.direction === brand;
+              || country.split(/\s+/).indexOf(state.direction) !== -1
+              || region.split(/\s+/).indexOf(state.direction) !== -1
+              || city.split(/\s+/).indexOf(state.direction) !== -1
+              || brand.split(/\s+/).indexOf(state.direction) !== -1;
             var matchSearch = !search || getCardText(card).indexOf(search) !== -1;
             var show = matchType && matchDirection && matchSearch;
             card.style.display = show ? '' : 'none';

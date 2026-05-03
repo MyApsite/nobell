@@ -8,6 +8,54 @@
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
   <style>
+    /* Drop-cap "В" в первом параграфе — пиксель-перфект под Figma */
+    .four-seasons-i-dropcap p:first-of-type::first-letter {
+      font-family: 'Playfair', serif;
+      font-weight: 500;
+      float: left;
+      font-size: 80px;
+      line-height: 0.85;
+      margin: 0 18px 0 0;
+      color: #212121;
+    }
+    /* Full-width hero — пропорции 1110×830 из Figma */
+    .four-seasons-i-page .services__img--hero picture,
+    .four-seasons-i-page .services__img--hero img {
+      aspect-ratio: 1110 / 830;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Сетка фото: пропорции по Figma. Колонки одной высоты (aspect-ratio на колонке),
+       картинки внутри тянутся через object-fit:cover. */
+    .four-seasons-i-page .services__img-row .services__img-col:first-child {
+      aspect-ratio: 678 / 690;
+    }
+    .four-seasons-i-page .services__img-row .services__img-col:nth-child(2) {
+      aspect-ratio: 452 / 690;
+      gap: 6px;
+    }
+    .four-seasons-i-page .services__img-row picture {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      flex: 1 1 auto;
+    }
+    .four-seasons-i-page .services__img-row picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Правая колонка: верхняя 337/690, нижняя 347/690 */
+    .four-seasons-i-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(1) {
+      flex: 0 0 calc((100% - 6px) * 337 / 684);
+      height: auto;
+    }
+    .four-seasons-i-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(2) {
+      flex: 0 0 calc((100% - 6px) * 347 / 684);
+      height: auto;
+    }
     /* Spotlight: на десктопе 4 карточки по 296px */
     .spotlight__slider .product {
       background-color: #f9f9f9;
@@ -37,7 +85,7 @@
   </style>
 </head>
 
-<body>
+<body class="four-seasons-i-page">
   <div class="wrapper">
     <header class="header">
       <a href="index.html" class="header__logo">
@@ -51,7 +99,7 @@
         <img src="assets/images/next.svg" alt="">
         <a href="guide.html">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a>
         <img src="assets/images/next.svg" alt="">
-        <a href="guide.html?type=cruises">Яхтинг</a>
+        <a href="guide.html?type=cruises">ЯХТИНГ</a>
         <img src="assets/images/next.svg" alt="">
         <span>ПУТЕШЕСТВИЯ ПО МИРУ</span>
       </div>
@@ -99,14 +147,128 @@
                 </div>
               </div>
             </div>
-            <div class="services__img">
+            <!-- Hero 1 (1110×830) — общий вид Four Seasons I -->
+            <div class="services__img services__img--hero">
               <picture>
-                <source srcset="assets/images/guide/card-1.png" media="(min-width: 768px)">
-                <img src="assets/images/guide/card-1.png" alt="Four Seasons I — первая яхта культового бренда">
+                <source srcset="assets/images/four-seasons-i/hero-1.png" media="(min-width: 768px)">
+                <img src="assets/images/four-seasons-i/hero-1.png" alt="Four Seasons I — первая яхта культового бренда">
               </picture>
+              <p class="services__img-text services__img-text--right">Фото: Предоставлено Four Seasons I</p>
             </div>
-            <div class="services__text services__text--first">
-              <p>Контент готовится. Здесь будет подробное описание места.</p>
+
+            <!-- Текст 1 с drop-cap "В" -->
+            <div class="services__text services__text--first four-seasons-i-dropcap">
+              <p>В Four Seasons I важен не только сам факт выхода бренда в море, но и то, каким именно получился этот первый шаг. Яхта задумана не как очередной круизный проект с гостиничной отделкой, а как попытка перенести на воду тот жилой, спокойный и очень собранный стиль, с которым давно ассоциируется Four Seasons. Дебют назначен на 20 марта 2026 года — в тот же день, когда в 1961 году открылся первый отель бренда, — и в этом совпадении есть красивая внутренняя логика. Но куда важнее другое: перед нами судно длиной 207 метров с 95 люксами, где ставка сделана не на масштаб ради масштаба, а на приватность, пространство и сервис, близкий по ощущению к частной резиденции.</p>
+              <p>Проект создан совместно с Marc-Henry Cruise Holdings и строится на верфи Fincantieri, а за его визуальный и пространственный язык отвечают Tillberg Design of Sweden, Martin Brudnizki Design Studio и Prosper Assouline. При этом замысел явно смотрит не в сторону классического круизного формата, а в сторону частного яхтинга. Four Seasons I опирается не на логику большого лайнера, а на более редкое для такого масштаба ощущение морского дома, где всё подчинено не потоку, а качеству жизни на борту.</p>
+            </div>
+
+            <!-- Grid 1: 678×690 + (452×337 / 453×347) -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g1-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g1-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g1-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g1-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g1-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g1-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 2 — система размещения и резиденции -->
+            <div class="services__text">
+              <p>Именно поэтому вся система размещения выстроена здесь особенно показательно. На яхте нет внутренних кают: каждый люкс связан с морем через панорамное остекление, просторные террасы и продуманное ощущение открытого воздуха. Во многих категориях предусмотрены собственные небольшие бассейны, а две самые выразительные резиденции на борту — Funnel Suite в носовой части и Loft Suite на корме — задают верхнюю планку этого опыта. Во всём чувствуется стремление не просто дать гостю красивый интерьер, а создать полноценное частное пространство на воде.</p>
+            </div>
+
+            <!-- Grid 2 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g2-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g2-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g2-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g2-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g2-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g2-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 3 — интерьеры, сервис и гастрономия -->
+            <div class="services__text">
+              <p>Общий характер интерьеров решён спокойно и современно. Палитра остаётся светлой и сдержанной, общественные пространства наполнены воздухом и светом, а переходы между внутренними и открытыми зонами сделаны так, чтобы море не служило фоном, а оставалось главным действующим элементом всей архитектуры. Даже модель сервиса, поддерживаемая соотношением персонала к гостям почти один к одному, работает здесь не на эффектную демонстрацию заботы, а на то редкое ощущение, когда всё происходит точно, естественно и без лишнего усилия.</p>
+              <p>Гастрономия на Four Seasons I задумана как одна из центральных частей путешествия. На борту будет 11 ресторанов и лаунж-пространств, охватывающих разные сценарии дня — от утреннего кофе до поздних коктейлей. В основе программы — средиземноморская рыба и морепродукты, omakase и тщательно выстроенная социальная жизнь вокруг еды и напитков. Особое место занимает Sedna с серией Chef-in-Residence, в которой будут участвовать шефы из отмеченных наградами ресторанов Four Seasons в Париже, Афинах, Гонконге, Кап-Ферра и Флоренции. Более расслабленное настроение задаёт Horizon Bar с открытым пространством, панорамой моря и собственным небольшим бассейном, тогда как Bar O предлагает более тихий и камерный вечерний ритм с авторскими коктейлями и редкими спиртными напитками.</p>
+            </div>
+
+            <!-- Grid 3 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g3-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g3-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g3-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g3-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g3-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g3-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 4 — оздоровительная программа -->
+            <div class="services__text">
+              <p>Оздоровительное направление выстроено вокруг L'Oceana Spa, где морская тема прочитана не декоративно, а как основа самой логики восстановления. Здесь предусмотрены хаммам, термальный контур, сауна, ароматический пар, холодовые процедуры, криотерапия, инфракрасные терапевтические кушетки, гидротерапия и программы восстановления, рассчитанные на поддержание ресурса и долголетия во время путешествия. Этот же подход продолжается и в более тихих практиках: йога на рассвете на палубе, медитация, индивидуальная дыхательная работа, персональные тренировки, практики осознанности и отдельное пространство для тишины и внутренней паузы. Даже wellness-меню в гастрономической части встроены в общий ритм так, чтобы забота о состоянии человека ощущалась не дополнительной опцией, а естественной нормой жизни на борту.</p>
+            </div>
+
+            <!-- Grid 4 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g4-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g4-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g4-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g4-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/four-seasons-i/g4-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-i/g4-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Финальный текст — марина и маршруты -->
+            <div class="services__text">
+              <p>За пределами люксов и спа у яхты есть ещё одна особенно сильная черта — поперечная марина, которая раскрывается сразу на обе стороны судна и превращает стоянки в полноценные дни у воды, с прямым выходом к морю и водными активностями. Маршруты тоже обещают быть более личными по характеру: от частных культурных посещений до уединённых прибрежных остановок и труднодоступных бронирований на берегу. В первый сезон Four Seasons I отправится в Средиземное море с заходами в Сен-Тропе, Бодрум, на остров Идра, а также вдоль греческого и хорватского побережий; зимой маршруты сместятся в Карибский бассейн и на Багамы. Именно поэтому яхта воспринимается не как просто новый продукт бренда, а как попытка предложить свой, очень Four Seasons, способ читать мир с воды — тише, просторнее и значительно более лично.</p>
             </div>
           </div>
         </div>
@@ -125,7 +287,26 @@
                   </div>
                   <div class="tech__body">
                     <ul>
-                      <li>Контент готовится</li>
+                      <li>Проект: Four Seasons I</li>
+                      <li>Бренд: Four Seasons</li>
+                      <li>Формат: первая яхта бренда</li>
+                      <li>Дебют: 20 марта 2026 года</li>
+                      <li>Длина: 207 м</li>
+                      <li>Количество люксов: 95</li>
+                      <li>Концепция размещения: только люксы, без внутренних кают</li>
+                      <li>Особенности люксов: панорамное остекление, просторные террасы, в ряде категорий — собственные небольшие бассейны</li>
+                      <li>Знаковые резиденции на борту: Funnel Suite в носовой части, Loft Suite на корме</li>
+                      <li>Девелопмент: Marc-Henry Cruise Holdings</li>
+                      <li>Верфь: Fincantieri</li>
+                      <li>Дизайн: Tillberg Design of Sweden, Martin Brudnizki Design Studio</li>
+                      <li>Креативное направление: Prosper Assouline</li>
+                      <li>Сервисная модель: почти один сотрудник на одного гостя</li>
+                      <li>Гастрономия: 11 ресторанов и лаунджей</li>
+                      <li>Ключевые гастрономические пространства: Sedna, Horizon Bar, Bar O</li>
+                      <li>Оздоровительная концепция: L'Oceana Spa, термальные и холодовые процедуры, криотерапия, гидротерапия, йога, медитация, дыхательные практики</li>
+                      <li>Особенность инфраструктуры: поперечная марина с открытием на обе стороны яхты</li>
+                      <li>Первый сезон: Средиземное море — Сен-Тропе, Бодрум, остров Идра, греческое и хорватское побережья</li>
+                      <li>Зимние маршруты: Карибский бассейн и Багамы</li>
                     </ul>
                   </div>
                 </div>
@@ -165,8 +346,8 @@
                   </div>
                   <div class="villa-descr__tags">
                     <a href="guide.html?brand=four-seasons" class="villa-tag">Four Seasons</a>
-                    <a href="guide.html?type=cruises" class="villa-tag">круизы</a>
-                    <a href="guide.html?region=worldwide" class="villa-tag">путешествия по миру</a>
+                    <a href="guide.html?region=mediterranean" class="villa-tag">Средиземное море</a>
+                    <a href="guide.html?type=cruises" class="villa-tag">Круизы</a>
                   </div>
                 </div>
               </div>
