@@ -48,9 +48,29 @@
       flex: 0 0 calc((100% - 6px) * 347 / 684);
       height: auto;
     }
-    /* Spotlight: на десктопе 4 карточки по 296px, переход pagination по 4 */
+    /* Spotlight: на десктопе 4 карточки по 296px */
+    .spotlight__slider .product {
+      background-color: #f9f9f9;
+      box-shadow: none;
+    }
+
+    .spotlight__slider .product__wrap {
+      height: 100%;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
     @media (min-width: 1280px) {
-      .spotlight__slider .swiper-slide { width: 296px !important; }
+      .spotlight__slider {
+        --spotlight-slide-width: min(296px, calc((100vw - 40px - 30px * 3) / 4));
+        width: calc(var(--spotlight-slide-width) * 4 + 30px * 3);
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+      }
+      .spotlight__slider .swiper-slide { width: var(--spotlight-slide-width) !important; }
       .spotlight__slider .product__img { aspect-ratio: 296 / 226; overflow: hidden; }
       .spotlight__slider .product__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     }
@@ -314,7 +334,7 @@
           <div class="spotlight__slider js-spotlight-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="four-seasons-i.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-1.png" alt="">
@@ -328,7 +348,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="erebero-hills.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-2.png" alt="">
@@ -356,7 +376,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="mpala-jena.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-4.png" alt="">
@@ -384,7 +404,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="eha.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-6.png" alt="">
@@ -398,7 +418,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="brecon.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-7.png" alt="">
@@ -412,7 +432,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="omadeleine.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-8.png" alt="">
@@ -426,7 +446,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="six-senses-milan.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-9.png" alt="">
@@ -440,7 +460,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="four-seasons-mauritius.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-10.png" alt="">
@@ -454,7 +474,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="nomade-ibiza.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-11.png" alt="">
@@ -468,7 +488,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="product">
+                <a href="orient-express.html" class="product">
                   <div class="product__wrap">
                     <div class="product__img">
                       <img loading="lazy" src="assets/images/guide/card-12.png" alt="">
@@ -497,7 +517,7 @@
             </div>
           </div>
           <div class="spotlight__footer">
-            <a href="#" class="btn primary">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a>
+            <a href="guide.html" class="btn primary">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a>
           </div>
         </div>
       </section>
