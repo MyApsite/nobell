@@ -8,6 +8,54 @@
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
   <style>
+    /* Drop-cap "Е" в первом параграфе — пиксель-перфект под Figma */
+    .four-seasons-mauritius-dropcap p:first-of-type::first-letter {
+      font-family: 'Playfair', serif;
+      font-weight: 500;
+      float: left;
+      font-size: 80px;
+      line-height: 0.85;
+      margin: 0 18px 0 0;
+      color: #212121;
+    }
+    /* Full-width hero — пропорции 1110×830 из Figma */
+    .four-seasons-mauritius-page .services__img--hero picture,
+    .four-seasons-mauritius-page .services__img--hero img {
+      aspect-ratio: 1110 / 830;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Сетка фото: пропорции по Figma. Колонки одной высоты (aspect-ratio на колонке),
+       картинки внутри тянутся через object-fit:cover. */
+    .four-seasons-mauritius-page .services__img-row .services__img-col:first-child {
+      aspect-ratio: 678 / 690;
+    }
+    .four-seasons-mauritius-page .services__img-row .services__img-col:nth-child(2) {
+      aspect-ratio: 452 / 690;
+      gap: 6px;
+    }
+    .four-seasons-mauritius-page .services__img-row picture {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      flex: 1 1 auto;
+    }
+    .four-seasons-mauritius-page .services__img-row picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Правая колонка: верхняя 337/690, нижняя 347/690 */
+    .four-seasons-mauritius-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(1) {
+      flex: 0 0 calc((100% - 6px) * 337 / 684);
+      height: auto;
+    }
+    .four-seasons-mauritius-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(2) {
+      flex: 0 0 calc((100% - 6px) * 347 / 684);
+      height: auto;
+    }
     /* Spotlight: на десктопе 4 карточки по 296px */
     .spotlight__slider .product {
       background-color: #f9f9f9;
@@ -37,7 +85,7 @@
   </style>
 </head>
 
-<body>
+<body class="four-seasons-mauritius-page">
   <div class="wrapper">
     <header class="header">
       <a href="index.html" class="header__logo">
@@ -55,7 +103,7 @@
         <img src="assets/images/next.svg" alt="">
         <a href="guide.html?country=mauritius">Маврикий</a>
         <img src="assets/images/next.svg" alt="">
-        <span>БО-ШАН</span>
+        <span>Бо-Шан</span>
       </div>
 
       <button type="button" class="header__burger header__burger--fixed js-burger-open">
@@ -81,7 +129,7 @@
                 <h1>Four Seasons Маврикий в Анахите возвращается после большого обновления</h1>
               </div>
               <div class="services__description">
-                <p>Курорт на восточном побережье Маврикия с обновлёнными виллами, расширенным спа над водой, новыми гастрономическими сюжетами и ещё более тонкой связью с природой острова.</p>
+                <p>Курорт на восточном побережье Маврикия открывает новую главу — с обновлёнными виллами, расширенным спа над водой, новыми гастрономическими сюжетами и ещё более тонкой связью с природой острова.</p>
               </div>
               <div class="services__contacts">
                 <span>Share</span>
@@ -101,14 +149,115 @@
                 </div>
               </div>
             </div>
-            <div class="services__img">
+
+            <!-- Hero 1 (1110×830) — общий вид курорта Four Seasons Mauritius в Анахите -->
+            <div class="services__img services__img--hero">
               <picture>
-                <source srcset="assets/images/guide/card-10.png" media="(min-width: 768px)">
-                <img src="assets/images/guide/card-10.png" alt="Four Seasons Маврикий в Анахите возвращается после большого обновления">
+                <source srcset="assets/images/four-seasons-mauritius/hero-1.png" media="(min-width: 768px)">
+                <img src="assets/images/four-seasons-mauritius/hero-1.png" alt="Four Seasons Маврикий в Анахите — вид на лагуну и восточное побережье">
+              </picture>
+              <p class="services__img-text services__img-text--right">Фото: Предоставлено Four Seasons Hotels and Resorts</p>
+            </div>
+
+            <!-- Текст 1 с drop-cap "Е" -->
+            <div class="services__text services__text--first four-seasons-mauritius-dropcap">
+              <p>Есть курорты, чья главная сила заключена не в эффектности, а в самом месте. Four Seasons Mauritius в Анахите — именно такой адрес. Он расположен на зелёном восточном побережье Маврикия, между горой Бамбу и спокойной бирюзовой лагуной, и эта природная среда всегда была частью его характера. Теперь курорт возвращается после большого обновления — не меняя своей сути, но делая отдых здесь более собранным, лёгким и современным.</p>
+              <p>Важно и то, что речь идёт не о поверхностном обновлении, а о более глубоком переосмыслении уже сложившегося места. Семь месяцев работы затронули виллы с частными бассейнами, частные резиденции, гастрономические пространства и спа над водой. Но главное здесь не в самом масштабе перемен, а в том, как они выстроены: курорт не пытается затмить Маврикий дизайном, а, напротив, ещё яснее раскрывает лагуну, мангровые заросли, движение воздуха и мягкие очертания островного ландшафта.</p>
+            </div>
+
+            <!-- Grid 1: 678×690 + (452×337 / 453×347) -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g1-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g1-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g1-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g1-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g1-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g1-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 2 — виллы и резиденции -->
+            <div class="services__text">
+              <p>Особенно хорошо эта перемена чувствуется в размещении. Виллы стали светлее, спокойнее и свободнее по ощущению: светлое дерево, фактурные ткани и оттенки, навеянные островной растительностью, сделали интерьеры мягче и тише по тону. При этом все резиденции по‑прежнему сохраняют частные бассейны и приватность садов. Частные дома ещё явственнее ориентированы на отдых семьи нескольких поколений — с просторными гостиными, большими террасами и той естественной непринуждённостью, которая особенно ценна в островной жизни.</p>
+            </div>
+
+            <!-- Grid 2 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g2-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g2-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g2-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g2-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g2-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g2-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 3 — спа и гастрономия -->
+            <div class="services__text">
+              <p>Спа-направление после обновления звучит особенно убедительно. Oseyan Spa расширен и вынесен над водой, так что сама архитектура здесь работает на ощущение покоя, отрешённости и медленного возвращения к себе. Отдельного внимания заслуживает Royal Spa Suite с парной, ванной из камня ручной обработки и уединённой террасой для отдыха. Всё это воспринимается не как набор красивых опций, а как продуманная среда восстановления, где море, свет и воздух становятся частью самого ритуала.</p>
+              <p>Гастрономическая жизнь курорта после обновления стала заметно богаче и разнообразнее. Здесь появились новые рестораны с разным настроением: от современной работы с тандуром в Angara и японской точности Awase до лёгкой прибрежной Италии в Radici, средиземноморской интонации Chaloupe и рыбы с морепродуктами в Ti Pwason. К этому добавляются вечерние ритуалы в Blu‚Zil, Rum Library с акцентом на местные ботанические ноты и возвращение La Plaz Beach Grill на острове Иль-о-Серф — одного из самых любимых пляжных адресов курорта.</p>
+            </div>
+
+            <!-- Grid 3 -->
+            <div class="services__img">
+              <div class="services__img-row">
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g3-1.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g3-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="services__img-col">
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g3-2.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g3-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/images/four-seasons-mauritius/g3-3.png" media="(min-width: 768px)">
+                    <img src="assets/images/four-seasons-mauritius/g3-3.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Текст 4 — природоохранные инициативы и активности -->
+            <div class="services__text">
+              <p>При этом новая глава курорта строится не только вокруг комфорта и красоты. Важной частью общего замысла стали природоохранные инициативы: питомник морской травы, программы по сохранению морских коньков и производство мангрового мёда. Повседневный ритм дополняют прогулки к водопадам, пробежки вдоль лагуны и ежедневная игра на одном из двух чемпионских гольф-полей — в гольф-клубе «Анахита» или на поле на острове Иль-о-Серф. Так курорт становится не просто красивым островным адресом, а цельной средой, где отдых, движение и бережное отношение к природе существуют в одном ритме.</p>
+            </div>
+
+            <!-- Hero 2 (1110×830) — атмосферный кадр с лагуной и пляжем -->
+            <div class="services__img services__img--hero">
+              <picture>
+                <source srcset="assets/images/four-seasons-mauritius/hero-2.png" media="(min-width: 768px)">
+                <img src="assets/images/four-seasons-mauritius/hero-2.png" alt="Four Seasons Маврикий — лагуна и пляж">
               </picture>
             </div>
-            <div class="services__text services__text--first">
-              <p>Контент готовится. Здесь будет подробное описание места.</p>
+
+            <!-- Финальный текст -->
+            <div class="services__text">
+              <p>Именно поэтому возвращение Four Seasons Mauritius в Анахите воспринимается не как обычное повторное открытие, а как уверенное обновление уже сложившегося классического адреса. Курорт сохранил ту лёгкость островной жизни, ради которой сюда всегда ехали, но сделал её более точной, более выразительной и лучше связанной с самим Маврикием. И в этом новом прочтении особенно ценна не внешняя эффектность, а чувство меры: здесь по‑прежнему много красоты, но теперь она ещё яснее подчинена тишине, ландшафту и подлинному ощущению отдыха.</p>
             </div>
           </div>
         </div>
@@ -127,7 +276,18 @@
                   </div>
                   <div class="tech__body">
                     <ul>
-                      <li>Контент готовится</li>
+                      <li>Проект: Four Seasons Mauritius в Анахите</li>
+                      <li>Расположение: восточное побережье Маврикия, Анахита, между горой Бамбу и лагуной</li>
+                      <li>Статус: повторное открытие после семимесячного обновления</li>
+                      <li>Размещение: виллы с частными бассейнами и частные резиденции</li>
+                      <li>Дизайн вилл и резиденций: лондонская студия 1508</li>
+                      <li>Обновление гастрономических пространств: студия Elastic</li>
+                      <li>Спа: расширенный Oseyan Spa над водой, включая Royal Spa Suite с парной, каменной ванной и отдельной террасой</li>
+                      <li>Гастрономия: Angara, Awase, Radici, Chaloupe, Ti Pwason, Blu’Zil, Rum Library, La Plaz Beach Grill на острове Иль-о-Серф</li>
+                      <li>Оздоровительная концепция: травяные настои, минеральные купания, восстановительные ритуалы, прогулки и пробежки вдоль лагуны</li>
+                      <li>Гольф: ежедневный раунд на одном из двух чемпионских полей — гольф-клуб «Анахита» и поле на острове Иль-о-Серф</li>
+                      <li>Природоохранительные инициативы: питомник морской травы, сохранение морских коньков, производство мангрового мёда</li>
+                      <li>Среда: лагуна, мангровые заросли, островная растительность, горные силуэты, пляжи и морские прогулки</li>
                     </ul>
                   </div>
                 </div>
@@ -167,10 +327,9 @@
                   </div>
                   <div class="villa-descr__tags">
                     <a href="guide.html?brand=four-seasons" class="villa-tag">Four Seasons</a>
-                    <a href="guide.html?city=beau-champ" class="villa-tag">Бо-Шан</a>
-                    <a href="guide.html?country=mauritius" class="villa-tag">маврикий</a>
-                    <a href="guide.html?region=indian-ocean" class="villa-tag">индийский океан</a>
-                    <a href="guide.html?type=wellness" class="villa-tag">wellness</a>
+                    <a href="guide.html?region=indian-ocean" class="villa-tag">Индийский Океан</a>
+                    <a href="guide.html?country=mauritius" class="villa-tag">Маврикий</a>
+                    <a href="guide.html?type=islands" class="villa-tag">островной отдых</a>
                   </div>
                 </div>
               </div>
