@@ -1,0 +1,794 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Зарубежная недвижимость — Prime Residences | Nobell</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+  <!-- Карточки недвижимости: фото 296×226, текст с Playfair-заголовком и тонким разделителем под ним.
+       Hero-слайдер: фото 1040×584. Декоративный заголовок страницы — modernline + Gilroy Light. -->
+  <style>
+    /* Hero-слайдер: фото фиксировано в пропорциях 1040/584 (как в Figma) */
+    .card-section--slider .house-card__img {
+      aspect-ratio: 1040 / 584;
+      overflow: hidden;
+      width: 100%;
+    }
+    .card-section--slider .house-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-section--slider .house-card__body {
+      max-width: 1032px;
+      padding: 20px 16px;
+    }
+
+    /* Карточки недвижимости (4×3 сетка) */
+    .guide__cards .product__img {
+      aspect-ratio: 296 / 226;
+      overflow: hidden;
+      width: 100%;
+    }
+    .guide__cards .product__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Кастомизация типографики карточки под Figma */
+    .pr-page .product__body {
+      padding: 20px 16px 24px;
+    }
+    .pr-page .product__tag {
+      font-family: 'Gilroy', sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      letter-spacing: 0.4px;
+      line-height: 1.3;
+      color: #212121;
+      text-transform: uppercase;
+      display: block;
+      margin: 0 0 21px;
+    }
+    .pr-page .product__title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      line-height: 1.65;
+      color: #212121;
+      margin: 0 0 15px;
+    }
+    .pr-page .product__title::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: #d9d9d9;
+      margin-top: 15px;
+    }
+    .pr-page .product__text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.24px;
+      line-height: 1.6;
+      color: #212121;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="pr-page">
+  <div class="wrapper">
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.svg" alt="">
+      </a>
+
+      <div class="breadcrumbs">
+        <a href="index.html">
+          <img src="assets/images/home.svg" alt="">
+        </a>
+        <img src="assets/images/next.svg" alt="">
+        <span>ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</span>
+      </div>
+
+      <button type="button" class="header__burger header__burger--fixed js-burger-open">
+        <div class="header__burger-mob">
+          <img src="assets/images/b-mob.svg" alt="">
+        </div>
+        <div class="header__burger-desk">
+          <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="15" height="1" fill="#000000" />
+            <rect y="6" width="23" height="1" fill="#000000" />
+            <rect x="8" y="13" width="15" height="1" fill="#000000" />
+          </svg>
+        </div>
+      </button>
+    </header>
+
+
+    <main class="main">
+      <section class="card-section card-section--slider">
+        <div class="container">
+          <div class="card-section__head">
+            <h2 class="card-section__title">Prime Residences</h2>
+            <p class="card-section__text">зарубежная недвижимость</p>
+          </div>
+
+          <div class="card-section__slider">
+            <div class="rec-slider js-rec-slider">
+              <div class="swiper-wrapper">
+                <!-- Slide 1: The Dubai Beach Edition -->
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/prime-residences/card-1.jpg" alt="The Dubai Beach Edition">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">The Dubai Beach Edition</h3>
+                        <p class="house-card__text">Уединённый прибрежный проект в Дубай-Харборе, состоящий из четырёх павильонов, объединяет архитектуру RSHP, интерьеры Rockwell Group и фирменный гостиничный сервис бренда Edition.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Slide 2: Rocco Forte Private Villas -->
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/prime-residences/slide-2.jpg" alt="Rocco Forte Private Villas">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">Rocco Forte Private Villas</h3>
+                        <p class="house-card__text">Брендированные резиденции на Сицилии, где фирменная тихая роскошь воплощена в частных виллах на побережье курорта «Вердура».</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Slide 3: Limassol Blu Marine -->
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/prime-residences/slide-3.jpg" alt="Limassol Blu Marine">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">Limassol Blu Marine</h3>
+                        <p class="house-card__text">Прибрежные резиденции в Лимассоле, где современная архитектура, панорамные виды на Средиземное море и пятизвездочный сервис формируют утончённый формат жизни у моря.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="rec-slider__nav">
+                <button type="button" class="rec-slider__btn js-prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 22L7 12L17 2" stroke="#212121" stroke-width="2" />
+                  </svg>
+                </button>
+                <div class="rec-slider__pagination js-pagination"></div>
+                <button type="button" class="rec-slider__btn js-next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 2L17 12L7 22" stroke="#212121" stroke-width="2" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-section">
+        <div class="container">
+          <div class="guide">
+            <div class="guide__head">
+              <div class="guide__nav">
+                <form action="#" class="guide-form">
+                  <div class="guide-form__wrap">
+                    <label class="guide-form__field guide-form__field--search" aria-label="Поиск">
+                      <button type="submit" class="guide-form__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M15.75 15.75L12.4928 12.4927M12.4928 12.4927C13.0499 11.9356 13.4919 11.2741 13.7935 10.5461C14.095 9.81816 14.2502 9.03792 14.2502 8.24997C14.2502 7.46202 14.095 6.68178 13.7935 5.95381C13.4919 5.22584 13.0499 4.56439 12.4928 4.00722C11.9356 3.45006 11.2742 3.00809 10.5462 2.70655C9.81822 2.40502 9.03798 2.24982 8.25003 2.24982C7.46208 2.24982 6.68184 2.40502 5.95387 2.70655C5.2259 3.00809 4.56445 3.45006 4.00728 4.00722C2.88204 5.13247 2.24988 6.65863 2.24988 8.24997C2.24988 9.84131 2.88204 11.3675 4.00728 12.4927C5.13253 13.618 6.65869 14.2501 8.25003 14.2501C9.84137 14.2501 11.3675 13.618 12.4928 12.4927Z"
+                            stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <input type="search" name="guide-search" class="guide-form__input" placeholder="ПОИСК">
+                    </label>
+
+                    <div class="guide-form__field guide-form__field--select js-select">
+                      <input type="hidden" name="guide-direction" class="js-select-input" value="">
+                      <button type="button" class="guide-form__select-btn js-select-btn" data-value="">
+                        <span class="guide-form__select-value js-select-value">ФИЛЬТР ПО НАПРАВЛЕНИЮ</span>
+                        <span class="guide-form__select-arrow" aria-hidden="true">
+                          <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L8 8L14 2" stroke="#232323" stroke-width="2" stroke-linecap="round" />
+                          </svg>
+                        </span>
+                      </button>
+
+                      <ul class="guide-form__dropdown js-select-list">
+                        <li class="guide-form__option js-select-option active" data-value="">ВСЕ НАПРАВЛЕНИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="europe">ЕВРОПА</li>
+                        <li class="guide-form__option js-select-option" data-value="italy">— ИТАЛИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="sicily">— — СИЦИЛИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="genoa">— — ГЕНУЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="spain">— ИСПАНИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="costa-del-sol">— — КОСТА-ДЕЛЬ-СОЛЬ</li>
+                        <li class="guide-form__option js-select-option" data-value="cyprus">— КИПР</li>
+                        <li class="guide-form__option js-select-option" data-value="limassol">— — ЛИМАСОЛ</li>
+                        <li class="guide-form__option js-select-option" data-value="uk">— ВЕЛИКОБРИТАНИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="london">— — ЛОНДОН</li>
+                        <li class="guide-form__option js-select-option" data-value="portugal">— ПОРТУГАЛИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="lisbon">— — ЛИССАБОН</li>
+                        <li class="guide-form__option js-select-option" data-value="middle-east">БЛИЖНИЙ ВОСТОК</li>
+                        <li class="guide-form__option js-select-option" data-value="uae">— ОАЭ</li>
+                        <li class="guide-form__option js-select-option" data-value="dubai">— — ДУБАЙ</li>
+                        <li class="guide-form__option js-select-option" data-value="saudi-arabia">— САУДОВСКАЯ АРАВИЯ</li>
+                        <li class="guide-form__option js-select-option" data-value="shura-island">— — ОСТРОВ ШУРА</li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="guide__filter">
+                <button type="button" class="guide-btn active" data-type="all">ВСЕ</button>
+                <button type="button" class="guide-btn" data-type="africa">африка</button>
+                <button type="button" class="guide-btn" data-type="asia">азия</button>
+                <button type="button" class="guide-btn" data-type="australasia">АВСТРАЛАЗИЯ</button>
+                <button type="button" class="guide-btn" data-type="caribbean">КАРИБЫ</button>
+                <button type="button" class="guide-btn" data-type="americas">ЦЕНТРАЛЬНАЯ И ЮЖНАЯ АМЕРИКА</button>
+                <button type="button" class="guide-btn" data-type="europe">ЕВРОПА</button>
+                <button type="button" class="guide-btn" data-type="indian-ocean">ИНДИЙСКИЙ ОКЕАН</button>
+                <button type="button" class="guide-btn" data-type="middle-east">ближний восток</button>
+                <button type="button" class="guide-btn" data-type="north-america">СЕВЕРНАЯ АМЕРИКА</button>
+              </div>
+            </div>
+            <div class="guide__cards">
+              <div class="card-section__row">
+                <!-- 1: ОАЭ, ДУБАЙ -->
+                <div class="card-section__col" data-type="middle-east branded coastal" data-country="uae" data-region="middle-east" data-brand="edition" data-city="dubai">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-1.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ОАЭ, ДУБАЙ</span>
+                        <h3 class="product__title">The Dubai Beach Edition</h3>
+                        <p class="product__text">Уединённый прибрежный проект в Дубай-Харборе, состоящий из четырёх павильонов, объединяет архитектуру RSHP, интерьеры Rockwell Group и фирменный гостиничный сервис бренда Edition.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 2: ИТАЛИЯ, СИЦИЛИЯ -->
+                <div class="card-section__col" data-type="europe branded coastal" data-country="italy" data-region="europe" data-brand="rocco-forte" data-city="sicily">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-2.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ИТАЛИЯ, СИЦИЛИЯ</span>
+                        <h3 class="product__title">Rocco Forte Private Villas</h3>
+                        <p class="product__text">Брендированные резиденции на Сицилии, где фирменная тихая роскошь воплощена в частных виллах на побережье курорта «Вердура».</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 3: КИПР, ЛИМАСОЛ -->
+                <div class="card-section__col" data-type="europe coastal" data-country="cyprus" data-region="europe" data-brand="" data-city="limassol">
+                  <a href="limassol-blu-marine.html" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-3.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">КИПР, ЛИМАСОЛ</span>
+                        <h3 class="product__title">Limassol Blu Marine</h3>
+                        <p class="product__text">Прибрежные резиденции в Лимассоле, где современная архитектура, панорамные виды на Средиземное море и пятизвездочный сервис формируют утончённый формат жизни у моря.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 4: ОАЭ, ДУБАЙ -->
+                <div class="card-section__col" data-type="middle-east branded" data-country="uae" data-region="middle-east" data-brand="maison-margiela carlo-colombo" data-city="dubai">
+                  <a href="maison-margiela.html" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-4.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ОАЭ, ДУБАЙ</span>
+                        <h3 class="product__title">Maison Margiela Residences</h3>
+                        <p class="product__text">Первый жилой проект дома моды Maison Margiela на Пальме Джумейра в Дубае, где эстетика бренда раскрыта в 25 персонализированных резиденциях.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card-section__row">
+                <!-- 5: ИСПАНИЯ, КОСТА-ДЕЛЬ-СОЛЬ -->
+                <div class="card-section__col" data-type="europe coastal" data-country="spain" data-region="europe" data-brand="" data-city="costa-del-sol">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-5.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ИСПАНИЯ, КОСТА-ДЕЛЬ-СОЛЬ</span>
+                        <h3 class="product__title">Tyrian Residences</h3>
+                        <p class="product__text">Прибрежные резиденции в Эстепоне на побережье Коста-дель-Соль, где простор виллы, гостиничный сервис и архитектура, соединены в едином приморском формате проживания.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 6: ИТАЛИЯ, ГЕНУЯ -->
+                <div class="card-section__col" data-type="europe coastal penthouse" data-country="italy" data-region="europe" data-brand="rpbw" data-city="genoa">
+                  <a href="waterfront-di-levante.html" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-6.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ИТАЛИЯ, ГЕНУЯ</span>
+                        <h3 class="product__title">Waterfront di Levante</h3>
+                        <p class="product__text">Готовые к проживанию пентхаусы на восточной набережной Генуи, где архитектурная ясность RPBW соединяется с панорамными видами на Лигурийское море, мариной и продуманной прибрежной инфраструктурой.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 7: ОАЭ, ДУБАЙ -->
+                <div class="card-section__col" data-type="middle-east coastal" data-country="uae" data-region="middle-east" data-brand="" data-city="dubai">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-7.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ОАЭ, ДУБАЙ</span>
+                        <h3 class="product__title">The Rings</h3>
+                        <p class="product__text">Новый прибрежный адрес в районе Джумейра в Дубае, где пластичная архитектура Foster + Partners формирует уникальный стиль жизни у моря.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 8: ОАЭ, ДУБАЙ -->
+                <div class="card-section__col" data-type="middle-east branded" data-country="uae" data-region="middle-east" data-brand="mr-c" data-city="dubai">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-8.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ОАЭ, ДУБАЙ</span>
+                        <h3 class="product__title">Mr. C Residences Jumeirah</h3>
+                        <p class="product__text">Камерный жилой проект в районе Джумейра в Дубае, где эстетика яхтенной жизни, европейская сдержанность и безупречно организованный сервис складываются в единый продуманный сценарий.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="card-section__row">
+                <!-- 9: ОАЭ, ДУБАЙ -->
+                <div class="card-section__col" data-type="middle-east branded coastal" data-country="uae" data-region="middle-east" data-brand="bulgari" data-city="dubai">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-9.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ОАЭ, ДУБАЙ</span>
+                        <h3 class="product__title">Bulgari Lighthouse Dubai</h3>
+                        <p class="product__text">Ультра-люксовый проект на Джумейре, где итальянская сдержанность, морской простор и приватность раскрываются в одном из самых эксклюзивных прибрежных адресов.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 10: ВЕЛИКОБРИТАНИЯ, ЛОНДОН -->
+                <div class="card-section__col" data-type="europe" data-country="uk" data-region="europe" data-brand="" data-city="london">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-10.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ВЕЛИКОБРИТАНИЯ, ЛОНДОН</span>
+                        <h3 class="product__title">Bishops Avenue Gardens</h3>
+                        <p class="product__text">Камерный жилой адрес, где садовое окружение создаёт редкое ощущение приватности в одном из самых престижных районов Лондона.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 11: САУДОВСКАЯ АРАВИЯ, ОСТРОВ ШУРА -->
+                <div class="card-section__col" data-type="middle-east branded coastal" data-country="saudi-arabia" data-region="middle-east" data-brand="miraval" data-city="shura-island">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-11.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">САУДОВСКАЯ АРАВИЯ, ОСТРОВ ШУРА</span>
+                        <h3 class="product__title">Miraval The Red Sea Residences</h3>
+                        <p class="product__text">Прибрежный проект на острове Шура в Саудовской Аравии, где частные виллы у моря соединяют архитектуру Foster + Partners с философией благополучия Miraval.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- 12: ПОРТУГАЛИЯ, ЛИССАБОН -->
+                <div class="card-section__col" data-type="europe branded" data-country="portugal" data-region="europe" data-brand="missoni" data-city="lisbon">
+                  <a href="#" class="product">
+                    <div class="product__wrap">
+                      <div class="product__img"><img loading="lazy" src="assets/images/prime-residences/card-12.jpg" alt=""></div>
+                      <div class="product__body">
+                        <span class="product__tag">ПОРТУГАЛИЯ, ЛИССАБОН</span>
+                        <h3 class="product__title">Aroeira Collections by Missoni</h3>
+                        <p class="product__text">Резиденции в сосновом лесу к югу от Лиссабона, где фирменная эстетика Missoni соединяется с песчаными дюнами, атлантическим светом и сдержанной архитектурой, бережно встроенной в природный ландшафт.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="guide__footer">
+                <a href="#" class="btn primary">загрузить больше</a>
+                <p class="guide__results">Показаны 12 из 947 результатов</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="guide.html" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="#" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="prime-residences.html" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="cars.html" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="watches.html" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="app.html" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn js-popup-open">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <img src="assets/images/f1.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+                    <img src="assets/images/f2.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <img src="assets/images/f3.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <img src="assets/images/f4.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516"
+                        stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА
+                                ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE LIVING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="guide.html" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ
+                                МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE SHOPPING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="prime-residences.html" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="cars.html" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="watches.html" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a>
+                        </li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО
+                                ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="app.html" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+            </div>
+            <div class="nav__form">
+                <form action="#">
+                    <input type="text" placeholder="ПОИСК">
+                    <button type="submit">
+                        <img src="assets/images/search.svg" alt="">
+                    </button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#">
+                    <img src="assets/images/popup.svg" alt="">
+                    Подать заявку
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <!-- Фильтрация карточек: по регионам (кнопки), по направлению (dropdown), по тексту (search) -->
+  <script defer>
+    (function () {
+      function init() {
+        var cards = document.querySelectorAll('.guide__cards .card-section__col');
+        var buttons = document.querySelectorAll('.guide__filter .guide-btn');
+        var selectInput = document.querySelector('.guide-form__field--select .js-select-input');
+        var searchInput = document.querySelector('input[name="guide-search"]');
+        var resultsLabel = document.querySelector('.guide__results');
+        if (!cards.length) return;
+
+        var state = { type: 'all', direction: '', search: '' };
+
+        try {
+          var params = new URLSearchParams(window.location.search);
+          if (params.get('type')) state.type = params.get('type');
+          state.direction = params.get('country') || params.get('region') || params.get('city') || params.get('brand') || '';
+        } catch (e) {}
+
+        function getCardText(card) {
+          return (card.textContent || '').toLowerCase();
+        }
+
+        function applyFilters() {
+          var visible = 0;
+          var search = state.search.trim().toLowerCase();
+          cards.forEach(function (card) {
+            var type = card.getAttribute('data-type') || '';
+            var country = card.getAttribute('data-country') || '';
+            var region = card.getAttribute('data-region') || '';
+            var brand = card.getAttribute('data-brand') || '';
+            var city = card.getAttribute('data-city') || '';
+            var matchType = state.type === 'all' || type.split(/\s+/).indexOf(state.type) !== -1;
+            var matchDirection = !state.direction
+              || country.split(/\s+/).indexOf(state.direction) !== -1
+              || region.split(/\s+/).indexOf(state.direction) !== -1
+              || city.split(/\s+/).indexOf(state.direction) !== -1
+              || brand.split(/\s+/).indexOf(state.direction) !== -1;
+            var matchSearch = !search || getCardText(card).indexOf(search) !== -1;
+            var show = matchType && matchDirection && matchSearch;
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+          });
+          if (resultsLabel) {
+            resultsLabel.textContent = 'Показано ' + visible + ' из ' + cards.length + ' результатов';
+          }
+        }
+
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            buttons.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            state.type = btn.getAttribute('data-type') || 'all';
+            applyFilters();
+          });
+        });
+
+        if (selectInput) {
+          var lastValue = selectInput.value;
+          var selectBtn = document.querySelector('.guide-form__field--select .js-select-btn');
+          if (selectBtn) {
+            var observer = new MutationObserver(function () {
+              var newValue = selectBtn.getAttribute('data-value') || '';
+              if (newValue !== lastValue) {
+                lastValue = newValue;
+                state.direction = newValue;
+                applyFilters();
+              }
+            });
+            observer.observe(selectBtn, { attributes: true, attributeFilter: ['data-value'] });
+          }
+          document.querySelectorAll('.guide-form__field--select .js-select-option').forEach(function (opt) {
+            opt.addEventListener('click', function () {
+              state.direction = opt.getAttribute('data-value') || '';
+              applyFilters();
+            });
+          });
+        }
+
+        if (searchInput) {
+          var debounce;
+          searchInput.addEventListener('input', function (e) {
+            clearTimeout(debounce);
+            debounce = setTimeout(function () {
+              state.search = e.target.value;
+              applyFilters();
+            }, 200);
+          });
+        }
+
+        var form = document.querySelector('.guide-form');
+        if (form) form.addEventListener('submit', function (e) { e.preventDefault(); });
+
+        if (state.type !== 'all') {
+          buttons.forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-type') === state.type);
+          });
+        }
+        if (state.direction) {
+          var btn = document.querySelector('.guide-form__field--select .js-select-btn');
+          var label = document.querySelector('.guide-form__field--select .js-select-value');
+          var hidden = document.querySelector('.guide-form__field--select .js-select-input');
+          var opt = document.querySelector('.guide-form__field--select .js-select-option[data-value="' + state.direction + '"]');
+          if (btn) btn.setAttribute('data-value', state.direction);
+          if (hidden) hidden.value = state.direction;
+          if (opt && label) label.textContent = opt.textContent.trim();
+        }
+
+        applyFilters();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+
+</html>
