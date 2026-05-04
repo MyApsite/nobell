@@ -40,6 +40,16 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: opacity 0.4s ease;
+    }
+    .cars-hero.is-fading .cars-hero__media img,
+    .cars-hero.is-fading .cars-hero__title,
+    .cars-hero.is-fading .cars-hero__text {
+      opacity: 0;
+    }
+    .cars-hero__title,
+    .cars-hero__text {
+      transition: opacity 0.4s ease;
     }
     .cars-hero__overlay {
       position: relative;
@@ -268,11 +278,11 @@
       <!-- Hero-блок: большое изображение + белая плашка с заголовком и описанием -->
       <section class="card-section">
         <div class="container">
-          <div class="cars-hero">
+          <div class="cars-hero" id="js-cars-hero">
             <div class="cars-hero__media">
               <picture>
-                <source srcset="assets/images/cars/card-1.webp" type="image/webp">
-                <img src="assets/images/cars/card-1.jpg" alt="Rolls-Royce Spectre Semaphore">
+                <source class="cars-hero__src" srcset="assets/images/cars/card-1.webp" type="image/webp">
+                <img class="cars-hero__img" src="assets/images/cars/card-1.jpg" alt="Rolls-Royce Spectre Semaphore">
               </picture>
             </div>
             <div class="cars-hero__overlay">
@@ -280,17 +290,17 @@
               <div class="cars-hero__divider" aria-hidden="true"></div>
               <p class="cars-hero__text">Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.</p>
               <div class="cars-hero__nav" role="group" aria-label="Навигация по слайдеру">
-                <button type="button" class="cars-hero__btn" aria-label="Предыдущий">
+                <button type="button" class="cars-hero__btn" data-slide-prev aria-label="Предыдущий">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 22L7 12L17 2" stroke="currentColor" stroke-width="2" />
                   </svg>
                 </button>
-                <div class="cars-hero__dots" aria-hidden="true">
-                  <button type="button" class="cars-hero__dot is-active" aria-label="Слайд 1"></button>
-                  <button type="button" class="cars-hero__dot" aria-label="Слайд 2"></button>
-                  <button type="button" class="cars-hero__dot" aria-label="Слайд 3"></button>
+                <div class="cars-hero__dots">
+                  <button type="button" class="cars-hero__dot is-active" data-slide-to="0" aria-label="Слайд 1"></button>
+                  <button type="button" class="cars-hero__dot" data-slide-to="1" aria-label="Слайд 2"></button>
+                  <button type="button" class="cars-hero__dot" data-slide-to="2" aria-label="Слайд 3"></button>
                 </div>
-                <button type="button" class="cars-hero__btn" aria-label="Следующий">
+                <button type="button" class="cars-hero__btn" data-slide-next aria-label="Следующий">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 2L17 12L7 22" stroke="currentColor" stroke-width="2" />
                   </svg>
@@ -586,7 +596,7 @@
             <div class="footer__column">
                 <h3 class="footer__column-title">Премиальный шоппинг</h3>
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="prime-residences.html" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
                     <li><a href="cars.html" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
                     <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
                 </ul>
@@ -745,7 +755,7 @@
                                 <span class="nav__menu-text">FINE SHOPPING</span>
                             </button>
                         </li>
-                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="prime-residences.html" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
                         <li class="nav__submenu-item"><a href="cars.html" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
                         <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
                         </li>
@@ -937,6 +947,98 @@
       } else {
         init();
       }
+    })();
+  </script>
+
+  <script defer>
+    // Hero-слайдер: 3 слайда с автопрокруткой, dots и prev/next
+    (function () {
+      var hero = document.getElementById('js-cars-hero');
+      if (!hero) return;
+      var slides = [
+        {
+          webp: 'assets/images/cars/card-1.webp',
+          jpg: 'assets/images/cars/card-1.jpg',
+          alt: 'Rolls-Royce Spectre Semaphore',
+          title: 'Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни',
+          text: 'Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.'
+        },
+        {
+          webp: 'assets/images/cars/card-2.webp',
+          jpg: 'assets/images/cars/card-2.jpg',
+          alt: 'Range Rover Holland & Holland Edition от Overfinch',
+          title: 'Range Rover Holland & Holland Edition от Overfinch — британский стиль охотничьего домика, теперь в турне по ОАЭ',
+          text: 'Range Rover SV с мотивами лондонского оружейного салона, выразительным кузовом в цвете British Racing Green и багажными отделениями, о которых коллекционеры говорят вполголоса.'
+        },
+        {
+          webp: 'assets/images/cars/card-3.webp',
+          jpg: 'assets/images/cars/card-3.jpg',
+          alt: 'Spofec Rolls-Royce Ghost Black Badge',
+          title: 'Spofec усиливает Rolls-Royce Ghost Black Badge без потери фирменной плавности',
+          text: 'Spofec добавляет Ghost Black Badge больше тяги, более собранную посадку, карбоновые аэродинамические элементы и новый голос — но делает это без ущерба для тишины и плавности, за которые ценят автомобиль'
+        }
+      ];
+      var src = hero.querySelector('.cars-hero__src');
+      var img = hero.querySelector('.cars-hero__img');
+      var titleEl = hero.querySelector('.cars-hero__title');
+      var textEl = hero.querySelector('.cars-hero__text');
+      var dots = hero.querySelectorAll('.cars-hero__dot');
+      var prev = hero.querySelector('[data-slide-prev]');
+      var next = hero.querySelector('[data-slide-next]');
+      var index = 0;
+      var autoTimer = null;
+
+      function update() {
+        var s = slides[index];
+        if (src) src.setAttribute('srcset', s.webp);
+        if (img) {
+          img.setAttribute('src', s.jpg);
+          img.setAttribute('alt', s.alt);
+        }
+        if (titleEl) titleEl.textContent = s.title;
+        if (textEl) textEl.textContent = s.text;
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].classList.toggle('is-active', i === index);
+        }
+      }
+
+      function show(i) {
+        var newIndex = ((i % slides.length) + slides.length) % slides.length;
+        if (newIndex === index) return;
+        hero.classList.add('is-fading');
+        setTimeout(function () {
+          index = newIndex;
+          update();
+          requestAnimationFrame(function () {
+            hero.classList.remove('is-fading');
+          });
+        }, 400);
+      }
+
+      function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(function () { show(index + 1); }, 7000);
+      }
+      function stopAuto() {
+        if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+      }
+
+      for (var d = 0; d < dots.length; d++) {
+        (function (btn) {
+          btn.addEventListener('click', function () {
+            show(parseInt(btn.getAttribute('data-slide-to'), 10));
+            startAuto();
+          });
+        })(dots[d]);
+      }
+      if (prev) prev.addEventListener('click', function () { show(index - 1); startAuto(); });
+      if (next) next.addEventListener('click', function () { show(index + 1); startAuto(); });
+
+      // Пауза автопрокрутки при ховере
+      hero.addEventListener('mouseenter', stopAuto);
+      hero.addEventListener('mouseleave', startAuto);
+
+      startAuto();
     })();
   </script>
 </body>
