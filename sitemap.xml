@@ -76,6 +76,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://nobell.com/rezvani-tank.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nobell.com/revuelto-ad-personam.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://nobell.com/villa.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
