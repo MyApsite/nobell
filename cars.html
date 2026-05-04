@@ -40,16 +40,12 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: opacity 0.4s ease;
     }
-    .cars-hero.is-fading .cars-hero__media img,
-    .cars-hero.is-fading .cars-hero__title,
-    .cars-hero.is-fading .cars-hero__text {
-      opacity: 0;
+    .cars-hero .swiper-slide {
+      height: auto;
     }
-    .cars-hero__title,
-    .cars-hero__text {
-      transition: opacity 0.4s ease;
+    .cars-hero__slide {
+      height: 100%;
     }
     .cars-hero__overlay {
       position: relative;
@@ -85,43 +81,6 @@
       margin: 0 0 18px;
       max-width: 720px;
     }
-    .cars-hero__nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-    .cars-hero__dots {
-      display: flex;
-      gap: 6px;
-    }
-    .cars-hero__dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: rgba(33, 33, 33, 0.25);
-      border: 0;
-      padding: 0;
-      cursor: pointer;
-    }
-    .cars-hero__dot.is-active {
-      background: #212121;
-    }
-    .cars-hero__btn {
-      width: 28px;
-      height: 28px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: transparent;
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      border-radius: 50%;
-      cursor: pointer;
-      color: #212121;
-    }
-    .cars-hero__btn:hover {
-      border-color: #212121;
-    }
-
     /* Декор-заголовок */
     .cars-heading {
       text-align: center;
@@ -278,34 +237,66 @@
       <!-- Hero-блок: большое изображение + белая плашка с заголовком и описанием -->
       <section class="card-section">
         <div class="container">
-          <div class="cars-hero" id="js-cars-hero">
-            <div class="cars-hero__media">
-              <picture>
-                <source class="cars-hero__src" srcset="assets/images/cars/card-1.webp" type="image/webp">
-                <img class="cars-hero__img" src="assets/images/cars/card-1.jpg" alt="Rolls-Royce Spectre Semaphore">
-              </picture>
-            </div>
-            <div class="cars-hero__overlay">
-              <h1 class="cars-hero__title">Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни</h1>
-              <div class="cars-hero__divider" aria-hidden="true"></div>
-              <p class="cars-hero__text">Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.</p>
-              <div class="cars-hero__nav" role="group" aria-label="Навигация по слайдеру">
-                <button type="button" class="cars-hero__btn" data-slide-prev aria-label="Предыдущий">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 22L7 12L17 2" stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
-                <div class="cars-hero__dots">
-                  <button type="button" class="cars-hero__dot is-active" data-slide-to="0" aria-label="Слайд 1"></button>
-                  <button type="button" class="cars-hero__dot" data-slide-to="1" aria-label="Слайд 2"></button>
-                  <button type="button" class="cars-hero__dot" data-slide-to="2" aria-label="Слайд 3"></button>
+          <div class="rec-slider js-rec-slider cars-hero">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="cars-hero__slide">
+                  <div class="cars-hero__media">
+                    <picture>
+                      <source srcset="assets/images/cars/card-1.webp" type="image/webp">
+                      <img src="assets/images/cars/card-1.jpg" alt="Rolls-Royce Spectre Semaphore">
+                    </picture>
+                  </div>
+                  <div class="cars-hero__overlay">
+                    <h1 class="cars-hero__title">Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни</h1>
+                    <div class="cars-hero__divider" aria-hidden="true"></div>
+                    <p class="cars-hero__text">Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.</p>
+                  </div>
                 </div>
-                <button type="button" class="cars-hero__btn" data-slide-next aria-label="Следующий">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 2L17 12L7 22" stroke="currentColor" stroke-width="2" />
-                  </svg>
-                </button>
               </div>
+              <div class="swiper-slide">
+                <div class="cars-hero__slide">
+                  <div class="cars-hero__media">
+                    <picture>
+                      <source srcset="assets/images/cars/card-2.webp" type="image/webp">
+                      <img src="assets/images/cars/card-2.jpg" alt="Range Rover Holland & Holland Edition от Overfinch">
+                    </picture>
+                  </div>
+                  <div class="cars-hero__overlay">
+                    <h2 class="cars-hero__title">Range Rover Holland &amp; Holland Edition от Overfinch — британский стиль охотничьего домика, теперь в турне по ОАЭ</h2>
+                    <div class="cars-hero__divider" aria-hidden="true"></div>
+                    <p class="cars-hero__text">Range Rover SV с мотивами лондонского оружейного салона, выразительным кузовом в цвете British Racing Green и багажными отделениями, о которых коллекционеры говорят вполголоса.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="cars-hero__slide">
+                  <div class="cars-hero__media">
+                    <picture>
+                      <source srcset="assets/images/cars/card-3.webp" type="image/webp">
+                      <img src="assets/images/cars/card-3.jpg" alt="Spofec Rolls-Royce Ghost Black Badge">
+                    </picture>
+                  </div>
+                  <div class="cars-hero__overlay">
+                    <h2 class="cars-hero__title">Spofec усиливает Rolls-Royce Ghost Black Badge без потери фирменной плавности</h2>
+                    <div class="cars-hero__divider" aria-hidden="true"></div>
+                    <p class="cars-hero__text">Spofec добавляет Ghost Black Badge больше тяги, более собранную посадку, карбоновые аэродинамические элементы и новый голос — но делает это без ущерба для тишины и плавности, за которые ценят автомобиль.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rec-slider__nav">
+              <button type="button" class="rec-slider__btn js-prev" aria-label="Предыдущий слайд">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 22L7 12L17 2" stroke="#212121" stroke-width="2" />
+                </svg>
+              </button>
+              <div class="rec-slider__pagination js-pagination"></div>
+              <button type="button" class="rec-slider__btn js-next" aria-label="Следующий слайд">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 2L17 12L7 22" stroke="#212121" stroke-width="2" />
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -598,7 +589,7 @@
                 <ul class="footer__links">
                     <li><a href="prime-residences.html" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
                     <li><a href="cars.html" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
-                    <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                    <li><a href="watches.html" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
                 </ul>
             </div>
             <div class="footer__column">
@@ -757,7 +748,7 @@
                         </li>
                         <li class="nav__submenu-item"><a href="prime-residences.html" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
                         <li class="nav__submenu-item"><a href="cars.html" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
-                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
+                        <li class="nav__submenu-item"><a href="watches.html" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
                         </li>
                     </ul>
                     <button type="button" class="nav__back js-burger-back" data-target="root">
@@ -950,97 +941,6 @@
     })();
   </script>
 
-  <script defer>
-    // Hero-слайдер: 3 слайда с автопрокруткой, dots и prev/next
-    (function () {
-      var hero = document.getElementById('js-cars-hero');
-      if (!hero) return;
-      var slides = [
-        {
-          webp: 'assets/images/cars/card-1.webp',
-          jpg: 'assets/images/cars/card-1.jpg',
-          alt: 'Rolls-Royce Spectre Semaphore',
-          title: 'Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни',
-          text: 'Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.'
-        },
-        {
-          webp: 'assets/images/cars/card-2.webp',
-          jpg: 'assets/images/cars/card-2.jpg',
-          alt: 'Range Rover Holland & Holland Edition от Overfinch',
-          title: 'Range Rover Holland & Holland Edition от Overfinch — британский стиль охотничьего домика, теперь в турне по ОАЭ',
-          text: 'Range Rover SV с мотивами лондонского оружейного салона, выразительным кузовом в цвете British Racing Green и багажными отделениями, о которых коллекционеры говорят вполголоса.'
-        },
-        {
-          webp: 'assets/images/cars/card-3.webp',
-          jpg: 'assets/images/cars/card-3.jpg',
-          alt: 'Spofec Rolls-Royce Ghost Black Badge',
-          title: 'Spofec усиливает Rolls-Royce Ghost Black Badge без потери фирменной плавности',
-          text: 'Spofec добавляет Ghost Black Badge больше тяги, более собранную посадку, карбоновые аэродинамические элементы и новый голос — но делает это без ущерба для тишины и плавности, за которые ценят автомобиль'
-        }
-      ];
-      var src = hero.querySelector('.cars-hero__src');
-      var img = hero.querySelector('.cars-hero__img');
-      var titleEl = hero.querySelector('.cars-hero__title');
-      var textEl = hero.querySelector('.cars-hero__text');
-      var dots = hero.querySelectorAll('.cars-hero__dot');
-      var prev = hero.querySelector('[data-slide-prev]');
-      var next = hero.querySelector('[data-slide-next]');
-      var index = 0;
-      var autoTimer = null;
-
-      function update() {
-        var s = slides[index];
-        if (src) src.setAttribute('srcset', s.webp);
-        if (img) {
-          img.setAttribute('src', s.jpg);
-          img.setAttribute('alt', s.alt);
-        }
-        if (titleEl) titleEl.textContent = s.title;
-        if (textEl) textEl.textContent = s.text;
-        for (var i = 0; i < dots.length; i++) {
-          dots[i].classList.toggle('is-active', i === index);
-        }
-      }
-
-      function show(i) {
-        var newIndex = ((i % slides.length) + slides.length) % slides.length;
-        if (newIndex === index) return;
-        hero.classList.add('is-fading');
-        setTimeout(function () {
-          index = newIndex;
-          update();
-          requestAnimationFrame(function () {
-            hero.classList.remove('is-fading');
-          });
-        }, 400);
-      }
-
-      function startAuto() {
-        stopAuto();
-        autoTimer = setInterval(function () { show(index + 1); }, 7000);
-      }
-      function stopAuto() {
-        if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
-      }
-
-      for (var d = 0; d < dots.length; d++) {
-        (function (btn) {
-          btn.addEventListener('click', function () {
-            show(parseInt(btn.getAttribute('data-slide-to'), 10));
-            startAuto();
-          });
-        })(dots[d]);
-      }
-      if (prev) prev.addEventListener('click', function () { show(index - 1); startAuto(); });
-      if (next) next.addEventListener('click', function () { show(index + 1); startAuto(); });
-
-      // Пауза автопрокрутки при ховере
-      hero.addEventListener('mouseenter', stopAuto);
-      hero.addEventListener('mouseleave', startAuto);
-
-      startAuto();
-    })();
-  </script>
 </body>
 
 </html>
