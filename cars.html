@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Эксклюзивные автомобили — World Of Supercars | Nobell</title>
+  <meta name="description" content="Курируемая подборка эксклюзивных автомобилей: лимитированные серии Rolls-Royce, Bentley, Lamborghini, Ferrari и мастерские bespoke-проекты от ведущих ателье мира.">
+  <meta name="keywords" content="эксклюзивные автомобили, Rolls-Royce, Bentley, Lamborghini, Ferrari, Mercedes-Maybach, Brabus, лимитированные серии, bespoke, премиальный шоппинг, Nobell">
+  <link rel="canonical" href="https://nobell.com/cars.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nobell.com/cars.html">
+  <meta property="og:title" content="Эксклюзивные автомобили — World Of Supercars | Nobell">
+  <meta property="og:description" content="Курируемая подборка эксклюзивных автомобилей: лимитированные серии Rolls-Royce, Bentley, Lamborghini, Ferrari и мастерские bespoke-проекты от ведущих ателье мира.">
+  <meta property="og:image" content="https://nobell.com/assets/images/cars/card-1.webp">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Nobell">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Эксклюзивные автомобили — World Of Supercars | Nobell">
+  <meta name="twitter:description" content="Курируемая подборка эксклюзивных автомобилей: лимитированные серии Rolls-Royce, Bentley, Lamborghini, Ferrari и мастерские bespoke-проекты от ведущих ателье мира.">
+  <meta name="twitter:image" content="https://nobell.com/assets/images/cars/card-1.webp">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+  <style>
+    /* Hero-блок — большое изображение 1040×584 с белой плашкой-оверлеем */
+    .cars-hero {
+      max-width: 1040px;
+      margin: 0 auto 80px;
+      position: relative;
+    }
+    .cars-hero__media {
+      aspect-ratio: 1040 / 584;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .cars-hero__media picture,
+    .cars-hero__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .cars-hero__overlay {
+      position: relative;
+      max-width: 1032px;
+      margin: -120px auto 0;
+      background: #ffffff;
+      padding: 28px 32px 24px;
+      border-radius: 8px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.06);
+    }
+    .cars-hero__title {
+      font-family: 'Playfair', serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.3;
+      letter-spacing: 0.16px;
+      color: #212121;
+      margin: 0 0 14px;
+    }
+    .cars-hero__divider {
+      width: 16px;
+      height: 1px;
+      background: #212121;
+      margin: 0 0 14px;
+    }
+    .cars-hero__text {
+      font-family: 'Playfair', serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.6;
+      letter-spacing: 0.24px;
+      color: rgba(33, 33, 33, 0.85);
+      margin: 0 0 18px;
+      max-width: 720px;
+    }
+    .cars-hero__nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .cars-hero__dots {
+      display: flex;
+      gap: 6px;
+    }
+    .cars-hero__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(33, 33, 33, 0.25);
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+    .cars-hero__dot.is-active {
+      background: #212121;
+    }
+    .cars-hero__btn {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      color: #212121;
+    }
+    .cars-hero__btn:hover {
+      border-color: #212121;
+    }
+
+    /* Декор-заголовок */
+    .cars-heading {
+      text-align: center;
+      margin: 0 auto 36px;
+    }
+    .cars-heading__decor {
+      font-family: 'modernline', cursive;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1;
+      color: rgba(33, 33, 33, 0.8);
+      margin: 0 0 8px;
+    }
+    .cars-heading__sub {
+      font-family: 'Gilroy', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: #212121;
+      margin: 0;
+    }
+
+    /* Grid 4×3 для карточек авто */
+    .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px 22px;
+    }
+    .cars-grid__col .product {
+      display: block;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    .cars-grid__col .product:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    }
+    .cars-grid__col .product__img {
+      aspect-ratio: 291 / 226;
+      overflow: hidden;
+      width: 100%;
+    }
+    .cars-grid__col .product__img picture,
+    .cars-grid__col .product__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .cars-grid__col .product__body {
+      padding: 18px 18px 22px;
+    }
+    .cars-grid__col .product__tag {
+      display: block;
+      font-family: 'Gilroy', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.36px;
+      text-transform: uppercase;
+      color: rgba(33, 33, 33, 0.7);
+      margin: 0 0 10px;
+    }
+    .cars-grid__col .product__title {
+      font-family: 'Playfair', serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.35;
+      color: #212121;
+      margin: 0 0 12px;
+    }
+    .cars-grid__col .product__text {
+      font-family: 'Playfair', serif;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 1.55;
+      color: rgba(33, 33, 33, 0.78);
+      margin: 0;
+    }
+
+    /* Footer (загрузить больше + счётчик) */
+    .guide__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 56px;
+    }
+    .guide__results {
+      font-family: 'FuturaFuturisLightC', 'Gilroy', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.36px;
+      color: rgba(33, 33, 33, 0.8);
+      margin: 0;
+    }
+
+    /* Адаптация под планшет/моб */
+    @media (max-width: 1100px) {
+      .cars-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 800px) {
+      .cars-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .cars-hero__overlay {
+        margin: -60px 12px 0;
+        padding: 20px 18px 18px;
+      }
+    }
+    @media (max-width: 520px) {
+      .cars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.svg" alt="Nobell — логотип">
+      </a>
+
+      <div class="breadcrumbs">
+        <a href="index.html">
+          <img src="assets/images/home.svg" alt="">
+        </a>
+        <img src="assets/images/next.svg" alt="">
+        <span>ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</span>
+      </div>
+
+      <button type="button" class="header__burger header__burger--fixed js-burger-open">
+        <div class="header__burger-mob">
+          <img src="assets/images/b-mob.svg" alt="">
+        </div>
+        <div class="header__burger-desk">
+          <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="15" height="1" fill="#000000" />
+            <rect y="6" width="23" height="1" fill="#000000" />
+            <rect x="8" y="13" width="15" height="1" fill="#000000" />
+          </svg>
+        </div>
+      </button>
+    </header>
+
+    <main class="main">
+      <!-- Hero-блок: большое изображение + белая плашка с заголовком и описанием -->
+      <section class="card-section">
+        <div class="container">
+          <div class="cars-hero">
+            <div class="cars-hero__media">
+              <picture>
+                <source srcset="assets/images/cars/card-1.webp" type="image/webp">
+                <img src="assets/images/cars/card-1.jpg" alt="Rolls-Royce Spectre Semaphore">
+              </picture>
+            </div>
+            <div class="cars-hero__overlay">
+              <h1 class="cars-hero__title">Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни</h1>
+              <div class="cars-hero__divider" aria-hidden="true"></div>
+              <p class="cars-hero__text">Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.</p>
+              <div class="cars-hero__nav" role="group" aria-label="Навигация по слайдеру">
+                <button type="button" class="cars-hero__btn" aria-label="Предыдущий">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 22L7 12L17 2" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+                <div class="cars-hero__dots" aria-hidden="true">
+                  <button type="button" class="cars-hero__dot is-active" aria-label="Слайд 1"></button>
+                  <button type="button" class="cars-hero__dot" aria-label="Слайд 2"></button>
+                  <button type="button" class="cars-hero__dot" aria-label="Слайд 3"></button>
+                </div>
+                <button type="button" class="cars-hero__btn" aria-label="Следующий">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 2L17 12L7 22" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cars-heading">
+            <p class="cars-heading__decor">World Of Supercars</p>
+            <h2 class="cars-heading__sub">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</h2>
+          </div>
+
+          <div class="guide">
+            <div class="guide__head">
+              <div class="guide__nav">
+                <form action="#" class="guide-form">
+                  <div class="guide-form__wrap">
+                    <label class="guide-form__field guide-form__field--search" aria-label="Поиск">
+                      <button type="submit" class="guide-form__btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.75 15.75L12.4928 12.4927M12.4928 12.4927C13.0499 11.9356 13.4919 11.2741 13.7935 10.5461C14.095 9.81816 14.2502 9.03792 14.2502 8.24997C14.2502 7.46202 14.095 6.68178 13.7935 5.95381C13.4919 5.22584 13.0499 4.56439 12.4928 4.00722C11.9356 3.45006 11.2742 3.00809 10.5462 2.70655C9.81822 2.40502 9.03798 2.24982 8.25003 2.24982C7.46208 2.24982 6.68184 2.40502 5.95387 2.70655C5.2259 3.00809 4.56445 3.45006 4.00728 4.00722C2.88204 5.13247 2.24988 6.65863 2.24988 8.24997C2.24988 9.84131 2.88204 11.3675 4.00728 12.4927C5.13253 13.618 6.65869 14.2501 8.25003 14.2501C9.84137 14.2501 11.3675 13.618 12.4928 12.4927Z"
+                            stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <input type="search" name="cars-search" class="guide-form__input" placeholder="ПОИСК">
+                    </label>
+
+                    <div class="guide-form__field guide-form__field--select js-select">
+                      <input type="hidden" name="cars-brand" class="js-select-input" value="">
+                      <button type="button" class="guide-form__select-btn js-select-btn" data-value="">
+                        <span class="guide-form__select-value js-select-value">ПОПУЛЯРНЫЕ БРЕНДЫ</span>
+                        <span class="guide-form__select-arrow" aria-hidden="true">
+                          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L8 8L14 2" stroke="#232323" stroke-width="2" stroke-linecap="round" />
+                          </svg>
+                        </span>
+                      </button>
+
+                      <ul class="guide-form__dropdown js-select-list">
+                        <li class="guide-form__option js-select-option active" data-value="">ВСЕ БРЕНДЫ</li>
+                        <li class="guide-form__option js-select-option" data-value="rolls-royce">ROLLS-ROYCE</li>
+                        <li class="guide-form__option js-select-option" data-value="bentley">BENTLEY</li>
+                        <li class="guide-form__option js-select-option" data-value="range-rover">RANGE ROVER</li>
+                        <li class="guide-form__option js-select-option" data-value="lamborghini">LAMBORGHINI</li>
+                        <li class="guide-form__option js-select-option" data-value="ferrari">FERRARI</li>
+                        <li class="guide-form__option js-select-option" data-value="mercedes-maybach">MERCEDES-MAYBACH</li>
+                        <li class="guide-form__option js-select-option" data-value="brabus">BRABUS</li>
+                        <li class="guide-form__option js-select-option" data-value="spofec">SPOFEC</li>
+                        <li class="guide-form__option js-select-option" data-value="novitec">NOVITEC</li>
+                        <li class="guide-form__option js-select-option" data-value="overfinch">OVERFINCH</li>
+                        <li class="guide-form__option js-select-option" data-value="rezvani">REZVANI</li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="guide__filter">
+                <button type="button" class="guide-btn active" data-type="all">ВСЕ</button>
+                <button type="button" class="guide-btn" data-type="sportcar">СПОРТКАР</button>
+                <button type="button" class="guide-btn" data-type="suv">ВНЕДОРОЖНИК</button>
+                <button type="button" class="guide-btn" data-type="crossover">КРОССОВЕР</button>
+                <button type="button" class="guide-btn" data-type="cabrio">КАБРИОЛЕТ</button>
+                <button type="button" class="guide-btn" data-type="coupe">КУПЕ</button>
+                <button type="button" class="guide-btn" data-type="sedan">СЕДАН</button>
+                <button type="button" class="guide-btn" data-type="limited">ЛИМИТИРОВАННАЯ ВЕРСИЯ</button>
+                <button type="button" class="guide-btn" data-type="bespoke">BESPOKE</button>
+              </div>
+            </div>
+
+            <div class="cars-grid">
+              <!-- 1 -->
+              <div class="cars-grid__col" data-type="coupe" data-brand="rolls-royce">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-1.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-1.jpg" alt="Rolls-Royce Spectre Semaphore">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">ROLLS-ROYCE</span>
+                    <h3 class="product__title">Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни</h3>
+                    <p class="product__text">Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 2 -->
+              <div class="cars-grid__col" data-type="suv limited" data-brand="range-rover overfinch">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-2.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-2.jpg" alt="Range Rover Holland & Holland Edition от Overfinch">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">RANGE ROVER · OVERFINCH</span>
+                    <h3 class="product__title">Range Rover Holland &amp; Holland Edition от Overfinch — британский стиль охотничьего домика, теперь в турне по ОАЭ</h3>
+                    <p class="product__text">Range Rover SV с мотивами лондонского оружейного салона, выразительным кузовом в цвете British Racing Green и багажными отделениями, о которых коллекционеры говорят вполголоса.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 3 -->
+              <div class="cars-grid__col" data-type="sedan" data-brand="rolls-royce spofec">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-3.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-3.jpg" alt="Spofec Rolls-Royce Ghost Black Badge">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">ROLLS-ROYCE · SPOFEC</span>
+                    <h3 class="product__title">Spofec усиливает Rolls-Royce Ghost Black Badge без потери фирменной плавности</h3>
+                    <p class="product__text">Spofec добавляет Ghost Black Badge больше тяги, более собранную посадку, карбоновые аэродинамические элементы и новый голос — но делает это без ущерба для тишины и плавности, за которые ценят автомобиль.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 4 -->
+              <div class="cars-grid__col" data-type="suv crossover limited" data-brand="bentley">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-4.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-4.jpg" alt="Bentley Bentayga Artenara Edition">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">BENTLEY</span>
+                    <h3 class="product__title">Bentayga Artenara Edition — находит свою вершину</h3>
+                    <p class="product__text">В этой версии Bentley придаёт Bentayga более собранный и тонкий характер, обращаясь к живописным образам Гран-Канарии, мастерству Mulliner и спокойной, уверенной пластике современного Grand Tourer (GT).</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 5 -->
+              <div class="cars-grid__col" data-type="sportcar" data-brand="lamborghini">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-5.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-5.jpg" alt="Lamborghini Revuelto Ad Personam">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">LAMBORGHINI</span>
+                    <h3 class="product__title">Lamborghini Revuelto в исполнении Ad Personam — сдержанная ярость</h3>
+                    <p class="product__text">Глубокий хвойно-зелёный оттенок придаёт Revuelto более сдержанный и благородный облик, не отнимая у него ни силы, ни врождённой хищности.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 6 -->
+              <div class="cars-grid__col" data-type="sportcar" data-brand="ferrari novitec">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-6.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-6.jpg" alt="Novitec Ferrari 296 GTB">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">FERRARI · NOVITEC</span>
+                    <h3 class="product__title">Novitec переосмысливает Ferrari 296 GTB с новым пакетом доработок</h3>
+                    <p class="product__text">Новая программа Novitec для Ferrari 296 GTB добавляет гибридному болиду из Маранелло мощности, выразительности и ещё более собранного характера — с новой выхлопной системой, коваными колёсами, заниженной посадкой и более острым визуальным образом.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 7 -->
+              <div class="cars-grid__col" data-type="suv limited bespoke" data-brand="rolls-royce">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-7.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-7.jpg" alt="Rolls-Royce Cullinan Yachting">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">ROLLS-ROYCE</span>
+                    <h3 class="product__title">Rolls-Royce Cullinan Yachting идёт своим курсом</h3>
+                    <p class="product__text">Четыре особых Cullinan переводят эстетику современной яхтенной культуры на язык автомобиля — через тик, компасную маркетри и живописный образ кильватерного следа.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 8 -->
+              <div class="cars-grid__col" data-type="sedan limited" data-brand="mercedes-maybach">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-8.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-8.jpg" alt="Mercedes-Maybach S-Class V12 Edition">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">MERCEDES-MAYBACH</span>
+                    <h3 class="product__title">Mercedes-Maybach S-Class V12 Edition — золотое прощание с эпохой двенадцати цилиндров</h3>
+                    <p class="product__text">Лимитированная версия Mercedes-Maybach S-Class V12 Edition превращает прощание с легендарным мотором в торжественный коллекционный жест — с историческими отсылками, ручной отделкой и подчёркнуто церемониальной роскошью.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 9 -->
+              <div class="cars-grid__col" data-type="cabrio sportcar limited bespoke" data-brand="bentley">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-9.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-9.jpg" alt="Bentley Batur № 4 Cabrio Mulliner">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">BENTLEY</span>
+                    <h3 class="product__title">Кабриолет Bentley Batur № 4 — частный диалог цвета, металла и вкуса</h3>
+                    <p class="product__text">4-ый Bentley Batur, созданный Mulliner в тесной работе с коллекционером Соней Бреслоу, превращает GT в очень личное исполнение — с трёхцветной окраской кузова, платиновыми деталями и редкой для Bentley степенью индивидуализации.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 10 -->
+              <div class="cars-grid__col" data-type="cabrio suv limited" data-brand="brabus mercedes-maybach">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-10.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-10.jpg" alt="Brabus XL 800 Cabrio">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">BRABUS · MERCEDES-AMG</span>
+                    <h3 class="product__title">Brabus XL 800 Cabrio — открытый G-Class в самой эффектной интерпретации</h3>
+                    <p class="product__text">Brabus превращает новый Mercedes-AMG G 63 серии W 465 в открытый внедорожник с мягкой крышей собственной разработки, 800-сильным V8 и подчёркнуто театральным характером.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 11 -->
+              <div class="cars-grid__col" data-type="cabrio limited bespoke" data-brand="bentley">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-11.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-11.jpg" alt="Bentley Continental GTC Azure Mulliner Qatar Edition">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">BENTLEY</span>
+                    <h3 class="product__title">Bentley Continental GTC Azure Mulliner Qatar Edition — вечерний свет Дохи в кабриолете Bentley</h3>
+                    <p class="product__text">Единственный в своём роде Continental GTC Azure от Mulliner, окрашенный в оттенок Desert Sand, передаёт сдержанный блеск и настроение дохийских сумерек.</p>
+                  </div>
+                </a>
+              </div>
+              <!-- 12 -->
+              <div class="cars-grid__col" data-type="suv limited" data-brand="rezvani">
+                <a href="#" class="product">
+                  <div class="product__img">
+                    <picture>
+                      <source srcset="assets/images/cars/card-12.webp" type="image/webp">
+                      <img loading="lazy" src="assets/images/cars/card-12.jpg" alt="Rezvani Tank 2026">
+                    </picture>
+                  </div>
+                  <div class="product__body">
+                    <span class="product__tag">REZVANI</span>
+                    <h3 class="product__title">Rezvani Tank 2026: баллистическая бравада с вариантом на 1000 л. с.</h3>
+                    <p class="product__text">Построенный на базе Jeep, этот брутальный внедорожник предлагает бронезащиту, ночное видение и V8 от Demon мощностью до 1000 л. с. — выбор для тех, кто предпочитает автомобили, готовые к апокалипсису.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="guide__footer">
+              <a href="#" class="btn primary">загрузить больше</a>
+              <p class="guide__results">Показаны 12 из 947 результатов</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="guide.html" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="#" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="cars.html" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="#" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="app.html" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn js-popup-open">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <img src="assets/images/f1.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+                    <img src="assets/images/f2.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <img src="assets/images/f3.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <img src="assets/images/f4.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516"
+                        stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">О НАС</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА
+                                ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE LIVING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="guide.html" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ
+                                МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">FINE SHOPPING</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="cars.html" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item">
+                            <button type="button" class="nav__menu-btn nav__menu-btn--info">
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
+                                <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
+                            </button>
+                        </li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a>
+                        </li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО
+                                ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="app.html" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root">
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
+                        <span class="nav__back-text">НАЗАД</span>
+                    </button>
+                </section>
+            </div>
+            <div class="nav__form">
+                <form action="#">
+                    <input type="text" placeholder="ПОИСК">
+                    <button type="submit">
+                        <img src="assets/images/search.svg" alt="">
+                    </button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#">
+                    <img src="assets/images/popup.svg" alt="">
+                    Подать заявку
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <!-- Фильтрация карточек авто: по типу кузова (кнопки), по бренду (dropdown), по тексту (search) -->
+  <script defer>
+    (function () {
+      function init() {
+        var cards = document.querySelectorAll('.cars-grid .cars-grid__col');
+        var buttons = document.querySelectorAll('.guide__filter .guide-btn');
+        var selectInput = document.querySelector('.guide-form__field--select .js-select-input');
+        var searchInput = document.querySelector('input[name="cars-search"]');
+        var resultsLabel = document.querySelector('.guide__results');
+        if (!cards.length) return;
+
+        var totalCatalog = 947;
+        var state = { type: 'all', direction: '', search: '' };
+
+        // Чтение URL-параметров: ?type=, ?brand=
+        try {
+          var params = new URLSearchParams(window.location.search);
+          if (params.get('type')) state.type = params.get('type');
+          state.direction = params.get('brand') || '';
+        } catch (e) {}
+
+        function getCardText(card) {
+          return (card.textContent || '').toLowerCase();
+        }
+
+        function applyFilters() {
+          var visible = 0;
+          var search = state.search.trim().toLowerCase();
+          cards.forEach(function (card) {
+            var type = card.getAttribute('data-type') || '';
+            var brand = card.getAttribute('data-brand') || '';
+            var matchType = state.type === 'all' || type.split(/\s+/).indexOf(state.type) !== -1;
+            // brand-поле также поддерживает мульти-значения через пробел
+            var matchDirection = !state.direction
+              || brand.split(/\s+/).indexOf(state.direction) !== -1;
+            var matchSearch = !search || getCardText(card).indexOf(search) !== -1;
+            var show = matchType && matchDirection && matchSearch;
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+          });
+          if (resultsLabel) {
+            // Если фильтры активны — показываем visible/visible. Если нет — visible из общего каталога 947.
+            if (state.type !== 'all' || state.direction || search) {
+              resultsLabel.textContent = 'Показано ' + visible + ' из ' + visible + ' результатов';
+            } else {
+              resultsLabel.textContent = 'Показаны ' + visible + ' из ' + totalCatalog + ' результатов';
+            }
+          }
+        }
+
+        // Кнопки-типы (спорткар / внедорожник / купе и т.д.)
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            buttons.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            state.type = btn.getAttribute('data-type') || 'all';
+            applyFilters();
+          });
+        });
+
+        // Dropdown — слушаем изменение скрытого input (его правит компонент select из app.js)
+        if (selectInput) {
+          var lastValue = selectInput.value;
+          var selectBtn = document.querySelector('.guide-form__field--select .js-select-btn');
+          if (selectBtn) {
+            var observer = new MutationObserver(function () {
+              var newValue = selectBtn.getAttribute('data-value') || '';
+              if (newValue !== lastValue) {
+                lastValue = newValue;
+                state.direction = newValue;
+                applyFilters();
+              }
+            });
+            observer.observe(selectBtn, { attributes: true, attributeFilter: ['data-value'] });
+          }
+          // Также вручную клики по опциям
+          document.querySelectorAll('.guide-form__field--select .js-select-option').forEach(function (opt) {
+            opt.addEventListener('click', function () {
+              state.direction = opt.getAttribute('data-value') || '';
+              applyFilters();
+            });
+          });
+        }
+
+        // Поиск
+        if (searchInput) {
+          var debounce;
+          searchInput.addEventListener('input', function (e) {
+            clearTimeout(debounce);
+            debounce = setTimeout(function () {
+              state.search = e.target.value;
+              applyFilters();
+            }, 200);
+          });
+        }
+
+        // Не сабмитим форму
+        var form = document.querySelector('.guide-form');
+        if (form) form.addEventListener('submit', function (e) { e.preventDefault(); });
+
+        // Если из URL пришёл type — подсветить соответствующую кнопку
+        if (state.type !== 'all') {
+          buttons.forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-type') === state.type);
+          });
+        }
+        // Если пришёл brand — подставить в видимое значение dropdown
+        if (state.direction) {
+          var btn = document.querySelector('.guide-form__field--select .js-select-btn');
+          var label = document.querySelector('.guide-form__field--select .js-select-value');
+          var hidden = document.querySelector('.guide-form__field--select .js-select-input');
+          var opt = document.querySelector('.guide-form__field--select .js-select-option[data-value="' + state.direction + '"]');
+          if (btn) btn.setAttribute('data-value', state.direction);
+          if (hidden) hidden.value = state.direction;
+          if (opt && label) label.textContent = opt.textContent.trim();
+        }
+
+        applyFilters();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+
+</html>
