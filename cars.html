@@ -23,86 +23,22 @@
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
   <style>
-    /* Hero-блок — большое изображение 1040×584 с белой плашкой-оверлеем */
-    .cars-hero {
-      max-width: 1040px;
-      margin: 0 auto 80px;
-      position: relative;
-    }
-    .cars-hero__media {
+    /* Hero-слайдер: фото фиксировано в пропорциях 1040/584 (как в Figma) */
+    .card-section--slider .house-card__img {
       aspect-ratio: 1040 / 584;
       overflow: hidden;
-      border-radius: 12px;
+      width: 100%;
     }
-    .cars-hero__media picture,
-    .cars-hero__media img {
+    .card-section--slider .house-card__img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    .cars-hero .swiper-slide {
-      height: auto;
-    }
-    .cars-hero__slide {
-      height: 100%;
-    }
-    .cars-hero__overlay {
-      position: relative;
+    /* Панель с текстом: 1032 шириной, плотно по дизайну */
+    .card-section--slider .house-card__body {
       max-width: 1032px;
-      margin: -120px auto 0;
-      background: #ffffff;
-      padding: 28px 32px 24px;
-      border-radius: 8px;
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.06);
-    }
-    .cars-hero__title {
-      font-family: 'Playfair', serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.3;
-      letter-spacing: 0.16px;
-      color: #212121;
-      margin: 0 0 14px;
-    }
-    .cars-hero__divider {
-      width: 16px;
-      height: 1px;
-      background: #212121;
-      margin: 0 0 14px;
-    }
-    .cars-hero__text {
-      font-family: 'Playfair', serif;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 1.6;
-      letter-spacing: 0.24px;
-      color: rgba(33, 33, 33, 0.85);
-      margin: 0 0 18px;
-      max-width: 720px;
-    }
-    /* Декор-заголовок */
-    .cars-heading {
-      text-align: center;
-      margin: 0 auto 36px;
-    }
-    .cars-heading__decor {
-      font-family: 'modernline', cursive;
-      font-weight: 400;
-      font-size: 36px;
-      line-height: 1;
-      color: rgba(33, 33, 33, 0.8);
-      margin: 0 0 8px;
-    }
-    .cars-heading__sub {
-      font-family: 'Gilroy', 'Helvetica Neue', Arial, sans-serif;
-      font-weight: 300;
-      font-size: 10px;
-      line-height: 1.4;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      color: #212121;
-      margin: 0;
+      padding: 20px 16px;
     }
 
     /* Grid 4×3 для карточек авто */
@@ -191,10 +127,6 @@
       .cars-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .cars-hero__overlay {
-        margin: -60px 12px 0;
-        padding: 20px 18px 18px;
-      }
     }
     @media (max-width: 520px) {
       .cars-grid {
@@ -234,77 +166,79 @@
     </header>
 
     <main class="main">
-      <!-- Hero-блок: большое изображение + белая плашка с заголовком и описанием -->
+      <section class="card-section card-section--slider">
+        <div class="container">
+          <div class="card-section__head">
+            <h2 class="card-section__title">World Of Supercars</h2>
+            <p class="card-section__text">Эксклюзивные автомобили</p>
+          </div>
+
+          <div class="card-section__slider">
+            <div class="rec-slider js-rec-slider">
+              <div class="swiper-wrapper">
+                <!-- Slide 1: Rolls-Royce Spectre Semaphore -->
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/cars/card-1.jpg" alt="">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни</h3>
+                        <p class="house-card__text">Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Slide 2: Range Rover Holland & Holland Edition -->
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/cars/card-2.jpg" alt="">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">Range Rover Holland &amp; Holland Edition от Overfinch — британский стиль охотничьего домика, теперь в турне по ОАЭ</h3>
+                        <p class="house-card__text">Range Rover SV с мотивами лондонского оружейного салона, выразительным кузовом в цвете British Racing Green и багажными отделениями, о которых коллекционеры говорят вполголоса.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Slide 3: Spofec Rolls-Royce Ghost Black Badge -->
+                <div class="swiper-slide">
+                  <a href="#" class="house-card">
+                    <div class="house-card__wrap">
+                      <div class="house-card__img">
+                        <img loading="lazy" src="assets/images/cars/card-3.jpg" alt="">
+                      </div>
+                      <div class="house-card__body">
+                        <h3 class="house-card__title">Spofec усиливает Rolls-Royce Ghost Black Badge без потери фирменной плавности</h3>
+                        <p class="house-card__text">Spofec добавляет Ghost Black Badge больше тяги, более собранную посадку, карбоновые аэродинамические элементы и новый голос — но делает это без ущерба для тишины и плавности, за которые ценят автомобиль.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="rec-slider__nav">
+                <button type="button" class="rec-slider__btn js-prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 22L7 12L17 2" stroke="#212121" stroke-width="2" />
+                  </svg>
+                </button>
+                <div class="rec-slider__pagination js-pagination"></div>
+                <button type="button" class="rec-slider__btn js-next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 2L17 12L7 22" stroke="#212121" stroke-width="2" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="card-section">
         <div class="container">
-          <div class="rec-slider js-rec-slider cars-hero">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="cars-hero__slide">
-                  <div class="cars-hero__media">
-                    <picture>
-                      <source srcset="assets/images/cars/card-1.webp" type="image/webp">
-                      <img src="assets/images/cars/card-1.jpg" alt="Rolls-Royce Spectre Semaphore">
-                    </picture>
-                  </div>
-                  <div class="cars-hero__overlay">
-                    <h1 class="cars-hero__title">Rolls-Royce Spectre Semaphore — яркое выражение новой эстетики красивой жизни</h1>
-                    <div class="cars-hero__divider" aria-hidden="true"></div>
-                    <p class="cars-hero__text">Spectre Semaphore отражает новые коды люкса для более смелой и молодой аудитории марки. Яркий оттенок навеян непринуждённой элегантностью современного стиля жизни.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cars-hero__slide">
-                  <div class="cars-hero__media">
-                    <picture>
-                      <source srcset="assets/images/cars/card-2.webp" type="image/webp">
-                      <img src="assets/images/cars/card-2.jpg" alt="Range Rover Holland & Holland Edition от Overfinch">
-                    </picture>
-                  </div>
-                  <div class="cars-hero__overlay">
-                    <h2 class="cars-hero__title">Range Rover Holland &amp; Holland Edition от Overfinch — британский стиль охотничьего домика, теперь в турне по ОАЭ</h2>
-                    <div class="cars-hero__divider" aria-hidden="true"></div>
-                    <p class="cars-hero__text">Range Rover SV с мотивами лондонского оружейного салона, выразительным кузовом в цвете British Racing Green и багажными отделениями, о которых коллекционеры говорят вполголоса.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="cars-hero__slide">
-                  <div class="cars-hero__media">
-                    <picture>
-                      <source srcset="assets/images/cars/card-3.webp" type="image/webp">
-                      <img src="assets/images/cars/card-3.jpg" alt="Spofec Rolls-Royce Ghost Black Badge">
-                    </picture>
-                  </div>
-                  <div class="cars-hero__overlay">
-                    <h2 class="cars-hero__title">Spofec усиливает Rolls-Royce Ghost Black Badge без потери фирменной плавности</h2>
-                    <div class="cars-hero__divider" aria-hidden="true"></div>
-                    <p class="cars-hero__text">Spofec добавляет Ghost Black Badge больше тяги, более собранную посадку, карбоновые аэродинамические элементы и новый голос — но делает это без ущерба для тишины и плавности, за которые ценят автомобиль.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="rec-slider__nav">
-              <button type="button" class="rec-slider__btn js-prev" aria-label="Предыдущий слайд">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 22L7 12L17 2" stroke="#212121" stroke-width="2" />
-                </svg>
-              </button>
-              <div class="rec-slider__pagination js-pagination"></div>
-              <button type="button" class="rec-slider__btn js-next" aria-label="Следующий слайд">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 2L17 12L7 22" stroke="#212121" stroke-width="2" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="cars-heading">
-            <p class="cars-heading__decor">World Of Supercars</p>
-            <h2 class="cars-heading__sub">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</h2>
-          </div>
-
           <div class="guide">
             <div class="guide__head">
               <div class="guide__nav">
