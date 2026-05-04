@@ -1,255 +1,294 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ru">
 <head>
-    <!-- Редирект на мобильную версию для узких экранов (до загрузки CSS/JS) -->
-    <script>
-        if (window.matchMedia('(max-width: 767px)').matches) {
-            window.location.replace('app-mob.html');
-        }
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="cmsmagazine" content="e9693fa3bee7e535eb6c84ab605a9292" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="legacy/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="legacy/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="legacy/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="legacy/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="legacy/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="legacy/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <title>Приложение для резидентов — Nobell</title>
-    <meta name="description" content="Точность и надежность в выполнение любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за ваше комфортное проживание"/>
-    <link rel="stylesheet" href="legacy/css/libs.min.css">
-    <link rel="stylesheet" href="legacy/css/styles.css">
-    <!-- Legacy jQuery грузим первым, потом noConflict — чтобы window.$/jQuery освободить для нового -->
-    <script src="legacy/js/lib.min.js"></script>
-    <script>window.$legacy = jQuery.noConflict(true);</script>
-    <style>
-        .trio_phone .tp_desc .phn.phn1 .phone {
-            background-image: url(legacy/img/x100.png);
-        }
-        .trio_phone .tp_desc .phn.phn2 .phone {
-            background-image: url(legacy/img/x200.png);
-        }
-        .trio_phone .tp_desc .phn.phn3 .phone {
-            background-image: url(legacy/img/x300.png);
-        }
-    </style>
-
-    <!-- НОВЫЙ футер: стили и шрифты -->
-    <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=13">
-    <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=13">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Приложение для резидентов — Nobell Mobile Butler | Nobell</title>
+  <meta name="description" content="Точность и надежность в выполнении любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за ваше комфортное проживание — мобильное приложение Nobell Mobile Butler.">
+  <meta name="keywords" content="Nobell Mobile Butler, приложение для резидентов, консьерж сервис, элитный ЖК, лайфстайл менеджер, премиальный сервис">
+  <link rel="canonical" href="https://nobell.com/app.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nobell.com/app.html">
+  <meta property="og:title" content="Приложение для резидентов — Nobell Mobile Butler | Nobell">
+  <meta property="og:description" content="Управление жизнью в одно касание. Точность и надежность в выполнении любых поручений, простота в общении со всеми службами через мобильное приложение Nobell Mobile Butler.">
+  <meta property="og:image" content="https://nobell.com/assets/images/app-intro.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Nobell">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Приложение для резидентов — Nobell Mobile Butler | Nobell">
+  <meta name="twitter:description" content="Управление жизнью в одно касание. Мобильное приложение Nobell Mobile Butler для резидентов элитных ЖК.">
+  <meta name="twitter:image" content="https://nobell.com/assets/images/app-intro.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
-<body>
-    <div id="loaders"><span class="n1"></span><span class="n2"></span></div>
-
-
-    <!-- ============= НОВАЯ ШАПКА ============= -->
+<body class="app-page">
+  <div class="wrapper">
     <header class="header">
-        <a href="index.html" class="header__logo">
-            <img src="assets/images/logo.svg?v=2" alt="Nobell — логотип" title="Nobell — логотип">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.svg" alt="">
+      </a>
+
+      <div class="breadcrumbs">
+        <a href="index.html">
+          <img src="assets/images/home.svg" alt="">
         </a>
+        <img src="assets/images/next.svg" alt="">
+        <span>Приложение для резидентов</span>
+      </div>
 
-        <div class="breadcrumbs">
-            <a href="index.html">
-                <img src="assets/images/home.svg?v=2" alt="Главная" title="Главная">
-            </a>
-            <img src="assets/images/next.svg?v=2" alt="Далее" title="Далее">
-            <span>Приложение для резидентов</span>
-        </div>
-
-        <button type="button" class="header__burger header__burger--fixed js-burger-open">
-            <div class="header__burger-mob">
-                <img src="assets/images/b-mob.svg?v=2" alt="Меню" title="Меню">
-            </div>
-            <div class="header__burger-desk">
-                <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="15" height="1" fill="#000000" />
-                    <rect y="6" width="23" height="1" fill="#000000" />
-                    <rect x="8" y="13" width="15" height="1" fill="#000000" />
-                </svg>
-            </div>
-        </button>
+      <button type="button" class="header__burger header__burger--fixed js-burger-toggle js-burger-open">
+        <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="15" height="1" fill="#000000" />
+          <rect y="6" width="23" height="1" fill="#000000" />
+          <rect x="8" y="13" width="15" height="1" fill="#000000" />
+        </svg>
+      </button>
     </header>
-    <!-- ============= /НОВАЯ ШАПКА ============= -->
 
-    <div id="wrapper">
-
-        <div id="aplct" class="prl_bg2">
-            <img src="legacy/img/16_1.jpg" alt="">
+    <main class="main">
+      <section class="app-intro-section">
+        <div class="container">
+          <div class="app-intro">
+            <div class="app-intro__services">
+              <div class="services">
+                <div class="services__head">
+                  <div class="services__title">
+                    <h1>Управление жизнью в одно касание</h1>
+                  </div>
+                  <div class="services__description">
+                    <p>Точность и надежность, выполнение любых поручений, экономия времени и простота в общении со всеми
+                      службами, отвечающими за Ваше комфортное проживание – все это далеко не полный список преимуществ,
+                      которые окажутся в Ваших руках при использовании мобильного приложения «Nobell Mobile Butler».</p>
+                  </div>
+                  <div class="services__contacts">
+                    <span>Share</span>
+                    <div class="services__soc">
+                      <a href="#" class="footer__social-link" aria-label="whatsapp">
+                        <img src="assets/images/whatsapp.svg" alt="">
+                      </a>
+                      <a href="#" class="footer__social-link" aria-label="linkedin">
+                        <img src="assets/images/linkedin.svg" alt="">
+                      </a>
+                      <a href="#" class="footer__social-link" aria-label="facebook">
+                        <img src="assets/images/facebook.svg" alt="">
+                      </a>
+                      <a href="#" class="footer__social-link" aria-label="mail">
+                        <img src="assets/images/mail.svg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="app-intro__img">
+              <img src="assets/images/app-intro.png" alt="">
+            </div>
+            <div class="app-intro__footer">
+              <div class="app-intro__footer-mob">
+                <div class="section-head">
+                  <h2 class="section-head__title">ПРЯМОЕ ОБЩЕНИЕ СО ВСЕМИ <br>СЛУЖБАМИ ПОСРЕДСТВОМ ЧАТА
+                  </h2>
+                </div>
+              </div>
+              <div class="app-intro__footer-desk">
+                <div class="section-head">
+                  <h2 class="section-head__title">Максимальная свобода и Комфорт в отправке поручений</h2>
+                  <div class="section-head__line"></div>
+                  <p class="section-head__text">Управляйте всеми доступными сервисами прямо с экрана вашего смартфона
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="clearfix main_ideal main_ideal_apl" style="margin-bottom: -5px;">
-            <div class="mi_ttl mi_ttl_border" style="margin-top: 68px; border-color: #998f8a ">
-                <h1 id="sdin1_2" class="ops sdin ttl3643 color_gray">Управление жизнью в одно касание</h1>
-            </div>
-            <div id="mtdi" class="ops clearfix mi_ttl_desc" style="margin-bottom: 70px; margin-top: 20px;">
-                <p class="Gtxt1224C color_gray" style="text-align: center;">Точность и надежность, выполнение любых поручений, экономия времени и простота в общении со всеми службами, отвечающими за Ваше комфортное<br>
-проживание – все это далеко не полный список преимуществ, которые окажутся в Ваших руках при использовании мобильного приложения «Nobell Mobile Butler».</p>
-            </div>
-            <div id="dayWithPremis" class="full-width-element premis-day">
-                <div id="dayWithPremisPhone" class="premis-day__phone">
-                    <div class="premis-day__phone-inner-wrap">
-                        <div class="premis-day__phone-inner premis-day__phone-inner--visible" style="background-image: url(legacy/img/screen_100.png);"> </div>
-                        <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_200.png);"></div>
-                        <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_300.png);"></div>
-                        <div class="premis-day__phone-inner" style="background-image: url(legacy/img/screen_400.png);"></div>
-                    </div>
-                </div>
-                <div class="premis-day__block" data-phonescreen="legacy/img/43.jpg">
-                    <div class="pd1 premis-day__image premis-day__image--visible">
-                        <img alt="" src="legacy/img/43.jpg" class="premis-day__img--desktop" />
-                        <img alt="" src="legacy/img/20m.jpg" class="premis-day__img--mobile" />
-                    </div>
-                    <div class="premis-day__content premis-day__content--active">
-                        <div>
-                            <div class="premis-day__day-content">
-                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                                <h3>ЧИСТОТА И ПОРЯДОК<br>В ОДНО КАСАНИЕ</h3>
-                                <p style="text-align: justify; max-width: 280px">Для проведения дневной уборки резиденции отправьте
-нам запрос с указанием желаемого времени сервиса.
-Пожелания и комментарии к данному сервису вы сможете
-оставить, заполнив соответствующее текстовое поле:
-«Комментарии». Используя короткое текстовое смс, мы
-уведомим вас о завершении сервиса и готовности вашей
-резиденции. Мы искренне желаем &nbsp;вам &nbsp;прекрасного &nbsp;дня!</p>
-                                <span class="bsck"><span class="csh"></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="premis-day__block" data-phonescreen="legacy/img/80.jpg">
-                    <div class="pd2 premis-day__image">
-                        <img alt="" class="premis-day__img--desktop" src="legacy/img/80.jpg" />
-                        <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
-                    </div>
-                    <div class="premis-day__content">
-                        <div>
-                            <div class="premis-day__day-content">
-                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                                <h3>ШЕДЕВРЫ ГАСТРОНОМИИ<br>В ОДНО КАСАНИЕ</h3>
-                                <p style="text-align: justify; max-width: 276px">Укажите желаемые блюда  и выберите время для начала трапезы. К вашим услугам предоставлено дневное  меню  (12:00-24:00) шести ресторанов,  а в позднее время (24:00-6:00) &nbsp;вы &nbsp;можете заказать блюда &nbsp;&nbsp;из &nbsp;&nbsp;ночного &nbsp;меню. «NOBELL LOUNGE» функционирует круглосуточно &nbsp;и мы будем рады предложить &nbsp;широкий &nbsp;выбор &nbsp;напитков, &nbsp;сигар и кальянов, &nbsp;а &nbsp;так &nbsp;же меню деликатесных закусок.</p>
-                                <span class="bsck"><span class="csh"></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="premis-day__block" data-phonescreen="legacy/img/79.jpg">
-                    <div class="pd2 premis-day__image">
-                        <img alt="" class="premis-day__img--desktop" src="legacy/img/79.jpg" />
-                        <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
-                    </div>
-                    <div class="premis-day__content">
-                        <div>
-                            <div class="premis-day__day-content">
-                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                                <h3>ЛЮБОЕ ПОРУЧЕНИЕ<br>В ОДНО КАСАНИЕ</h3>
-                                <p style="text-align: justify; max-width: 242px">Служба батлеров двадцать четыре часа в сутки
-в вашем распоряжении. Укажите локацию и время
-встречи с батлером и сам тип вашего поручения.
-Опишите дополнительные пожелания и вопросы,
-касающиеся ваших поручений в текстовом поле:
-«Комментарии». Мы всегда будем рады оказать
-всестороннюю и оперативную помощь в решении
-любых &nbsp;&nbsp;поставленных &nbsp;&nbsp;вами &nbsp;задач &nbsp;и &nbsp;поручений.</p>
-                                <span class="bsck"><span class="csh"></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="premis-day__block" data-phonescreen="legacy/img/42.jpg">
-                    <div class="pd2 premis-day__image">
-                        <img alt="" class="premis-day__img--desktop" src="legacy/img/42.jpg" />
-                        <img alt="" class="premis-day__img--mobile" src="legacy/img/23m.jpg" />
-                    </div>
-                    <div class="premis-day__content">
-                        <div>
-                            <div class="premis-day__day-content">
-                                <img src="legacy/img/s_logo.svg" alt="" class="w34">
-                                <h3>СВЯЗЬ С РЕСЕПШЕН<br>В ОДНО КАСАНИЕ</h3>
-                                <p style="text-align: justify; max-width: 242px">Служба ресепшн двадцать четыре часа в сутки  в вашем распоряжении. Опишите свои пожелания  и вопросы,  касающиеся  встречи  и  сопровождения ваших  гостей,  приёма  курьерской  доставки  или любые другие аспекты  в  соответствующем  поле: «Ваш   запрос».   Мы  всегда  будем   рады  оказать  всестороннюю  и  оперативную помощь в решении любых &nbsp;&nbsp;поставленых &nbsp;&nbsp;вами &nbsp;задач  &nbsp;&nbsp;и  &nbsp;&nbsp;поручений.</p>
-                                <span class="bsck"><span class="csh"></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="trio_phone">
-                <div class="tp_ttl">
-                    <h2 id="tpp1_2" class="ops">Максимальная свобода и непревзойденный<br>Комфорт в отправке бытовых поручений</h2>
-                </div>
-                <div class="tp_desc">
-                    <div class="phn1 phn">
-                        <div class="o_phone">
-                            <div class="phone"></div>
-                        </div>
-                        <div id="txt1" class="ops txt">Прямое общение
-                            <br>Со всеми службами
-                            <br>Посредством чата</div>
-                    </div>
-                    <div class="phn2 phn">
-                        <div class="o_phone">
-                            <div class="phone"></div>
-                        </div>
-                        <div id="txt2" class="ops txt">Передача изображений
-                            <br>И возможность
-                            <br>Двустороннего чата</div>
-                    </div>
-                    <div class="phn3 phn">
-                        <div class="o_phone">
-                            <div class="phone"></div>
-                        </div>
-                        <div id="txt3" class="ops txt">Удобный контроль
-                            <br>Над всеми режимами
-                            <br>Вашей резиденции</div>
-                    </div>
-                </div>
-            </div>
-            <div class="container1266 clearfix main_ideal main_ideal_img" style="margin-top: 100px">
-                <div id="md10" class="mi_desc mia">
-                    <div class="mid_i">
-                        <div class="imid_bg bg_mac bg_mac_ipad">
-                            <img src="legacy/img/b200.png" alt="">
-                        </div>
-                        <div class="mid_txt">
-                            <div id="m1" class="mid_txt_in" style="margin-top: 30px;">
-                                <h3 id="ttl_txt1_1" class="ops color_gray Gttl2429" style="margin-bottom: 16px; margin-top: 90px;">УПРАВЛЯЙТЕ ВСЕМИ ДОСТУПНЫМИ СЕРВИСАМИ ПРЯМО С ЭКРАНА ДОМАШНЕГО ПЛАНШЕТА</h3>
-                                <p id="txt_txt1_1" class="ops txt_txt color_gray Gtxt1218C">Планшетное приложение «Nobell» раскрывает границы традиционного стиля жизни современных ЖК. Заказывайте Ваши любимые блюда с указанием любых гастрономических особенностей<br>
-приготовления, заказывайте уборку Вашей резиденции с указанием желаемых аспектов, бронируйте места на любые светские мероприятия, общайтесь напрямую<br>
-с операторами ресепшн, управляйте температурным режимом, освещением, шторами, телевизором и другими электроприборами.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tm1" class="trg" data-id="1"></div>
-                </div>
-                <div id="md20" class="mi_desc mia">
-                    <div class="mid_i mid_ir">
-                        <div class="imid_bg bg_mac">
-                            <img src="legacy/img/b100.png" alt="">
-                        </div>
-                        <div class="mid_txt">
-                            <div id="m2" class="mid_txt_in" style="margin-top: 0px; ">
-                                <h3 id="ttl_txt2_1" class="ops ttl_txt color_gray Gttl2429" style="margin-bottom: 16px; margin-top: 70px;">Доступ через любой браузер ко всем услугам и системам вашей резиденции  </h3>
-                                <p id="txt_txt2_1" class="ops txt_txt color_gray Gtxt1218C">Вы сможете с легкостью управлять всем спектром доступных сервисов и систем вашей резиденции из любой точки планеты.<br>
-Управляйте домашним температурным режимом, освещением, шторами, заказывайте приготовление ужина или<br>
-подготовку горячей ванны, ведь теперь для этого вам совсем нет необходимости находиться дома.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tm2" class="trg" data-id="2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/wrapper-->
+      </section>
 
-    <!-- ============= НОВЫЙ ФУТЕР (заменяет старый footer.php) ============= -->
+      <section class="app-section">
+        <div class="app js-app">
+          <div class="app__row">
+            <div class="app__col app__col--img">
+              <div class="app__col-img active">
+                <img src="assets/images/ai1.png" alt="">
+              </div>
+              <div class="app__col-img">
+                <img src="assets/images/ai2.png" alt="">
+              </div>
+              <div class="app__col-img">
+                <img src="assets/images/ai3.png" alt="">
+              </div>
+              <div class="app__col-img">
+                <img src="assets/images/ai4.png" alt="">
+              </div>
+            </div>
+
+            <div class="app__phone">
+              <div class="app__phone-bg">
+                <img src="assets/images/ap.png" alt="">
+              </div>
+              <div class="app__phone-content">
+                <div class="app__phone-img active">
+                  <img src="assets/images/ap1.png" alt="">
+                </div>
+                <div class="app__phone-img">
+                  <img src="assets/images/ap2.png" alt="">
+                </div>
+                <div class="app__phone-img">
+                  <img src="assets/images/ap3.png" alt="">
+                </div>
+                <div class="app__phone-img">
+                  <img src="assets/images/ap4.png" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="app__col">
+              <div class="app__col-content">
+                <div class="app__col-text">
+                  <div class="app-descr">
+                    <img src="assets/images/ap.svg" alt="">
+                    <h3>ЧИСТОТА И ПОРЯДОК <br> В ОДНО КАСАНИЕ</h3>
+                    <p>Для проведения дневной уборки резиденции отправьте нам запрос с указанием желаемого времени
+                      сервиса. Пожелания и комментарии к данному сервису вы сможете оставить, заполнив соответствующее
+                      текстовое поле: «Комментарии». Используя короткое текстовое смс, мы уведомим вас о завершении
+                      сервиса и готовности вашей резиденции. Мы искренне желаем вам прекрасного дня!</p>
+                    <div class="app-descr__footer">
+                      <img src="assets/images/foot-logo.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="app__col-text">
+                  <div class="app-descr">
+                    <img src="assets/images/ap.svg" alt="">
+                    <h3>ШЕДЕВРЫ ГАСТРОНОМИИ<br>
+                      В ОДНО КАСАНИЕ</h3>
+                    <p>Укажите желаемые блюда и выберите время для начала трапезы. К вашим услугам предоставлено дневное
+                      меню (12:00-24:00) шести ресторанов, а в позднее время (24:00-6:00) вы можете заказать блюда из
+                      ночного меню. «NOBELL LOUNGE» функционирует круглосуточно и мы будем рады предложить широкий выбор
+                      напитков, сигар и кальянов, а так же меню деликатесных закусок.</p>
+                    <div class="app-descr__footer">
+                      <img src="assets/images/foot-logo.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="app__col-text">
+                  <div class="app-descr">
+                    <img src="assets/images/ap.svg" alt="">
+                    <h3>ЛЮБОЕ ПОРУЧЕНИЕ<br>
+                      В ОДНО КАСАНИЕ</h3>
+                    <p>Служба батлеров двадцать четыре часа в сутки в вашем распоряжении. Укажите локацию и время
+                      встречи с батлером и сам тип вашего поручения. Опишите дополнительные пожелания и вопросы,
+                      касающиеся ваших поручений в текстовом поле: «Комментарии». Мы всегда будем рады оказать
+                      всестороннюю и оперативную помощь в решении любых поставленных вами задач и поручений.</p>
+                    <div class="app-descr__footer">
+                      <img src="assets/images/foot-logo.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="app__col-text">
+                  <div class="app-descr">
+                    <img src="assets/images/ap.svg" alt="">
+                    <h3>СВЯЗЬ С РЕСЕПШЕН<br>
+                      В ОДНО КАСАНИЕ</h3>
+                    <p>Служба ресепшн двадцать четыре часа в сутки в вашем распоряжении. Опишите свои пожелания и
+                      вопросы, касающиеся встречи и сопровождения ваших гостей, приёма курьерской доставки или любые
+                      другие аспекты в соответствующем поле: «Ваш запрос». Мы всегда будем рады оказать всестороннюю и
+                      оперативную помощь в решении любых поставленых вами задач и поручений.</p>
+                    <div class="app-descr__footer">
+                      <img src="assets/images/foot-logo.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="app-slider-section app-slider-section--mob">
+        <div class="container">
+          <div class="app-slider js-app-slider-1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="app-slide">
+                  <img src="assets/images/ap1.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="app-slide">
+                  <img src="assets/images/ap2.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="app-slide">
+                  <img src="assets/images/ap3.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="app-slide">
+                  <img src="assets/images/ap4.png" alt="">
+                </div>
+              </div>
+            </div>
+            <button type="button" class="app-slider__btn app-slider__btn--prev js-app-1-prev">
+              <svg width="12" height="50" viewBox="0 0 12 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5471 0.203125L0.547119 24.7031L11.5471 49.7031" stroke="#212121" stroke-opacity="0.8" />
+              </svg>
+            </button>
+            <div class="rec-slider__pagination app-slider__pagination js-app-1-pagination"></div>
+            <button type="button" class="app-slider__btn app-slider__btn--next js-app-1-next">
+              <svg width="12" height="50" viewBox="0 0 12 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.457642 49.7031L11.4576 25.2031L0.457642 0.203125" stroke="#212121" stroke-opacity="0.8" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="app-slider-section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-head__title">ЧИСТОТА И ПОРЯДОК <br> В ОДНО КАСАНИЕ</h2>
+          </div>
+
+          <div class="app-slider js-app-slider-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="app-slide">
+                  <img src="assets/images/app1.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="app-slide">
+                  <img src="assets/images/app2.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="app-slide">
+                  <img src="assets/images/app3.png" alt="">
+                </div>
+              </div>
+            </div>
+            <button type="button" class="app-slider__btn app-slider__btn--prev js-app-2-prev">
+              <svg width="12" height="50" viewBox="0 0 12 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5471 0.203125L0.547119 24.7031L11.5471 49.7031" stroke="#212121" stroke-opacity="0.8" />
+              </svg>
+            </button>
+            <div class="rec-slider__pagination app-slider__pagination js-app-2-pagination"></div>
+            <button type="button" class="app-slider__btn app-slider__btn--next js-app-2-next">
+              <svg width="12" height="50" viewBox="0 0 12 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.457642 49.7031L11.4576 25.2031L0.457642 0.203125" stroke="#212121" stroke-opacity="0.8" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="services__author">
+            <p>Эксперты Красивой Жизни</p>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
         <div class="footer__columns">
             <div class="footer__column">
@@ -286,21 +325,21 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <button type="button" class="footer__portal-btn">
+            <button type="button" class="footer__portal-btn js-popup-open">
                 <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
             </button>
             <div class="footer__social">
                 <a href="#" class="footer__social-link" aria-label="Instagram">
-                    <img src="assets/images/f1.svg?v=2" alt="WhatsApp" title="WhatsApp">
+                    <img src="assets/images/f1.svg" alt="">
                 </a>
                 <a href="#" class="footer__social-link" aria-label="X (Twitter)">
-                    <img src="assets/images/f2.svg?v=2" alt="Telegram" title="Telegram">
+                    <img src="assets/images/f2.svg" alt="">
                 </a>
                 <a href="#" class="footer__social-link" aria-label="Facebook">
-                    <img src="assets/images/f3.svg?v=2" alt="Instagram" title="Instagram">
+                    <img src="assets/images/f3.svg" alt="">
                 </a>
                 <a href="#" class="footer__social-link" aria-label="YouTube">
-                    <img src="assets/images/f4.svg?v=2" alt="Facebook" title="Facebook">
+                    <img src="assets/images/f4.svg" alt="">
                 </a>
             </div>
         </div>
@@ -313,7 +352,6 @@
             </div>
         </div>
     </footer>
-    <!-- ============= /НОВЫЙ ФУТЕР ============= -->
 
     <div class="overlay js-overlay"></div>
 
@@ -321,7 +359,8 @@
         <div class="nav__wrap">
             <button type="button" class="nav__close js-burger-close">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516" stroke="#212121" />
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516"
+                        stroke="#212121" />
                 </svg>
             </button>
             <div class="nav__panels">
@@ -329,30 +368,46 @@
                     <ul class="nav__menu">
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn js-burger-submenu" data-target="about">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/people.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">О НАС</span>
-                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
                             </button>
                         </li>
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/flag.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span>
-                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
                             </button>
                         </li>
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/diamond.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span>
-                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
                             </button>
                         </li>
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/message.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
-                                <span class="nav__menu-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                                <span class="nav__menu-arrow" aria-hidden="true">
+                                    <img src="assets/images/arrow.svg" alt="">
+                                </span>
                             </button>
                         </li>
                     </ul>
@@ -362,16 +417,21 @@
                     <ul class="nav__submenu">
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn nav__menu-btn--info">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/people.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/people.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">О НАС</span>
                             </button>
                         </li>
                         <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
-                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА
+                                ЭКСПЕРТОВ</a></li>
                         <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
                     </ul>
                     <button type="button" class="nav__back js-burger-back" data-target="root">
-                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
                         <span class="nav__back-text">НАЗАД</span>
                     </button>
                 </section>
@@ -380,16 +440,21 @@
                     <ul class="nav__submenu">
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn nav__menu-btn--info">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/flag.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/flag.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">FINE LIVING</span>
                             </button>
                         </li>
                         <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
                         <li class="nav__submenu-item"><a href="guide.html" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
-                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ
+                                МЕРОПРИЯТИЙ</a></li>
                     </ul>
                     <button type="button" class="nav__back js-burger-back" data-target="root">
-                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
                         <span class="nav__back-text">НАЗАД</span>
                     </button>
                 </section>
@@ -398,16 +463,21 @@
                     <ul class="nav__submenu">
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn nav__menu-btn--info">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/diamond.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/diamond.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">FINE SHOPPING</span>
                             </button>
                         </li>
                         <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
                         <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
-                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a>
+                        </li>
                     </ul>
                     <button type="button" class="nav__back js-burger-back" data-target="root">
-                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
                         <span class="nav__back-text">НАЗАД</span>
                     </button>
                 </section>
@@ -416,16 +486,23 @@
                     <ul class="nav__submenu">
                         <li class="nav__menu-item">
                             <button type="button" class="nav__menu-btn nav__menu-btn--info">
-                                <span class="nav__menu-ico" aria-hidden="true"><img src="assets/images/message.svg?v=2" alt=""></span>
+                                <span class="nav__menu-ico" aria-hidden="true">
+                                    <img src="assets/images/message.svg" alt="">
+                                </span>
                                 <span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span>
                             </button>
                         </li>
-                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a></li>
-                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
-                        <li class="nav__submenu-item"><a href="app.html" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a>
+                        </li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО
+                                ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="app.html" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a>
+                        </li>
                     </ul>
                     <button type="button" class="nav__back js-burger-back" data-target="root">
-                        <span class="nav__back-arrow" aria-hidden="true"><img src="assets/images/arrow.svg?v=2" alt=""></span>
+                        <span class="nav__back-arrow" aria-hidden="true">
+                            <img src="assets/images/arrow.svg" alt="">
+                        </span>
                         <span class="nav__back-text">НАЗАД</span>
                     </button>
                 </section>
@@ -433,7 +510,9 @@
             <div class="nav__form">
                 <form action="#">
                     <input type="text" placeholder="ПОИСК">
-                    <button type="submit"><img src="assets/images/search.svg?v=2" alt="Поиск"></button>
+                    <button type="submit">
+                        <img src="assets/images/search.svg" alt="">
+                    </button>
                 </form>
                 <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
             </div>
@@ -448,24 +527,16 @@
             <div class="popup__body">
                 <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
                 <a href="#">
-                    <img src="assets/images/popup.svg?v=2" alt="">
+                    <img src="assets/images/popup.svg" alt="">
                     Подать заявку
                 </a>
             </div>
         </div>
     </div>
-
-    <!-- Новые скрипты — как на example.html: новый jQuery бандлится внутри vendor.min.js -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/vendor.min.js?v=13" defer></script>
-    <script src="assets/js/app.js?v=13" defer></script>
-    <!-- Legacy custom.js запускаем изолированно: $ и jQuery внутри = legacy jQuery со slick -->
-    <script>
-        fetch('legacy/js/custom.js').then(function(r){return r.text();}).then(function(code){
-            (new Function('$', 'jQuery', code))(window.$legacy, window.$legacy);
-        });
-    </script>
-
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
 </body>
 
 </html>
