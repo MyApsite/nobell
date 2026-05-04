@@ -7,11 +7,14 @@ var _burgerMenu = _interopRequireDefault(require("./components/burger-menu"));
 var _popup = _interopRequireDefault(require("./components/popup"));
 var _secondSection = _interopRequireDefault(require("./components/second-section"));
 var _select = _interopRequireDefault(require("./components/select"));
+var _appScroll = _interopRequireDefault(require("./components/app-scroll.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 // You can write a call and import your functions in this file.
 //
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
+
+// import appSection from './components/app-section';
 
 (function ($) {
   // When DOM is ready
@@ -22,7 +25,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
     _popup["default"].init();
     _secondSection["default"].init();
     (0, _select["default"])();
+    _appScroll["default"].init();
     AOS.init();
+    // appSection.init();
 
     //VIDEO
     var video = document.getElementById('video');
@@ -153,7 +158,86 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   });
 })(jQuery);
 
-},{"./components/burger-menu":2,"./components/popup":3,"./components/scroll-to":4,"./components/second-section":5,"./components/select":6,"./components/slider":7}],2:[function(require,module,exports){
+},{"./components/app-scroll.js":2,"./components/burger-menu":3,"./components/popup":4,"./components/scroll-to":5,"./components/second-section":6,"./components/select":7,"./components/slider":8}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var appScroll = function () {
+  var SECTION = document.querySelector('.app-section');
+  var CONTENT = document.querySelector('.app__col-content');
+  var ITEMS = document.querySelectorAll('.app__col-text');
+  var IMAGES = document.querySelectorAll('.app__col-img');
+  var PHONE_IMAGES = document.querySelectorAll('.app__phone-img');
+  var CLASS_ACTIVE = 'active';
+  var sectionTop = 0;
+  var sectionHeight = 0;
+  var maxTranslate = 0;
+  var calcValues = function calcValues() {
+    if (!SECTION || !CONTENT || !ITEMS.length) return;
+    var viewportHeight = window.innerHeight;
+
+    // 🔥 считаем реальную высоту контента
+    var contentHeight = 0;
+    ITEMS.forEach(function (item) {
+      contentHeight += item.offsetHeight;
+    });
+
+    // 🔥 максимум движения текста
+    maxTranslate = Math.max(contentHeight - viewportHeight, 0);
+
+    // 🔥 важный момент:
+    // добавляем viewportHeight в конец, чтобы последний блок УСПЕЛ закрепиться
+    sectionHeight = contentHeight + viewportHeight;
+    SECTION.style.height = "".concat(sectionHeight, "px");
+    sectionTop = SECTION.offsetTop;
+  };
+  var onScroll = function onScroll() {
+    if (!SECTION) return;
+    var scrollY = window.scrollY;
+
+    // 🔥 границы "активной зоны" sticky
+    var start = sectionTop;
+    var end = sectionTop + sectionHeight - window.innerHeight;
+    var progress = (scrollY - start) / (end - start);
+
+    // clamp 0..1
+    progress = Math.min(Math.max(progress, 0), 1);
+
+    // 🔥 движение текста (фейковый скролл)
+    var translateY = progress * maxTranslate;
+    CONTENT.style.transform = "translateY(-".concat(translateY, "px)");
+
+    // 🔥 активный блок
+    var index = Math.min(ITEMS.length - 1, Math.floor(progress * ITEMS.length));
+    updateActive(index);
+  };
+  var updateActive = function updateActive(index) {
+    IMAGES.forEach(function (el, i) {
+      el.classList.toggle(CLASS_ACTIVE, i === index);
+    });
+    PHONE_IMAGES.forEach(function (el, i) {
+      el.classList.toggle(CLASS_ACTIVE, i === index);
+    });
+  };
+  var init = function init() {
+    if (!SECTION) return;
+    calcValues();
+    window.addEventListener('scroll', onScroll, {
+      passive: true
+    });
+    window.addEventListener('resize', calcValues);
+  };
+  return {
+    init: init
+  };
+}();
+var _default = appScroll;
+exports["default"] = _default;
+
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -250,7 +334,7 @@ var burgerMenu = function () {
 var _default = burgerMenu;
 exports["default"] = _default;
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -303,7 +387,7 @@ var popup = function () {
 var _default = popup;
 exports["default"] = _default;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -362,7 +446,7 @@ var scrollTo = function () {
 var _default = scrollTo;
 exports["default"] = _default;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -422,7 +506,7 @@ var autoScrollSection = function () {
 var _default = autoScrollSection;
 exports["default"] = _default;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -498,7 +582,7 @@ var initSelects = function initSelects() {
 var _default = initSelects;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -571,10 +655,8 @@ var swiperSlider = function () {
   });
   var spotlightSlider = new Swiper('.js-spotlight-slider', {
     slidesPerView: 1.2,
-    slidesPerGroup: 1,
     spaceBetween: 16,
-    loop: true,
-    loopAdditionalSlides: 4,
+    loop: false,
     navigation: {
       nextEl: '.js-spotlight-next',
       prevEl: '.js-spotlight-prev'
@@ -585,17 +667,14 @@ var swiperSlider = function () {
     },
     breakpoints: {
       768: {
-        slidesPerView: 2.2,
-        slidesPerGroup: 2
+        slidesPerView: 2.2
       },
       1024: {
         slidesPerView: 3.2,
-        slidesPerGroup: 3,
         spaceBetween: 20
       },
       1280: {
-        slidesPerView: 'auto',
-        slidesPerGroup: 4,
+        slidesPerView: 4,
         spaceBetween: 30
       }
     }
