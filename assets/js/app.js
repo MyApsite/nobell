@@ -654,7 +654,8 @@ var swiperSlider = function () {
     }
   });
   var spotlightSlider = new Swiper('.js-spotlight-slider', {
-    slidesPerView: 1.2,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 16,
     loop: false,
     navigation: {
@@ -667,14 +668,17 @@ var swiperSlider = function () {
     },
     breakpoints: {
       768: {
-        slidesPerView: 2.2
+        slidesPerView: 2,
+        slidesPerGroup: 2
       },
       1024: {
-        slidesPerView: 3.2,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 20
       },
       1280: {
         slidesPerView: 4,
+        slidesPerGroup: 4,
         spaceBetween: 30
       }
     }
