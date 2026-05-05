@@ -100,6 +100,7 @@
       <section class="card-section card-section--slider">
         <div class="container">
           <div class="card-section__head">
+            <span class="card-section__date" id="js-today-date">Январь 28, 2026</span>
             <h1 class="card-section__title">Global Calendar</h1>
             <p class="card-section__text">Календарь ключевых мероприятий</p>
           </div>
@@ -706,6 +707,15 @@
       } else {
         init();
       }
+    })();
+  </script>
+  <!-- Дата вверху страницы — подставляется текущая (как на recommendation.html) -->
+  <script defer>
+    (function () {
+      var months = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+      var d = new Date();
+      var el = document.getElementById('js-today-date');
+      if (el) el.textContent = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
     })();
   </script>
 </body>
