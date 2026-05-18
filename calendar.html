@@ -592,6 +592,7 @@
         var selectInput = document.querySelector('.guide-form__field--select .js-select-input');
         var searchInput = document.querySelector('input[name="calendar-search"]');
         var resultsLabel = document.querySelector('.guide__results');
+        var loadMoreBtn = document.querySelector('.guide__footer .btn.primary');
         if (!cards.length) return;
 
         var state = { month: 'all', format: '', city: '', country: '', region: '', search: '' };
@@ -632,6 +633,11 @@
           });
           if (resultsLabel) {
             resultsLabel.textContent = 'Показано ' + visible + ' из ' + cards.length + ' результатов';
+          }
+          if (loadMoreBtn) {
+            // Кнопка "Загрузить больше" — ховається коли всі картки видно (немає пагінації).
+            // Коли пагінація буде реалізована — змінити умову на (visible < total_in_db).
+            loadMoreBtn.style.display = (visible >= cards.length) ? 'none' : '';
           }
         }
 

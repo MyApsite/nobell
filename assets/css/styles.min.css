@@ -2451,13 +2451,13 @@ input:focus::placeholder {
   line-height: 100%;
   text-transform: uppercase;
   letter-spacing: 0.22px; }
-  .guide-btn:hover, .guide-btn.active {
-    color: #212121;
-    background: #fff;
-    border-color: #f28c28; }
+  .guide-btn:hover {
+    border-color: #212121; }
   .guide-btn.active {
-    border-width: 1.5px;
-    font-weight: 700; }
+    color: #fff;
+    background: #212121;
+    border-color: #212121;
+    letter-spacing: 0.88px; }
 
 .guide-form {
   width: 100%; }

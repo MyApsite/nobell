@@ -644,6 +644,12 @@ var swiperSlider = function () {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    speed: 800,
     navigation: {
       nextEl: '.js-next',
       prevEl: '.js-prev'
