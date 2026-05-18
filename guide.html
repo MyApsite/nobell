@@ -220,7 +220,6 @@
               </div>
               <div class="guide__filter">
                 <button type="button" class="guide-btn active" data-type="all">ВСЕ</button>
-                <button type="button" class="guide-btn" data-type="islands">островной отдых</button>
                 <button type="button" class="guide-btn" data-type="coastal-hotel">прибрежный отель</button>
                 <button type="button" class="guide-btn" data-type="retreat">РЕТРИТ</button>
                 <button type="button" class="guide-btn" data-type="safari-lodge">САФАРИ-ЛОДЖ</button>
@@ -260,7 +259,7 @@
                   </a>
                 </div>
                 <!-- 3: ФРАНЦИЯ, ФРАНЦУЗСКАЯ РИВЬЕРА -->
-                <div class="card-section__col" data-type="islands" data-country="france" data-region="europe" data-brand="zannier" data-city="french-riviera">
+                <div class="card-section__col" data-type="coastal-hotel" data-country="france" data-region="europe" data-brand="zannier" data-city="french-riviera">
                   <a href="villa.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/guide/card-3.webp"><img loading="lazy" src="assets/images/guide/card-3.jpg" alt=""></picture></div>
@@ -351,7 +350,7 @@
                   </a>
                 </div>
                 <!-- 10: МАВРИКИЙ, БО-ШАН -->
-                <div class="card-section__col" data-type="wellness islands" data-country="mauritius" data-region="indian-ocean" data-brand="four-seasons" data-city="beau-champ">
+                <div class="card-section__col" data-type="wellness coastal-hotel" data-country="mauritius" data-region="indian-ocean" data-brand="four-seasons" data-city="beau-champ">
                   <a href="four-seasons-mauritius.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/guide/card-10.webp"><img loading="lazy" src="assets/images/guide/card-10.jpg" alt=""></picture></div>
@@ -706,7 +705,7 @@
           }
         }
 
-        // Кнопки-типы (островной отдых / ретрит / круизы и т.д.)
+        // Кнопки-типы (прибрежный отель / ретрит / круизы и т.д.)
         buttons.forEach(function (btn) {
           btn.addEventListener('click', function () {
             buttons.forEach(function (b) { b.classList.remove('active'); });
