@@ -705,6 +705,7 @@
             var city = card.getAttribute('data-city') || '';
             var matchType = state.type === 'all' || type.split(/\s+/).indexOf(state.type) !== -1;
             var matchDirection = !state.direction
+              || type.split(/\s+/).indexOf(state.direction) !== -1
               || country.split(/\s+/).indexOf(state.direction) !== -1
               || region.split(/\s+/).indexOf(state.direction) !== -1
               || city.split(/\s+/).indexOf(state.direction) !== -1
