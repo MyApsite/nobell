@@ -90,12 +90,16 @@ $body .= "User-Agent: " . ($_SERVER['HTTP_USER_AGENT'] ?? '-') . "\n";
 $body .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? '-') . "\n";
 $body .= "Time: " . date('Y-m-d H:i:s') . " UTC\n";
 
-$headers  = "From: Nobell Contact Form <noreply@nobell.com>\r\n";
+$headers  = "MIME-Version: 1.0\r\n";
+$headers .= "From: Nobell Contact Form <noreply@nobell.com>\r\n";
 $headers .= "Reply-To: $first $last <$email>\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "Content-Transfer-Encoding: base64\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
-$ok = @mail($RECIPIENT, "=?UTF-8?B?" . base64_encode($subject) . "?=", $body, $headers);
+$body_encoded = chunk_split(base64_encode($body));
+
+$ok = @mail($RECIPIENT, "=?UTF-8?B?" . base64_encode($subject) . "?=", $body_encoded, $headers);
 
 if (!$ok) {
     http_response_code(500);
