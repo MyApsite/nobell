@@ -122,9 +122,13 @@
             </div>
             <div class="services__img">
               <div class="services__video">
-                <video id="video" playsinline preload="none" poster="assets/images/video-poster.png"></video>
+                <video id="video" playsinline preload="metadata" controls poster="assets/images/video-poster.png">
+                  <source src="assets/video/mob_1080_web_audio_video_10sec-opt.mp4" type="video/mp4" media="(max-width: 767px)">
+                  <source src="assets/video/1080_web_audio_video_10sec-opt.mp4" type="video/mp4">
+                  Ваш браузер не поддерживает воспроизведение видео.
+                </video>
 
-                <button type="button" class="video-btn" aria-label="Play video">
+                <button type="button" class="video-btn" aria-label="Воспроизвести видео">
                   <img src="assets/images/play.svg?v=2" alt="Воспроизвести видео" title="Воспроизвести видео">
                 </button>
               </div>
