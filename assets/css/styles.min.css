@@ -2071,33 +2071,28 @@ input:focus::placeholder {
     border-bottom-color: #d52b1e !important; }
   .contacts-form__field.is-error .contacts-form__phone {
     border-bottom-color: #d52b1e; }
-  .contacts-form__flag-emoji {
-    font-size: 22px; line-height: 1; display: inline-block; margin-right: 6px; }
   .contacts-form__country-code {
     font-family: "Gilroy"; font-size: 12px; color: #212121; margin-right: 6px; }
   .contacts-form__country {
-    width: auto; min-width: 80px; gap: 0; }
+    width: auto; min-width: 60px; gap: 4px; padding: 0 4px 0 0; }
+  .contacts-form__phone { position: relative; }
   .contacts-form__country-list {
-    position: absolute; z-index: 20; top: 100%; left: 0;
-    margin: 4px 0 0; padding: 6px 0; list-style: none;
+    position: absolute; z-index: 20; top: calc(100% + 4px); left: 0;
+    margin: 0; padding: 6px 0; list-style: none;
     background: #fff; border: 1px solid #d8d8d8; border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     max-height: 280px; overflow-y: auto;
-    min-width: 280px; }
-  .contacts-form__phone { position: relative; }
+    min-width: 240px; }
+  .contacts-form__country-list[hidden] { display: none !important; }
   .contacts-form__country-item {
-    width: 100%; display: flex; align-items: center; gap: 10px;
+    width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px;
     padding: 8px 14px; border: 0; background: transparent;
     font-family: "Gilroy"; font-size: 12px; color: #212121; cursor: pointer;
     text-align: left; transition: background 0.15s ease; }
   .contacts-form__country-item:hover, .contacts-form__country-item:focus-visible {
     background: #f3f3f5; outline: none; }
-  .contacts-form__country-item-flag {
-    font-size: 20px; line-height: 1; flex: none; }
-  .contacts-form__country-item-name {
-    flex: 1; }
-  .contacts-form__country-item-code {
-    color: rgba(0,0,0,0.5); }
+  .contacts-form__country-item-name { flex: 1; }
+  .contacts-form__country-item-code { color: rgba(0,0,0,0.5); flex: none; }
   .popup--success .popup__body p {
     text-align: center; padding: 0 8px; }
 

@@ -10,85 +10,81 @@
 
   // ---- Country picker ----
   var COUNTRIES = [
-    { code: '+7',   flag: '🇷🇺', name: 'Россия' },
-    { code: '+380', flag: '🇺🇦', name: 'Україна' },
-    { code: '+375', flag: '🇧🇾', name: 'Беларусь' },
-    { code: '+7',   flag: '🇰🇿', name: 'Қазақстан' },
-    { code: '+374', flag: '🇦🇲', name: 'Հայաստան' },
-    { code: '+995', flag: '🇬🇪', name: 'საქართველო' },
-    { code: '+994', flag: '🇦🇿', name: 'Azərbaycan' },
-    { code: '+996', flag: '🇰🇬', name: 'Кыргызстан' },
-    { code: '+998', flag: '🇺🇿', name: 'Oʻzbekiston' },
-    { code: '+992', flag: '🇹🇯', name: 'Тоҷикистон' },
-    { code: '+972', flag: '🇮🇱', name: 'ישראל' },
-    { code: '+971', flag: '🇦🇪', name: 'الإمارات' },
-    { code: '+966', flag: '🇸🇦', name: 'السعودية' },
-    { code: '+90',  flag: '🇹🇷', name: 'Türkiye' },
-    { code: '+357', flag: '🇨🇾', name: 'Κύπρος' },
-    { code: '+30',  flag: '🇬🇷', name: 'Ελλάδα' },
-    { code: '+39',  flag: '🇮🇹', name: 'Italia' },
-    { code: '+34',  flag: '🇪🇸', name: 'España' },
-    { code: '+33',  flag: '🇫🇷', name: 'France' },
-    { code: '+49',  flag: '🇩🇪', name: 'Deutschland' },
-    { code: '+41',  flag: '🇨🇭', name: 'Schweiz' },
-    { code: '+43',  flag: '🇦🇹', name: 'Österreich' },
-    { code: '+31',  flag: '🇳🇱', name: 'Nederland' },
-    { code: '+44',  flag: '🇬🇧', name: 'United Kingdom' },
-    { code: '+353', flag: '🇮🇪', name: 'Éire' },
-    { code: '+351', flag: '🇵🇹', name: 'Portugal' },
-    { code: '+48',  flag: '🇵🇱', name: 'Polska' },
-    { code: '+420', flag: '🇨🇿', name: 'Česko' },
-    { code: '+36',  flag: '🇭🇺', name: 'Magyarország' },
-    { code: '+1',   flag: '🇺🇸', name: 'United States' },
-    { code: '+1',   flag: '🇨🇦', name: 'Canada' },
-    { code: '+86',  flag: '🇨🇳', name: '中国' },
-    { code: '+852', flag: '🇭🇰', name: '香港' },
-    { code: '+65',  flag: '🇸🇬', name: 'Singapore' },
-    { code: '+81',  flag: '🇯🇵', name: '日本' }
+    { code: '+7',   name: 'Россия' },
+    { code: '+380', name: 'Украина' },
+    { code: '+375', name: 'Беларусь' },
+    { code: '+7',   name: 'Казахстан' },
+    { code: '+374', name: 'Армения' },
+    { code: '+995', name: 'Грузия' },
+    { code: '+994', name: 'Азербайджан' },
+    { code: '+996', name: 'Киргизия' },
+    { code: '+998', name: 'Узбекистан' },
+    { code: '+992', name: 'Таджикистан' },
+    { code: '+972', name: 'Израиль' },
+    { code: '+971', name: 'ОАЭ' },
+    { code: '+966', name: 'Саудовская Аравия' },
+    { code: '+90',  name: 'Турция' },
+    { code: '+357', name: 'Кипр' },
+    { code: '+30',  name: 'Греция' },
+    { code: '+39',  name: 'Италия' },
+    { code: '+34',  name: 'Испания' },
+    { code: '+33',  name: 'Франция' },
+    { code: '+49',  name: 'Германия' },
+    { code: '+41',  name: 'Швейцария' },
+    { code: '+43',  name: 'Австрия' },
+    { code: '+31',  name: 'Нидерланды' },
+    { code: '+44',  name: 'Великобритания' },
+    { code: '+353', name: 'Ирландия' },
+    { code: '+351', name: 'Португалия' },
+    { code: '+48',  name: 'Польша' },
+    { code: '+420', name: 'Чехия' },
+    { code: '+36',  name: 'Венгрия' },
+    { code: '+1',   name: 'США' },
+    { code: '+1',   name: 'Канада' },
+    { code: '+86',  name: 'Китай' },
+    { code: '+852', name: 'Гонконг' },
+    { code: '+65',  name: 'Сингапур' },
+    { code: '+81',  name: 'Япония' }
   ];
 
   var wrap     = form.querySelector('.js-country-wrap');
   var btn      = form.querySelector('.js-country-btn');
-  var flagEl   = form.querySelector('.js-country-flag');
   var codeEl   = form.querySelector('.js-country-code');
   var listEl   = form.querySelector('.js-country-list');
   var phoneEl  = form.querySelector('#contact-phone');
 
   // Build list
-  COUNTRIES.forEach(function (c, idx) {
+  COUNTRIES.forEach(function (c) {
     var li = document.createElement('li');
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'contacts-form__country-item';
     b.setAttribute('role', 'option');
     b.dataset.code = c.code;
-    b.dataset.flag = c.flag;
     b.dataset.name = c.name;
-    b.innerHTML = '<span class="contacts-form__country-item-flag">' + c.flag + '</span>'
-                + '<span class="contacts-form__country-item-name">' + c.name + '</span>'
+    b.innerHTML = '<span class="contacts-form__country-item-name">' + c.name + '</span>'
                 + '<span class="contacts-form__country-item-code">' + c.code + '</span>';
     li.appendChild(b);
     listEl.appendChild(li);
   });
 
   function closeList() {
-    listEl.hidden = true;
+    listEl.style.display = 'none';
     btn.setAttribute('aria-expanded', 'false');
   }
   function openList() {
-    listEl.hidden = false;
+    listEl.style.display = 'block';
     btn.setAttribute('aria-expanded', 'true');
   }
 
   btn.addEventListener('click', function (e) {
     e.stopPropagation();
-    if (listEl.hidden) openList(); else closeList();
+    if (listEl.style.display === 'none') openList(); else closeList();
   });
 
   listEl.addEventListener('click', function (e) {
     var t = e.target.closest('.contacts-form__country-item');
     if (!t) return;
-    flagEl.textContent = t.dataset.flag;
     codeEl.textContent = t.dataset.code;
     btn.dataset.country = t.dataset.name;
     closeList();
@@ -198,7 +194,6 @@
     .then(function (data) {
       if (data && data.ok) {
         form.reset();
-        flagEl.textContent = '🇷🇺';
         codeEl.textContent = '+7';
         showSuccess();
       } else {
