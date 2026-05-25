@@ -29,9 +29,11 @@ Redirect 301 /serviced-residences.php /example.html
 
 # ============================================
 # 4. Catch-all: any other .php → homepage
-#    (исключаем /old-site/ — там лежит копия старого PHP-сайта для просмотра)
+#    (исключаем /old-site/ — там лежит копия старого PHP-сайта для просмотра,
+#     и /api/ — endpoint-ы для форм)
 # ============================================
 RewriteCond %{REQUEST_URI} !^/old-site/
+RewriteCond %{REQUEST_URI} !^/api/
 RewriteRule ^(.*)\.php$ / [R=301,L]
 
 # ============================================

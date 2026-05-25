@@ -66,7 +66,7 @@
               <p class="contacts-form__hint">(*) поля обязательны к заполнению</p>
             </div>
 
-            <form class="contacts-form__body" action="#" method="post" novalidate>
+            <form class="contacts-form__body js-contact-form" action="/api/contact.php" method="post" novalidate>
               <div class="contacts-form__grid">
                 <div class="contacts-form__field">
                   <input class="contacts-form__control" placeholder="ИМЯ *" id="contact-first-name" name="firstName"
@@ -84,12 +84,15 @@
                 </div>
 
                 <div class="contacts-form__field contacts-form__field--full">
-                  <div class="contacts-form__phone">
-                    <button class="contacts-form__country" type="button" aria-label="Выбор страны">
-                      <img class="contacts-form__flag" src="assets/images/cont.svg?v=2" alt="Флаг страны" title="Флаг страны">
+                  <div class="contacts-form__phone js-country-wrap">
+                    <button class="contacts-form__country js-country-btn" type="button" aria-label="Выбор страны" aria-haspopup="listbox" aria-expanded="false">
+                      <span class="contacts-form__flag-emoji js-country-flag" aria-hidden="true">🇷🇺</span>
+                      <span class="contacts-form__country-code js-country-code">+7</span>
+                      <span class="contacts-form__country-arrow" aria-hidden="true"></span>
                     </button>
                     <input class="contacts-form__control contacts-form__control--phone" placeholder="ТЕЛЕФОН *"
-                      id="contact-phone" name="phone" type="tel" autocomplete="tel" required>
+                      id="contact-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+                    <ul class="contacts-form__country-list js-country-list" role="listbox" hidden></ul>
                   </div>
                 </div>
 
@@ -103,7 +106,7 @@
                 Нобелл будет использовать ваши персональные данные для обработки вашего запроса. Для получения
                 дополнительной
                 информации, пожалуйста, <br> ознакомьтесь с нашей <a class="contacts-form__policy-link"
-                  href="#">политикой конфиденциальности</a>.
+                  href="privacy.html">политикой конфиденциальности</a>.
               </p>
 
               <button class="contacts-form__submit" type="submit">Отправить заявку</button>
@@ -378,10 +381,22 @@
             </div>
         </div>
     </div>
+
+    <div class="popup popup--success js-popup-success" role="alertdialog" aria-live="polite">
+        <div class="popup__wrap">
+            <div class="popup__head">
+                <h2>Начните Жить Красиво</h2>
+            </div>
+            <div class="popup__body">
+                <p>Ваша заявка принята.<br>Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+        </div>
+    </div>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/vendor.min.js?v=13" defer></script>
   <script src="assets/js/app.js?v=13" defer></script>
+  <script src="assets/js/contacts-form.js?v=1" defer></script>
 </body>
 
 </html>
