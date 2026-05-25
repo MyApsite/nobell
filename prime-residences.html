@@ -221,7 +221,7 @@
                     <div class="guide-form__field guide-form__field--select js-select">
                       <input type="hidden" name="guide-direction" class="js-select-input" value="">
                       <button type="button" class="guide-form__select-btn js-select-btn" data-value="">
-                        <span class="guide-form__select-value js-select-value">ФИЛЬТР ПО НАПРАВЛЕНИЮ</span>
+                        <span class="guide-form__select-value js-select-value">ФИЛЬТР ПО ВИДУ НЕДВИЖИМОСТИ</span>
                         <span class="guide-form__select-arrow" aria-hidden="true">
                           <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -231,24 +231,11 @@
                       </button>
 
                       <ul class="guide-form__dropdown js-select-list">
-                        <li class="guide-form__option js-select-option active" data-value="">ВСЕ НАПРАВЛЕНИЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="europe">ЕВРОПА</li>
-                        <li class="guide-form__option js-select-option" data-value="italy">— ИТАЛИЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="sicily">— — СИЦИЛИЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="genoa">— — ГЕНУЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="spain">— ИСПАНИЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="costa-del-sol">— — КОСТА-ДЕЛЬ-СОЛЬ</li>
-                        <li class="guide-form__option js-select-option" data-value="cyprus">— КИПР</li>
-                        <li class="guide-form__option js-select-option" data-value="limassol">— — ЛИМАСОЛ</li>
-                        <li class="guide-form__option js-select-option" data-value="uk">— ВЕЛИКОБРИТАНИЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="london">— — ЛОНДОН</li>
-                        <li class="guide-form__option js-select-option" data-value="portugal">— ПОРТУГАЛИЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="lisbon">— — ЛИССАБОН</li>
-                        <li class="guide-form__option js-select-option" data-value="middle-east">БЛИЖНИЙ ВОСТОК</li>
-                        <li class="guide-form__option js-select-option" data-value="uae">— ОАЭ</li>
-                        <li class="guide-form__option js-select-option" data-value="dubai">— — ДУБАЙ</li>
-                        <li class="guide-form__option js-select-option" data-value="saudi-arabia">— САУДОВСКАЯ АРАВИЯ</li>
-                        <li class="guide-form__option js-select-option" data-value="shura-island">— — ОСТРОВ ШУРА</li>
+                        <li class="guide-form__option js-select-option active" data-value="">ВСЕ ВИДЫ НЕДВИЖИМОСТИ</li>
+                        <li class="guide-form__option js-select-option" data-value="coastal-residences">ПРИБРЕЖНЫЕ РЕЗИДЕНЦИИ</li>
+                        <li class="guide-form__option js-select-option" data-value="coastal-villas">ПРИБРЕЖНЫЕ ВИЛЛЫ</li>
+                        <li class="guide-form__option js-select-option" data-value="branded">БРЕНДИРОВАННАЯ НЕДВИЖИМОСТЬ</li>
+                        <li class="guide-form__option js-select-option" data-value="ultra-premium">УЛЬТРАПРЕМИАЛЬНАЯ НЕДВИЖИМОСТЬ</li>
                       </ul>
                     </div>
                   </div>
@@ -270,7 +257,7 @@
             <div class="guide__cards">
               <div class="card-section__row">
                 <!-- 1: ОАЭ, ДУБАЙ -->
-                <div class="card-section__col" data-type="middle-east branded coastal" data-country="uae" data-region="middle-east" data-brand="edition" data-city="dubai">
+                <div class="card-section__col" data-type="middle-east branded coastal coastal-residences" data-country="uae" data-region="middle-east" data-brand="edition" data-city="dubai">
                   <a href="dubai-beach-edition.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-1.webp"><img loading="lazy" src="assets/images/prime-residences/card-1.jpg" alt=""></picture></div>
@@ -283,7 +270,7 @@
                   </a>
                 </div>
                 <!-- 2: ИТАЛИЯ, СИЦИЛИЯ -->
-                <div class="card-section__col" data-type="europe branded coastal" data-country="italy" data-region="europe" data-brand="rocco-forte" data-city="sicily">
+                <div class="card-section__col" data-type="europe branded coastal coastal-villas" data-country="italy" data-region="europe" data-brand="rocco-forte" data-city="sicily">
                   <a href="rocco-forte-villas.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-2.webp"><img loading="lazy" src="assets/images/prime-residences/card-2.jpg" alt=""></picture></div>
@@ -296,7 +283,7 @@
                   </a>
                 </div>
                 <!-- 3: КИПР, ЛИМАСОЛ -->
-                <div class="card-section__col" data-type="europe coastal" data-country="cyprus" data-region="europe" data-brand="" data-city="limassol">
+                <div class="card-section__col" data-type="europe coastal coastal-residences" data-country="cyprus" data-region="europe" data-brand="" data-city="limassol">
                   <a href="limassol-blu-marine.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-3.webp"><img loading="lazy" src="assets/images/prime-residences/card-3.jpg" alt=""></picture></div>
@@ -309,7 +296,7 @@
                   </a>
                 </div>
                 <!-- 4: ОАЭ, ДУБАЙ -->
-                <div class="card-section__col" data-type="middle-east branded" data-country="uae" data-region="middle-east" data-brand="maison-margiela carlo-colombo" data-city="dubai">
+                <div class="card-section__col" data-type="middle-east branded ultra-premium coastal-residences" data-country="uae" data-region="middle-east" data-brand="maison-margiela carlo-colombo" data-city="dubai">
                   <a href="maison-margiela.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-4.webp"><img loading="lazy" src="assets/images/prime-residences/card-4.jpg" alt=""></picture></div>
@@ -322,7 +309,7 @@
                   </a>
                 </div>
                 <!-- 5: ИСПАНИЯ, КОСТА-ДЕЛЬ-СОЛЬ -->
-                <div class="card-section__col" data-type="europe coastal" data-country="spain" data-region="europe" data-brand="yodezeen arata-arquitectura" data-city="costa-del-sol">
+                <div class="card-section__col" data-type="europe coastal coastal-residences" data-country="spain" data-region="europe" data-brand="yodezeen arata-arquitectura" data-city="costa-del-sol">
                   <a href="tyrian-residences.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-5.webp"><img loading="lazy" src="assets/images/prime-residences/card-5.jpg" alt=""></picture></div>
@@ -335,7 +322,7 @@
                   </a>
                 </div>
                 <!-- 6: ИТАЛИЯ, ГЕНУЯ -->
-                <div class="card-section__col" data-type="europe coastal penthouse" data-country="italy" data-region="europe" data-brand="rpbw" data-city="genoa">
+                <div class="card-section__col" data-type="europe coastal penthouse coastal-residences" data-country="italy" data-region="europe" data-brand="rpbw" data-city="genoa">
                   <a href="waterfront-di-levante.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-6.webp"><img loading="lazy" src="assets/images/prime-residences/card-6.jpg" alt=""></picture></div>
@@ -348,7 +335,7 @@
                   </a>
                 </div>
                 <!-- 7: ОАЭ, ДУБАЙ -->
-                <div class="card-section__col" data-type="middle-east coastal" data-country="uae" data-region="middle-east" data-brand="foster-partners" data-city="dubai">
+                <div class="card-section__col" data-type="middle-east coastal coastal-residences branded" data-country="uae" data-region="middle-east" data-brand="foster-partners" data-city="dubai">
                   <a href="the-rings.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-7.webp"><img loading="lazy" src="assets/images/prime-residences/card-7.jpg" alt=""></picture></div>
@@ -361,7 +348,7 @@
                   </a>
                 </div>
                 <!-- 8: ОАЭ, ДУБАЙ -->
-                <div class="card-section__col" data-type="middle-east branded coastal" data-country="uae" data-region="middle-east" data-brand="mr-c arquitectonica meyer-davis" data-city="dubai">
+                <div class="card-section__col" data-type="middle-east branded coastal coastal-residences" data-country="uae" data-region="middle-east" data-brand="mr-c arquitectonica meyer-davis" data-city="dubai">
                   <a href="mr-c-residences.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-8.webp"><img loading="lazy" src="assets/images/prime-residences/card-8.jpg" alt=""></picture></div>
@@ -374,7 +361,7 @@
                   </a>
                 </div>
                 <!-- 9: ОАЭ, ДУБАЙ -->
-                <div class="card-section__col" data-type="middle-east branded coastal" data-country="uae" data-region="middle-east" data-brand="bulgari acpv citterio" data-city="dubai">
+                <div class="card-section__col" data-type="middle-east branded coastal coastal-residences ultra-premium" data-country="uae" data-region="middle-east" data-brand="bulgari acpv citterio" data-city="dubai">
                   <a href="bulgari-lighthouse.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-9.webp"><img loading="lazy" src="assets/images/prime-residences/card-9.jpg" alt=""></picture></div>
@@ -387,7 +374,7 @@
                   </a>
                 </div>
                 <!-- 10: ВЕЛИКОБРИТАНИЯ, ЛОНДОН -->
-                <div class="card-section__col" data-type="europe" data-country="uk" data-region="europe" data-brand="pilbrow-partners" data-city="london">
+                <div class="card-section__col" data-type="europe ultra-premium" data-country="uk" data-region="europe" data-brand="pilbrow-partners" data-city="london">
                   <a href="bishops-avenue.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-10.webp"><img loading="lazy" src="assets/images/prime-residences/card-10.jpg" alt=""></picture></div>
@@ -400,7 +387,7 @@
                   </a>
                 </div>
                 <!-- 11: САУДОВСКАЯ АРАВИЯ, ОСТРОВ ШУРА -->
-                <div class="card-section__col" data-type="middle-east branded coastal" data-country="saudi-arabia" data-region="middle-east" data-brand="miraval foster-partners rockwell" data-city="shura-island">
+                <div class="card-section__col" data-type="middle-east branded coastal coastal-residences ultra-premium" data-country="saudi-arabia" data-region="middle-east" data-brand="miraval foster-partners rockwell" data-city="shura-island">
                   <a href="miraval-red-sea.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-11.webp"><img loading="lazy" src="assets/images/prime-residences/card-11.jpg" alt=""></picture></div>
@@ -413,7 +400,7 @@
                   </a>
                 </div>
                 <!-- 12: ПОРТУГАЛИЯ, ЛИССАБОН -->
-                <div class="card-section__col" data-type="europe branded coastal" data-country="portugal" data-region="europe" data-brand="missoni" data-city="lisbon">
+                <div class="card-section__col" data-type="europe branded coastal coastal-residences" data-country="portugal" data-region="europe" data-brand="missoni" data-city="lisbon">
                   <a href="aroeira-missoni.html" class="product">
                     <div class="product__wrap">
                       <div class="product__img"><picture><source type="image/webp" srcset="assets/images/prime-residences/card-12.webp"><img loading="lazy" src="assets/images/prime-residences/card-12.jpg" alt=""></picture></div>
