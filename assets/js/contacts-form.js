@@ -68,9 +68,29 @@
     listEl.appendChild(li);
   });
 
+  // "Другая страна…" — opens an inline input for manual code entry
+  var otherLi = document.createElement('li');
+  otherLi.className = 'contacts-form__country-other';
+  otherLi.innerHTML =
+    '<button type="button" class="contacts-form__country-item js-country-other-toggle">'
+      + '<span class="contacts-form__country-item-name">Другая страна…</span>'
+      + '<span class="contacts-form__country-item-code">+</span>'
+    + '</button>'
+    + '<div class="contacts-form__country-other-row js-country-other-row" hidden>'
+      + '<input type="text" class="js-country-other-input" placeholder="+XXX" maxlength="5" pattern="\\+?\\d{1,4}" inputmode="numeric">'
+      + '<button type="button" class="js-country-other-ok">OK</button>'
+    + '</div>';
+  listEl.appendChild(otherLi);
+
+  var otherToggle = otherLi.querySelector('.js-country-other-toggle');
+  var otherRow    = otherLi.querySelector('.js-country-other-row');
+  var otherInput  = otherLi.querySelector('.js-country-other-input');
+  var otherOk     = otherLi.querySelector('.js-country-other-ok');
+
   function closeList() {
     listEl.style.display = 'none';
     btn.setAttribute('aria-expanded', 'false');
+    otherRow.hidden = true;
   }
   function openList() {
     listEl.style.display = 'block';
@@ -82,9 +102,38 @@
     if (listEl.style.display === 'none') openList(); else closeList();
   });
 
+  otherToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    otherRow.hidden = !otherRow.hidden;
+    if (!otherRow.hidden) otherInput.focus();
+  });
+
+  function applyOther() {
+    var v = otherInput.value.trim();
+    if (!v) return;
+    if (v.charAt(0) !== '+') v = '+' + v;
+    if (!/^\+\d{1,4}$/.test(v)) {
+      otherInput.classList.add('is-error');
+      return;
+    }
+    otherInput.classList.remove('is-error');
+    codeEl.textContent = v;
+    btn.dataset.country = 'custom';
+    closeList();
+    phoneEl.focus();
+  }
+  otherOk.addEventListener('click', function (e) { e.stopPropagation(); applyOther(); });
+  otherInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); applyOther(); }
+  });
+  otherInput.addEventListener('input', function () {
+    otherInput.classList.remove('is-error');
+  });
+  otherInput.addEventListener('click', function (e) { e.stopPropagation(); });
+
   listEl.addEventListener('click', function (e) {
     var t = e.target.closest('.contacts-form__country-item');
-    if (!t) return;
+    if (!t || t === otherToggle) return;
     codeEl.textContent = t.dataset.code;
     btn.dataset.country = t.dataset.name;
     closeList();

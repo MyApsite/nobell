@@ -2093,6 +2093,19 @@ input:focus::placeholder {
     background: #f3f3f5; outline: none; }
   .contacts-form__country-item-name { flex: 1; }
   .contacts-form__country-item-code { color: rgba(0,0,0,0.5); flex: none; }
+  .contacts-form__country-other {
+    border-top: 1px solid #ececec; margin-top: 4px; padding-top: 4px; }
+  .contacts-form__country-other-row {
+    display: flex; gap: 6px; padding: 8px 14px; align-items: center; }
+  .contacts-form__country-other-row[hidden] { display: none; }
+  .contacts-form__country-other-row input {
+    flex: 1; padding: 6px 10px; border: 1px solid #d8d8d8; border-radius: 4px;
+    font-family: "Gilroy"; font-size: 12px; }
+  .contacts-form__country-other-row input.is-error {
+    border-color: #d52b1e; }
+  .contacts-form__country-other-row button {
+    padding: 6px 12px; border: 0; background: #212121; color: #fff;
+    border-radius: 4px; font-family: "Gilroy"; font-size: 11px; cursor: pointer; }
   .popup--success .popup__body p {
     text-align: center; padding: 0 8px; }
 
