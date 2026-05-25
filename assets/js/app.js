@@ -646,8 +646,7 @@ var swiperSlider = function () {
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true
+      disableOnInteraction: false
     },
     speed: 800,
     navigation: {
@@ -663,7 +662,12 @@ var swiperSlider = function () {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 16,
-    loop: false,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    speed: 800,
     navigation: {
       nextEl: '.js-spotlight-next',
       prevEl: '.js-spotlight-prev'
