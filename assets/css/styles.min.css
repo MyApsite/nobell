@@ -2619,7 +2619,7 @@ input:focus::placeholder {
     padding: 12px 16px; }
     .guide-form__option:hover, .guide-form__option.active {
       background-color: #fff;
-      border-color: #f28c28;
+      border-color: #212121;
       color: #212121; }
     .guide-form__option.active {
       border-width: 1.5px;
