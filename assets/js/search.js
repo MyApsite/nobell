@@ -91,11 +91,17 @@
       var a = document.createElement('a');
       a.className = 'search-card';
       a.href = '/' + e.url;
+      var img = e.image
+        ? '<div class="search-card__img"><img loading="lazy" decoding="async" src="/' + escapeHtml(e.image) + '" alt=""></div>'
+        : '';
       a.innerHTML =
-        (e.tag ? '<span class="search-card__tag">' + escapeHtml(e.tag) + '</span>' : '') +
-        '<h3 class="search-card__title">' + highlight(e.title || e.url, terms) + '</h3>' +
-        (e.description ? '<p class="search-card__text">' + highlight(e.description, terms) + '</p>' : '') +
-        '<span class="search-card__url">/' + escapeHtml(e.url) + '</span>';
+        img +
+        '<div class="search-card__body">' +
+          (e.tag ? '<span class="search-card__tag">' + escapeHtml(e.tag) + '</span>' : '') +
+          '<h3 class="search-card__title">' + highlight(e.title || e.url, terms) + '</h3>' +
+          (e.description ? '<p class="search-card__text">' + highlight(e.description, terms) + '</p>' : '') +
+          '<span class="search-card__url">/' + escapeHtml(e.url) + '</span>' +
+        '</div>';
       frag.appendChild(a);
     });
     grid.appendChild(frag);
