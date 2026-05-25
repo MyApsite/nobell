@@ -15,6 +15,7 @@
   <meta name="twitter:title" content="{{ page.twitter_title }}">
   <meta name="twitter:description" content="{{ page.twitter_description }}">
   <meta name="twitter:image" content="{{ page.og_image }}">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/styles.min.css">

@@ -1,6 +1,6 @@
     <header class="header">
       <a href="/" class="header__logo">
-        <img src="assets/images/logo.svg" alt="">
+        <img src="assets/images/logo.svg" alt="Nobell — логотип">
       </a>
 
       <div class="breadcrumbs">

@@ -38,6 +38,7 @@ CATEGORIES = {
         "label": "ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ",
         "href": "cars.html",
         "detail_tpl": "cars-detail.html.tpl",
+        "catalog_tpl": "cars.html.tpl",
     },
 }
 
@@ -51,12 +52,20 @@ def load_frontmatter(md_path: Path) -> dict:
     return yaml.safe_load(m.group(1)) or {}
 
 
-def load_category(slug: str) -> list[dict]:
-    """Load all content/<slug>/*.md and return them as a list."""
-    items = []
+def load_category(slug: str) -> tuple[list[dict], dict | None]:
+    """Load all content/<slug>/*.md and return (detail_pages, catalog_index_or_None).
+
+    The catalog index file `_index.md` is treated separately.
+    """
+    items: list[dict] = []
+    index: dict | None = None
     for path in sorted((CONTENT_DIR / slug).glob("*.md")):
-        items.append(load_frontmatter(path))
-    return items
+        data = load_frontmatter(path)
+        if path.name.startswith("_index."):
+            index = data
+        else:
+            items.append(data)
+    return items, index
 
 
 def get_sibling_order(category: str, pages: list[dict]) -> list[dict]:
@@ -73,11 +82,13 @@ def get_sibling_order(category: str, pages: list[dict]) -> list[dict]:
 
 def render_category(category: str, env: Environment, only_slugs: set[str] | None):
     cat_meta = CATEGORIES[category]
-    pages = load_category(category)
+    pages, catalog = load_category(category)
     siblings = get_sibling_order(category, pages)
-    tpl = env.get_template(cat_meta["detail_tpl"])
+    detail_tpl = env.get_template(cat_meta["detail_tpl"])
 
     DIST_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Render detail-pages
     n_done = 0
     for page in pages:
         if only_slugs and page["slug"] not in only_slugs:
@@ -93,12 +104,31 @@ def render_category(category: str, env: Environment, only_slugs: set[str] | None
             "has_hero": "hero" in body_types,
             "has_grid": "grid_2col" in body_types,
         }
-        html = tpl.render(**ctx).lstrip()
+        html = detail_tpl.render(**ctx).lstrip()
         out_path = DIST_DIR / f"{page['slug']}.html"
         out_path.write_bytes(html.encode("utf-8"))
         n_done += 1
         print(f"  OK   dist/{page['slug']}.html")
-    print(f"Rendered {n_done} {category} detail-pages")
+
+    # Render catalog (if _index.md present and template configured)
+    catalog_render = "catalog_tpl" in cat_meta and catalog is not None
+    if catalog_render and (not only_slugs or catalog["slug"] in only_slugs):
+        catalog_tpl = env.get_template(cat_meta["catalog_tpl"])
+        ctx = {
+            "page": catalog,
+            "items": siblings,
+            "catalog": catalog,
+            "category_label": cat_meta["label"],
+            "category_href": cat_meta["href"],
+            "category_only": True,
+            "crumbs": [],
+        }
+        html = catalog_tpl.render(**ctx).lstrip()
+        out_path = DIST_DIR / f"{catalog['slug']}.html"
+        out_path.write_bytes(html.encode("utf-8"))
+        print(f"  OK   dist/{catalog['slug']}.html  (catalog)")
+
+    print(f"Rendered {n_done} {category} detail-pages" + (" + catalog" if catalog_render else ""))
 
 
 def main():
