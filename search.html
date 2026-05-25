@@ -3,21 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Контакты — Nobell</title>
-  <meta name="description" content="Свяжитесь с Nobell. Контактная форма для заявок на премиальный консьерж сервис и персональный лайфстайл менеджмент.">
-  <meta name="keywords" content="контакты Nobell, заявка, консьерж сервис, связаться">
-  <link rel="canonical" href="https://nobell.com/contacts.html">
+  <title>Поиск — Nobell</title>
+  <meta name="description" content="Поиск по сайту Nobell — премиальная недвижимость, эксклюзивные автомобили, шедевры часового искусства, отели и яхты.">
+  <meta name="keywords" content="поиск Nobell">
+  <link rel="canonical" href="https://nobell.com/search.html">
+  <meta name="robots" content="noindex,follow">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nobell.com/contacts.html">
-  <meta property="og:title" content="Контакты — Nobell">
-  <meta property="og:description" content="Свяжитесь с Nobell. Контактная форма для заявок на премиальный консьерж сервис.">
-  <meta property="og:image" content="https://nobell.com/assets/images/video-poster.png">
+  <meta property="og:url" content="https://nobell.com/search.html">
+  <meta property="og:title" content="Поиск — Nobell">
+  <meta property="og:description" content="Поиск по сайту Nobell.">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="Nobell">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Контакты — Nobell">
-  <meta name="twitter:description" content="Свяжитесь с Nobell. Контактная форма для заявок на премиальный консьерж сервис.">
-  <meta name="twitter:image" content="https://nobell.com/assets/images/video-poster.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Поиск — Nobell">
+  <meta name="twitter:description" content="Поиск по сайту Nobell.">
+  <style>
+    .search-hero { padding: 60px 0 40px; background: #f8f8fa; }
+    @media (min-width: 1024px) { .search-hero { padding: 100px 0 60px; } }
+    .search-hero__title { font-family: 'modernline - Personal Use'; font-weight: 400; font-size: 36px; line-height: 100%; text-align: center; margin: 0 0 8px; color: #212121; }
+    .search-hero__sub { font-family: 'Gilroy'; font-size: 10px; font-weight: 300; letter-spacing: 0.4px; text-transform: uppercase; text-align: center; color: rgba(33,33,33,0.65); margin: 0 0 32px; }
+    .search-form { max-width: 720px; margin: 0 auto; display: flex; gap: 12px; padding: 0 16px; }
+    .search-form input[type="search"] { flex: 1; padding: 14px 18px; border: 1px solid #d8d8d8; border-radius: 8px; background: #fff; font-family: 'Gilroy'; font-size: 14px; color: #212121; }
+    .search-form input[type="search"]:focus { border-color: #212121; outline: none; }
+    .search-form button { padding: 0 26px; min-width: 120px; background: #212121; color: #fff; border: 0; border-radius: 8px; font-family: 'Gilroy'; font-size: 11px; letter-spacing: 0.44px; text-transform: uppercase; cursor: pointer; }
+    .search-form button:hover { background: #333; }
+
+    .search-results { padding: 40px 0 80px; }
+    .search-results__meta { font-family: 'Gilroy'; font-size: 13px; color: rgba(33,33,33,0.7); text-align: center; margin: 0 0 32px; }
+    .search-results__meta strong { color: #212121; }
+    .search-results__grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    @media (min-width: 768px) { .search-results__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .search-results__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+
+    .search-card { display: flex; flex-direction: column; padding: 20px 22px 24px; background: #fff; border: 1px solid #ececec; border-radius: 10px; color: #212121; text-decoration: none; transition: box-shadow .2s ease, transform .2s ease; }
+    .search-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.07); transform: translateY(-2px); }
+    .search-card__tag { font-family: 'Gilroy'; font-size: 10px; font-weight: 300; letter-spacing: 0.4px; text-transform: uppercase; color: rgba(33,33,33,0.55); margin: 0 0 10px; }
+    .search-card__title { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 16px; line-height: 1.4; margin: 0 0 14px; }
+    .search-card__title mark { background: #ffe17a; color: #212121; padding: 0 2px; }
+    .search-card__text { font-family: 'Gilroy'; font-size: 12px; line-height: 1.55; color: rgba(33,33,33,0.78); margin: 0 0 16px; }
+    .search-card__text mark { background: #ffe17a; color: #212121; padding: 0 2px; }
+    .search-card__url { margin-top: auto; font-family: 'Gilroy'; font-size: 11px; color: rgba(33,33,33,0.45); text-transform: lowercase; }
+
+    .search-empty { text-align: center; padding: 60px 16px; color: rgba(33,33,33,0.7); font-family: 'Gilroy'; font-size: 14px; }
+    .search-empty__hint { font-size: 12px; color: rgba(33,33,33,0.45); margin-top: 8px; }
+  </style>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
   <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
@@ -40,7 +69,7 @@
           <img src="assets/images/home.svg?v=2" alt="Главная" title="Главная">
         </a>
         <img src="assets/images/next.svg?v=2" alt="Далее" title="Далее">
-        <span>КОНТАКТЫ</span>
+        <span>ПОИСК</span>
       </div>
 
       <button type="button" class="header__burger header__burger--fixed js-burger-open">
@@ -58,80 +87,24 @@
     </header>
 
     <main class="main">
-      <section class="contacts-section">
+      <section class="search-hero">
         <div class="container">
-          <div class="contacts-form">
-            <div class="contacts-form__head">
-              <h1 class="contacts-form__title">Контактная форма</h1>
-              <p class="contacts-form__hint">(*) поля обязательны к заполнению</p>
-            </div>
-
-            <form class="contacts-form__body js-contact-form" action="/api/contact.php" method="post" novalidate>
-              <div class="contacts-form__grid">
-                <div class="contacts-form__field">
-                  <input class="contacts-form__control" placeholder="ИМЯ *" id="contact-first-name" name="firstName"
-                    type="text" autocomplete="given-name" required>
-                </div>
-
-                <div class="contacts-form__field">
-                  <input class="contacts-form__control" placeholder="ФАМИЛИЯ *" id="contact-last-name" name="lastName"
-                    type="text" autocomplete="family-name" required>
-                </div>
-
-                <div class="contacts-form__field contacts-form__field--full">
-                  <input class="contacts-form__control" placeholder="EMAIL *" id="contact-email" name="email"
-                    type="email" autocomplete="email" required>
-                </div>
-
-                <div class="contacts-form__field contacts-form__field--full">
-                  <div class="contacts-form__phone js-country-wrap">
-                    <button class="contacts-form__country js-country-btn" type="button" aria-label="Выбор страны" aria-haspopup="listbox" aria-expanded="false">
-                      <span class="contacts-form__country-code js-country-code">+7</span>
-                      <span class="contacts-form__country-arrow" aria-hidden="true"></span>
-                    </button>
-                    <input class="contacts-form__control contacts-form__control--phone" placeholder="ТЕЛЕФОН *"
-                      id="contact-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
-                    <ul class="contacts-form__country-list js-country-list" role="listbox" style="display:none"></ul>
-                  </div>
-                </div>
-
-                <div class="contacts-form__field contacts-form__field--full">
-                  <textarea class="contacts-form__control contacts-form__control--message"
-                    placeholder="ВАШЕ СООБЩЕНИЕ *" id="contact-message" name="message" rows="3" required></textarea>
-                </div>
-              </div>
-
-              <p class="contacts-form__policy">
-                Нобелл будет использовать ваши персональные данные для обработки вашего запроса. Для получения
-                дополнительной
-                информации, пожалуйста, <br> ознакомьтесь с нашей <a class="contacts-form__policy-link"
-                  href="privacy.html">политикой конфиденциальности</a>.
-              </p>
-
-              <button class="contacts-form__submit" type="submit">Отправить заявку</button>
-            </form>
-          </div>
+          <h1 class="search-hero__title">Поиск по сайту</h1>
+          <p class="search-hero__sub" id="js-search-sub">Введите запрос и нажмите Enter</p>
+          <form class="search-form" action="/search.html" method="get" id="js-search-form" role="search">
+            <input type="search" name="s" id="js-search-input" placeholder="Например: Rolls-Royce, Сицилия, яхта Four Seasons" autocomplete="off" autofocus>
+            <button type="submit">Искать</button>
+          </form>
         </div>
       </section>
 
-      <section class="map-section">
-        <picture>
-          <source srcset="assets/images/map-desk.webp?v=2" type="image/webp" media="(min-width: 768px)">
-          <source srcset="assets/images/map-mob.webp?v=2" type="image/webp">
-          <source srcset="assets/images/map-desk.jpg?v=2" media="(min-width: 768px)">
-          <img src="assets/images/map-mob.jpg?v=2" alt="Карта расположения Nobell" title="Карта расположения Nobell">
-        </picture>
-      </section>
-
-      <section class="inform-section">
+      <section class="search-results">
         <div class="container">
-          <div class="inform">
-            <h3>Мы всегда к вашим услугам по любому вопросу:</h3>
-            <a href="mailto:support@nobell.com">
-              <img src="assets/images/email.svg?v=2" alt="Email" title="Email">
-              support@nobell.com
-            </a>
-            <p>The Gate, Level 14, Dubai International Financial Centre (DIFC), P.O. Box 74777, Dubai, UAE</p>
+          <p class="search-results__meta" id="js-search-meta" hidden></p>
+          <div class="search-results__grid" id="js-search-grid"></div>
+          <div class="search-empty" id="js-search-empty" hidden>
+            Ничего не найдено по запросу <strong></strong>
+            <div class="search-empty__hint">Попробуйте другие слова или общие категории — отели, авто, часы, недвижимость.</div>
           </div>
         </div>
       </section>
@@ -395,7 +368,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/vendor.min.js?v=13" defer></script>
   <script src="assets/js/app.js?v=13" defer></script>
-  <script src="assets/js/contacts-form.js?v=1" defer></script>
+  <script src="assets/js/search.js?v=1" defer></script>
 </body>
 
 </html>
