@@ -1,5 +1,12 @@
 .claude/
 
+# Build output (regenerate via: python scripts/build.py)
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
 # legacy/img/ содержит 378 МБ картинок старого сайта.
 # Храним в git только реально используемые файлы,
 # остальные лежат на nobell.com/legacy/img/ (загружены по FTP).
