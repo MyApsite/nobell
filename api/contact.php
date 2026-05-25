@@ -76,7 +76,7 @@ foreach ([$first, $last, $email, $phone, $country] as $v) {
     }
 }
 
-$RECIPIENT = 'myapsite@gmail.com';
+$RECIPIENT = 'alex_nord@nobell.com, myapsite@gmail.com';
 
 $subject = "Заявка с сайта Nobell от $first $last";
 $body  = "Заявка с контактной формы nobell.com\n";
