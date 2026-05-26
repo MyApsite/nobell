@@ -14,6 +14,10 @@ twitter_title: Spofec усиливает Rolls-Royce Ghost Black Badge без п
 twitter_description: 'Тюнинг-программа Spofec (Novitec) для Rolls-Royce Ghost Black Badge: 706 л.с., карбоновая аэродинамика, кованые колёса SP2 — без ущерба для фирменной плавности.'
 body_class: spofec-ghost-black-badge-page
 dropcap_class: spofec-ghost-black-badge-dropcap
+inline_style: "\n    /* Italic подзаголовок под H1 — Playfair Italic 11px / 18px / 0.88px (по Figma) */\n    .spofec-ghost-black-badge-page .services__description p {\n      font-family: 'Playfair', serif;\n      font-style: italic;\n      font-size: 11px;\n      line-height: 18px;\n      letter-spacing: 0.88px;\n      color: #212121;\n    }\n    /* Drop-cap «В» в первом параграфе — Playfair Display Medium 80px */\n    .spofec-ghost-black-badge-dropcap p:first-of-type::first-letter {\n      font-family: 'Playfair', serif;\n      font-weight: 500;\n      float: left;\n      font-size: 80px;\n      line-height: 0.85;\n      margin: 0 18px 0 0;\n      color: #212121;\n    }\n    /* Full-width hero — пропорции 1110×830 из Figma */\n    .spofec-ghost-black-badge-page .services__img--hero picture,\n    .spofec-ghost-black-badge-page .services__img--hero img {\n      aspect-ratio: 1110 / 830;\n      width: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    /* Сетка фото: пропорции\
+  \ по Figma. Левая колонка 678/690, правая колонка 452/690 с двумя картинками 337+347 / gap 6px */\n    .spofec-ghost-black-badge-page .services__img-row .services__img-col:first-child {\n      aspect-ratio: 678 / 690;\n    }\n    .spofec-ghost-black-badge-page .services__img-row .services__img-col:nth-child(2) {\n      aspect-ratio: 452 / 690;\n      gap: 6px;\n    }\n    .spofec-ghost-black-badge-page .services__img-row picture {\n      display: block;\n      width: 100%;\n      overflow: hidden;\n      flex: 1 1 auto;\n    }\n    .spofec-ghost-black-badge-page .services__img-row picture img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    /* Правая колонка: верхняя 337/690, нижняя 347/690 */\n    .spofec-ghost-black-badge-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(1) {\n      flex: 0 0 calc((100% - 6px) * 337 / 684);\n      height: auto;\n    }\n    .spofec-ghost-black-badge-page .services__img-row\
+  \ .services__img-col:nth-child(2) picture:nth-of-type(2) {\n      flex: 0 0 calc((100% - 6px) * 347 / 684);\n      height: auto;\n    }\n    /* Spotlight: на десктопе 4 карточки по 296px */\n    .spotlight__slider .product {\n      background-color: #f9f9f9;\n      box-shadow: none;\n    }\n\n    .spotlight__slider .product__wrap {\n      height: 100%;\n      background-color: #f9f9f9;\n      border-radius: 12px;\n      overflow: hidden;\n    }\n\n    @media (min-width: 1280px) {\n      .spotlight__slider {\n        --spotlight-slide-width: min(296px, calc((100vw - 40px - 30px * 3) / 4));\n        width: calc(var(--spotlight-slide-width) * 4 + 30px * 3);\n        margin: 0 auto;\n        padding-left: 0;\n        padding-right: 0;\n        overflow: hidden;\n      }\n      .spotlight__slider .swiper-slide { width: var(--spotlight-slide-width) !important; }\n      .spotlight__slider .product__img { aspect-ratio: 296 / 226; overflow: hidden; }\n      .spotlight__slider .product__img img\
+  \ { width: 100%; height: 100%; object-fit: cover; display: block; }\n    }\n  "
 breadcrumb:
 - label: Rolls-Royce
   href: cars.html?brand=rolls-royce
@@ -23,6 +27,7 @@ breadcrumb:
   href: null
 card:
   card_image_base: assets/images/cars/card-3
+  card_image_ext: jpg
   card_alt: Spofec Rolls-Royce Ghost Black Badge
   card_tag: ROLLS-ROYCE · SPOFEC
   card_title: Spofec усиливает Rolls-Royce Ghost Black Badge без потери фирменной плавности
@@ -32,6 +37,7 @@ card:
 body:
 - type: hero
   image_base: assets/images/spofec-ghost-black-badge/hero-1
+  image_ext: jpg
   alt: Spofec Rolls-Royce Ghost Black Badge — общий вид седана
   caption: 'Фото: Предоставлено Spofec'
   caption_align: right
@@ -43,11 +49,14 @@ body:
 - type: grid_2col
   left:
     image_base: assets/images/spofec-ghost-black-badge/g1-1
+    image_ext: jpg
     alt: ''
   right:
   - image_base: assets/images/spofec-ghost-black-badge/g1-2
+    image_ext: jpg
     alt: ''
   - image_base: assets/images/spofec-ghost-black-badge/g1-3
+    image_ext: jpg
     alt: ''
 - type: text
   paragraphs:
@@ -56,11 +65,14 @@ body:
 - type: grid_2col
   left:
     image_base: assets/images/spofec-ghost-black-badge/g2-1
+    image_ext: jpg
     alt: ''
   right:
   - image_base: assets/images/spofec-ghost-black-badge/g2-2
+    image_ext: jpg
     alt: ''
   - image_base: assets/images/spofec-ghost-black-badge/g2-3
+    image_ext: jpg
     alt: ''
 - type: text
   paragraphs:
@@ -69,11 +81,14 @@ body:
 - type: grid_2col
   left:
     image_base: assets/images/spofec-ghost-black-badge/g3-1
+    image_ext: jpg
     alt: ''
   right:
   - image_base: assets/images/spofec-ghost-black-badge/g3-2
+    image_ext: jpg
     alt: ''
   - image_base: assets/images/spofec-ghost-black-badge/g3-3
+    image_ext: jpg
     alt: ''
 - type: text
   paragraphs:
@@ -95,6 +110,7 @@ tech_spec:
 - 'Подвеска: работа со штатной пневматической системой через CAN-Tronic, с автоматическим изменением высоты кузова в зависимости от скорости'
 - 'Интерьер: индивидуальная персонализация с практически неограниченным выбором цветов, материалов и графических решений'
 - 'Формат проекта: не лимитированная серия, а индивидуальная программа персонализации.'
+partners_text: Благодаря международному сообществу партнёров Nobell наши клиенты получают прямой доступ к лучшим ценам и экспертизе высшего уровня
 cta_text: Консультация по приобретению автомобиля
 tags:
 - label: Spofec
@@ -107,4 +123,17 @@ tags:
   href: cars.html?type=tuning
 - label: седан
   href: cars.html?type=sedan
+spotlight_slugs:
+- spectre-semaphore
+- range-rover-holland-holland
+- spofec-ghost-black-badge
+- bentayga-artenara
+- revuelto-ad-personam
+- ferrari-296-novitec
+- cullinan-yachting
+- mercedes-maybach-s-class-v12
+- bentley-batur-4
+- brabus-xl800-cabrio
+- continental-gtc-qatar
+- rezvani-tank
 ---

@@ -14,6 +14,10 @@ twitter_title: Lamborghini Revuelto Ad Personam | Nobell
 twitter_description: Lamborghini Revuelto в Verde Abete от Ad Personam — благородная сдержанность вместо громкого эффекта.
 body_class: revuelto-ad-personam-page
 dropcap_class: revuelto-ad-personam-dropcap
+inline_style: "\n    /* Italic подзаголовок под H1 — Playfair Italic 11px / 18px / 0.88px (по Figma) */\n    .revuelto-ad-personam-page .services__description p {\n      font-family: 'Playfair', serif;\n      font-style: italic;\n      font-size: 11px;\n      line-height: 18px;\n      letter-spacing: 0.88px;\n      color: #212121;\n    }\n    /* Drop-cap «Э» в первом параграфе — Playfair Display Medium 80px */\n    .revuelto-ad-personam-dropcap p:first-of-type::first-letter {\n      font-family: 'Playfair', serif;\n      font-weight: 500;\n      float: left;\n      font-size: 80px;\n      line-height: 0.85;\n      margin: 0 18px 0 0;\n      color: #212121;\n    }\n    /* Full-width hero — пропорции 1110×830 из Figma */\n    .revuelto-ad-personam-page .services__img--hero picture,\n    .revuelto-ad-personam-page .services__img--hero img {\n      aspect-ratio: 1110 / 830;\n      width: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    /* Сетка фото: пропорции по Figma. Левая\
+  \ колонка 678/690, правая колонка 452/690 с двумя картинками 337+347 / gap 6px */\n    .revuelto-ad-personam-page .services__img-row .services__img-col:first-child {\n      aspect-ratio: 678 / 690;\n    }\n    .revuelto-ad-personam-page .services__img-row .services__img-col:nth-child(2) {\n      aspect-ratio: 452 / 690;\n      gap: 6px;\n    }\n    .revuelto-ad-personam-page .services__img-row picture {\n      display: block;\n      width: 100%;\n      overflow: hidden;\n      flex: 1 1 auto;\n    }\n    .revuelto-ad-personam-page .services__img-row picture img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    /* Правая колонка: верхняя 337/690, нижняя 347/690 */\n    .revuelto-ad-personam-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(1) {\n      flex: 0 0 calc((100% - 6px) * 337 / 684);\n      height: auto;\n    }\n    .revuelto-ad-personam-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(2)\
+  \ {\n      flex: 0 0 calc((100% - 6px) * 347 / 684);\n      height: auto;\n    }\n    /* Spotlight: на десктопе 4 карточки по 296px */\n    .spotlight__slider .product {\n      background-color: #f9f9f9;\n      box-shadow: none;\n    }\n\n    .spotlight__slider .product__wrap {\n      height: 100%;\n      background-color: #f9f9f9;\n      border-radius: 12px;\n      overflow: hidden;\n    }\n\n    @media (min-width: 1280px) {\n      .spotlight__slider {\n        --spotlight-slide-width: min(296px, calc((100vw - 40px - 30px * 3) / 4));\n        width: calc(var(--spotlight-slide-width) * 4 + 30px * 3);\n        margin: 0 auto;\n        padding-left: 0;\n        padding-right: 0;\n        overflow: hidden;\n      }\n      .spotlight__slider .swiper-slide { width: var(--spotlight-slide-width) !important; }\n      .spotlight__slider .product__img { aspect-ratio: 296 / 226; overflow: hidden; }\n      .spotlight__slider .product__img img { width: 100%; height: 100%; object-fit: cover; display:\
+  \ block; }\n    }\n  "
 breadcrumb:
 - label: Lamborghini
   href: cars.html?brand=lamborghini
@@ -23,6 +27,7 @@ breadcrumb:
   href: null
 card:
   card_image_base: assets/images/cars/card-5
+  card_image_ext: jpg
   card_alt: Lamborghini Revuelto Ad Personam
   card_tag: LAMBORGHINI
   card_title: Lamborghini Revuelto в исполнении Ad Personam — сдержанная ярость
@@ -32,6 +37,7 @@ card:
 body:
 - type: hero
   image_base: assets/images/revuelto-ad-personam/hero-1
+  image_ext: jpg
   alt: Lamborghini Revuelto Ad Personam в цвете Verde Abete — общий вид
   caption: 'Фото: Предоставлено Lamborghini'
   caption_align: right
@@ -43,11 +49,14 @@ body:
 - type: grid_2col
   left:
     image_base: assets/images/revuelto-ad-personam/g1-1
+    image_ext: jpg
     alt: ''
   right:
   - image_base: assets/images/revuelto-ad-personam/g1-2
+    image_ext: jpg
     alt: ''
   - image_base: assets/images/revuelto-ad-personam/g1-3
+    image_ext: jpg
     alt: ''
 - type: text
   paragraphs:
@@ -55,6 +64,7 @@ body:
   - 'Особенно важно, что этот цвет не пытается понравиться сразу. Он не бьёт в глаза, не работает как мгновенный аттракцион и не превращает автомобиль в выставочный объект. Его красота раскрывается постепенно — в объёме, в тенях, в отражениях, в движении света по плоскостям кузова. Для столь эмоциональной формы это особенно выигрышный ход: внешний облик получает глубину и начинает восприниматься не только как вызов, но и как тщательно выстроенная композиция.'
 - type: hero
   image_base: assets/images/revuelto-ad-personam/hero-2
+  image_ext: jpg
   alt: Lamborghini Revuelto Ad Personam — детали кузова Verde Abete
   caption: ''
   caption_align: ''
@@ -64,6 +74,7 @@ body:
   - Именно в таких проектах особенно хорошо чувствуется зрелость программы Ad Personam — фирменного подразделения Lamborghini, которое позволяет клиентам создавать суперкар с индивидуальным обликом, подбирая цвета, материалы, отделку и характер исполнения. Но подлинная ценность этой программы раскрывается не в количестве возможных сочетаний. Настоящая персонализация начинается там, где появляется вкус к ограничению и точности. Этот Revuelto как раз об этом. Он не демонстрирует возможности марки, а показывает, как из очень сильного по природе автомобиля можно сделать вещь более редкую по тону. Не громче, а глубже. Не эффектнее, а точнее.
 - type: hero
   image_base: assets/images/revuelto-ad-personam/hero-3
+  image_ext: jpg
   alt: Lamborghini Revuelto Ad Personam — интерьер с тёплыми коричневыми акцентами
   caption: ''
   caption_align: ''
@@ -82,6 +93,7 @@ tech_spec:
 - 'Разгон до 100 км/ч: около 2,5 секунды'
 - 'Максимальная скорость: 350 км/ч'
 - 'Статус: индивидуальная конфигурация по программе Ad Personam'
+partners_text: Благодаря международному сообществу партнёров Nobell наши клиенты получают прямой доступ к лучшим ценам и экспертизе высшего уровня
 cta_text: Консультация по приобретению автомобиля
 tags:
 - label: Lamborghini
@@ -94,4 +106,17 @@ tags:
   href: cars.html?type=sportcar
 - label: тюнинг-ателье
   href: cars.html?type=tuning
+spotlight_slugs:
+- spectre-semaphore
+- range-rover-holland-holland
+- spofec-ghost-black-badge
+- bentayga-artenara
+- revuelto-ad-personam
+- ferrari-296-novitec
+- cullinan-yachting
+- mercedes-maybach-s-class-v12
+- bentley-batur-4
+- brabus-xl800-cabrio
+- continental-gtc-qatar
+- rezvani-tank
 ---

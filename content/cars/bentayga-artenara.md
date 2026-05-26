@@ -14,6 +14,10 @@ twitter_title: Bentley Bentayga Artenara Edition — находит свою в�
 twitter_description: Mulliner-исполнение Bentley Bentayga, вдохновлённое Артенарой на Гран-Канарии — тонкая работа с пропорциями, фактурой и характером кроссовера.
 body_class: bentayga-artenara-page
 dropcap_class: bentayga-artenara-dropcap
+inline_style: "\n    /* Italic подзаголовок под H1 — Playfair Italic 11px / 18px / 0.88px (по Figma) */\n    .bentayga-artenara-page .services__description p {\n      font-family: 'Playfair', serif;\n      font-style: italic;\n      font-size: 11px;\n      line-height: 18px;\n      letter-spacing: 0.88px;\n      color: #212121;\n    }\n    /* Drop-cap «B» в первом параграфе — Playfair Display Medium 80px */\n    .bentayga-artenara-dropcap p:first-of-type::first-letter {\n      font-family: 'Playfair', serif;\n      font-weight: 500;\n      float: left;\n      font-size: 80px;\n      line-height: 0.85;\n      margin: 0 18px 0 0;\n      color: #212121;\n    }\n    /* Full-width hero — пропорции 1110×830 из Figma */\n    .bentayga-artenara-page .services__img--hero picture,\n    .bentayga-artenara-page .services__img--hero img {\n      aspect-ratio: 1110 / 830;\n      width: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    /* Сетка фото: пропорции по Figma. Левая колонка 678/690,\
+  \ правая колонка 452/690 с двумя картинками 337+347 / gap 6px */\n    .bentayga-artenara-page .services__img-row .services__img-col:first-child {\n      aspect-ratio: 678 / 690;\n    }\n    .bentayga-artenara-page .services__img-row .services__img-col:nth-child(2) {\n      aspect-ratio: 452 / 690;\n      gap: 6px;\n    }\n    .bentayga-artenara-page .services__img-row picture {\n      display: block;\n      width: 100%;\n      overflow: hidden;\n      flex: 1 1 auto;\n    }\n    .bentayga-artenara-page .services__img-row picture img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    /* Правая колонка: верхняя 337/690, нижняя 347/690 */\n    .bentayga-artenara-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(1) {\n      flex: 0 0 calc((100% - 6px) * 337 / 684);\n      height: auto;\n    }\n    .bentayga-artenara-page .services__img-row .services__img-col:nth-child(2) picture:nth-of-type(2) {\n      flex: 0 0\
+  \ calc((100% - 6px) * 347 / 684);\n      height: auto;\n    }\n    /* Spotlight: на десктопе 4 карточки по 296px */\n    .spotlight__slider .product {\n      background-color: #f9f9f9;\n      box-shadow: none;\n    }\n\n    .spotlight__slider .product__wrap {\n      height: 100%;\n      background-color: #f9f9f9;\n      border-radius: 12px;\n      overflow: hidden;\n    }\n\n    @media (min-width: 1280px) {\n      .spotlight__slider {\n        --spotlight-slide-width: min(296px, calc((100vw - 40px - 30px * 3) / 4));\n        width: calc(var(--spotlight-slide-width) * 4 + 30px * 3);\n        margin: 0 auto;\n        padding-left: 0;\n        padding-right: 0;\n        overflow: hidden;\n      }\n      .spotlight__slider .swiper-slide { width: var(--spotlight-slide-width) !important; }\n      .spotlight__slider .product__img { aspect-ratio: 296 / 226; overflow: hidden; }\n      .spotlight__slider .product__img img { width: 100%; height: 100%; object-fit: cover; display: block; }\n    }\n\
+  \  "
 breadcrumb:
 - label: Bentley
   href: cars.html?brand=bentley
@@ -23,6 +27,7 @@ breadcrumb:
   href: null
 card:
   card_image_base: assets/images/cars/card-4
+  card_image_ext: jpg
   card_alt: Bentley Bentayga Artenara Edition
   card_tag: BENTLEY
   card_title: Bentayga Artenara Edition — находит свою вершину
@@ -32,6 +37,7 @@ card:
 body:
 - type: hero
   image_base: assets/images/bentayga-artenara/hero-1
+  image_ext: jpg
   alt: Bentley Bentayga Artenara Edition — общий вид кроссовера
   caption: 'Фото: Предоставлено Bentley Motors'
   caption_align: right
@@ -43,11 +49,14 @@ body:
 - type: grid_2col
   left:
     image_base: assets/images/bentayga-artenara/g1-1
+    image_ext: jpg
     alt: ''
   right:
   - image_base: assets/images/bentayga-artenara/g1-2
+    image_ext: jpg
     alt: ''
   - image_base: assets/images/bentayga-artenara/g1-3
+    image_ext: jpg
     alt: ''
 - type: text
   paragraphs:
@@ -56,11 +65,14 @@ body:
 - type: grid_2col
   left:
     image_base: assets/images/bentayga-artenara/g2-1
+    image_ext: jpg
     alt: ''
   right:
   - image_base: assets/images/bentayga-artenara/g2-2
+    image_ext: jpg
     alt: ''
   - image_base: assets/images/bentayga-artenara/g2-3
+    image_ext: jpg
     alt: ''
 - type: text
   paragraphs:
@@ -69,11 +81,14 @@ body:
 - type: grid_2col
   left:
     image_base: assets/images/bentayga-artenara/g3-1
+    image_ext: jpg
     alt: ''
   right:
   - image_base: assets/images/bentayga-artenara/g3-2
+    image_ext: jpg
     alt: ''
   - image_base: assets/images/bentayga-artenara/g3-3
+    image_ext: jpg
     alt: ''
 - type: text
   paragraphs:
@@ -91,6 +106,7 @@ tech_spec:
 - 'Салон: трёхцветное оформление интерьера'
 - 'Цветовые решения: восемь специально подобранных сочетаний кузова и салона'
 - 'Особые элементы: графика Роке-Бентайга с координатами на передней панели, перфорация дверей и сидений, световая проекция, подсвеченные пороги, надпись Artenara Edition'
+partners_text: Благодаря международному сообществу партнёров Nobell наши клиенты получают прямой доступ к лучшим ценам и экспертизе высшего уровня
 cta_text: Консультация по приобретению автомобиля
 tags:
 - label: Bentley
@@ -103,4 +119,17 @@ tags:
   href: cars.html?type=limited
 - label: кроссовер
   href: cars.html?type=crossover
+spotlight_slugs:
+- spectre-semaphore
+- range-rover-holland-holland
+- spofec-ghost-black-badge
+- bentayga-artenara
+- revuelto-ad-personam
+- ferrari-296-novitec
+- cullinan-yachting
+- mercedes-maybach-s-class-v12
+- bentley-batur-4
+- brabus-xl800-cabrio
+- continental-gtc-qatar
+- rezvani-tank
 ---

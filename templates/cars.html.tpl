@@ -1,119 +1,9 @@
+{# Cars catalog: cars-grid layout (different from card-section). #}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   {% include '_head.html.tpl' %}
-  <style>
-    /* Hero-слайдер: фото фиксировано в пропорциях 1040/584 (как в Figma) */
-    .card-section--slider .house-card__img {
-      aspect-ratio: 1040 / 584;
-      overflow: hidden;
-      width: 100%;
-    }
-    .card-section--slider .house-card__img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    /* Панель с текстом: 1032 шириной, плотно по дизайну */
-    .card-section--slider .house-card__body {
-      max-width: 1032px;
-      padding: 20px 16px;
-    }
-
-    /* Grid 4×3 для карточек авто */
-    .cars-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 30px 22px;
-    }
-    .cars-grid__col .product {
-      display: block;
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100%;
-    }
-    .cars-grid__col .product:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-    }
-    .cars-grid__col .product__img {
-      aspect-ratio: 291 / 226;
-      overflow: hidden;
-      width: 100%;
-    }
-    .cars-grid__col .product__img picture,
-    .cars-grid__col .product__img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .cars-grid__col .product__body {
-      padding: 18px 18px 22px;
-    }
-    .cars-grid__col .product__tag {
-      display: block;
-      font-family: 'Gilroy', 'Helvetica Neue', Arial, sans-serif;
-      font-size: 9px;
-      letter-spacing: 0.36px;
-      text-transform: uppercase;
-      color: rgba(33, 33, 33, 0.7);
-      margin: 0 0 10px;
-    }
-    .cars-grid__col .product__title {
-      font-family: 'Playfair', serif;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.35;
-      color: #212121;
-      margin: 0 0 12px;
-    }
-    .cars-grid__col .product__text {
-      font-family: 'Playfair', serif;
-      font-weight: 400;
-      font-size: 11px;
-      line-height: 1.55;
-      color: rgba(33, 33, 33, 0.78);
-      margin: 0;
-    }
-
-    /* Footer (загрузить больше + счётчик) */
-    .guide__footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      margin-top: 56px;
-    }
-    .guide__results {
-      font-family: 'FuturaFuturisLightC', 'Gilroy', sans-serif;
-      font-size: 9px;
-      letter-spacing: 0.36px;
-      color: rgba(33, 33, 33, 0.8);
-      margin: 0;
-    }
-
-    /* Адаптация под планшет/моб */
-    @media (max-width: 1100px) {
-      .cars-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-    @media (max-width: 800px) {
-      .cars-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-    @media (max-width: 520px) {
-      .cars-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <style>{{ catalog.inline_style|safe }}</style>
 </head>
 
 <body>
@@ -131,16 +21,16 @@
           <div class="card-section__slider">
             <div class="rec-slider js-rec-slider">
               <div class="swiper-wrapper">
-                {% for s in items[:3] %}
+                {% for s in catalog.hero_slides %}
                 <div class="swiper-slide">
-                  <a href="{{ s.slug }}.html" class="house-card">
+                  <a href="{{ s.href }}" class="house-card">
                     <div class="house-card__wrap">
                       <div class="house-card__img">
-                        <picture><source type="image/webp" srcset="{{ s.card.card_image_base }}.webp"><img loading="lazy" src="{{ s.card.card_image_base }}.jpg" alt=""></picture>
+                        <picture><source type="image/webp" srcset="{{ s.image_base }}.webp"><img loading="lazy" src="{{ s.image_base }}.{{ s.image_ext }}" alt="{{ s.alt }}"></picture>
                       </div>
                       <div class="house-card__body">
-                        <h3 class="house-card__title">{{ s.card.card_title }}</h3>
-                        <p class="house-card__text">{{ s.card.card_text }}</p>
+                        <h3 class="house-card__title">{{ s.title }}</h3>
+                        <p class="house-card__text">{{ s.text }}</p>
                       </div>
                     </div>
                   </a>
@@ -183,9 +73,9 @@
                     </label>
 
                     <div class="guide-form__field guide-form__field--select js-select">
-                      <input type="hidden" name="{{ catalog.brand_name }}" class="js-select-input" value="">
+                      <input type="hidden" name="{{ catalog.hidden_name }}" class="js-select-input" value="">
                       <button type="button" class="guide-form__select-btn js-select-btn" data-value="">
-                        <span class="guide-form__select-value js-select-value">{{ catalog.brand_dropdown_default }}</span>
+                        <span class="guide-form__select-value js-select-value">{{ catalog.dropdown_button_label }}</span>
                         <span class="guide-form__select-arrow" aria-hidden="true">
                           <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 2L8 8L14 2" stroke="#232323" stroke-width="2" stroke-linecap="round" />
@@ -194,9 +84,9 @@
                       </button>
 
                       <ul class="guide-form__dropdown js-select-list">
-                        <li class="guide-form__option js-select-option active" data-value="">{{ catalog.brand_dropdown_default }}</li>
-                        {% for brand in catalog.brands %}
-                        <li class="guide-form__option js-select-option" data-value="{{ brand.value }}">{{ brand.label|safe }}</li>
+                        <li class="guide-form__option js-select-option active" data-value="">{{ catalog.dropdown_default_option }}</li>
+                        {% for opt in catalog.dropdown_items %}
+                        <li class="guide-form__option js-select-option" data-value="{{ opt.value }}">{{ opt.label }}</li>
                         {% endfor %}
                       </ul>
                     </div>
@@ -204,20 +94,20 @@
                 </form>
               </div>
               <div class="guide__filter">
-                {% for t in catalog.type_buttons %}
-                <button type="button" class="guide-btn{% if t.active|default(false) %} active{% endif %}" data-type="{{ t.value }}">{{ t.label }}</button>
+                {% for b in catalog.filter_buttons %}
+                <button type="button" class="guide-btn{% if b.active|default(false) %} active{% endif %}" data-{{ b.dim|default('type') }}="{{ b.value }}">{{ b.label }}</button>
                 {% endfor %}
               </div>
             </div>
 
             <div class="cars-grid">
               {% for s in items %}
-              <div class="cars-grid__col" data-type="{{ s.card.data_type }}" data-brand="{{ s.card.data_brand }}">
+              <div class="cars-grid__col"{% for k, v in s.card.items() %}{% if k.startswith('data_') and v %} data-{{ k[5:]|replace('_','-') }}="{{ v }}"{% endif %}{% endfor %}>
                 <a href="{{ s.slug }}.html" class="product">
                   <div class="product__img">
                     <picture>
                       <source srcset="{{ s.card.card_image_base }}.webp" type="image/webp">
-                      <img loading="lazy" src="{{ s.card.card_image_base }}.jpg" alt="{{ s.card.card_alt }}">
+                      <img loading="lazy" src="{{ s.card.card_image_base }}.{{ s.card.card_image_ext }}" alt="{{ s.card.card_alt }}">
                     </picture>
                   </div>
                   <div class="product__body">
@@ -246,7 +136,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/vendor.min.js" defer></script>
   <script src="assets/js/app.js" defer></script>
-  {% include '_cars-filter.html.tpl' %}
+  {% if filter_partial %}{% include filter_partial %}{% endif %}
 </body>
 
 </html>
