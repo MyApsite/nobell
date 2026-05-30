@@ -33,7 +33,7 @@ card:
   card_title: Range Rover Holland & Holland Edition от Overfinch — британский стиль охотничьего домика, теперь в турне по ОАЭ
   card_text: Range Rover SV с мотивами лондонского оружейного салона, выразительным кузовом в цвете British Racing Green и багажными отделениями, о которых коллекционеры говорят вполголоса.
   data_type: suv limited tuning
-  data_brand: range-rover overfinch holland-holland
+  data_brand: range-rover overfinch
 body:
 - type: hero
   image_base: assets/images/range-rover-holland-holland/hero-1

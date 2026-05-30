@@ -37,6 +37,7 @@ inline_style: "\n    /* Hero-слайдер: фото фиксировано в 
   \   }\n  "
 search_name: cars-search
 hidden_name: cars-brand
+card_selector: .cars-grid .cars-grid__col
 dropdown_button_label: ПОПУЛЯРНЫЕ БРЕНДЫ
 dropdown_default_option: ВСЕ БРЕНДЫ
 dropdown_items:
@@ -46,8 +47,6 @@ dropdown_items:
   label: BRABUS
 - value: ferrari
   label: FERRARI
-- value: holland-holland
-  label: HOLLAND & HOLLAND
 - value: lamborghini
   label: LAMBORGHINI
 - value: mercedes
