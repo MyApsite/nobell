@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/top-marques-monaco/hero-1
   image_ext: png
+  has_webp: true
   alt: Top Marques Monaco — мотор-шоу суперкаров и гиперкаров в Монте-Карло
   caption: ''
   caption_align: ''

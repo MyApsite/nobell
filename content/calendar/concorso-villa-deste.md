@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/concorso-villa-deste/hero-1
   image_ext: png
+  has_webp: true
   alt: Concorso d’Eleganza Villa d’Este — конкурс коллекционных автомобилей на озере Комо
   caption: ''
   caption_align: ''

@@ -16,6 +16,11 @@ Usage:
   python scripts/parse_pages.py                 # parse all categories
   python scripts/parse_pages.py cars            # parse one category
   python scripts/parse_pages.py cars watches    # parse several
+
+⚠️  DESTRUCTIVE — overwrites content/<cat>/*.md from the original *.html files.
+Manual edits made directly to content/*.md (e.g. data_format tag adjustments,
+PDF-feedback fixes) will be LOST on re-run. Treat this as a one-shot importer;
+after initial parse, all changes should go into content/*.md directly.
 """
 from __future__ import annotations
 
@@ -83,7 +88,14 @@ def meta(soup: BeautifulSoup, name: str = "", prop: str = "") -> str:
 
 
 def extract_picture(pic: Tag) -> dict:
-    """Return {image_base, image_ext, alt} from a <picture> element."""
+    """Return {image_base, image_ext, has_webp, alt} from a <picture> element.
+
+    `has_webp` is True only when a {image_base}.webp file actually exists on
+    disk — pages like villa.html / brecon.html ship PNG-only with no webp
+    companions, and emitting a phantom <source type="image/webp"> in the
+    rendered output leaves the browser stuck on a 404 instead of falling
+    back to the <img>.
+    """
     src = pic.find("source")
     img = pic.find("img")
     base, ext = "", "jpg"
@@ -91,9 +103,11 @@ def extract_picture(pic: Tag) -> dict:
         base, ext = split_ext(img["src"])
     elif src and src.get("srcset"):
         base, ext = split_ext(src["srcset"].split()[0])
+    has_webp = bool(base) and (ROOT / f"{base}.webp").exists()
     return {
         "image_base": base,
         "image_ext": ext,
+        "has_webp": has_webp,
         "alt": strip(img.get("alt", "")) if img else "",
     }
 

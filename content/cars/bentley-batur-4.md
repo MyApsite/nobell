@@ -37,6 +37,7 @@ body:
 - type: hero
   image_base: assets/images/bentley-batur-4/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Bentley Batur Convertible №4 — общий вид кабриолета
   caption: 'Фото: Предоставлено компанией Bentley'
   caption_align: right
@@ -49,13 +50,16 @@ body:
   left:
     image_base: assets/images/bentley-batur-4/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/bentley-batur-4/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/bentley-batur-4/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -65,13 +69,16 @@ body:
   left:
     image_base: assets/images/bentley-batur-4/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/bentley-batur-4/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/bentley-batur-4/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -81,13 +88,16 @@ body:
   left:
     image_base: assets/images/bentley-batur-4/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/bentley-batur-4/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/bentley-batur-4/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

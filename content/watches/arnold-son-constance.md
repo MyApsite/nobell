@@ -36,6 +36,7 @@ body:
 - type: picture
   image_base: assets/images/arnold-son-constance/hero-1
   image_ext: png
+  has_webp: true
   alt: Arnold & Son Constance Force Tourbillon 11 — платиновый корпус с гравированным золотым фоном
   caption: 'Фото: предоставлено Arnold & Son'
   caption_align: right
@@ -48,13 +49,16 @@ body:
   left:
     image_base: assets/images/arnold-son-constance/g1-1
     image_ext: png
+    has_webp: true
     alt: Arnold & Son Constance Force Tourbillon 11 — циферблат с гравировкой fern и субциферблатом
   right:
   - image_base: assets/images/arnold-son-constance/g1-2
     image_ext: png
+    has_webp: true
     alt: Arnold & Son Constance Force Tourbillon 11 — деталь корпуса и заводной головки
   - image_base: assets/images/arnold-son-constance/g1-3
     image_ext: png
+    has_webp: true
     alt: Arnold & Son Constance Force Tourbillon 11 — задняя крышка с матированным мостом турбийона
 - type: text
   paragraphs:
@@ -65,13 +69,16 @@ body:
   left:
     image_base: assets/images/arnold-son-constance/g2-1
     image_ext: png
+    has_webp: true
     alt: Arnold & Son Constance Force Tourbillon 11 — макрофото субциферблата и римских цифр
   right:
   - image_base: assets/images/arnold-son-constance/g2-2
     image_ext: png
+    has_webp: true
     alt: Arnold & Son Constance Force Tourbillon 11 — гравированное золотое поле fern
   - image_base: assets/images/arnold-son-constance/g2-3
     image_ext: png
+    has_webp: true
     alt: Arnold & Son Constance Force Tourbillon 11 — синяя секундная стрелка-якорь
 - type: text
   paragraphs:

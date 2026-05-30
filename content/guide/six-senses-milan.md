@@ -39,6 +39,7 @@ body:
 - type: picture
   image_base: assets/images/six-senses-milan/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Six Senses Milan — городской ретрит в районе Брера, Милан
   caption: 'Фото: Предоставлено Six Senses'
   caption_align: right
@@ -50,6 +51,7 @@ body:
 - type: picture
   image_base: assets/images/six-senses-milan/hero-2
   image_ext: jpg
+  has_webp: true
   alt: ''
   caption: ''
   caption_align: ''
@@ -59,6 +61,7 @@ body:
 - type: picture
   image_base: assets/images/six-senses-milan/hero-3
   image_ext: jpg
+  has_webp: true
   alt: ''
   caption: ''
   caption_align: ''
@@ -69,6 +72,7 @@ body:
 - type: picture
   image_base: assets/images/six-senses-milan/hero-4
   image_ext: jpg
+  has_webp: true
   alt: ''
   caption: ''
   caption_align: ''
@@ -78,6 +82,7 @@ body:
 - type: picture
   image_base: assets/images/six-senses-milan/hero-5
   image_ext: jpg
+  has_webp: true
   alt: ''
   caption: ''
   caption_align: ''

@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/bulgari-lighthouse/hero
   image_ext: jpg
+  has_webp: true
   alt: Bulgari Lighthouse Dubai — резиденции ACPV на Джумейра-Бэй
   caption: 'Фото: предоставлено Bulgari Lighthouse Дубай'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/bulgari-lighthouse/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — фасад на закате
   right:
   - image_base: assets/images/bulgari-lighthouse/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — терраса с видом на город
   - image_base: assets/images/bulgari-lighthouse/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — деталь архитектуры
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/bulgari-lighthouse/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — спальня с видом
   right:
   - image_base: assets/images/bulgari-lighthouse/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — деталь интерьера
   - image_base: assets/images/bulgari-lighthouse/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — гостиная Sky Villa
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/bulgari-lighthouse/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — общественные пространства
   right:
   - image_base: assets/images/bulgari-lighthouse/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — панорамный бассейн
   - image_base: assets/images/bulgari-lighthouse/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — морской вид
 - type: text
   paragraphs:
@@ -98,13 +108,16 @@ body:
   left:
     image_base: assets/images/bulgari-lighthouse/block4-1
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — Bulgari Yacht Club
   right:
   - image_base: assets/images/bulgari-lighthouse/block4-2
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — wellness-зона
   - image_base: assets/images/bulgari-lighthouse/block4-3
     image_ext: jpg
+    has_webp: true
     alt: Bulgari Lighthouse Dubai — пляж и марина
 - type: text
   paragraphs:

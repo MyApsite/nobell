@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/the-rings/hero
   image_ext: jpg
+  has_webp: true
   alt: The Rings — резиденции Foster + Partners, Джумейра, Дубай
   caption: 'Фото: предоставлено The Rings'
   caption_align: right
@@ -53,13 +54,16 @@ body:
   left:
     image_base: assets/images/the-rings/block1-1
     image_ext: jpg
+    has_webp: true
     alt: The Rings — фасад с видом на канал
   right:
   - image_base: assets/images/the-rings/block1-2
     image_ext: jpg
+    has_webp: true
     alt: The Rings — терраса с видом на Бурдж-Халифу
   - image_base: assets/images/the-rings/block1-3
     image_ext: jpg
+    has_webp: true
     alt: The Rings — приватный бассейн
 - type: text
   paragraphs:
@@ -69,13 +73,16 @@ body:
   left:
     image_base: assets/images/the-rings/block2-1
     image_ext: jpg
+    has_webp: true
     alt: The Rings — двусветная гостиная
   right:
   - image_base: assets/images/the-rings/block2-2
     image_ext: jpg
+    has_webp: true
     alt: The Rings — кухня Poliform
   - image_base: assets/images/the-rings/block2-3
     image_ext: jpg
+    has_webp: true
     alt: The Rings — деталь интерьера
 - type: text
   paragraphs:
@@ -84,13 +91,16 @@ body:
   left:
     image_base: assets/images/the-rings/block3-1
     image_ext: jpg
+    has_webp: true
     alt: The Rings — общественные пространства
   right:
   - image_base: assets/images/the-rings/block3-2
     image_ext: jpg
+    has_webp: true
     alt: The Rings — лобби и озеленённые зоны
   - image_base: assets/images/the-rings/block3-3
     image_ext: jpg
+    has_webp: true
     alt: The Rings — частный паркинг-шоурум
 - type: text
   paragraphs:
@@ -99,13 +109,16 @@ body:
   left:
     image_base: assets/images/the-rings/block4-1
     image_ext: jpg
+    has_webp: true
     alt: The Rings — спа-зона
   right:
   - image_base: assets/images/the-rings/block4-2
     image_ext: jpg
+    has_webp: true
     alt: The Rings — фитнес и wellness
   - image_base: assets/images/the-rings/block4-3
     image_ext: jpg
+    has_webp: true
     alt: The Rings — открытые бассейны
 - type: text
   paragraphs:

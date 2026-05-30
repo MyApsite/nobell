@@ -36,6 +36,7 @@ body:
 - type: picture
   image_base: assets/images/chopard-imperiale/hero-1
   image_ext: png
+  has_webp: true
   alt: Chopard Imperiale «Четыре времени года» — циферблат с перламутровой маркетри и лотосом из белого золота
   caption: 'Фото: предоставлено Chopard'
   caption_align: right
@@ -48,13 +49,16 @@ body:
   left:
     image_base: assets/images/chopard-imperiale/g1-1
     image_ext: png
+    has_webp: true
     alt: Chopard Imperiale «Четыре времени года» — циферблат крупным планом с лотосом и бриллиантовым безелем
   right:
   - image_base: assets/images/chopard-imperiale/g1-2
     image_ext: png
+    has_webp: true
     alt: Chopard Imperiale «Четыре времени года» — модель с шафрановым ремешком
   - image_base: assets/images/chopard-imperiale/g1-3
     image_ext: png
+    has_webp: true
     alt: Chopard Imperiale «Четыре времени года» — модель с зелёным ремешком
 - type: text
   paragraphs:
@@ -64,13 +68,16 @@ body:
   left:
     image_base: assets/images/chopard-imperiale/g2-1
     image_ext: png
+    has_webp: true
     alt: Chopard Imperiale «Четыре времени года» — годовой диск перламутра с цветовой палитрой сезонов
   right:
   - image_base: assets/images/chopard-imperiale/g2-2
     image_ext: png
+    has_webp: true
     alt: Chopard Imperiale «Четыре времени года» — модель с сапфирово-синим ремешком
   - image_base: assets/images/chopard-imperiale/g2-3
     image_ext: png
+    has_webp: true
     alt: Chopard Imperiale «Четыре времени года» — задняя крышка с калибром L.U.C 96.31-L и микроротором
 - type: text
   paragraphs:

@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/tyrian-residences/hero
   image_ext: jpg
+  has_webp: true
   alt: Tyrian Residences — Эстепона, Коста-дель-Соль
   caption: 'Фото: Предоставлено Tyrian Residences'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/tyrian-residences/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — фасад на первой береговой линии
   right:
   - image_base: assets/images/tyrian-residences/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — терраса с видом на море
   - image_base: assets/images/tyrian-residences/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — общественные пространства
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/tyrian-residences/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — гостиная
   right:
   - image_base: assets/images/tyrian-residences/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — деталь интерьера
   - image_base: assets/images/tyrian-residences/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — кухня Poliform
 - type: text
   paragraphs:
@@ -84,13 +91,16 @@ body:
   left:
     image_base: assets/images/tyrian-residences/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — спа-зона
   right:
   - image_base: assets/images/tyrian-residences/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — wellness и фитнес
   - image_base: assets/images/tyrian-residences/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Tyrian Residences — инфинити-бассейн на крыше
 - type: text
   paragraphs:

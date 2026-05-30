@@ -34,6 +34,7 @@ body:
 - type: picture
   image_base: assets/images/patek-aquanaut-luce/hero-1
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce — годовой календарь на синем рельефном циферблате
   caption: 'Фото: предоставлено Patek Philippe'
   caption_align: right
@@ -45,6 +46,7 @@ body:
 - type: picture
   image_base: assets/images/patek-aquanaut-luce/hero-2
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce — крупный план циферблата с указателем фаз Луны и счётчиками
   caption: ''
   caption_align: ''
@@ -55,6 +57,7 @@ body:
 - type: picture
   image_base: assets/images/patek-aquanaut-luce/hero-3
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce — деталь корпуса 39,9 мм из розового золота с заводной головкой
   caption: ''
   caption_align: ''
@@ -64,6 +67,7 @@ body:
 - type: picture
   image_base: assets/images/patek-aquanaut-luce/hero-4
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce — синий композитный ремешок с раскладывающейся застёжкой
   caption: ''
   caption_align: ''

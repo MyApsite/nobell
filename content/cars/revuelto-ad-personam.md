@@ -38,6 +38,7 @@ body:
 - type: hero
   image_base: assets/images/revuelto-ad-personam/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Lamborghini Revuelto Ad Personam в цвете Verde Abete — общий вид
   caption: 'Фото: Предоставлено Lamborghini'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/revuelto-ad-personam/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/revuelto-ad-personam/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/revuelto-ad-personam/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -65,6 +69,7 @@ body:
 - type: hero
   image_base: assets/images/revuelto-ad-personam/hero-2
   image_ext: jpg
+  has_webp: true
   alt: Lamborghini Revuelto Ad Personam — детали кузова Verde Abete
   caption: ''
   caption_align: ''
@@ -75,6 +80,7 @@ body:
 - type: hero
   image_base: assets/images/revuelto-ad-personam/hero-3
   image_ext: jpg
+  has_webp: true
   alt: Lamborghini Revuelto Ad Personam — интерьер с тёплыми коричневыми акцентами
   caption: ''
   caption_align: ''

@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/limassol-blu-marine/hero
   image_ext: jpg
+  has_webp: true
   alt: Limassol Blu Marine — прибрежные резиденции, Лимасол, Кипр
   caption: 'Фото: предоставлено Limassol Blu Marine'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/limassol-blu-marine/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — фасад на набережной
   right:
   - image_base: assets/images/limassol-blu-marine/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — общественные пространства
   - image_base: assets/images/limassol-blu-marine/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — гостиная с видом
 - type: text
   paragraphs:
@@ -67,13 +71,16 @@ body:
   left:
     image_base: assets/images/limassol-blu-marine/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — резиденция
   right:
   - image_base: assets/images/limassol-blu-marine/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — спальня с видом
   - image_base: assets/images/limassol-blu-marine/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — обеденная зона
 - type: text
   paragraphs:
@@ -82,13 +89,16 @@ body:
   left:
     image_base: assets/images/limassol-blu-marine/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — Cavalli Tower интерьер
   right:
   - image_base: assets/images/limassol-blu-marine/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — Cavalli Tower деталь
   - image_base: assets/images/limassol-blu-marine/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — Cavalli Tower вестибюль
 - type: text
   paragraphs:
@@ -97,13 +107,16 @@ body:
   left:
     image_base: assets/images/limassol-blu-marine/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — панорамный бассейн
   right:
   - image_base: assets/images/limassol-blu-marine/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — спа
   - image_base: assets/images/limassol-blu-marine/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — клубная гостиная
 - type: text
   paragraphs:
@@ -112,13 +125,16 @@ body:
   left:
     image_base: assets/images/limassol-blu-marine/block4-1
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — крытый бассейн
   right:
   - image_base: assets/images/limassol-blu-marine/block4-2
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — общая зона отдыха
   - image_base: assets/images/limassol-blu-marine/block4-3
     image_ext: jpg
+    has_webp: true
     alt: Limassol Blu Marine — закатный вид
 - type: text
   paragraphs:

@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/bishops-avenue/hero
   image_ext: jpg
+  has_webp: true
   alt: Bishops Avenue Gardens — резиденции Pilbrow & Partners в Лондоне
   caption: 'Фото: предоставлено Bishops Avenue Gardens'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/bishops-avenue/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — фасад нового павильона
   right:
   - image_base: assets/images/bishops-avenue/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — садовое окружение
   - image_base: assets/images/bishops-avenue/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — Oak Lodge
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/bishops-avenue/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — гостиная с видом на сад
   right:
   - image_base: assets/images/bishops-avenue/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — обеденная зона Albion Nord
   - image_base: assets/images/bishops-avenue/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — деталь интерьера
 - type: text
   paragraphs:
@@ -84,13 +91,16 @@ body:
   left:
     image_base: assets/images/bishops-avenue/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — wellness-зона с бассейном
   right:
   - image_base: assets/images/bishops-avenue/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — спа
   - image_base: assets/images/bishops-avenue/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Bishops Avenue Gardens — общественные пространства
 - type: text
   paragraphs:

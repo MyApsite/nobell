@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/maison-margiela/hero
   image_ext: jpg
+  has_webp: true
   alt: Maison Margiela Residences — Пальма Джумейра, Дубай
   caption: 'Фото: предоставлено Maison Margiela'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/maison-margiela/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — фасад
   right:
   - image_base: assets/images/maison-margiela/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — терраса
   - image_base: assets/images/maison-margiela/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — интерьер
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/maison-margiela/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — спальня
   right:
   - image_base: assets/images/maison-margiela/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — деталь интерьера
   - image_base: assets/images/maison-margiela/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — обеденная зона
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/maison-margiela/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — wellness
   right:
   - image_base: assets/images/maison-margiela/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — спа
   - image_base: assets/images/maison-margiela/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — общественные пространства
 - type: text
   paragraphs:
@@ -98,13 +108,16 @@ body:
   left:
     image_base: assets/images/maison-margiela/block4-1
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — бассейн
   right:
   - image_base: assets/images/maison-margiela/block4-2
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — вид на море
   - image_base: assets/images/maison-margiela/block4-3
     image_ext: jpg
+    has_webp: true
     alt: Maison Margiela Residences — деталь архитектуры
 - type: text
   paragraphs:

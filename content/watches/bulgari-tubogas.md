@@ -36,6 +36,7 @@ body:
 - type: picture
   image_base: assets/images/bulgari-tubogas/hero-1
   image_ext: png
+  has_webp: true
   alt: Bulgari Tubogas Manchette — ювелирная часы-манжета на запястье
   caption: 'Фото: предоставлено Bulgari'
   caption_align: right
@@ -48,13 +49,16 @@ body:
   left:
     image_base: assets/images/bulgari-tubogas/g1-1
     image_ext: png
+    has_webp: true
     alt: Bulgari Tubogas Manchette — золотая манжета на запястье крупным планом
   right:
   - image_base: assets/images/bulgari-tubogas/g1-2
     image_ext: png
+    has_webp: true
     alt: Bulgari Tubogas Manchette — циферблат с бриллиантовым pavé
   - image_base: assets/images/bulgari-tubogas/g1-3
     image_ext: png
+    has_webp: true
     alt: Bulgari Tubogas Manchette — сапфировая задняя крышка с калибром BVS 100
 - type: text
   paragraphs:
@@ -63,13 +67,16 @@ body:
   left:
     image_base: assets/images/bulgari-tubogas/g2-1
     image_ext: png
+    has_webp: true
     alt: Bulgari Tubogas Manchette — авторский эскиз с цветной палитрой камней
   right:
   - image_base: assets/images/bulgari-tubogas/g2-2
     image_ext: png
+    has_webp: true
     alt: Bulgari Tubogas Manchette — деталь золотых звеньев и камней
   - image_base: assets/images/bulgari-tubogas/g2-3
     image_ext: png
+    has_webp: true
     alt: Bulgari Tubogas Manchette — макрофото инкрустации цветными драгоценными камнями
 - type: text
   paragraphs:
@@ -77,6 +84,7 @@ body:
 - type: picture
   image_base: assets/images/bulgari-tubogas/hero-2
   image_ext: png
+  has_webp: true
   alt: Bulgari Tubogas Manchette — финальный кадр модели на запястье
   caption: ''
   caption_align: ''

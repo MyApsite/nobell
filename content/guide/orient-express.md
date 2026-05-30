@@ -40,6 +40,7 @@ body:
 - type: hero
   image_base: assets/images/orient-express/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Orient Express Corinthian
   caption: ''
   caption_align: ''
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/orient-express/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/orient-express/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/orient-express/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/orient-express/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/orient-express/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/orient-express/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

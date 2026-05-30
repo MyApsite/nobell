@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/miraval-red-sea/hero
   image_ext: jpg
+  has_webp: true
   alt: Miraval The Red Sea Residences — пляжные виллы на острове Шура
   caption: 'Фото: предоставлено Miraval Resorts & Spas'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/miraval-red-sea/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — пляжная вилла
   right:
   - image_base: assets/images/miraval-red-sea/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — терраса с видом на Красное море
   - image_base: assets/images/miraval-red-sea/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — частный бассейн
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/miraval-red-sea/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — спальня с видом
   right:
   - image_base: assets/images/miraval-red-sea/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — обеденная зона
   - image_base: assets/images/miraval-red-sea/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — деталь интерьера Rockwell Group
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/miraval-red-sea/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — гостиная с морским видом
   right:
   - image_base: assets/images/miraval-red-sea/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — wellness-зона
   - image_base: assets/images/miraval-red-sea/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — общественные пространства
 - type: text
   paragraphs:
@@ -98,13 +108,16 @@ body:
   left:
     image_base: assets/images/miraval-red-sea/block4-1
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — пляж и спа
   right:
   - image_base: assets/images/miraval-red-sea/block4-2
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — Life in Balance Spa
   - image_base: assets/images/miraval-red-sea/block4-3
     image_ext: jpg
+    has_webp: true
     alt: Miraval The Red Sea Residences — медитативный лабиринт
 - type: text
   paragraphs:

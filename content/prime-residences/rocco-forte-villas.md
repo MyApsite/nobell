@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/rocco-forte-villas/hero
   image_ext: jpg
+  has_webp: true
   alt: Rocco Forte Private Villas — Verdura Resort, Сицилия
   caption: 'Фото: предоставлено Rocco Forte'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/rocco-forte-villas/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — вид на побережье
   right:
   - image_base: assets/images/rocco-forte-villas/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — гольф-поля Verdura
   - image_base: assets/images/rocco-forte-villas/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — оливковые рощи
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/rocco-forte-villas/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — спальня
   right:
   - image_base: assets/images/rocco-forte-villas/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — гостиная
   - image_base: assets/images/rocco-forte-villas/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — деталь интерьера
 - type: text
   paragraphs:
@@ -84,13 +91,16 @@ body:
   left:
     image_base: assets/images/rocco-forte-villas/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — пляжный клуб
   right:
   - image_base: assets/images/rocco-forte-villas/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — терраса
   - image_base: assets/images/rocco-forte-villas/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Rocco Forte Private Villas — Средиземное море
 - type: text
   paragraphs:

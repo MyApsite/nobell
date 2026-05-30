@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/danieli/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Закат над Венецией, набережная Рива-дельи-Скьявони
   caption: 'Фото: предоставлено отелями и курортами Four Seasons'
   caption_align: right
@@ -51,6 +52,7 @@ body:
 - type: picture
   image_base: assets/images/danieli/hero-2
   image_ext: jpg
+  has_webp: true
   alt: Атриум Palazzo Dandolo с колоннами из розового мрамора
   caption: ''
   caption_align: ''
@@ -62,13 +64,16 @@ body:
   left:
     image_base: assets/images/danieli/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/danieli/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/danieli/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -77,13 +82,16 @@ body:
   left:
     image_base: assets/images/danieli/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/danieli/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/danieli/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -92,13 +100,16 @@ body:
   left:
     image_base: assets/images/danieli/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/danieli/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/danieli/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

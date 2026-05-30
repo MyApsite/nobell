@@ -34,6 +34,7 @@ body:
 - type: picture
   image_base: assets/images/hermes-arceau/hero-1
   image_ext: png
+  has_webp: true
   alt: Hermès Arceau Jour de Casting — портрет Тако на синем эмалевом циферблате
   caption: 'Фото: предоставлено Hermès'
   caption_align: right
@@ -45,6 +46,7 @@ body:
 - type: picture
   image_base: assets/images/hermes-arceau/hero-2
   image_ext: png
+  has_webp: true
   alt: Hermès Arceau Jour de Casting — макрофото ручной росписи и перегородчатой эмали
   caption: ''
   caption_align: ''
@@ -55,6 +57,7 @@ body:
 - type: picture
   image_base: assets/images/hermes-arceau/hero-3
   image_ext: png
+  has_webp: true
   alt: Hermès Arceau Jour de Casting — корпус из белого золота с 71 бриллиантом и синим ремешком
   caption: ''
   caption_align: ''
@@ -64,6 +67,7 @@ body:
 - type: picture
   image_base: assets/images/hermes-arceau/hero-4
   image_ext: png
+  has_webp: true
   alt: Hermès Arceau Jour de Casting — деталь корпуса с бриллиантовой инкрустацией и кожаными элементами
   caption: ''
   caption_align: ''

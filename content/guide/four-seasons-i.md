@@ -38,6 +38,7 @@ body:
 - type: hero
   image_base: assets/images/four-seasons-i/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Four Seasons I — первая яхта культового бренда
   caption: 'Фото: Предоставлено Four Seasons I'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/four-seasons-i/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/four-seasons-i/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/four-seasons-i/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -65,13 +69,16 @@ body:
   left:
     image_base: assets/images/four-seasons-i/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/four-seasons-i/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/four-seasons-i/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -81,13 +88,16 @@ body:
   left:
     image_base: assets/images/four-seasons-i/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/four-seasons-i/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/four-seasons-i/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -96,13 +106,16 @@ body:
   left:
     image_base: assets/images/four-seasons-i/g4-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/four-seasons-i/g4-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/four-seasons-i/g4-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/artmonte-carlo/hero-1
   image_ext: png
+  has_webp: true
   alt: Artmonte-carlo — камерная ярмарка современного искусства в Гримальди Форуме, Монте-Карло
   caption: ''
   caption_align: ''

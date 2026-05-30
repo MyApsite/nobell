@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/mr-c-residences/hero
   image_ext: jpg
+  has_webp: true
   alt: Mr. C Residences Jumeirah — резиденции у канала, Дубай
   caption: 'Фото: предоставлено Arquitectonica'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/mr-c-residences/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — фасад с балконами
   right:
   - image_base: assets/images/mr-c-residences/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — терраса с видом на канал
   - image_base: assets/images/mr-c-residences/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — вид на Бурдж-Халифу
 - type: text
   paragraphs:
@@ -67,13 +71,16 @@ body:
   left:
     image_base: assets/images/mr-c-residences/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — гостиная с панорамным остеклением
   right:
   - image_base: assets/images/mr-c-residences/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — терраса с бассейном
   - image_base: assets/images/mr-c-residences/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — деталь интерьера
 - type: text
   paragraphs:
@@ -82,13 +89,16 @@ body:
   left:
     image_base: assets/images/mr-c-residences/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — общественные пространства
   right:
   - image_base: assets/images/mr-c-residences/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — Bellini Café
   - image_base: assets/images/mr-c-residences/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — лобби
 - type: text
   paragraphs:
@@ -98,13 +108,16 @@ body:
   left:
     image_base: assets/images/mr-c-residences/block4-1
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — фасад на закате
   right:
   - image_base: assets/images/mr-c-residences/block4-2
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — wellness и фитнес
   - image_base: assets/images/mr-c-residences/block4-3
     image_ext: jpg
+    has_webp: true
     alt: Mr. C Residences Jumeirah — открытый кинотеатр
 - type: text
   paragraphs:

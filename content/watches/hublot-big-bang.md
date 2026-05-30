@@ -34,6 +34,7 @@ body:
 - type: picture
   image_base: assets/images/hublot-big-bang/hero-1
   image_ext: png
+  has_webp: true
   alt: Hublot Big Bang Unico Saxem Green — фронтальный кадр на зелёной подставке
   caption: 'Фото: предоставлено Hublot'
   caption_align: right
@@ -45,6 +46,7 @@ body:
 - type: picture
   image_base: assets/images/hublot-big-bang/hero-2
   image_ext: png
+  has_webp: true
   alt: Hublot Big Bang Unico Saxem Green — корпус и циферблат крупным планом
   caption: ''
   caption_align: ''
@@ -54,6 +56,7 @@ body:
 - type: picture
   image_base: assets/images/hublot-big-bang/hero-3
   image_ext: png
+  has_webp: true
   alt: Hublot Big Bang Unico Saxem Green — деталь корпуса с логотипом и каучуковым ремешком
   caption: ''
   caption_align: ''
@@ -64,6 +67,7 @@ body:
 - type: picture
   image_base: assets/images/hublot-big-bang/hero-4
   image_ext: png
+  has_webp: true
   alt: Hublot Big Bang Unico Saxem Green — задняя сторона со скелетонизированным механизмом
   caption: ''
   caption_align: ''

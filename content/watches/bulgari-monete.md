@@ -36,6 +36,7 @@ body:
 - type: picture
   image_base: assets/images/bulgari-monete/hero-1
   image_ext: png
+  has_webp: true
   alt: Bulgari Maglia Milanese Monete — секретные часы с монетой Каракаллы на миланском браслете
   caption: 'Фото: предоставлено Bulgari'
   caption_align: right
@@ -48,13 +49,16 @@ body:
   left:
     image_base: assets/images/bulgari-monete/g1-1
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — восьмиугольный безель с бриллиантовым pavé
   right:
   - image_base: assets/images/bulgari-monete/g1-2
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — открытый циферблат с перламутром и часовыми метками
   - image_base: assets/images/bulgari-monete/g1-3
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — солнечный узор циферблата
 - type: text
   paragraphs:
@@ -63,13 +67,16 @@ body:
   left:
     image_base: assets/images/bulgari-monete/g2-1
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — деталь шарнира и монеты Каракаллы
   right:
   - image_base: assets/images/bulgari-monete/g2-2
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — миниатюрный калибр Piccolissimo BVP 100
   - image_base: assets/images/bulgari-monete/g2-3
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — сапфировая задняя крышка с механизмом
 - type: text
   paragraphs:
@@ -78,13 +85,16 @@ body:
   left:
     image_base: assets/images/bulgari-monete/g3-1
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — модель на запястье с миланским браслетом
   right:
   - image_base: assets/images/bulgari-monete/g3-2
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — авторский эскиз модели
   - image_base: assets/images/bulgari-monete/g3-3
     image_ext: png
+    has_webp: true
     alt: Bulgari Maglia Milanese Monete — крупный план плетёного миланского браслета
 - type: text
   paragraphs:

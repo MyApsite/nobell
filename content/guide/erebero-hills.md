@@ -40,6 +40,7 @@ body:
 - type: hero
   image_base: assets/images/erebero-hills/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Erebero Hills — стеклянный лодж среди крон тропического леса Бвинди
   caption: 'Фото: Предоставлено Erebero Hills'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/erebero-hills/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/erebero-hills/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/erebero-hills/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -66,6 +70,7 @@ body:
 - type: hero
   image_base: assets/images/erebero-hills/hero-2
   image_ext: jpg
+  has_webp: true
   alt: Erebero Hills — интерьер сьюта с панорамным остеклением
   caption: ''
   caption_align: ''
@@ -76,6 +81,7 @@ body:
 - type: hero
   image_base: assets/images/erebero-hills/hero-3
   image_ext: jpg
+  has_webp: true
   alt: Erebero Hills — гастрономическое пространство
   caption: ''
   caption_align: ''
@@ -85,6 +91,7 @@ body:
 - type: hero
   image_base: assets/images/erebero-hills/hero-4
   image_ext: jpg
+  has_webp: true
   alt: Erebero Hills — лес Бвинди и горные гориллы
   caption: ''
   caption_align: ''

@@ -42,7 +42,9 @@
             {% if block.type == 'hero' %}
             <div class="services__img services__img--hero">
               <picture>
+                {% if block.has_webp|default(false) %}
                 <source srcset="{{ block.image_base }}.webp" type="image/webp" media="(min-width: 768px)">
+                {% endif %}
                 <img src="{{ block.image_base }}.{{ block.image_ext }}" alt="{{ block.alt }}">
               </picture>
               {% if block.caption|default('') %}
@@ -52,7 +54,9 @@
             {% elif block.type == 'picture' %}
             <div class="services__img">
               <picture>
+                {% if block.has_webp|default(false) %}
                 <source srcset="{{ block.image_base }}.webp" type="image/webp" media="(min-width: 768px)">
+                {% endif %}
                 <img src="{{ block.image_base }}.{{ block.image_ext }}" alt="{{ block.alt }}">
               </picture>
               {% if block.caption|default('') %}
@@ -64,14 +68,18 @@
               <div class="services__img-row">
                 <div class="services__img-col">
                   <picture>
+                    {% if block.left.has_webp|default(false) %}
                     <source srcset="{{ block.left.image_base }}.webp" type="image/webp" media="(min-width: 768px)">
+                    {% endif %}
                     <img src="{{ block.left.image_base }}.{{ block.left.image_ext }}" alt="{{ block.left.alt }}">
                   </picture>
                 </div>
                 <div class="services__img-col">
                   {% for pic in block.right %}
                   <picture>
+                    {% if pic.has_webp|default(false) %}
                     <source srcset="{{ pic.image_base }}.webp" type="image/webp" media="(min-width: 768px)">
+                    {% endif %}
                     <img src="{{ pic.image_base }}.{{ pic.image_ext }}" alt="{{ pic.alt }}">
                   </picture>
                   {% endfor %}

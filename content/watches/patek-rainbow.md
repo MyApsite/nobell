@@ -34,6 +34,7 @@ body:
 - type: picture
   image_base: assets/images/patek-rainbow/hero-1
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce «Rainbow» — первый женский хронограф с радужным безелем
   caption: 'Фото: предоставлено Patek Philippe'
   caption_align: right
@@ -45,6 +46,7 @@ body:
 - type: picture
   image_base: assets/images/patek-rainbow/hero-2
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce «Rainbow» — модель на красном композитном ремешке
   caption: ''
   caption_align: ''
@@ -54,6 +56,7 @@ body:
 - type: picture
   image_base: assets/images/patek-rainbow/hero-3
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce «Rainbow» — крупный план радужного безеля с багетными сапфирами и бриллиантами
   caption: ''
   caption_align: ''
@@ -63,6 +66,7 @@ body:
 - type: picture
   image_base: assets/images/patek-rainbow/hero-4
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Aquanaut Luce «Rainbow» — задняя крышка с калибром CH 28-520
   caption: ''
   caption_align: ''

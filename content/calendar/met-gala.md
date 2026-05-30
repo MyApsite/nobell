@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/met-gala/hero-1
   image_ext: png
+  has_webp: true
   alt: Met Gala — благотворительный бал в Метрополитен-музее, Нью-Йорк
   caption: ''
   caption_align: ''

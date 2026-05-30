@@ -36,6 +36,7 @@ body:
 - type: picture
   image_base: assets/images/roger-dubuis-hommage/hero-1
   image_ext: png
+  has_webp: true
   alt: Roger Dubuis Hommage La Placide — корпус 38 мм из розового золота с синим лаковым циферблатом
   caption: ''
   caption_align: ''
@@ -48,13 +49,16 @@ body:
   left:
     image_base: assets/images/roger-dubuis-hommage/g1-1
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — циферблат с биретроградной индикацией и фазой Луны
   right:
   - image_base: assets/images/roger-dubuis-hommage/g1-2
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — модель на синем кожаном ремешке
   - image_base: assets/images/roger-dubuis-hommage/g1-3
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — деталь корпуса с заводной головкой
 - type: text
   paragraphs:
@@ -64,13 +68,16 @@ body:
   left:
     image_base: assets/images/roger-dubuis-hommage/g2-1
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — макрофото перламутровых счётчиков биретроградной шкалы
   right:
   - image_base: assets/images/roger-dubuis-hommage/g2-2
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — указатель фаз Луны на синем авантюрине
   - image_base: assets/images/roger-dubuis-hommage/g2-3
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — задняя крышка с калибром RD1472
 - type: text
   paragraphs:
@@ -79,13 +86,16 @@ body:
   left:
     image_base: assets/images/roger-dubuis-hommage/g3-1
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — общий вид модели с синим ремешком
   right:
   - image_base: assets/images/roger-dubuis-hommage/g3-2
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — деталь корпуса 38 мм из розового золота
   - image_base: assets/images/roger-dubuis-hommage/g3-3
     image_ext: png
+    has_webp: true
     alt: Roger Dubuis Hommage La Placide — деталь раскладывающейся застёжки
 - type: text
   paragraphs:

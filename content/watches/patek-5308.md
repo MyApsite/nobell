@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/patek-5308/hero-1
   image_ext: png
+  has_webp: true
   alt: Patek Philippe Reference 5308 — Quadruple Complication в белом золоте с ледяно-голубым циферблатом
   caption: 'Фото: предоставлено Patek Philippe'
   caption_align: right
@@ -47,13 +48,16 @@ body:
   left:
     image_base: assets/images/patek-5308/g1-1
     image_ext: png
+    has_webp: true
     alt: Patek Philippe 5308 — крупный план циферблата с лучистой отделкой и оконной индикацией
   right:
   - image_base: assets/images/patek-5308/g1-2
     image_ext: png
+    has_webp: true
     alt: Patek Philippe 5308 — счётчик хронографа с минутной индикацией
   - image_base: assets/images/patek-5308/g1-3
     image_ext: png
+    has_webp: true
     alt: Patek Philippe 5308 — апертура индикации даты с накладными метками
 - type: text
   paragraphs:
@@ -63,13 +67,16 @@ body:
   left:
     image_base: assets/images/patek-5308/g2-1
     image_ext: png
+    has_webp: true
     alt: Patek Philippe 5308 — корпус 42 мм со скелетонизированными ушками
   right:
   - image_base: assets/images/patek-5308/g2-2
     image_ext: png
+    has_webp: true
     alt: Patek Philippe 5308 — задняя крышка с калибром R CHR 27 PS QI
   - image_base: assets/images/patek-5308/g2-3
     image_ext: png
+    has_webp: true
     alt: Patek Philippe 5308 — деталь корпуса с ползунком минутного репетира
 - type: text
   paragraphs:

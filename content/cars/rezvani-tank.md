@@ -37,6 +37,7 @@ body:
 - type: hero
   image_base: assets/images/rezvani-tank/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Rezvani Tank 2026 — общий вид экстремального внедорожника
   caption: 'Фото: Предоставлено Rezvani'
   caption_align: right
@@ -49,13 +50,16 @@ body:
   left:
     image_base: assets/images/rezvani-tank/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/rezvani-tank/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/rezvani-tank/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -64,6 +68,7 @@ body:
 - type: hero
   image_base: assets/images/rezvani-tank/hero-2
   image_ext: jpg
+  has_webp: true
   alt: Rezvani Tank 2026 — детали брутального экстерьера
   caption: ''
   caption_align: ''
@@ -75,13 +80,16 @@ body:
   left:
     image_base: assets/images/rezvani-tank/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/rezvani-tank/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/rezvani-tank/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

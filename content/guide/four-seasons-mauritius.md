@@ -40,6 +40,7 @@ body:
 - type: hero
   image_base: assets/images/four-seasons-mauritius/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Four Seasons Маврикий в Анахите — вид на лагуну и восточное побережье
   caption: 'Фото: Предоставлено Four Seasons Hotels and Resorts'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/four-seasons-mauritius/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/four-seasons-mauritius/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/four-seasons-mauritius/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -67,13 +71,16 @@ body:
   left:
     image_base: assets/images/four-seasons-mauritius/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/four-seasons-mauritius/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/four-seasons-mauritius/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/four-seasons-mauritius/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/four-seasons-mauritius/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/four-seasons-mauritius/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -97,6 +107,7 @@ body:
 - type: hero
   image_base: assets/images/four-seasons-mauritius/hero-2
   image_ext: jpg
+  has_webp: true
   alt: Four Seasons Маврикий — лагуна и пляж
   caption: ''
   caption_align: ''

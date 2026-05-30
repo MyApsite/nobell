@@ -38,6 +38,7 @@ body:
 - type: hero
   image_base: assets/images/spectre-semaphore/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Rolls-Royce Spectre Semaphore — общий вид купе в цвете Semaphore Yellow
   caption: 'Фото: Предоставлено Rolls-Royce Motor Cars'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/spectre-semaphore/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/spectre-semaphore/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/spectre-semaphore/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -66,13 +70,16 @@ body:
   left:
     image_base: assets/images/spectre-semaphore/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/spectre-semaphore/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/spectre-semaphore/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

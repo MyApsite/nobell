@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/shellona-saint-tropez/hero-1
   image_ext: png
+  has_webp: true
   alt: Shellona Saint-Tropez — beach club на пляже Пампелон
   caption: ''
   caption_align: ''

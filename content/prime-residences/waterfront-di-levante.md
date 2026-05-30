@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/waterfront-di-levante/hero
   image_ext: jpg
+  has_webp: true
   alt: Waterfront di Levante — пентхаусы на набережной Генуи
   caption: 'Фото: предоставлено Waterfront di Levante'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/waterfront-di-levante/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — фасад на набережной
   right:
   - image_base: assets/images/waterfront-di-levante/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — терраса
   - image_base: assets/images/waterfront-di-levante/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — внутренний интерьер
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/waterfront-di-levante/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — вид на марину
   right:
   - image_base: assets/images/waterfront-di-levante/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — гостиная
   - image_base: assets/images/waterfront-di-levante/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — деталь интерьера
 - type: text
   paragraphs:
@@ -84,13 +91,16 @@ body:
   left:
     image_base: assets/images/waterfront-di-levante/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — обеденная зона с видом
   right:
   - image_base: assets/images/waterfront-di-levante/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — общая зона отдыха
   - image_base: assets/images/waterfront-di-levante/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Waterfront di Levante — морской пейзаж и марина
 - type: text
   paragraphs:

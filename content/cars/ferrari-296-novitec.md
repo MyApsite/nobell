@@ -36,6 +36,7 @@ body:
 - type: hero
   image_base: assets/images/ferrari-296-novitec/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Novitec Ferrari 296 GTB — общий вид спорткара
   caption: 'Фото: Предоставлено Novitec'
   caption_align: right
@@ -47,6 +48,7 @@ body:
 - type: hero
   image_base: assets/images/ferrari-296-novitec/hero-2
   image_ext: jpg
+  has_webp: true
   alt: Novitec Ferrari 296 GTB — деталь выхлопной системы и кормы
   caption: ''
   caption_align: ''
@@ -57,6 +59,7 @@ body:
 - type: hero
   image_base: assets/images/ferrari-296-novitec/hero-3
   image_ext: jpg
+  has_webp: true
   alt: Novitec Ferrari 296 GTB — кованые колёса Vossen NF 10
   caption: ''
   caption_align: ''
@@ -67,6 +70,7 @@ body:
 - type: hero
   image_base: assets/images/ferrari-296-novitec/hero-4
   image_ext: jpg
+  has_webp: true
   alt: Novitec Ferrari 296 GTB — финальный кадр
   caption: ''
   caption_align: ''

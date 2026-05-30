@@ -40,6 +40,7 @@ body:
 - type: hero
   image_base: assets/images/mpala-jena/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Mpala Jena Private Villas — национальный парк Замбези, рядом с водопадом Виктория
   caption: 'Фото: Предоставлено Mpala Jena'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/mpala-jena/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/mpala-jena/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/mpala-jena/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -67,13 +71,16 @@ body:
   left:
     image_base: assets/images/mpala-jena/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/mpala-jena/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/mpala-jena/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/mpala-jena/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/mpala-jena/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/mpala-jena/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -98,13 +108,16 @@ body:
   left:
     image_base: assets/images/mpala-jena/g4-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/mpala-jena/g4-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/mpala-jena/g4-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

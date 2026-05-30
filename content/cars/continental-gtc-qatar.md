@@ -38,6 +38,7 @@ body:
 - type: hero
   image_base: assets/images/continental-gtc-qatar/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Bentley Continental GTC Azure Mulliner Qatar Edition — общий вид кабриолета
   caption: 'Фото: Предоставлено Bentley Motors Limited'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/continental-gtc-qatar/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/continental-gtc-qatar/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/continental-gtc-qatar/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -65,6 +69,7 @@ body:
 - type: hero
   image_base: assets/images/continental-gtc-qatar/hero-2
   image_ext: jpg
+  has_webp: true
   alt: Bentley Continental GTC Azure Mulliner Qatar Edition — детали кузова в свете дохийских сумерек
   caption: ''
   caption_align: ''

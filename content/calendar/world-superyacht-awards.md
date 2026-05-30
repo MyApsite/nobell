@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/world-superyacht-awards/hero-1
   image_ext: png
+  has_webp: true
   alt: World Superyacht Awards — суперъяхта на фоне Венеции
   caption: ''
   caption_align: ''

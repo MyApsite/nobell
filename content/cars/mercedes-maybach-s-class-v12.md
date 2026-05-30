@@ -38,6 +38,7 @@ body:
 - type: hero
   image_base: assets/images/mercedes-maybach-s-class-v12/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Mercedes-Maybach S-Class V12 Edition — общий вид седана
   caption: 'Фото: Предоставлено Mercedes-Maybach'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/mercedes-maybach-s-class-v12/g1-1
     image_ext: jpg
+    has_webp: true
     alt: Mercedes-Maybach S-Class V12 Edition — двухцветный кузов olive metallic / obsidian black
   right:
   - image_base: assets/images/mercedes-maybach-s-class-v12/g1-2
     image_ext: jpg
+    has_webp: true
     alt: Mercedes-Maybach S-Class V12 Edition — экстерьер
   - image_base: assets/images/mercedes-maybach-s-class-v12/g1-3
     image_ext: jpg
+    has_webp: true
     alt: Mercedes-Maybach S-Class V12 Edition — фрагмент решётки
 - type: text
   paragraphs:
@@ -66,13 +70,16 @@ body:
   left:
     image_base: assets/images/mercedes-maybach-s-class-v12/g2-1
     image_ext: jpg
+    has_webp: true
     alt: Mercedes-Maybach S-Class V12 Edition — эмблема в кольце 24-каратного золота
   right:
   - image_base: assets/images/mercedes-maybach-s-class-v12/g2-2
     image_ext: jpg
+    has_webp: true
     alt: Mercedes-Maybach S-Class V12 Edition — деталь с алмазной гравировкой
   - image_base: assets/images/mercedes-maybach-s-class-v12/g2-3
     image_ext: jpg
+    has_webp: true
     alt: Mercedes-Maybach S-Class V12 Edition — золотистая вставка в задней консоли
 - type: text
   paragraphs:

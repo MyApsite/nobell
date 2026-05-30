@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/eha/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Аэросъёмка ландшафта острова Хийумаа
   caption: 'Фото: Предоставлено Eha'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/eha/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/eha/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/eha/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -67,13 +71,16 @@ body:
   left:
     image_base: assets/images/eha/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/eha/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/eha/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/eha/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/eha/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/eha/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -98,13 +108,16 @@ body:
   left:
     image_base: assets/images/eha/g4-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/eha/g4-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/eha/g4-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

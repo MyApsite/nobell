@@ -35,6 +35,7 @@ body:
 - type: picture
   image_base: assets/images/la-guerite-cannes/hero-1
   image_ext: png
+  has_webp: true
   alt: La Guérite Cannes — beach club на острове Сент-Маргерит
   caption: ''
   caption_align: ''

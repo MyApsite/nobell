@@ -36,6 +36,7 @@ body:
 - type: picture
   image_base: assets/images/louis-vuitton-escale/hero-1
   image_ext: png
+  has_webp: true
   alt: Louis Vuitton Escale Twin Zone — ювелирная travel-модель в платине
   caption: 'Фото: предоставлено Louis Vuitton'
   caption_align: right
@@ -48,13 +49,16 @@ body:
   left:
     image_base: assets/images/louis-vuitton-escale/g1-1
     image_ext: png
+    has_webp: true
     alt: Louis Vuitton Escale Twin Zone — циферблат из синего авантюрина крупным планом
   right:
   - image_base: assets/images/louis-vuitton-escale/g1-2
     image_ext: png
+    has_webp: true
     alt: Louis Vuitton Escale Twin Zone — деталь корпуса с бриллиантовой инкрустацией
   - image_base: assets/images/louis-vuitton-escale/g1-3
     image_ext: png
+    has_webp: true
     alt: Louis Vuitton Escale Twin Zone — задняя крышка с калибром LFT VO 15.01
 - type: text
   paragraphs:
@@ -63,6 +67,7 @@ body:
 - type: picture
   image_base: assets/images/louis-vuitton-escale/hero-2
   image_ext: png
+  has_webp: true
   alt: Louis Vuitton Escale Twin Zone — деталь корпуса и индикации
   caption: ''
   caption_align: ''
@@ -72,6 +77,7 @@ body:
 - type: picture
   image_base: assets/images/louis-vuitton-escale/hero-3
   image_ext: png
+  has_webp: true
   alt: Louis Vuitton Escale Twin Zone — финальный кадр на ремешке из синей кожи
   caption: ''
   caption_align: ''

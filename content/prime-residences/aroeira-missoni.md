@@ -40,6 +40,7 @@ body:
 - type: picture
   image_base: assets/images/aroeira-missoni/hero
   image_ext: jpg
+  has_webp: true
   alt: Aroeira Collections by Missoni — резиденции к югу от Лиссабона
   caption: 'Фото: предоставлено Missoni'
   caption_align: right
@@ -52,13 +53,16 @@ body:
   left:
     image_base: assets/images/aroeira-missoni/block1-1
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — фасад в сосновом лесу
   right:
   - image_base: assets/images/aroeira-missoni/block1-2
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — гостиная
   - image_base: assets/images/aroeira-missoni/block1-3
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — деталь интерьера
 - type: text
   paragraphs:
@@ -68,13 +72,16 @@ body:
   left:
     image_base: assets/images/aroeira-missoni/block2-1
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — спальня
   right:
   - image_base: assets/images/aroeira-missoni/block2-2
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — кухня и столовая
   - image_base: assets/images/aroeira-missoni/block2-3
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — текстура Missoni
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/aroeira-missoni/block3-1
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — терраса с видом на лес
   right:
   - image_base: assets/images/aroeira-missoni/block3-2
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — wellness-зона
   - image_base: assets/images/aroeira-missoni/block3-3
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — общественные пространства
 - type: text
   paragraphs:
@@ -98,13 +108,16 @@ body:
   left:
     image_base: assets/images/aroeira-missoni/block4-1
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — резиденция в природе
   right:
   - image_base: assets/images/aroeira-missoni/block4-2
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — бассейн
   - image_base: assets/images/aroeira-missoni/block4-3
     image_ext: jpg
+    has_webp: true
     alt: Aroeira Collections by Missoni — поля для гольфа
 - type: text
   paragraphs:

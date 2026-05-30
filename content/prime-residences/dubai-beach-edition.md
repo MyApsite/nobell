@@ -39,6 +39,7 @@ body:
 - type: picture
   image_base: assets/images/dubai-beach-edition/hero
   image_ext: jpg
+  has_webp: true
   alt: The Dubai Beach Edition — Дубай-Харбор, ОАЭ
   caption: 'Фото: предоставлено RSHP'
   caption_align: right
@@ -51,13 +52,16 @@ body:
   left:
     image_base: assets/images/dubai-beach-edition/block1-1
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — закат над пляжем
   right:
   - image_base: assets/images/dubai-beach-edition/block1-2
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — фасад павильона
   - image_base: assets/images/dubai-beach-edition/block1-3
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — пальмы у входа
 - type: text
   paragraphs:
@@ -67,13 +71,16 @@ body:
   left:
     image_base: assets/images/dubai-beach-edition/block2-1
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — гостиная с видом на залив
   right:
   - image_base: assets/images/dubai-beach-edition/block2-2
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — спальня
   - image_base: assets/images/dubai-beach-edition/block2-3
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — кухня и обеденная зона
 - type: text
   paragraphs:
@@ -83,13 +90,16 @@ body:
   left:
     image_base: assets/images/dubai-beach-edition/block3-1
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — клубная гостиная
   right:
   - image_base: assets/images/dubai-beach-edition/block3-2
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — холл
   - image_base: assets/images/dubai-beach-edition/block3-3
     image_ext: jpg
+    has_webp: true
     alt: The Dubai Beach Edition — вид на Дубай-Марину
 - type: text
   paragraphs:

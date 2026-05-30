@@ -38,6 +38,7 @@ body:
 - type: picture
   image_base: assets/images/omadeleine/hero-1
   image_ext: jpg
+  has_webp: true
   alt: O'Madeleine — общий вид 60-метровой яхты Golden Yachts
   caption: 'Фото: Предоставлено Golden Yachts'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/omadeleine/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/omadeleine/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/omadeleine/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -65,13 +69,16 @@ body:
   left:
     image_base: assets/images/omadeleine/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/omadeleine/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/omadeleine/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -81,13 +88,16 @@ body:
   left:
     image_base: assets/images/omadeleine/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/omadeleine/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/omadeleine/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -96,13 +106,16 @@ body:
   left:
     image_base: assets/images/omadeleine/g4-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/omadeleine/g4-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/omadeleine/g4-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

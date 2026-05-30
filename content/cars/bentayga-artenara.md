@@ -38,6 +38,7 @@ body:
 - type: hero
   image_base: assets/images/bentayga-artenara/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Bentley Bentayga Artenara Edition — общий вид кроссовера
   caption: 'Фото: Предоставлено Bentley Motors'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/bentayga-artenara/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/bentayga-artenara/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/bentayga-artenara/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -66,13 +70,16 @@ body:
   left:
     image_base: assets/images/bentayga-artenara/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/bentayga-artenara/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/bentayga-artenara/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -82,13 +89,16 @@ body:
   left:
     image_base: assets/images/bentayga-artenara/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/bentayga-artenara/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/bentayga-artenara/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

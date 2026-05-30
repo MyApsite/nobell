@@ -38,6 +38,7 @@ body:
 - type: picture
   image_base: assets/images/v-1
   image_ext: png
+  has_webp: false
   alt: Описание
   caption: 'Фото: любезно предоставлено отелями Zannier'
   caption_align: right
@@ -49,13 +50,16 @@ body:
   left:
     image_base: assets/images/v-2
     image_ext: png
+    has_webp: false
     alt: Описание
   right:
   - image_base: assets/images/v-3
     image_ext: png
+    has_webp: false
     alt: Описание
   - image_base: assets/images/v-4
     image_ext: png
+    has_webp: false
     alt: Описание
 - type: text
   paragraphs:
@@ -64,13 +68,16 @@ body:
   left:
     image_base: assets/images/v-5
     image_ext: png
+    has_webp: false
     alt: Описание
   right:
   - image_base: assets/images/v-6
     image_ext: png
+    has_webp: false
     alt: Описание
   - image_base: assets/images/v-7
     image_ext: png
+    has_webp: false
     alt: Описание
 - type: text
   paragraphs:
@@ -80,13 +87,16 @@ body:
   left:
     image_base: assets/images/v-8
     image_ext: png
+    has_webp: false
     alt: Описание
   right:
   - image_base: assets/images/v-9
     image_ext: png
+    has_webp: false
     alt: Описание
   - image_base: assets/images/v-10
     image_ext: png
+    has_webp: false
     alt: Описание
 - type: text
   paragraphs:
@@ -95,13 +105,16 @@ body:
   left:
     image_base: assets/images/v-11
     image_ext: png
+    has_webp: false
     alt: Описание
   right:
   - image_base: assets/images/v-12
     image_ext: png
+    has_webp: false
     alt: Описание
   - image_base: assets/images/v-13
     image_ext: png
+    has_webp: false
     alt: Описание
 - type: text
   paragraphs:

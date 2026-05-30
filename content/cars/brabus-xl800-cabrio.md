@@ -38,6 +38,7 @@ body:
 - type: hero
   image_base: assets/images/brabus-xl800-cabrio/hero-1
   image_ext: jpg
+  has_webp: true
   alt: Brabus XL 800 Cabrio — открытый G-Class общий вид
   caption: 'Фото: Предоставлено Brabus'
   caption_align: right
@@ -50,13 +51,16 @@ body:
   left:
     image_base: assets/images/brabus-xl800-cabrio/g1-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/brabus-xl800-cabrio/g1-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/brabus-xl800-cabrio/g1-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -66,13 +70,16 @@ body:
   left:
     image_base: assets/images/brabus-xl800-cabrio/g2-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/brabus-xl800-cabrio/g2-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/brabus-xl800-cabrio/g2-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:
@@ -82,13 +89,16 @@ body:
   left:
     image_base: assets/images/brabus-xl800-cabrio/g3-1
     image_ext: jpg
+    has_webp: true
     alt: ''
   right:
   - image_base: assets/images/brabus-xl800-cabrio/g3-2
     image_ext: jpg
+    has_webp: true
     alt: ''
   - image_base: assets/images/brabus-xl800-cabrio/g3-3
     image_ext: jpg
+    has_webp: true
     alt: ''
 - type: text
   paragraphs:

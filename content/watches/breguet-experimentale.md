@@ -36,6 +36,7 @@ body:
 - type: picture
   image_base: assets/images/breguet-experimentale/hero-1
   image_ext: png
+  has_webp: true
   alt: Breguet Expérimentale 1 — корпус из 18-каратного золота с открытой архитектурой механизма
   caption: ''
   caption_align: ''
@@ -48,13 +49,16 @@ body:
   left:
     image_base: assets/images/breguet-experimentale/g1-1
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — крупный план открытой архитектуры циферблата
   right:
   - image_base: assets/images/breguet-experimentale/g1-2
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — деталь турбийона на 10 Гц
   - image_base: assets/images/breguet-experimentale/g1-3
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — макрофото магнитного спуска постоянной силы
 - type: text
   paragraphs:
@@ -63,13 +67,16 @@ body:
   left:
     image_base: assets/images/breguet-experimentale/g2-1
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — деталь корпуса с регуляторным сапфировым циферблатом
   right:
   - image_base: assets/images/breguet-experimentale/g2-2
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — архивный эскиз классических карманных часов Breguet
   - image_base: assets/images/breguet-experimentale/g2-3
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — рукописная заметка инженерных расчётов
 - type: text
   paragraphs:
@@ -79,13 +86,16 @@ body:
   left:
     image_base: assets/images/breguet-experimentale/g3-1
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — открытая архитектура с мостами и колёсной системой
   right:
   - image_base: assets/images/breguet-experimentale/g3-2
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — деталь турбийона и магнитного спуска
   - image_base: assets/images/breguet-experimentale/g3-3
     image_ext: png
+    has_webp: true
     alt: Breguet Expérimentale 1 — задняя сторона калибра 7250
 - type: text
   paragraphs:
