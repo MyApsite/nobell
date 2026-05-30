@@ -27,7 +27,7 @@ card:
   card_title: Top Marques Monaco — главное шоу суперкаров, гиперкаров и премиальных премьер в Монте-Карло
   card_text: Выставка ежегодно собирает в Монте-Карло производителей суперкаров, тюнинг-ателье, коллекционеров и частных клиентов, оставаясь одной из самых заметных витрин автомобильной роскоши.
   data_month: may
-  data_format: auto
+  data_format: auto cote-azur
   data_city: monaco
   data_country: monaco
   data_region: ''

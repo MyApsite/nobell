@@ -1102,6 +1102,12 @@ input:focus::placeholder {
 
 .services__video {
   position: relative; }
+  .services__video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; }
   .services__video .video-btn {
     position: absolute;
     z-index: 1;
@@ -1991,7 +1997,7 @@ input:focus::placeholder {
     border-bottom: 1px solid #d8d8d8 !important;
     background-color: transparent;
     padding: 10px 12px;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.3;
     font-family: "Gilroy" !important;
     transition: all 0.3s ease; }

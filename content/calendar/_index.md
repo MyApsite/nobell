@@ -34,60 +34,47 @@ hero_slides:
 inline_style: "\n    .guide__cards .product__img {\n      aspect-ratio: 291 / 226;\n      overflow: hidden;\n      width: 100%;\n    }\n    .guide__cards .product__img img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    .card-section--slider .house-card__img {\n      aspect-ratio: 1040 / 584;\n      overflow: hidden;\n      width: 100%;\n    }\n    .card-section--slider .house-card__img img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      display: block;\n    }\n    .card-section--slider .house-card__body {\n      max-width: 1032px;\n      padding: 20px 16px;\n    }\n    /* Локальный subtitle над заголовком слайда (видимый только на 1-м слайде в Figma,\n       но используется для согласованности структуры) */\n    .house-card__subtag {\n      font-size: 10px;\n      font-weight: 300;\n      font-family: \"Gilroy\";\n      line-height: 130%;\n      letter-spacing: 0.4px;\n      text-transform: uppercase;\n\
   \      margin-bottom: 20px;\n      color: #212121;\n    }\n  "
 search_name: calendar-search
-hidden_name: calendar-format
-dropdown_button_label: ФИЛЬТР ПО ФОРМАТУ МЕРОПРИЯТИЙ
-dropdown_default_option: ВСЕ ФОРМАТЫ
+hidden_name: calendar-month
+dropdown_button_label: ВСЕ МЕСЯЦА
+dropdown_default_option: ВСЕ МЕСЯЦА
 dropdown_items:
-- value: art
-  label: ИСКУССТВО
-- value: auto
-  label: АВТОМОБИЛЬНЫЕ КОНКУРСЫ
-- value: yachts
-  label: ЯХТЕННЫЕ ПРЕМИИ
-- value: society
-  label: СВЕТСКИЕ СОБЫТИЯ
-- value: lifestyle
-  label: КЛУБЫ И РЕСТОРАНЫ
+- value: january
+  label: ЯНВАРЬ
+- value: february
+  label: ФЕВРАЛЬ
+- value: march
+  label: МАРТ
+- value: april
+  label: АПРЕЛЬ
+- value: may
+  label: МАЙ
+- value: june
+  label: ИЮНЬ
+- value: july
+  label: ИЮЛЬ
+- value: august
+  label: АВГУСТ
+- value: september
+  label: СЕНТЯБРЬ
+- value: october
+  label: ОКТЯБРЬ
+- value: november
+  label: НОЯБРЬ
+- value: december
+  label: ДЕКАБРЬ
 filter_buttons:
 - value: all
   label: ВСЕ
   active: true
-  dim: month
-- value: january
-  label: январь
-  dim: month
-- value: february
-  label: февраль
-  dim: month
-- value: march
-  label: март
-  dim: month
-- value: april
-  label: апрель
-  dim: month
-- value: may
-  label: май
-  dim: month
-- value: june
-  label: июнь
-  dim: month
-- value: july
-  label: июль
-  dim: month
-- value: august
-  label: август
-  dim: month
-- value: september
-  label: сентябрь
-  dim: month
-- value: october
-  label: октябрь
-  dim: month
-- value: november
-  label: ноябрь
-  dim: month
-- value: december
-  label: декабрь
-  dim: month
+  dim: format
+- value: art
+  label: АРТ-КАЛЕНДАРЬ
+  dim: format
+- value: society
+  label: СВЕТСКИЙ КАЛЕНДАРЬ
+  dim: format
+- value: cote-azur
+  label: КАЛЕНДАРЬ ЛАЗУРНОГО БЕРЕГА
+  dim: format
 total_results: 947
 ---

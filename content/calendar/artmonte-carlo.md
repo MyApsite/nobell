@@ -27,7 +27,7 @@ card:
   card_title: Artmonte-carlo — камерная ярмарка современного искусства в Монте-Карло
   card_text: Ярмарка собирает в Гримальди Форуме ведущие галереи и коллекционеров, предлагая камерный формат художественной ярмарки в Монако.
   data_month: april may
-  data_format: art
+  data_format: art cote-azur
   data_city: monaco
   data_country: monaco
   data_region: ''

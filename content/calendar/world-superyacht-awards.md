@@ -27,7 +27,7 @@ card:
   card_title: World Superyacht Awards — главная награда мира суперъяхт в Венеции
   card_text: Премия ежегодно собирает в Венеции ведущие верфи, дизайнеров, морских архитекторов и владельцев яхт, оставаясь одной из самых авторитетных наград мировой суперъяхтенной индустрии.
   data_month: may
-  data_format: yachts
+  data_format: yachts society
   data_city: venice
   data_country: italy
   data_region: ''

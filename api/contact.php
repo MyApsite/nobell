@@ -90,16 +90,26 @@ $body .= "User-Agent: " . ($_SERVER['HTTP_USER_AGENT'] ?? '-') . "\n";
 $body .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? '-') . "\n";
 $body .= "Time: " . date('Y-m-d H:i:s') . " UTC\n";
 
+$message_id = '<' . sha1(uniqid('', true) . microtime(true)) . '@nobell.com>';
+
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "From: Nobell Contact Form <noreply@nobell.com>\r\n";
+$headers .= "Sender: noreply@nobell.com\r\n";
 $headers .= "Reply-To: $first $last <$email>\r\n";
+$headers .= "Return-Path: <noreply@nobell.com>\r\n";
+$headers .= "Message-ID: $message_id\r\n";
+$headers .= "Date: " . date('r') . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "Content-Transfer-Encoding: base64\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+$headers .= "X-Auto-Response-Suppress: All\r\n";
+$headers .= "List-Unsubscribe: <mailto:noreply@nobell.com?subject=unsubscribe>\r\n";
 
 $body_encoded = chunk_split(base64_encode($body));
 
-$ok = @mail($RECIPIENT, "=?UTF-8?B?" . base64_encode($subject) . "?=", $body_encoded, $headers);
+// 5th arg `-f` sets the envelope-from (Return-Path) so the receiving SPF check
+// can authorize the sending mail server against nobell.com's SPF record.
+$ok = @mail($RECIPIENT, "=?UTF-8?B?" . base64_encode($subject) . "?=", $body_encoded, $headers, '-f noreply@nobell.com');
 
 if (!$ok) {
     http_response_code(500);

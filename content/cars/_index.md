@@ -38,7 +38,7 @@ inline_style: "\n    /* Hero-слайдер: фото фиксировано в 
 search_name: cars-search
 hidden_name: cars-brand
 dropdown_button_label: ПОПУЛЯРНЫЕ БРЕНДЫ
-dropdown_default_option: ПОПУЛЯРНЫЕ БРЕНДЫ
+dropdown_default_option: ВСЕ БРЕНДЫ
 dropdown_items:
 - value: bentley
   label: BENTLEY

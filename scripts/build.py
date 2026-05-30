@@ -34,7 +34,7 @@ CATEGORIES = {
         "spotlight_title": "In the Spotlight",
         "detail_tpl": "cars-detail.html.tpl",
         "catalog_tpl": "cars.html.tpl",
-        "filter_partial": "_cars-filter.html.tpl",
+        "filter_partial": "_filter.html.tpl",
     },
     "watches": {
         "label": "ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА",
@@ -42,7 +42,7 @@ CATEGORIES = {
         "spotlight_title": "Masterpieces of Time",
         "detail_tpl": "cars-detail.html.tpl",
         "catalog_tpl": "catalog.html.tpl",
-        "filter_partial": "_watches-filter.html.tpl",
+        "filter_partial": "_filter.html.tpl",
     },
     "guide": {
         "label": "ГИД ПО ОТЕЛЯМ И ЯХТАМ",
@@ -50,7 +50,7 @@ CATEGORIES = {
         "spotlight_title": "In the Spotlight",
         "detail_tpl": "cars-detail.html.tpl",
         "catalog_tpl": "catalog.html.tpl",
-        "filter_partial": "_guide-filter.html.tpl",
+        "filter_partial": "_filter.html.tpl",
     },
     "calendar": {
         "label": "КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ",
@@ -58,7 +58,7 @@ CATEGORIES = {
         "spotlight_title": "Global Calendar",
         "detail_tpl": "cars-detail.html.tpl",
         "catalog_tpl": "catalog.html.tpl",
-        "filter_partial": "_calendar-filter.html.tpl",
+        "filter_partial": "_filter.html.tpl",
     },
     "prime-residences": {
         "label": "ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ",
@@ -66,7 +66,7 @@ CATEGORIES = {
         "spotlight_title": "Prime Residences",
         "detail_tpl": "cars-detail.html.tpl",
         "catalog_tpl": "catalog.html.tpl",
-        "filter_partial": "_prime-residences-filter.html.tpl",
+        "filter_partial": "_filter.html.tpl",
     },
 }
 
