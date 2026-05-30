@@ -69,16 +69,19 @@
             <form class="contacts-form__body js-contact-form" action="/api/contact.php" method="post" novalidate>
               <div class="contacts-form__grid">
                 <div class="contacts-form__field">
+                  <label for="contact-first-name" class="sr-only">Имя</label>
                   <input class="contacts-form__control" placeholder="ИМЯ *" id="contact-first-name" name="firstName"
                     type="text" autocomplete="off" autocorrect="off" spellcheck="false" required>
                 </div>
 
                 <div class="contacts-form__field">
+                  <label for="contact-last-name" class="sr-only">Фамилия</label>
                   <input class="contacts-form__control" placeholder="ФАМИЛИЯ *" id="contact-last-name" name="lastName"
                     type="text" autocomplete="off" autocorrect="off" spellcheck="false" required>
                 </div>
 
                 <div class="contacts-form__field contacts-form__field--full">
+                  <label for="contact-email" class="sr-only">Email</label>
                   <input class="contacts-form__control" placeholder="EMAIL *" id="contact-email" name="email"
                     type="email" autocomplete="off" autocorrect="off" spellcheck="false" required>
                 </div>
@@ -89,6 +92,7 @@
                       <span class="contacts-form__country-code js-country-code">+7</span>
                       <span class="contacts-form__country-arrow" aria-hidden="true"></span>
                     </button>
+                    <label for="contact-phone" class="sr-only">Телефон</label>
                     <input class="contacts-form__control contacts-form__control--phone" placeholder="ТЕЛЕФОН *"
                       id="contact-phone" name="phone" type="tel" inputmode="tel" autocomplete="off" required>
                     <ul class="contacts-form__country-list js-country-list" role="listbox" style="display:none"></ul>
@@ -96,6 +100,7 @@
                 </div>
 
                 <div class="contacts-form__field contacts-form__field--full">
+                  <label for="contact-message" class="sr-only">Ваше сообщение</label>
                   <textarea class="contacts-form__control contacts-form__control--message"
                     placeholder="ВАШЕ СООБЩЕНИЕ *" id="contact-message" name="message" rows="3" required></textarea>
                 </div>
