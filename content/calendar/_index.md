@@ -76,5 +76,5 @@ filter_buttons:
 - value: cote-azur
   label: КАЛЕНДАРЬ ЛАЗУРНОГО БЕРЕГА
   dim: format
-total_results: 947
+total_results: 7
 ---

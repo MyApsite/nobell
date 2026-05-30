@@ -90,5 +90,5 @@ filter_buttons:
 - value: men
   label: МУЖСКИЕ
   dim: type
-total_results: 947
+total_results: 12
 ---

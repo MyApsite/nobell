@@ -86,5 +86,5 @@ filter_buttons:
 - value: charter
   label: чартер
   dim: type
-total_results: 947
+total_results: 12
 ---

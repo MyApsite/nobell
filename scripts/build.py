@@ -142,6 +142,10 @@ def render_category(category: str, env: Environment, only_slugs: set[str] | None
             print(f"  SKIP catalog: template {cat_meta['catalog_tpl']} not yet created")
         elif not only_slugs or catalog["slug"] in only_slugs:
             catalog_tpl = env.get_template(cat_meta["catalog_tpl"])
+            # Always reflect the real catalog size — overrides any stale value
+            # in _index.md so adding/removing detail pages never leaves the
+            # "Показаны X из Y" count out of date.
+            catalog["total_results"] = len(siblings)
             ctx = {
                 "page": catalog,
                 "items": siblings,

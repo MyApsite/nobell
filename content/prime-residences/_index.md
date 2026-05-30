@@ -78,5 +78,5 @@ filter_buttons:
 - value: north-america
   label: СЕВЕРНАЯ АМЕРИКА
   dim: type
-total_results: 947
+total_results: 12
 ---

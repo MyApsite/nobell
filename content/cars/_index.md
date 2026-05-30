@@ -93,5 +93,5 @@ filter_buttons:
 - value: bespoke
   label: BESPOKE
   dim: type
-total_results: 947
+total_results: 12
 ---
