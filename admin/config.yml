@@ -1,0 +1,568 @@
+# Decap CMS configuration — Nobell content authoring
+# Edit collections live at https://nobell.com/admin/ after Netlify Identity
+# setup (see admin/README.md for one-time setup steps).
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where Decap uploads media (mirrors current asset layout)
+media_folder: assets/images
+public_folder: /assets/images
+
+# Display all dates in Moscow time for the team
+display_url: https://nobell.com
+logo_url: https://nobell.com/assets/images/logo.svg
+locale: ru
+
+# Re-usable block schema for detail-page body sequences
+# (referenced via Decap's anchors+merges; defined as fields directly per
+# collection because Decap doesn't support YAML anchors in collections —
+# this is duplicated literally below.)
+
+collections:
+  # ────────────────────────────────────────────────────────────────
+  - name: cars
+    label: Автомобили
+    label_singular: Автомобиль
+    folder: content/cars
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    summary: '{{h1}}'
+    filter:
+      field: slug
+      pattern: '^(?!_index)'
+    fields:
+      - {name: slug, label: Slug, widget: string}
+      - {name: title, label: '<title>', widget: string}
+      - {name: h1, label: H1, widget: string}
+      - {name: intro, label: Intro paragraph, widget: text}
+      - {name: description, label: Meta description, widget: text}
+      - {name: keywords, label: Keywords, widget: string, required: false}
+      - {name: canonical, label: Canonical URL, widget: string}
+      - {name: og_image, label: og:image URL, widget: string}
+      - {name: og_type, label: og:type, widget: string, default: article}
+      - {name: og_title, label: og:title, widget: string}
+      - {name: og_description, label: og:description, widget: text}
+      - {name: twitter_title, label: twitter:title, widget: string}
+      - {name: twitter_description, label: twitter:description, widget: text}
+      - {name: body_class, label: Body CSS class, widget: string}
+      - {name: dropcap_class, label: Drop-cap CSS class, widget: string, required: false}
+      - {name: inline_style, label: 'Page-specific <style> (raw CSS)', widget: text, required: false}
+      - name: breadcrumb
+        label: Breadcrumb (last segments after category)
+        widget: list
+        fields:
+          - {name: label, label: Label, widget: string}
+          - {name: href, label: Href (null for current page), widget: string, required: false}
+      - name: card
+        label: Catalog card (shown in cars.html grid + spotlight)
+        widget: object
+        fields:
+          - {name: card_image_base, label: Image base, widget: string}
+          - {name: card_image_ext, label: Image ext, widget: select, options: [jpg, png, webp]}
+          - {name: card_alt, label: Card alt, widget: string, required: false}
+          - {name: card_tag, label: Card tag/category, widget: string}
+          - {name: card_title, label: Card title, widget: string}
+          - {name: card_text, label: Card text, widget: text}
+          - {name: data_type, label: data-type filter tokens, widget: string, required: false}
+          - {name: data_brand, label: data-brand filter tokens, widget: string, required: false}
+      - name: body
+        label: Body blocks (in order)
+        widget: list
+        types:
+          - name: hero
+            label: Hero image (full-width with caption)
+            fields:
+              - {name: image_base, label: Image base (no .ext), widget: string}
+              - {name: image_ext, label: Ext, widget: select, options: [jpg, png]}
+              - {name: has_webp, label: 'WebP companion exists?', widget: boolean, default: true}
+              - {name: alt, label: Alt text, widget: string}
+              - {name: caption, label: Caption, widget: string, required: false}
+              - {name: caption_align, label: Caption alignment, widget: select, options: ['', left, right], required: false}
+          - name: picture
+            label: Single picture (no --hero modifier)
+            fields:
+              - {name: image_base, label: Image base, widget: string}
+              - {name: image_ext, label: Ext, widget: select, options: [jpg, png]}
+              - {name: has_webp, label: 'WebP companion?', widget: boolean, default: true}
+              - {name: alt, label: Alt, widget: string}
+              - {name: caption, label: Caption, widget: string, required: false}
+              - {name: caption_align, label: Caption alignment, widget: select, options: ['', left, right], required: false}
+          - name: grid_2col
+            label: 2-column image grid
+            fields:
+              - name: left
+                label: Left column (large)
+                widget: object
+                fields:
+                  - {name: image_base, widget: string, label: Image base}
+                  - {name: image_ext, widget: select, options: [jpg, png], label: Ext}
+                  - {name: has_webp, widget: boolean, default: true, label: 'WebP'}
+                  - {name: alt, widget: string, label: Alt, required: false}
+              - name: right
+                label: Right column (stacked images)
+                widget: list
+                fields:
+                  - {name: image_base, widget: string, label: Image base}
+                  - {name: image_ext, widget: select, options: [jpg, png], label: Ext}
+                  - {name: has_webp, widget: boolean, default: true, label: 'WebP'}
+                  - {name: alt, widget: string, label: Alt, required: false}
+          - name: text
+            label: Text block
+            fields:
+              - {name: dropcap, label: 'First paragraph drop-cap?', widget: boolean, default: false, required: false}
+              - name: paragraphs
+                label: Paragraphs
+                widget: list
+                field: {name: p, label: 'Paragraph (HTML allowed for &nbsp;/<sup>/etc)', widget: text}
+      - name: tech_spec
+        label: Tech-spec list (one item per line)
+        widget: list
+        field: {name: item, label: Item, widget: string}
+      - {name: partners_text, label: Partners Community CTA copy, widget: text, default: 'Благодаря международному сообществу партнёров Nobell наши клиенты получают прямой доступ к лучшим ценам и экспертизе высшего уровня'}
+      - {name: cta_text, label: Community CTA button, widget: string, default: Консультация по приобретению автомобиля}
+      - name: tags
+        label: Tags (chips at bottom of detail page)
+        widget: list
+        fields:
+          - {name: label, widget: string, label: Tag label}
+          - {name: href, widget: string, label: 'Href (e.g. cars.html?brand=rolls-royce)'}
+      - name: spotlight_slugs
+        label: Spotlight cascade (sibling page slugs to show, in order)
+        widget: list
+        field: {name: slug, widget: string, label: Slug}
+
+  # ────────────────────────────────────────────────────────────────
+  - name: watches
+    label: Часы
+    label_singular: Часовая модель
+    folder: content/watches
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    summary: '{{h1}}'
+    filter:
+      field: slug
+      pattern: '^(?!_index)'
+    fields:
+      - {name: slug, widget: string, label: Slug}
+      - {name: title, widget: string, label: '<title>'}
+      - {name: h1, widget: string, label: H1}
+      - {name: intro, widget: text, label: Intro}
+      - {name: description, widget: text, label: Description}
+      - {name: keywords, widget: string, required: false}
+      - {name: canonical, widget: string}
+      - {name: og_image, widget: string}
+      - {name: og_type, widget: string, default: article}
+      - {name: og_title, widget: string}
+      - {name: og_description, widget: text}
+      - {name: twitter_title, widget: string}
+      - {name: twitter_description, widget: text}
+      - {name: body_class, widget: string}
+      - {name: dropcap_class, widget: string, required: false}
+      - {name: inline_style, widget: text, required: false}
+      - name: breadcrumb
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string, required: false}
+      - name: card
+        widget: object
+        fields:
+          - {name: card_image_base, widget: string}
+          - {name: card_image_ext, widget: select, options: [jpg, png, webp]}
+          - {name: card_alt, widget: string, required: false}
+          - {name: card_tag, widget: string}
+          - {name: card_title, widget: string}
+          - {name: card_text, widget: text}
+          - {name: data_type, widget: string, required: false}
+          - {name: data_brand, widget: string, required: false}
+      - name: body
+        widget: list
+        types:
+          - {name: hero, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - {name: picture, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - name: grid_2col
+            fields:
+              - {name: left, widget: object, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string, required: false}]}
+              - {name: right, widget: list, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string, required: false}]}
+          - name: text
+            fields:
+              - {name: dropcap, widget: boolean, default: false, required: false}
+              - {name: paragraphs, widget: list, field: {name: p, widget: text}}
+      - {name: tech_spec, widget: list, field: {name: item, widget: string}}
+      - {name: partners_text, widget: text}
+      - {name: cta_text, widget: string, default: Консультация по приобретению часов}
+      - name: tags
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string}
+      - {name: spotlight_slugs, widget: list, field: {name: slug, widget: string}}
+
+  # ────────────────────────────────────────────────────────────────
+  - name: guide
+    label: Гид по отелям и яхтам
+    label_singular: Отель/яхта
+    folder: content/guide
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    summary: '{{h1}}'
+    filter:
+      field: slug
+      pattern: '^(?!_index)'
+    fields:
+      - {name: slug, widget: string}
+      - {name: title, widget: string}
+      - {name: h1, widget: string}
+      - {name: intro, widget: text}
+      - {name: description, widget: text}
+      - {name: keywords, widget: string, required: false}
+      - {name: canonical, widget: string}
+      - {name: og_image, widget: string}
+      - {name: og_type, widget: string, default: article}
+      - {name: og_title, widget: string}
+      - {name: og_description, widget: text}
+      - {name: twitter_title, widget: string}
+      - {name: twitter_description, widget: text}
+      - {name: body_class, widget: string}
+      - {name: dropcap_class, widget: string, required: false}
+      - {name: inline_style, widget: text, required: false}
+      - name: breadcrumb
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string, required: false}
+      - name: card
+        widget: object
+        fields:
+          - {name: card_image_base, widget: string}
+          - {name: card_image_ext, widget: select, options: [jpg, png, webp]}
+          - {name: card_alt, widget: string, required: false}
+          - {name: card_tag, widget: string}
+          - {name: card_title, widget: string}
+          - {name: card_text, widget: text}
+          - {name: data_type, widget: string, required: false}
+          - {name: data_country, widget: string, required: false}
+          - {name: data_region, widget: string, required: false}
+          - {name: data_brand, widget: string, required: false}
+          - {name: data_city, widget: string, required: false}
+      - name: body
+        widget: list
+        types:
+          - {name: hero, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - {name: picture, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - name: grid_2col
+            fields:
+              - {name: left, widget: object, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string, required: false}]}
+              - {name: right, widget: list, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string, required: false}]}
+          - name: text
+            fields:
+              - {name: dropcap, widget: boolean, default: false, required: false}
+              - {name: paragraphs, widget: list, field: {name: p, widget: text}}
+      - {name: tech_spec, widget: list, field: {name: item, widget: string}}
+      - {name: partners_text, widget: text}
+      - {name: cta_text, widget: string, default: Бронирование}
+      - name: tags
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string}
+      - {name: spotlight_slugs, widget: list, field: {name: slug, widget: string}}
+
+  # ────────────────────────────────────────────────────────────────
+  - name: calendar
+    label: Календарь мероприятий
+    label_singular: Мероприятие
+    folder: content/calendar
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    summary: '{{h1}}'
+    filter:
+      field: slug
+      pattern: '^(?!_index)'
+    fields:
+      - {name: slug, widget: string}
+      - {name: title, widget: string}
+      - {name: h1, widget: string}
+      - {name: intro, widget: text}
+      - {name: description, widget: text}
+      - {name: keywords, widget: string, required: false}
+      - {name: canonical, widget: string}
+      - {name: og_image, widget: string}
+      - {name: og_type, widget: string, default: article}
+      - {name: og_title, widget: string}
+      - {name: og_description, widget: text}
+      - {name: twitter_title, widget: string}
+      - {name: twitter_description, widget: text}
+      - {name: body_class, widget: string}
+      - {name: dropcap_class, widget: string, required: false}
+      - {name: inline_style, widget: text, required: false}
+      - name: breadcrumb
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string, required: false}
+      - name: card
+        widget: object
+        fields:
+          - {name: card_image_base, widget: string}
+          - {name: card_image_ext, widget: select, options: [jpg, png, webp]}
+          - {name: card_alt, widget: string, required: false}
+          - {name: card_tag, widget: string, label: 'Card tag (e.g. "Монако, 29 апреля – 1 мая")'}
+          - {name: card_title, widget: string}
+          - {name: card_text, widget: text}
+          - {name: data_month, widget: string, required: false, hint: 'space-separated months e.g. "april may"'}
+          - {name: data_format, widget: string, required: false, hint: 'art society cote-azur yachts auto lifestyle'}
+          - {name: data_city, widget: string, required: false}
+          - {name: data_country, widget: string, required: false}
+          - {name: data_region, widget: string, required: false}
+      - name: body
+        widget: list
+        types:
+          - {name: hero, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - {name: picture, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - name: text
+            fields:
+              - {name: dropcap, widget: boolean, default: false, required: false}
+              - {name: paragraphs, widget: list, field: {name: p, widget: text}}
+      - {name: tech_spec, widget: list, field: {name: item, widget: string}}
+      - {name: partners_text, widget: text}
+      - {name: cta_text, widget: string, default: Забронировать посещение}
+      - name: tags
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string}
+      - {name: spotlight_slugs, widget: list, field: {name: slug, widget: string}}
+
+  # ────────────────────────────────────────────────────────────────
+  - name: prime-residences
+    label: Зарубежная недвижимость
+    label_singular: Резиденция
+    folder: content/prime-residences
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    summary: '{{h1}}'
+    filter:
+      field: slug
+      pattern: '^(?!_index)'
+    fields:
+      - {name: slug, widget: string}
+      - {name: title, widget: string}
+      - {name: h1, widget: string}
+      - {name: intro, widget: text}
+      - {name: description, widget: text}
+      - {name: keywords, widget: string, required: false}
+      - {name: canonical, widget: string}
+      - {name: og_image, widget: string}
+      - {name: og_type, widget: string, default: article}
+      - {name: og_title, widget: string}
+      - {name: og_description, widget: text}
+      - {name: twitter_title, widget: string}
+      - {name: twitter_description, widget: text}
+      - {name: body_class, widget: string}
+      - {name: dropcap_class, widget: string, required: false}
+      - {name: inline_style, widget: text, required: false}
+      - name: breadcrumb
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string, required: false}
+      - name: card
+        widget: object
+        fields:
+          - {name: card_image_base, widget: string}
+          - {name: card_image_ext, widget: select, options: [jpg, png, webp]}
+          - {name: card_alt, widget: string, required: false}
+          - {name: card_tag, widget: string}
+          - {name: card_title, widget: string}
+          - {name: card_text, widget: text}
+          - {name: data_type, widget: string, required: false}
+          - {name: data_country, widget: string, required: false}
+          - {name: data_region, widget: string, required: false}
+          - {name: data_brand, widget: string, required: false}
+          - {name: data_city, widget: string, required: false}
+      - name: body
+        widget: list
+        types:
+          - {name: hero, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - {name: picture, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string}, {name: caption, widget: string, required: false}, {name: caption_align, widget: select, options: ['', left, right], required: false}]}
+          - name: grid_2col
+            fields:
+              - {name: left, widget: object, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string, required: false}]}
+              - {name: right, widget: list, fields: [{name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: has_webp, widget: boolean, default: true}, {name: alt, widget: string, required: false}]}
+          - name: text
+            fields:
+              - {name: dropcap, widget: boolean, default: false, required: false}
+              - {name: paragraphs, widget: list, field: {name: p, widget: text}}
+      - {name: tech_spec, widget: list, field: {name: item, widget: string}}
+      - {name: partners_text, widget: text}
+      - {name: cta_text, widget: string, default: Консультация по приобретению резиденции}
+      - name: tags
+        widget: list
+        fields:
+          - {name: label, widget: string}
+          - {name: href, widget: string}
+      - {name: spotlight_slugs, widget: list, field: {name: slug, widget: string}}
+
+  # ────────────────────────────────────────────────────────────────
+  # Catalog index files (5 categories)
+  - name: catalogs
+    label: Каталоги (страница-обложка категории)
+    files:
+      - name: cars-index
+        label: Cars — обложка каталога
+        file: content/cars/_index.md
+        fields:
+          - {name: slug, widget: hidden, default: cars}
+          - {name: title, widget: string}
+          - {name: description, widget: text}
+          - {name: keywords, widget: string, required: false}
+          - {name: canonical, widget: string}
+          - {name: og_image, widget: string}
+          - {name: og_type, widget: string, default: website}
+          - {name: og_title, widget: string}
+          - {name: og_description, widget: text}
+          - {name: twitter_title, widget: string}
+          - {name: twitter_description, widget: text}
+          - {name: hero_title, widget: string}
+          - {name: hero_subtitle, widget: string}
+          - name: hero_slides
+            label: Hero slider (3 slides)
+            widget: list
+            fields:
+              - {name: href, widget: string}
+              - {name: image_base, widget: string}
+              - {name: image_ext, widget: select, options: [jpg, png]}
+              - {name: alt, widget: string, required: false}
+              - {name: title, widget: string}
+              - {name: text, widget: text}
+          - {name: inline_style, widget: text, required: false}
+          - {name: search_name, widget: string, default: cars-search}
+          - {name: hidden_name, widget: string, default: cars-brand}
+          - {name: card_selector, widget: string, default: .cars-grid .cars-grid__col}
+          - {name: dropdown_button_label, widget: string}
+          - {name: dropdown_default_option, widget: string}
+          - name: dropdown_items
+            widget: list
+            fields:
+              - {name: value, widget: string}
+              - {name: label, widget: string}
+          - name: filter_buttons
+            widget: list
+            fields:
+              - {name: value, widget: string}
+              - {name: label, widget: string}
+              - {name: active, widget: boolean, default: false, required: false}
+              - {name: dim, widget: string, default: type}
+          - {name: total_results, widget: number, default: 12, value_type: int}
+      - name: watches-index
+        label: Watches — обложка каталога
+        file: content/watches/_index.md
+        fields:
+          - {name: slug, widget: hidden, default: watches}
+          - {name: title, widget: string}
+          - {name: description, widget: text}
+          - {name: keywords, widget: string, required: false}
+          - {name: canonical, widget: string}
+          - {name: og_image, widget: string}
+          - {name: og_type, widget: string, default: website}
+          - {name: og_title, widget: string}
+          - {name: og_description, widget: text}
+          - {name: twitter_title, widget: string}
+          - {name: twitter_description, widget: text}
+          - {name: hero_title, widget: string}
+          - {name: hero_subtitle, widget: string}
+          - {name: hero_slides, widget: list, fields: [{name: href, widget: string}, {name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: alt, widget: string, required: false}, {name: title, widget: string}, {name: text, widget: text}]}
+          - {name: inline_style, widget: text, required: false}
+          - {name: search_name, widget: string, default: watches-search}
+          - {name: hidden_name, widget: string, default: watches-brand}
+          - {name: dropdown_button_label, widget: string}
+          - {name: dropdown_default_option, widget: string}
+          - {name: dropdown_items, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}]}
+          - {name: filter_buttons, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}, {name: active, widget: boolean, default: false, required: false}, {name: dim, widget: string, default: type}]}
+          - {name: total_results, widget: number, default: 12, value_type: int}
+      - name: guide-index
+        label: Guide — обложка каталога
+        file: content/guide/_index.md
+        fields:
+          - {name: slug, widget: hidden, default: guide}
+          - {name: title, widget: string}
+          - {name: description, widget: text}
+          - {name: keywords, widget: string, required: false}
+          - {name: canonical, widget: string}
+          - {name: og_image, widget: string}
+          - {name: og_type, widget: string, default: website}
+          - {name: og_title, widget: string}
+          - {name: og_description, widget: text}
+          - {name: twitter_title, widget: string}
+          - {name: twitter_description, widget: text}
+          - {name: hero_title, widget: string}
+          - {name: hero_subtitle, widget: string}
+          - {name: hero_slides, widget: list, fields: [{name: href, widget: string}, {name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: alt, widget: string, required: false}, {name: title, widget: string}, {name: text, widget: text}]}
+          - {name: inline_style, widget: text, required: false}
+          - {name: search_name, widget: string, default: guide-search}
+          - {name: hidden_name, widget: string, default: guide-direction}
+          - {name: dropdown_button_label, widget: string}
+          - {name: dropdown_default_option, widget: string}
+          - {name: dropdown_items, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}]}
+          - {name: filter_buttons, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}, {name: active, widget: boolean, default: false, required: false}, {name: dim, widget: string, default: type}]}
+          - {name: total_results, widget: number, default: 12, value_type: int}
+      - name: calendar-index
+        label: Calendar — обложка каталога
+        file: content/calendar/_index.md
+        fields:
+          - {name: slug, widget: hidden, default: calendar}
+          - {name: title, widget: string}
+          - {name: description, widget: text}
+          - {name: keywords, widget: string, required: false}
+          - {name: canonical, widget: string}
+          - {name: og_image, widget: string}
+          - {name: og_type, widget: string, default: website}
+          - {name: og_title, widget: string}
+          - {name: og_description, widget: text}
+          - {name: twitter_title, widget: string}
+          - {name: twitter_description, widget: text}
+          - {name: hero_title, widget: string}
+          - {name: hero_subtitle, widget: string}
+          - {name: hero_slides, widget: list, fields: [{name: href, widget: string}, {name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: alt, widget: string, required: false}, {name: title, widget: string}, {name: text, widget: text}]}
+          - {name: inline_style, widget: text, required: false}
+          - {name: search_name, widget: string, default: calendar-search}
+          - {name: hidden_name, widget: string, default: calendar-month}
+          - {name: dropdown_button_label, widget: string}
+          - {name: dropdown_default_option, widget: string}
+          - {name: dropdown_items, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}]}
+          - {name: filter_buttons, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}, {name: active, widget: boolean, default: false, required: false}, {name: dim, widget: string, default: format}]}
+          - {name: total_results, widget: number, default: 7, value_type: int}
+      - name: prime-residences-index
+        label: Prime Residences — обложка каталога
+        file: content/prime-residences/_index.md
+        fields:
+          - {name: slug, widget: hidden, default: prime-residences}
+          - {name: title, widget: string}
+          - {name: description, widget: text}
+          - {name: keywords, widget: string, required: false}
+          - {name: canonical, widget: string}
+          - {name: og_image, widget: string}
+          - {name: og_type, widget: string, default: website}
+          - {name: og_title, widget: string}
+          - {name: og_description, widget: text}
+          - {name: twitter_title, widget: string}
+          - {name: twitter_description, widget: text}
+          - {name: hero_title, widget: string}
+          - {name: hero_subtitle, widget: string}
+          - {name: hero_slides, widget: list, fields: [{name: href, widget: string}, {name: image_base, widget: string}, {name: image_ext, widget: select, options: [jpg, png]}, {name: alt, widget: string, required: false}, {name: title, widget: string}, {name: text, widget: text}]}
+          - {name: inline_style, widget: text, required: false}
+          - {name: search_name, widget: string, default: guide-search}
+          - {name: hidden_name, widget: string, default: guide-direction}
+          - {name: dropdown_button_label, widget: string}
+          - {name: dropdown_default_option, widget: string}
+          - {name: dropdown_items, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}]}
+          - {name: filter_buttons, widget: list, fields: [{name: value, widget: string}, {name: label, widget: string}, {name: active, widget: boolean, default: false, required: false}, {name: dim, widget: string, default: type}]}
+          - {name: total_results, widget: number, default: 12, value_type: int}
