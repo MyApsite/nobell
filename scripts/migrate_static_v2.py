@@ -48,8 +48,16 @@ def migrate(html: str) -> str:
         r'\1terms.html\2',
         html,
     )
-    # 5. Inject popup-login before </body> (idempotent)
-    if "js-popup-login" not in html and "</body>" in html:
+    # 5. Inject popup-login before </body>. Re-applies on every run so
+    # template changes (e.g. JS rename in _popup-login.html.tpl) propagate.
+    if "</body>" in html:
+        # Strip any previous popup-login block (DOM + script) — match from
+        # the opening <div ... popup--login ...> down to the next </script>.
+        html = re.sub(
+            r'\s*<div class="popup popup--login js-popup-login">[\s\S]+?</script>\s*',
+            '\n',
+            html,
+        )
         html = html.replace("</body>", POPUP_LOGIN + "\n</body>", 1)
     return html
 

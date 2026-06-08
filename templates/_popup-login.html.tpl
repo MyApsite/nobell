@@ -19,29 +19,29 @@
             </div>
         </div>
     </div>
-    <script defer>
+    <script>
       (function () {
         function init() {
-          var popup = document.querySelector('.js-popup-login');
-          var overlay = document.querySelector('.js-overlay');
+          var popupEl = document.querySelector('.js-popup-login');
+          var overlayEl = document.querySelector('.js-overlay');
           var openBtns = document.querySelectorAll('.js-popup-login-open');
           var form = document.querySelector('.js-popup-login-form');
           var error = document.querySelector('.js-popup-login-error');
-          if (!popup || !overlay) return;
+          if (!popupEl || !overlayEl) return;
 
-          function open(e) {
+          function openPopupLogin(e) {
             if (e) e.preventDefault();
-            popup.classList.add('active');
-            overlay.classList.add('active');
+            popupEl.classList.add('active');
+            overlayEl.classList.add('active');
           }
-          function close() {
-            popup.classList.remove('active');
-            overlay.classList.remove('active');
+          function closePopupLogin() {
+            popupEl.classList.remove('active');
+            overlayEl.classList.remove('active');
           }
-          openBtns.forEach(function (b) { b.addEventListener('click', open); });
-          overlay.addEventListener('click', close);
+          openBtns.forEach(function (b) { b.addEventListener('click', openPopupLogin); });
+          overlayEl.addEventListener('click', closePopupLogin);
           document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') close();
+            if (e.key === 'Escape') closePopupLogin();
           });
 
           // UI-only login: show error chip "*Введите корректные данные" per PDF / Figma.
