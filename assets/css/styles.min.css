@@ -1912,6 +1912,9 @@ input:focus::placeholder {
   background: linear-gradient(to right, #212121, #1c1a25);
   height: 100px; }
 .popup__body--login { padding: 30px 24px 40px; }
+/* Neutralize default .popup__body p (margin-bottom 32px / max-width 315px)
+ * — subtitle and error use their own controlled spacing. */
+.popup__body--login p { margin: 0; max-width: none; }
 .popup__body--login .popup__subtitle {
   margin: 0 auto 30px;
   font-family: "Playfair", serif;
@@ -1986,6 +1989,36 @@ input:focus::placeholder {
   background: #fff;
   color: #212121;
   border: 1px solid rgba(33, 33, 33, 0.8); }
+
+/* Override .popup__body a (старая большая «Подать заявку» card-button) — для
+ * login popup кнопки должны быть аккуратными пилюлями 25px по высоте. */
+.popup__body--login .popup-login-form__btn,
+.popup__body--login a.popup-login-form__btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: auto;
+  height: 25px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-family: "FuturaFuturisLightC", "Gilroy", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: none; }
+.popup__body--login .popup-login-form__btn--primary {
+  background: #212121;
+  color: #fff;
+  border: 1px solid #212121; }
+.popup__body--login a.popup-login-form__btn--secondary {
+  background: #fff;
+  color: #212121;
+  border: 1px solid rgba(33, 33, 33, 0.8); }
+.popup__body--login .popup-login-form__btn:hover { opacity: 0.85; }
 
 .mob-section__logo {
   margin: 20px auto 40px;
