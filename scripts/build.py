@@ -45,7 +45,7 @@ CATEGORIES = {
         "filter_partial": "_filter.html.tpl",
     },
     "guide": {
-        "label": "ГИД ПО ОТЕЛЯМ И ЯХТАМ",
+        "label": "АЛЬМАНАХ ПУТЕШЕСТВИЙ",
         "href": "guide.html",
         "spotlight_title": "In the Spotlight",
         "detail_tpl": "cars-detail.html.tpl",
@@ -201,6 +201,7 @@ SITEMAP_BASE_URL = "https://nobell.com"
 STATIC_PAGES = [
     "index.html", "team.html", "contacts.html", "services.html",
     "app.html", "example.html", "privacy.html", "recommendation.html",
+    "terms.html", "registration.html",
 ]
 
 

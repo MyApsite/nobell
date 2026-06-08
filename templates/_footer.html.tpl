@@ -12,7 +12,7 @@
                 <h3 class="footer__column-title">Услуги лайфстайл</h3>
                 <ul class="footer__links">
                     <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
-                    <li><a href="guide.html" class="footer__link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                    <li><a href="guide.html" class="footer__link">АЛЬМАНАХ ПУТЕШЕСТВИЙ</a></li>
                     <li><a href="calendar.html" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
                 </ul>
             </div>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <button type="button" class="footer__portal-btn js-popup-open">
+            <button type="button" class="footer__portal-btn js-popup-login-open">
                 <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
             </button>
             <div class="footer__social">
@@ -57,7 +57,7 @@
             <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
             <div class="footer__legal">
                 <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
-                <a href="#" class="footer__legal-link">Правила клуба</a>
+                <a href="terms.html" class="footer__legal-link">Правила клуба</a>
             </div>
         </div>
     </footer>

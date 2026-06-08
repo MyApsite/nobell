@@ -92,7 +92,7 @@
                             </button>
                         </li>
                         <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
-                        <li class="nav__submenu-item"><a href="guide.html" class="nav__submenu-link">ГИД ПО ОТЕЛЯМ И ЯХТАМ</a></li>
+                        <li class="nav__submenu-item"><a href="guide.html" class="nav__submenu-link">АЛЬМАНАХ ПУТЕШЕСТВИЙ</a></li>
                         <li class="nav__submenu-item"><a href="calendar.html" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ
                                 МЕРОПРИЯТИЙ</a></li>
                     </ul>
@@ -159,7 +159,7 @@
                         <img src="assets/images/search.svg" alt="">
                     </button>
                 </form>
-                <button type="button" class="nav__form-link js-popup-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+                <button type="button" class="nav__form-link js-popup-login-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
             </div>
         </div>
     </nav>

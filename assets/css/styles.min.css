@@ -1906,6 +1906,87 @@ input:focus::placeholder {
       color: #212121;
       box-shadow: 0 -4px 10px 0 #b7a9a933, 0 4px 10px 0 #b7a9a966; }
 
+/* Login popup (Личный кабинет) — отдельный от popup (Подать заявку) */
+.popup--login { max-width: 456px; }
+.popup__head--login {
+  background: linear-gradient(to right, #212121, #1c1a25);
+  height: 100px; }
+.popup__body--login { padding: 30px 24px 40px; }
+.popup__body--login .popup__subtitle {
+  margin: 0 auto 30px;
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 315px;
+  color: #212121; }
+.popup-login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 241px;
+  margin: 0 auto; }
+.popup-login-form__control {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+  background: transparent;
+  padding: 10px 12px;
+  margin-bottom: 9px;
+  font-family: "Gilroy";
+  font-size: 14px;
+  line-height: 1.3;
+  color: #212121;
+  text-transform: uppercase;
+  transition: border-bottom-color 0.3s ease; }
+.popup-login-form__control::placeholder {
+  color: #212121;
+  font-size: 10px;
+  text-transform: uppercase; }
+.popup-login-form__control:focus {
+  outline: none;
+  border-bottom-color: #212121; }
+.popup-login-form__control.is-error { border-bottom-color: #d9534f; }
+.popup-login-form__error {
+  width: 100%;
+  margin: 6px 0 0;
+  font-family: "Gilroy";
+  font-size: 10px;
+  line-height: 1.3;
+  color: #d9534f;
+  text-align: center; }
+.popup-login-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px; }
+.popup-login-form__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-family: "FuturaFuturisLightC", "Gilroy", sans-serif;
+  font-size: 9px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease; }
+.popup-login-form__btn:hover { opacity: 0.85; }
+.popup-login-form__btn--primary {
+  background: #212121;
+  color: #fff;
+  border: 1px solid #212121; }
+.popup-login-form__btn--secondary {
+  background: #fff;
+  color: #212121;
+  border: 1px solid rgba(33, 33, 33, 0.8); }
+
 .mob-section__logo {
   margin: 20px auto 40px;
   width: 325px; }

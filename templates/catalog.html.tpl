@@ -129,6 +129,8 @@
     {% include '_nav.html.tpl' %}
 
     {% include '_popup.html.tpl' %}
+
+    {% include '_popup-login.html.tpl' %}
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/vendor.min.js" defer></script>

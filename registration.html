@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Регистрация — Nobell</title>
+  <meta name="description" content="Регистрация в клубе Nobell. Заполните форму с кодом приглашения, чтобы получить доступ к премиальному консьерж сервису.">
+  <meta name="keywords" content="регистрация Nobell, заявка, код приглашения, клуб">
+  <link rel="canonical" href="https://nobell.com/registration.html">
+  <meta name="robots" content="noindex, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nobell.com/registration.html">
+  <meta property="og:title" content="Регистрация — Nobell">
+  <meta property="og:description" content="Регистрация в клубе Nobell. Премиальный консьерж сервис.">
+  <meta property="og:image" content="https://nobell.com/assets/images/video-poster.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Nobell">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Регистрация — Nobell">
+  <meta name="twitter:description" content="Регистрация в клубе Nobell.">
+  <meta name="twitter:image" content="https://nobell.com/assets/images/video-poster.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="preload" href="assets/fonts/Antarctic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/FuturaCyrillicMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css?v=13">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css?v=13">
+  <link media="all" rel="stylesheet" href="assets/css/safari-fix.css?v=13">
+  <style>
+    .registration-page { background: #f8f8fa; }
+    .registration-section { padding: 60px 0 100px; }
+    @media (min-width: 768px) {
+      .registration-section { padding: 80px 0 140px; }
+    }
+    .registration-card {
+      max-width: 543px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: -8px -8px 60px rgba(183, 169, 169, 0.18),
+                   8px  8px 60px rgba(183, 169, 169, 0.18);
+      padding: 40px 24px;
+    }
+    @media (min-width: 768px) {
+      .registration-card { padding: 60px 110px; }
+    }
+    .registration-card__head {
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Gilroy', sans-serif;
+      font-weight: 300;
+      color: #212121;
+    }
+    .registration-card__head h1 {
+      font-family: 'Gilroy', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+    .registration-card__hint {
+      font-size: 12px;
+      line-height: 1.3;
+      margin: 0;
+      color: #212121;
+    }
+    .registration-form__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+      row-gap: 30px;
+      margin-bottom: 30px;
+    }
+    .registration-form__field--full { grid-column: 1 / -1; }
+    .registration-form__control {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #d8d8d8;
+      background: transparent;
+      padding: 10px 12px;
+      font-family: 'Gilroy', sans-serif;
+      font-size: 14px;
+      line-height: 1.3;
+      color: #212121;
+      transition: border-bottom-color 0.3s ease;
+    }
+    .registration-form__control::placeholder {
+      color: #212121;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .registration-form__control:focus {
+      outline: none;
+      border-bottom-color: #212121;
+    }
+    .registration-form__control.is-error { border-bottom-color: #d9534f; }
+    .registration-form__phone {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #d8d8d8;
+      padding: 0 0 0 12px;
+    }
+    .registration-form__country {
+      width: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      color: #212121;
+    }
+    .registration-form__country-code {
+      font-family: 'Gilroy';
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .registration-form__phone .registration-form__control {
+      border-bottom: 0;
+      position: relative;
+      bottom: -1px;
+    }
+    .registration-form__policy {
+      font-family: 'Gilroy', sans-serif;
+      font-size: 12px;
+      line-height: 1.3;
+      color: #212121;
+      text-align: left;
+      margin: 0 0 30px;
+    }
+    .registration-form__policy a { color: #212121; text-decoration: underline; }
+    .registration-form__submit {
+      display: block;
+      width: 100%;
+      max-width: 272px;
+      margin: 0 auto;
+      background: #212121;
+      color: #fff;
+      border: 0;
+      border-radius: 6px;
+      padding: 18px 12px;
+      font-family: 'Gilroy', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+    .registration-form__submit:hover { opacity: 0.88; }
+    .registration-form__success {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: #2a7a2a;
+      font-family: 'Gilroy', sans-serif;
+      font-size: 14px;
+    }
+    .registration-form__success.is-visible { display: block; }
+  </style>
+</head>
+
+<body class="registration-page">
+  <div class="wrapper">
+    <header class="header">
+      <a href="/" class="header__logo">
+        <img src="assets/images/logo.svg?v=2" alt="Nobell — логотип" title="Nobell — логотип">
+      </a>
+
+      <div class="breadcrumbs">
+        <a href="/">
+          <img src="assets/images/home.svg?v=2" alt="Главная" title="Главная">
+        </a>
+        <img src="assets/images/next.svg?v=2" alt="Далее" title="Далее">
+        <span>РЕГИСТРАЦИЯ</span>
+      </div>
+
+      <button type="button" class="header__burger header__burger--fixed js-burger-open">
+        <div class="header__burger-mob">
+          <img src="assets/images/b-mob.svg?v=2" alt="Меню" title="Меню">
+        </div>
+        <div class="header__burger-desk">
+          <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="15" height="1" fill="#000000" />
+            <rect y="6" width="23" height="1" fill="#000000" />
+            <rect x="8" y="13" width="15" height="1" fill="#000000" />
+          </svg>
+        </div>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="registration-section">
+        <div class="container">
+          <div class="registration-card">
+            <div class="registration-card__head">
+              <h1>Регистрация</h1>
+              <p class="registration-card__hint">(*) поля обязательны к заполнению</p>
+            </div>
+
+            <form class="registration-form js-registration-form" action="/api/register.php" method="post" novalidate>
+              <div class="registration-form__grid">
+                <div class="registration-form__field">
+                  <label for="reg-first-name" class="sr-only">Имя</label>
+                  <input class="registration-form__control" id="reg-first-name" name="firstName" type="text" placeholder="ИМЯ *" autocomplete="off" required>
+                </div>
+                <div class="registration-form__field">
+                  <label for="reg-last-name" class="sr-only">Фамилия</label>
+                  <input class="registration-form__control" id="reg-last-name" name="lastName" type="text" placeholder="ФАМИЛИЯ *" autocomplete="off" required>
+                </div>
+                <div class="registration-form__field registration-form__field--full">
+                  <label for="reg-email" class="sr-only">Email</label>
+                  <input class="registration-form__control" id="reg-email" name="email" type="email" placeholder="EMAIL *" autocomplete="off" required>
+                </div>
+                <div class="registration-form__field registration-form__field--full">
+                  <div class="registration-form__phone">
+                    <button class="registration-form__country" type="button" aria-label="Код страны">
+                      <span class="registration-form__country-code">+7</span>
+                    </button>
+                    <label for="reg-phone" class="sr-only">Телефон</label>
+                    <input class="registration-form__control" id="reg-phone" name="phone" type="tel" inputmode="tel" placeholder="ТЕЛЕФОН *" autocomplete="off" required>
+                  </div>
+                </div>
+                <div class="registration-form__field registration-form__field--full">
+                  <label for="reg-invite" class="sr-only">Код приглашения</label>
+                  <input class="registration-form__control" id="reg-invite" name="inviteCode" type="text" placeholder="КОД ПРИГЛАШЕНИЯ *" autocomplete="off" required>
+                </div>
+              </div>
+
+              <p class="registration-form__policy">
+                Нобелл будет использовать ваши персональные данные для обработки вашего запроса. Для получения дополнительной информации, пожалуйста, ознакомьтесь с нашей <a href="privacy.html">политикой конфиденциальности</a>.
+              </p>
+
+              <button class="registration-form__submit" type="submit">Отправить заявку</button>
+              <p class="registration-form__success js-registration-success">Заявка отправлена. С вами свяжется менеджер.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__columns">
+            <div class="footer__column">
+                <h3 class="footer__column-title">О нас</h3>
+                <ul class="footer__links">
+                    <li><a href="/" class="footer__link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    <li><a href="team.html" class="footer__link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                    <li><a href="contacts.html" class="footer__link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Услуги лайфстайл</h3>
+                <ul class="footer__links">
+                    <li><a href="recommendation.html" class="footer__link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                    <li><a href="guide.html" class="footer__link">АЛЬМАНАХ ПУТЕШЕСТВИЙ</a></li>
+                    <li><a href="calendar.html" class="footer__link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Премиальный шоппинг</h3>
+                <ul class="footer__links">
+                    <li><a href="prime-residences.html" class="footer__link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                    <li><a href="cars.html" class="footer__link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                    <li><a href="watches.html" class="footer__link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Резидентский консьерж</h3>
+                <ul class="footer__links">
+                    <li><a href="services.html" class="footer__link">УСЛУГИ ДЛЯ УК</a></li>
+                    <li><a href="example.html" class="footer__link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                    <li><a href="app.html" class="footer__link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <button type="button" class="footer__portal-btn js-popup-login-open">
+                <span>КЛИЕНТСКИЙ ПОРТАЛ</span>
+            </button>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram"><img src="assets/images/f1.svg" alt=""></a>
+                <a href="#" class="footer__social-link" aria-label="X (Twitter)"><img src="assets/images/f2.svg" alt=""></a>
+                <a href="#" class="footer__social-link" aria-label="Facebook"><img src="assets/images/f3.svg" alt=""></a>
+                <a href="#" class="footer__social-link" aria-label="YouTube"><img src="assets/images/f4.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__nav">
+            <p class="footer__copyright">© 2026, Нобелл Сервис Групп.</p>
+            <div class="footer__legal">
+                <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+                <a href="terms.html" class="footer__legal-link">Правила клуба</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay js-overlay"></div>
+
+    <nav class="nav js-burger" aria-label="Меню">
+        <div class="nav__wrap">
+            <button type="button" class="nav__close js-burger-close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M0.353516 0.646408L11.3535 11.6464M0.353516 11.3535L11.3535 0.353516" stroke="#212121" />
+                </svg>
+            </button>
+            <div class="nav__panels">
+                <section class="nav__panel nav__panel--active js-burger-panel" data-panel="root">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn js-burger-submenu" data-target="about"><span class="nav__menu-ico"><img src="assets/images/people.svg" alt=""></span><span class="nav__menu-text">О НАС</span><span class="nav__menu-arrow"><img src="assets/images/arrow.svg" alt=""></span></button></li>
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-living"><span class="nav__menu-ico"><img src="assets/images/flag.svg" alt=""></span><span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span><span class="nav__menu-arrow"><img src="assets/images/arrow.svg" alt=""></span></button></li>
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn js-burger-submenu" data-target="fine-shopping"><span class="nav__menu-ico"><img src="assets/images/diamond.svg" alt=""></span><span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span><span class="nav__menu-arrow"><img src="assets/images/arrow.svg" alt=""></span></button></li>
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn js-burger-submenu" data-target="concierge"><span class="nav__menu-ico"><img src="assets/images/message.svg" alt=""></span><span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span><span class="nav__menu-arrow"><img src="assets/images/arrow.svg" alt=""></span></button></li>
+                    </ul>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="about">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn nav__menu-btn--info"><span class="nav__menu-ico"><img src="assets/images/people.svg" alt=""></span><span class="nav__menu-text">О НАС</span></button></li>
+                        <li class="nav__submenu-item"><a href="/" class="nav__submenu-link">УСЛУГИ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="team.html" class="nav__submenu-link">МЕЖДУНАРОДНАЯ КОМАНДА ЭКСПЕРТОВ</a></li>
+                        <li class="nav__submenu-item"><a href="contacts.html" class="nav__submenu-link">КОНТАКТЫ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root"><span class="nav__back-arrow"><img src="assets/images/arrow.svg" alt=""></span><span class="nav__back-text">НАЗАД</span></button>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="fine-living">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn nav__menu-btn--info"><span class="nav__menu-ico"><img src="assets/images/flag.svg" alt=""></span><span class="nav__menu-text">УСЛУГИ ЛАЙФСТАЙЛ</span></button></li>
+                        <li class="nav__submenu-item"><a href="recommendation.html" class="nav__submenu-link">ВИТРИНА РЕКОМЕНДАЦИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="guide.html" class="nav__submenu-link">АЛЬМАНАХ ПУТЕШЕСТВИЙ</a></li>
+                        <li class="nav__submenu-item"><a href="calendar.html" class="nav__submenu-link">КАЛЕНДАРЬ КЛЮЧЕВЫХ МЕРОПРИЯТИЙ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root"><span class="nav__back-arrow"><img src="assets/images/arrow.svg" alt=""></span><span class="nav__back-text">НАЗАД</span></button>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="fine-shopping">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn nav__menu-btn--info"><span class="nav__menu-ico"><img src="assets/images/diamond.svg" alt=""></span><span class="nav__menu-text">ПРЕМИАЛЬНЫЙ ШОППИНГ</span></button></li>
+                        <li class="nav__submenu-item"><a href="prime-residences.html" class="nav__submenu-link">ЗАРУБЕЖНАЯ НЕДВИЖИМОСТЬ</a></li>
+                        <li class="nav__submenu-item"><a href="cars.html" class="nav__submenu-link">ЭКСКЛЮЗИВНЫЕ АВТОМОБИЛИ</a></li>
+                        <li class="nav__submenu-item"><a href="watches.html" class="nav__submenu-link">ШЕДЕВРЫ ЧАСОВОГО ИСКУССТВА</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root"><span class="nav__back-arrow"><img src="assets/images/arrow.svg" alt=""></span><span class="nav__back-text">НАЗАД</span></button>
+                </section>
+                <section class="nav__panel js-burger-panel" data-panel="concierge">
+                    <ul class="nav__submenu">
+                        <li class="nav__menu-item"><button type="button" class="nav__menu-btn nav__menu-btn--info"><span class="nav__menu-ico"><img src="assets/images/message.svg" alt=""></span><span class="nav__menu-text">РЕЗИДЕНТСКИЙ КОНСЬЕРЖ</span></button></li>
+                        <li class="nav__submenu-item"><a href="services.html" class="nav__submenu-link">УСЛУГИ ДЛЯ УК</a></li>
+                        <li class="nav__submenu-item"><a href="example.html" class="nav__submenu-link">ПРИМЕР РЕАЛИЗОВАННОГО ПРОЕКТА</a></li>
+                        <li class="nav__submenu-item"><a href="app.html" class="nav__submenu-link">ПРИЛОЖЕНИЕ ДЛЯ РЕЗИДЕНТОВ</a></li>
+                    </ul>
+                    <button type="button" class="nav__back js-burger-back" data-target="root"><span class="nav__back-arrow"><img src="assets/images/arrow.svg" alt=""></span><span class="nav__back-text">НАЗАД</span></button>
+                </section>
+            </div>
+            <div class="nav__form">
+                <form action="/search.html" method="get">
+                    <input type="search" name="s" placeholder="ПОИСК" autocomplete="off">
+                    <button type="submit"><img src="assets/images/search.svg" alt=""></button>
+                </form>
+                <button type="button" class="nav__form-link js-popup-login-open">КЛИЕНТСКИЙ ПОРТАЛ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="popup js-popup">
+        <div class="popup__wrap">
+            <div class="popup__head"><h2>Начните Жить Красиво</h2></div>
+            <div class="popup__body">
+                <p>Данный раздел предназначен исключительно для действующих участников клуба</p>
+                <a href="#"><img src="assets/images/popup.svg" alt="">Подать заявку</a>
+            </div>
+        </div>
+    </div>
+
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/vendor.min.js?v=13" defer></script>
+  <script src="assets/js/app.js?v=13" defer></script>
+  <script defer>
+    (function () {
+      function init() {
+        var form = document.querySelector('.js-registration-form');
+        var success = document.querySelector('.js-registration-success');
+        if (!form) return;
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var fields = form.querySelectorAll('.registration-form__control');
+          var ok = true;
+          var data = {};
+          fields.forEach(function (f) {
+            var v = (f.value || '').trim();
+            if (!v) { f.classList.add('is-error'); ok = false; }
+            else { f.classList.remove('is-error'); }
+            data[f.name] = v;
+          });
+          if (!ok) return;
+
+          var btn = form.querySelector('.registration-form__submit');
+          btn.disabled = true;
+          var countryCode = (form.querySelector('.registration-form__country-code') || {textContent: ''}).textContent.trim();
+          data.country = countryCode;
+
+          fetch('/api/register.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data),
+            credentials: 'same-origin'
+          }).then(function (r) { return r.json(); })
+          .then(function (resp) {
+            btn.disabled = false;
+            if (resp && resp.ok) {
+              form.style.display = 'none';
+              if (success) success.classList.add('is-visible');
+            } else {
+              alert('Ошибка отправки. Попробуйте позже или напишите на support@nobell.com');
+            }
+          })
+          .catch(function () {
+            btn.disabled = false;
+            alert('Не удалось отправить заявку. Проверьте интернет-соединение.');
+          });
+        });
+        form.querySelectorAll('.registration-form__control').forEach(function (f) {
+          f.addEventListener('input', function () { f.classList.remove('is-error'); });
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+</html>
